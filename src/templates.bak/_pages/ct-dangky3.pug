@@ -1,0 +1,418 @@
+section.breadcrumb-wrap
+	.breadcrumb-content
+		.container
+			ol.breadcrumb
+				li
+					a(href="#!")
+						span Thẻ
+				li
+					a(href="#!")
+						span Đăng ký thẻ
+section.register-page
+	.container
+		h1.home-title.text-blue.text-center.mb-2 Đăng ký thẻ
+		.home-content.text-center.mb-0(style="max-width: unset")
+			.content
+				p Đăng ký thẻ Quốc tế Visa Vietbank để nhận ưu đãi lớn từ VietBank
+		.register-link
+			a(href="#!") Đăng ký nhanh
+			a.active(href="#!") Đăng ký đầy đủ
+		.register-form
+			.module-title 
+				span Chọn loại thẻ
+			.card-list
+				.row
+					.col-12.col-md-4
+						.cre-card
+							input#c1(type="radio", name="card" checked)
+							label(for="c1")
+								.img
+									img(src="img/dangky/c1.png", alt="")
+								.name luxury
+					.col-12.col-md-4
+						.cre-card
+							input#c2(type="radio", name="card")
+							label(for="c2")
+								.img
+									img(src="img/dangky/c2.png", alt="")
+								.name platinum
+					.col-12.col-md-4
+						.cre-card(data-toggle="modal" data-target="#choosecard")
+							input#c3(type="radio", name="card")
+							label(for="c3")
+								.img
+									img(src="img/dangky/c3.png", alt="")
+								.name My style
+
+			#choosecard.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+				.modal-dialog.modal-card(role='document')
+					.modal-content
+						.modal-header
+							.close(data-dismiss='modal', aria-label='Close')
+								.material-icons close
+						.modal-body
+							.module-title 
+								span Chọn loại thẻ
+							.card-list
+								.row
+									.col-12.col-md-3
+										.cre-card
+											input#c21(type="radio", name="card2" checked)
+											label(for="c21")
+												.img
+													img(src="img/dangky/c3.png", alt="")
+												//- .name luxury
+									.col-12.col-md-3
+										.cre-card
+											input#c22(type="radio", name="card2" checked)
+											label(for="c22")
+												.img
+													img(src="img/dangky/c3.png", alt="")
+												//- .name luxury
+									.col-12.col-md-3
+										.cre-card
+											input#c23(type="radio", name="card2" checked)
+											label(for="c23")
+												.img
+													img(src="img/dangky/c3.png", alt="")
+												//- .name luxury
+									.col-12.col-md-3
+										.cre-card
+											input#c24(type="radio", name="card2" checked)
+											label(for="c24")
+												.img
+													img(src="img/dangky/c3.png", alt="")
+												//- .name luxury
+							
+			.register-step
+				.step.finish 01. Thông tin khách hàng
+				.step.finish 02. Thông tin tài chính
+				.step.active 03. Thông tin dịch vụ
+				.step 04. Hoàn thành
+			.form-wrap
+				.form-title Đăng ký thanh toán dịch vụ
+				.form-note.text-black.mb-3 Tôi đề nghị Vietbank thanh toán tự động các khoản nợ thẻ tín dụng của Tôi/Chúng tôi trước hoặc ngay Ngày trả trước số tiền tối thiểu đối với thẻ tín dụng bằng cách ghi nợ vào tài khoản thanh toán tại Vietbank của Tôi/Chúng tôi theo thông tin sau:
+				.form-group
+					label Tên chủ tài khoản:
+					.input
+						input(type="text" placeholder="")
+				.form-group
+					label Số tài khoản:
+					.input
+						.form-row
+							.col-12.col-md-6
+								input.mb-10(type="text" placeholder="")
+							.col-12.col-md-6
+								.form-sub.mb-md-10
+									label Tại Vietbank:
+									input(type="text")
+				.form-group.mb-5
+					label Tỉ lệ thanh toán dư nợ thẻ tín dụng:
+					.input
+						.mary-status
+							ul
+								li.radio.mb-sm-10
+									input#r1(type="radio", name="radio1")
+									label(for="r1") Toàn bộ dư nợ
+								li.radio.mb-sm-10
+									input#r2(type="radio", name="radio1")
+									label(for="r2") Tối thiểu
+				.form-title Đăng ký thẻ phụ:
+				.form-group
+					label Mối quan hệ:
+					.input
+						.mary-status
+							ul
+								li.radio.mb-sm-10
+									input#r21(type="radio", name="radio2")
+									label(for="r21") Bố / Mẹ
+								li.radio.mb-sm-10
+									input#r22(type="radio", name="radio2")
+									label(for="r22") Anh / Chị / Em
+								li.radio.mb-sm-10
+									input#r23(type="radio", name="radio2")
+									label(for="r23") Khác
+				.form-group
+					label Họ và tên:
+					.input
+						input(type="text" placeholder="Tên trên CMND/CCCD/Giấy khai sinh")
+				.form-group.align-items-start
+					label Họ và tên:
+					.input
+						.card-name
+							input(type="text" placeholder="")
+							input(type="text" placeholder="")
+							input(type="text" placeholder="")
+							input(type="text" placeholder="")
+							input(type="text" placeholder="")
+							input(type="text" placeholder="")
+							input(type="text" placeholder="")
+							input(type="text" placeholder="")
+							input(type="text" placeholder="")
+							input(type="text" placeholder="")
+							input(type="text" placeholder="")
+							input(type="text" placeholder="")
+							input(type="text" placeholder="")
+							input(type="text" placeholder="")
+							input(type="text" placeholder="")
+							input(type="text" placeholder="")
+							input(type="text" placeholder="")
+							input(type="text" placeholder="")
+							input(type="text" placeholder="")
+						em.form-note.text-silver (Tối đa 19 ký tự không dấu kể cả khoảng trắng)
+				.form-group
+					label Giới tính:
+					.input
+						.gender
+							ul
+								li.radio
+									input#nam(type="radio", name="gender" checked)
+									label(for="nam") Nam
+								li.radio
+									input#nu(type="radio", name="gender")
+									label(for="nu") Nữ
+				.form-group
+					label Ngày sinh:
+					.input
+						.form-row
+							.col-12.col-md-6
+								.birthday.mb-sm-10
+									ul
+										li
+											input(type="text" placeholder="Ngày")
+										li
+											input(type="text" placeholder="Tháng")
+										li
+											input(type="text" placeholder="Năm")
+							.col-12.col-md-6
+								.form-sub
+									label Quốc tịch:
+									select
+										option 
+				.form-group
+					label Số CMND/CCCD/HC:
+					.input
+						input(type="text" placeholder="")
+				.form-group
+					label Ngày cấp:
+					.input
+						.form-row
+							.col-12.col-md-6
+								.birthday.mb-sm-10
+									ul
+										li
+											input(type="text" placeholder="Ngày")
+										li
+											input(type="text" placeholder="Tháng")
+										li
+											input(type="text" placeholder="Năm")
+							.col-12.col-md-6
+								.form-sub
+									label Nơi cấp:
+									input(type="text")
+				.form-group
+					label Số ĐTDĐ:
+					.input
+						.form-row
+							.col-12.col-md-6
+								input.mb-sm-10(type="text")
+							.col-12.col-md-6
+								.form-sub
+									label Số ĐT bàn:
+									input(type="text")
+				.form-group
+					label Email:
+					.input
+						input(type="text" placeholder="Email cá nhân")
+				.form-group.align-items-start
+					label Địa chỉ hộ khẩu:
+					.input
+						.form-row
+							.col-12
+								input.mb-10(type="text" placeholder="Số nhà tên đường")
+							.col-12.col-md-6.col-lg-4
+								.form-sub.mb-md-10
+									label Phường/Xã:
+									select
+										option
+							.col-12.col-md-6.col-lg-4
+								.form-sub.mb-md-10
+									label Tỉnh/TP:
+									select
+										option
+							.col-12.col-md-6.col-lg-4
+								.form-sub
+									label Quận/Huyện:
+									select
+										option
+				.form-group.mb-5.align-items-start
+					label Hạn mức tín dụng
+					.input
+						.form-row
+							.col-12
+								.mary-status.mb-10
+									ul
+										li.radio
+											input#r31(type="radio", name="radio3")
+											label(for="r31") Bằng thẻ chính
+										li.radio.has-input
+											input#r32(type="radio", name="radio3")
+											label(for="r32") Khác
+											input.input-text(type="text" placeholder="triệu đồng")
+							.col-12
+								.form-sub.s2
+									label Hạn mức bằng chữ
+									input(type="text")
+				.form-title Thông tin nhận thẻ và bảng thông báo giao dịch:
+				.form-group
+					label.pb-10(for="") Địa chỉ nhận thẻ:
+					.input.w-100
+						.form-row.align-items-center
+							.col-12.col-md-4.col-lg-2.mb-md-10
+								.radio.mb-10
+									input#r41(type="radio", name="radio4")
+									label(for="r41") Địa chỉ hộ khẩu
+							.col-12.col-md-4.col-lg-2.mb-md-10
+								.radio.mb-10
+									input#r42(type="radio", name="radio4")
+									label(for="r42") Địa chỉ hiện tại
+							.col-12.col-md-4.col-lg-2.mb-md-10
+								.radio.mb-10
+									input#r43(type="radio", name="radio4")
+									label(for="r43") Địa chỉ làm việc
+							.col-12.col-lg-6
+								.radio.has-input.s2.mb-10
+									input#r44(type="radio", name="radio4")
+									label(for="r44") TTKD Vietbank:
+									select.input-text
+										option
+				.form-group.align-items-start
+					.input.w-100
+						.form-row
+							.col-12.col-md-3
+								.radio.mb-10
+									input#r45(type="radio", name="radio4")
+									label(for="r45") Địa chỉ khác
+							.col-12.col-md-9
+								.input.w-100
+									.form-row
+										.col-12
+											input.mb-10(type="text")
+										.col-12.col-md-6.col-lg-4
+											.form-sub.mb-md-10
+												label Phường/Xã:
+												select
+													option
+										.col-12.col-md-6.col-lg-4
+											.form-sub.mb-md-10
+												label Tỉnh/TP:
+												select
+													option
+										.col-12.col-md-6.col-lg-4
+											.form-sub
+												label Quận/Huyện:
+												select
+													option
+				.form-group
+					label(for="")
+					.input.w-100
+						.mary-status
+							ul
+								li.radio.mb-10
+									input#r51(type="radio", name="radio5")
+									label(for="r51") Địa chỉ hộ khẩu
+								li.radio.mb-10
+									input#r52(type="radio", name="radio5")
+									label(for="r52") Địa chỉ hiện tại
+								li.radio.mb-10
+									input#r53(type="radio", name="radio5")
+									label(for="r53") Địa chỉ làm việc
+				.form-note.text-black.w-100.mb-5 Hình thức nhận thông tin ưu đãi của Vietbank:
+					br
+					|Tôi đồng ý nhận các thông tin ưu đãi, các chương trình khuyến mãi của Vietbank qua Email, SMS và các hình thức khác.
+				.register-table.mb-5
+					table
+						tr
+							th
+							th Thẻ chính
+							th Thẻ phụ
+						tr
+							td Là công dân Hoa Kỳ hoặc đối tượng cư trú tại Hoa Kỳ
+							td
+								.checkbox
+									input#cb1(type="checkbox", name="checkbox")
+									label(for="cb1") yes
+							td
+								.checkbox
+									input#cb2(type="checkbox", name="checkbox")
+									label(for="cb2") yes
+						tr
+							td Có nơi sinh tại Hoa Kỳ
+							td
+								.checkbox
+									input#cb3(type="checkbox", name="checkbox")
+									label(for="cb3") yes
+							td
+								.checkbox
+									input#cb4(type="checkbox", name="checkbox")
+									label(for="cb4") yes
+						tr
+							td Có địa chỉ gửi thư hoặc nơi cư trú hiện hành ở Hoa Kỳ (bao gồm hộp nhận thư ở bưu điện Hoa Kỳ);
+							td
+								.checkbox
+									input#cb5(type="checkbox", name="checkbox")
+									label(for="cb5") yes
+							td
+								.checkbox
+									input#cb6(type="checkbox", name="checkbox")
+									label(for="cb6") yes
+						tr
+							td Có số điện thoại liên lạc tại Hoa Kỳ
+							td
+								.checkbox
+									input#cb7(type="checkbox", name="checkbox")
+									label(for="cb7") yes
+							td
+								.checkbox
+									input#cb8(type="checkbox", name="checkbox")
+									label(for="cb8") yes
+						tr
+							td Có chỉ định định kỳ chuyển khoản vào một tài khoản mở tại Hoa Kỳ hay định kỳ nhận tiền từ một tài khoản mở tại Hoa Kỳ;
+							td
+								.checkbox
+									input#cb9(type="checkbox", name="checkbox")
+									label(for="cb9") yes
+							td
+								.checkbox
+									input#cb10(type="checkbox", name="checkbox")
+									label(for="cb10") yes
+						tr
+							td Giấy ủy quyền hoặc ủy quyền ký tên hiện đang có hiệu lực cấp cho người có địa chỉ ở Hoa Kỳ;
+							td
+								.checkbox
+									input#cb11(type="checkbox", name="checkbox")
+									label(for="cb11") yes
+							td
+								.checkbox
+									input#cb1(type="checkbox", name="checkbox")
+									label(for="cb1") yes
+						tr
+							td Có địa chỉ “nhờ chuyển thư” hay địa chỉ “giữ thư” (địa chỉ nhận thư tại Hoa Kỳ) mà địa chỉ đó là địa chỉ duy nhất đối với khách hàng tại Hoa Kỳ.
+							td
+								.checkbox
+									input#cb12(type="checkbox", name="checkbox")
+									label(for="cb12") yes
+							td
+								.checkbox
+									input#cb13(type="checkbox", name="checkbox")
+									label(for="cb13") yes
+				.form-title Thông tin lưu ý
+				.content
+					ul
+						li Tôi/Chúng tôi xác nhận chi tiết các thông tin nêu trên là chính xác và đầy đủ. Tôi/Chúng tôi đồng ý để Vietbank xác thực các thông tin nêu trên ừ bất kỳ nguồn thông tin nào mà Vietbank cho là phù hợp. 
+						li Trường hợp Chủ Thẻ được Vietbank cấp tín dụng dưới bất kỳ hình thức nào (tại bất kỳ thời điểm nào) và có bảo đảm thì nghĩa vụ bảo đảm của tài sản đó đương nhiên bao gồm cả nghĩa vụ thanh toán của Chủ Thẻ phát sinh trong quá trình sử dụng thẻ. Việc Chủ Thẻ bị chấm dứt cấp tín dụng tại Vietbank vì bất cứ lý do gì có thể dẫn đến việc chấm dứt sử dụng thẻ và/hoặc xử lý tài sản bảo đảm theo quy định của Vietbank.
+						li Bằng việc ký vào Giấy đề nghị này, Tôi/Chúng tôi đã đọc và đồng ý việc sử dụng và sẽ tuân thủ nội dung của các Điều khoản và điều kiện phát hành và sử dụng thẻ tín dụng, cùng với Giấy đề nghị này sẽ tạo nên một hợp đồng ràng buộc về mặt pháp lý giữa Tôi/Chúng tôi với Vietbank và được lưu giữ bởi Vietbank. Trường hợp không được Vietbank cung ứng dịch vụ, Tôi/Chúng tôi đồng ý không yêu cầu nhận lại hồ sơ đã cung cấp.
+						li Điều khoản và điều kiện các nội dung điều chỉnh, bổ sung của việc phát hành và sử dụng thẻ tín dụng sẽ được công bố tại website chính thức của Vietbank (www.vietbank.com.vn) hoặc tại các điểm giao dịch của Vietbank. 
+				.frm-btn
+					a.btn-secondary.mr-2(href="#!") Trở về
+					input.btn-primary(type="submit", value="Đăng ký")

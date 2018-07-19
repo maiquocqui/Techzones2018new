@@ -1,0 +1,87 @@
+footer
+	background: darken($white,10%)
+	.footer-top
+		padding: 40px 0
+	.footer-col
+		margin-bottom: 20px
+	.footer-title
+		+fs(15rem)
+		font-weight: bold
+		margin-bottom: 20px
+		&:after
+			content: ''
+			display: block
+			width: 110px
+			height: 1px
+			background: $blue
+			margin-top: 15px
+	.footer-link
+		a
+			display: block
+			+fs(13rem)
+			color: darken($white,60%)
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
+			&:hover
+				color: $blue
+	.module-title
+		display: block
+		+fs(13rem)
+		color: darken($white,60%)
+		margin-bottom: 10px
+	.subscribefrm
+		+flexbox
+		background: $white
+		+bor-rad(50px)
+		overflow: hidden
+		align-items: center
+		align-content: center
+		justify-content: space-between
+		margin-bottom: 20px
+		input
+			border: none
+			+fs(13rem)
+			padding: 0px 15px
+		.subscribebutton
+			background: $red
+			color: $white
+			+fs(12rem)
+			font-weight: bold
+			text-transform: uppercase
+			+bor-rad(50px)
+			line-height: 40px
+			padding: 0px 25px
+	.social
+		+flexbox
+		a
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			width: 48px
+			height: 48px
+			+bor-rad(50px)
+			border: 2px solid $blue
+			+fs(24rem)
+			color: $blue
+			+ a
+				margin-left: 10px
+			&:hover
+				background: $blue
+				color: $white
+	.footer-bottom
+		padding: 15px 0
+		background: $blue
+		.footer-wrap
+			+flexbox
+			justify-content: space-between
+			+media-breakpoint-down(lg)
+				justify-content: center
+				text-align: center
+				flex-wrap: wrap
+		.footer-address, .copyright
+			+fs(13rem)
+			line-height: 20px
+			color: $white
+			font-weight: bold

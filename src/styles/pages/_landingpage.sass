@@ -1,0 +1,63 @@
+.landing-section
+	padding: 50px 0
+	+pos(rel,null)
+	+media-breakpoint-down(sm)
+		padding: 30px 0
+	.home-title
+		+media-breakpoint-up(lg)
+			margin-bottom: 40px
+	.content
+	.card-drop
+		+pos(abs,0 null null 47%)
+		z-index: 3
+		+media-breakpoint-down(sm)
+			+pos(static,null)
+			margin: -31px 0 0px 40px
+.landing-time
+	background: #ffcd43
+	padding: 50px 0
+	+media-breakpoint-down(sm)
+		padding: 30px 0
+	.time-content
+		height: 100%
+		padding: 30px 0px 0px
+		+flexbox
+		flex-direction: column
+		justify-content: center
+		text-align: center
+.landing-award
+	background: $main
+	padding: 50px 0
+	+media-breakpoint-down(sm)
+		padding: 30px 0
+	.award-table
+		table
+			th, td
+				vertical-align: middle
+				padding: 0 5px
+				+media-breakpoint-down(sm)
+					vertical-align: top
+			th
+				+fs(24rem)
+				font-weight: bold
+				color: $yellow
+				text-align: right
+				+media-breakpoint-down(sm)
+					+fs(15rem)
+					white-space: nowrap
+			td
+				+fs(14rem)
+				color: $white
+.landing-policy
+	padding: 50px 0
+	background: $white
+	.btn-viewdetail
+		display: inline-block
+		+fs(14rem)
+		font-weight: bold
+		padding: 0px 40px
+		line-height: 40px
+		+bor-rad(50px)
+		background: $blue
+		color: $white
+		border: none

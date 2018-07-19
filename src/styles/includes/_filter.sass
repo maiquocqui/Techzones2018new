@@ -1,0 +1,189 @@
+// TOGGLE BUTTON
+.btn-togglewrap
+	+pos(fix, null 0 0 0)
+	z-index: 50
+	+flexbox
+	background: $white
+	border-top: 1px solid darken($white,15%)
+	.btn-showcate, .btn-showfilter
+		text-align: center
+		line-height: 40px
+		padding: 0px
+		width: 100%
+		&.active
+			background: darken($white,5%)
+	.btn-showcate
+		&:before
+			content: '\f00b'
+			font-family: 'fontawesome'
+			margin-right: 10px
+			line-height: 1
+			// +fs(18rem)
+			display: inline-block
+			vertical-align: middle
+			+media-breakpoint-down(xs)
+				// +fs(15rem)
+				margin-right: 5px
+	.btn-showfilter
+		border-left: 1px solid darken($white,15%)
+		&:before
+			content: '\f013'
+			font-family: 'fontawesome'
+			margin-right: 10px
+			line-height: 1
+			// +fs(18rem)
+			display: inline-block
+			vertical-align: middle
+			+media-breakpoint-down(xs)
+				// +fs(15rem)
+				margin-right: 5px
+
+// PRODUCT FILTER
+
+.product-filter
+	padding: 0 25px
+	background: darken($white,3%)
+	margin-bottom: 30px
+	.category-group
+		.filter-name
+			+fs(18rem)
+			color: $main
+			line-height: 1
+			font-weight: 600
+			text-transform: uppercase
+			margin-bottom: 15px
+	.option-group
+		.filter-group
+			border-top: 1px solid darken($white,10%)
+	.filter-group
+		padding: 25px 0
+	.filter-name
+		+fs(16rem)
+		color: $red
+		text-transform: uppercase
+		font-weight: 500
+	.filter-category
+		text-transform: capitalize
+		> ul
+			> li
+				> a
+					+fs(14rem)
+					font-weight: 500
+					color: darken($white,60%)
+					line-height: 16px
+					display: block
+					padding: 10px 20px
+					+pos(rel,null)
+				&.has-sub
+					> a
+						&:before
+							content: '\f0d7'
+							+pos(abs, 10px null null 0)
+					.sub-filter
+						display: none
+						padding-left: 20px
+						ul
+							li
+								a
+									+fs(12rem)
+									color: darken($white,40%)
+									padding-left: 20px
+									+pos(rel,null)
+									&:before
+										content: ''
+										width: 14px
+										height: 14px
+										+bor-rad(3px)
+										+pos(abs, 0 null null 0)
+										border: 1px solid darken($white,20%)
+									&:after
+										content: ''
+										width: 10px
+										height: 10px
+										+bor-rad(3px)
+										background: $red
+										+pos(abs, 2px null null 2px)
+										opacity: 0
+								&.active
+									a
+										color: $main
+										font-weight: 500
+										&:before
+											border-color: darken($white,40%)
+										&:after
+											opacity: 1
+				&.active
+					> a
+						color: $red
+						&:before
+							+transform(scale(1,-1))
+					.sub-filter
+						display: block
+	.filter-range
+		margin: 0px 10px
+		+pos(rel,null)
+		&:before, &:after
+			content: ''
+			display: table
+			width: 100%
+			clear: both
+		#slider-range
+			width: 100%
+			height: 4px
+			background: darken($white,10%)
+			margin: 15px 0 15px
+			+pos(rel,null)
+			+transition(all,0s)
+		.ui-widget-header
+			background: $red
+			position: absolute
+			z-index: 1
+			display: block
+			top: 0px
+			height: 4px
+			+transition(all,0s)
+		.ui-slider-handle
+			position: absolute
+			z-index: 2
+			cursor: default
+			touch-action: none
+			top: 2px
+			margin-left: -0.6em
+			left: 15%
+			width: 14px
+			height: 14px
+			+bor-rad(50%)
+			background: $white
+			border: 2px solid $red
+			z-index: 1
+			cursor: pointer
+			+transition(all,0s)
+			+transform(translateY(-50%))
+			&:hover
+				background: $red
+		.min, .max
+			width: 16px
+			height: 16px
+			background: darken($white,60%)
+			box-shadow: 0px 0px 5px -1px rgba(0,0,0,.7)
+			z-index: 1
+			cursor: pointer
+			+transition(all,0.5s)
+			+transform(translateY(-50%))
+			&:hover
+				background: $main
+		.min
+			+pos(abs, 50% null null 0)
+		.max 
+			+pos(abs, 50% 0 null null)
+		.price-range
+			// text-transform: uppercase
+			+fs(13rem)
+			// font-weight: bold
+			margin-left: -10px
+		.min-input, .max-input
+			display: inline-block
+			margin: 0 5px
+			font-weight: bold
+			+fs(14rem)
+			color: $red

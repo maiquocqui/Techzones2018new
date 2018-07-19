@@ -1,0 +1,48 @@
+section.product-filter
+	.filter-wrap.category-group
+		.filter-group
+			.filter-name Danh mục
+			.filter-category
+				ul
+					li.has-sub.active
+						a(href="#!") Nội thất đồ gỗ
+						.sub-filter
+							ul
+								li.active
+									a(href="#!") Bàn
+								li
+									a(href="#!") Ghế
+					li.has-sub
+						a(href="#!") Thiết bị/Phụ kiện
+						.sub-filter
+							ul
+								li
+									a(href="#!") Bàn
+								li
+									a(href="#!") Ghế
+					li
+						a(href="#!") Đèn
+					li.has-sub
+						a(href="#!") Thảm
+						.sub-filter
+							ul
+								li
+									a(href="#!") Bàn
+								li
+									a(href="#!") Ghế
+					li
+						a(href="#!") Decor/Trang trí
+					li
+						a(href="#!") Khuyến mãi
+	.filter-wrap.option-group
+		.filter-group
+			.filter-name Giá
+			.filter-range
+				#slider-range.ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all(aria-disabled='false')
+					.ui-slider-range.ui-widget-header.ui-corner-all(style='left: 0%; width: 100%;')
+					a.ui-slider-handle.ui-state-default.ui-corner-all(href='#', style='left: 0%;')
+					a.ui-slider-handle.ui-state-default.ui-corner-all(href='#', style='left: 100%;')
+				.price-range Giá từ
+					.sliderValue.min-input(data-index='0') 0
+					| đến
+					.sliderValue.max-input(data-index='1') 1.000.000

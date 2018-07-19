@@ -1,0 +1,422 @@
+section.breadcrumb-wrap
+	.breadcrumb-content
+		.container
+			ol.breadcrumb
+				li
+					a(href="#!")
+						span Thẻ
+				li
+					a(href="#!")
+						span Đăng ký thẻ
+section.register-page
+	.container
+		h1.home-title.text-blue.text-center.mb-2 Đăng ký thẻ
+		.home-content.text-center.mb-0(style="max-width: unset")
+			.content
+				p Đăng ký thẻ Quốc tế Visa Vietbank để nhận ưu đãi lớn từ VietBank
+		.register-link
+			a(href="#!") Đăng ký nhanh
+			a.active(href="#!") Đăng ký đầy đủ
+		.register-form
+			.module-title 
+				span Chọn loại thẻ
+			.card-list
+				.row
+					.col-12.col-md-4
+						.cre-card
+							input#c1(type="radio", name="card" checked)
+							label(for="c1")
+								.img
+									img(src="img/dangky/c1.png", alt="")
+								.name luxury
+					.col-12.col-md-4
+						.cre-card
+							input#c2(type="radio", name="card")
+							label(for="c2")
+								.img
+									img(src="img/dangky/c2.png", alt="")
+								.name platinum
+					.col-12.col-md-4
+						.cre-card(data-toggle="modal" data-target="#choosecard")
+							input#c3(type="radio", name="card")
+							label(for="c3")
+								.img
+									img(src="img/dangky/c3.png", alt="")
+								.name My style
+
+			#choosecard.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+				.modal-dialog.modal-card(role='document')
+					.modal-content
+						.modal-header
+							.close(data-dismiss='modal', aria-label='Close')
+								.material-icons close
+						.modal-body
+							.module-title 
+								span Chọn loại thẻ
+							.card-list
+								.row
+									.col-12.col-md-3
+										.cre-card
+											input#c21(type="radio", name="card2" checked)
+											label(for="c21")
+												.img
+													img(src="img/dangky/c3.png", alt="")
+												//- .name luxury
+									.col-12.col-md-3
+										.cre-card
+											input#c22(type="radio", name="card2" checked)
+											label(for="c22")
+												.img
+													img(src="img/dangky/c3.png", alt="")
+												//- .name luxury
+									.col-12.col-md-3
+										.cre-card
+											input#c23(type="radio", name="card2" checked)
+											label(for="c23")
+												.img
+													img(src="img/dangky/c3.png", alt="")
+												//- .name luxury
+									.col-12.col-md-3
+										.cre-card
+											input#c24(type="radio", name="card2" checked)
+											label(for="c24")
+												.img
+													img(src="img/dangky/c3.png", alt="")
+												//- .name luxury
+							
+			.register-step
+				.step.finish 01. Thông tin khách hàng
+				.step.active 02. Thông tin tài chính
+				.step 03. Thông tin dịch vụ
+				.step 04. Hoàn thành
+			.form-wrap
+				.form-title Thông tin nghề nghiệp:
+				.form-group
+					label Tên doanh nghiệp :
+					.input
+						input(type="text" placeholder="")
+				.form-group.align-items-start
+					label Địa chỉ làm việc:
+					.input
+						.form-row
+							.col-12
+								input.mb-10(type="text" placeholder="Số nhà tên đường")
+							.col-12.col-md-6.col-lg-4
+								.form-sub.mb-md-10
+									label Phường/Xã:
+									select
+										option
+							.col-12.col-md-6.col-lg-4
+								.form-sub.mb-md-10
+									label Tỉnh/TP:
+									select
+										option
+							.col-12.col-md-6.col-lg-4
+								.form-sub
+									label Quận/Huyện:
+									select
+										option
+				.form-group
+					label Phòng ban:
+					.input
+						.form-row
+							.col-12.col-md-4
+								input.mb-sm-10(type="text")
+							.col-12.col-md-4
+								.form-sub.mb-sm-10
+									label Số ĐT bàn:
+									input(type="text")
+							.col-12.col-md-4
+								.form-sub
+									label Tỉnh/TP:
+									select
+										option
+				.form-group
+					label Chức danh:
+					.input
+						.form-row
+							.col-12.col-md-6
+								input.mb-sm-10(type="text")
+							.col-12.col-md-6
+								.form-sub
+									label Công tác từ:
+									.date-live
+										ul
+											li
+												input(type="text")
+												|tháng
+											li
+												input(type="text")
+												|năm
+				.form-group.align-items-start
+					label Chức vụ:
+					.input
+						.mary-status.mt-10
+							ul
+								li.radio.mb-10
+									input#r1(type="radio", name="radio")
+									label(for="r1") TV góp vốn / Chủ DN
+								li.radio.mb-10
+									input#r2(type="radio", name="radio")
+									label(for="r2") NV/ Chuyên viên
+								li.radio.mb-10
+									input#r3(type="radio", name="radio")
+									label(for="r3") Cấp quản lý
+								li.radio.mb-10
+									input#r4(type="radio", name="radio")
+									label(for="r4") Ban điều hành
+						.form-row.align-items-center
+							.col-12.col-md-3
+								.form-sub
+									label Khác:
+							.col-12.col-md-9
+								input(type="text")
+				.form-group
+					label Tình trạng làm việc:
+					.input
+						.mary-status.mt-10
+							ul
+								li.radio.mb-10
+									input#r1(type="radio", name="radio2")
+									label(for="r1") Chủ Doanh nghiệp
+								li.radio.mb-10
+									input#r2(type="radio", name="radio2")
+									label(for="r2") Bán thời gian
+								li.radio
+									input#r3(type="radio", name="radio2")
+									label(for="r3") Toàn thời gian
+								//- li.radio
+									input#r4(type="radio", name="radio2")
+									label(for="r4") Ban điều hành
+				.form-group.align-items-start
+					label Loại hình doanh nghiệp:
+					.input
+						.mary-status.mt-10
+							ul
+								li.radio.mb-10
+									input#r31(type="radio", name="radio3")
+									label(for="r31") Trách nhiệm hữu hạn
+								li.radio.mb-10
+									input#r32(type="radio", name="radio3")
+									label(for="r32") Doanh nghiệp tư nhân
+								li.radio.mb-10
+									input#r33(type="radio", name="radio3")
+									label(for="r33") Cty liên doanh
+								li.radio.mb-10
+									input#r34(type="radio", name="radio3")
+									label(for="r34") Cổ phần
+								li.radio.mb-10
+									input#r35(type="radio", name="radio3")
+									label(for="r35") Doanh nghiệp nhà nước
+								li.radio.mb-10
+									input#r36(type="radio", name="radio3")
+									label(for="r36") Cơ quan HC-SN
+								li.radio.has-input
+									input#r37(type="radio", name="radio3")
+									label(for="r37") Khác:
+									input.input-text(type="text")
+				.form-group.align-items-start
+					label Lĩnh vực hoạt động:
+					.input
+						.mary-status.mt-10
+							ul
+								li.radio.mb-10
+									input#r41(type="radio", name="radio4")
+									label(for="r41") Giáo dục
+								li.radio.mb-10
+									input#r42(type="radio", name="radio4")
+									label(for="r42") Viễn thông
+								li.radio.mb-10
+									input#r43(type="radio", name="radio4")
+									label(for="r43") DL / NH / KS
+								li.radio.mb-10
+									input#r44(type="radio", name="radio4")
+									label(for="r44") Y tế
+								li.radio.mb-10
+									input#r45(type="radio", name="radio4")
+									label(for="r45") Tài chính ngân hàng
+								li.radio.mb-10
+									input#r46(type="radio", name="radio4")
+									label(for="r46") Giải trí
+								li.radio.mb-10
+									input#r47(type="radio", name="radio4")
+									label(for="r47") Xây dựng
+								li.radio.mb-10
+									input#r48(type="radio", name="radio4")
+									label(for="r48") Địa ốc
+								li.radio.mb-10
+									input#r49(type="radio", name="radio4")
+									label(for="r49") Thương mại dịch vụ
+								li.radio.mb-10
+									input#r410(type="radio", name="radio4")
+									label(for="r410") Sản xuất
+								li.radio.mb-10
+									input#r411(type="radio", name="radio4")
+									label(for="r411") Nông nghiệp
+								li.radio.mb-10
+									input#r412(type="radio", name="radio4")
+									label(for="r412") Vận tải
+								li.radio.has-input.w-100
+									input#r413(type="radio", name="radio4")
+									label(for="r413") Khác:
+									input.input-text(type="text")
+				.form-group.mb-5
+					label Số lượng nhân viên:
+					.input
+						.mary-status.mt-10
+							ul
+								li.radio.mb-10
+									input#r51(type="radio", name="radio5")
+									label(for="r51") < 20 người
+								li.radio.mb-10
+									input#r52(type="radio", name="radio5")
+									label(for="r52") 20 - 100 người
+								li.radio.mb-10
+									input#r53(type="radio", name="radio5")
+									label(for="r53") > 100 người
+				.form-title Thông tin Tài chính:
+				.row.mb-5
+					.col-12.col-md-6
+						.form-group
+							label Tổng thu nhập:
+							.input
+								input(type="text" placeholder="triệu đồng / tháng")
+						.form-group
+							label Tổng chi phí:
+							.input
+								input(type="text" placeholder="triệu đồng / tháng")
+						.form-group
+							label Số người phụ thuộc:
+							.input
+								input(type="text" placeholder="người")
+						.form-group
+							label Số lượng thẻ tín dụng đang sở hữu:
+							.input
+								input(type="text" placeholder="thẻ")
+						.form-group
+							label Hạn mức thẻ tín dụng cao nhất:
+							.input
+								input(type="text" placeholder="triệu đồng")
+					.col-12.col-md-6
+						.form-group
+							label.pb-2 Khoản vay khác:
+							.input.w-100
+								.rent
+									ul
+										li.radio.mb-2
+											input#r61(type="radio", name="radio6")
+											label(for="r61") Không có khoản vay nào
+										li.radio.has-input
+											input#r62(type="radio", name="radio6")
+											label(for="r62") Có
+											input(type="text" placeholder="Tín chấp (hạn mức triệu đồng)")
+				.form-title Thông tin người hôn phối
+				.form-group
+					label(for="") Họ và tên:
+					.input
+						input(type="text")
+				.form-group
+					label(for="") ĐTDĐ:
+					.input
+						.form-row
+							.col-12.col-md-6
+								input.mb-sm-10(type="text")
+							.col-12.col-md-6
+								.form-sub
+									label Email:
+									input(type="text")
+				.form-group.mb-3.mt-3
+					label(for="") 
+						strong.text-black Thông tin nghề nghiệp:
+				.form-group
+					label(for="") Tên doanh nghiệp:
+					.input
+						input(type="text")
+				.form-group.align-items-start
+					label(for="") Địa chỉ làm việc:
+					.input
+						.form-row
+							.col-12
+								input.mb-10(type="text" placeholder="Số nhà tên đường")
+							.col-12.col-md-6.col-lg-4
+								.form-sub.mb-md-10
+									label Phường/Xã:
+									select
+										option
+							.col-12.col-md-6.col-lg-4
+								.form-sub.mb-md-10
+									label Tỉnh/TP:
+									select
+										option
+							.col-12.col-md-6.col-lg-4
+								.form-sub
+									label Quận/Huyện:
+									select
+										option
+				.form-group.mb-5
+					label(for="") Phòng ban
+					.input
+						.form-row
+							.col-12.col-md-6.col-lg-4
+								input.mb-sm-10(type="text")
+							.col-12.col-md-6.col-lg-4
+								.form-sub.mb-sm-10
+									label Chức vụ:
+									input(type="text")
+							.col-12.col-md-6.col-lg-4
+								.form-sub
+									label ĐT bàn:
+									input(type="text")
+				.form-title Thông tin người thân:
+				.form-group
+					label(for="") Mối quan hệ
+					.input
+						.mary-status
+							ul
+								li.radio.mb-10
+									input#r71(type="radio", name="radio7")
+									label(for="r71") Bố / Mẹ
+								li.radio.mb-10
+									input#r72(type="radio", name="radio7")
+									label(for="r72") Anh / Chị / Em
+								li.radio
+									input#r73(type="radio", name="radio7")
+									label(for="r73") Khác
+				.form-group
+					label(for="") Họ và tên:
+					.input
+						input(type="text" placeholder="Tên trên CMND/CCCD/Giấy khai sinh")
+				.form-group
+					label(for="") ĐTDĐ:
+					.input
+						.form-row
+							.col-12.col-md-6
+								input.mb-sm-10(type="text" placeholder="")
+							.col-12.col-md-6
+								.form-sub
+									label(for="") Email:
+									input(type="text" placeholder="")
+				.form-group.align-items-start
+					label(for="") Địa chỉ hiện tại:
+					.input
+						.form-row
+							.col-12
+								input.mb-10(type="text" placeholder="Số nhà tên đường")
+							.col-12.col-md-6.col-lg-4
+								.form-sub.mb-md-10
+									label Phường/Xã:
+									select
+										option
+							.col-12.col-md-6.col-lg-4
+								.form-sub.mb-md-10
+									label Tỉnh/TP:
+									select
+										option
+							.col-12.col-md-6.col-lg-4
+								.form-sub
+									label Quận/Huyện:
+									select
+										option
+				.frm-btn
+					a.btn-secondary.mr-2(href="#!") Trở về
+					input.btn-primary(type="submit", value="Đăng ký")

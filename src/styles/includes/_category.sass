@@ -1,0 +1,56 @@
+.page-cate
+	ul
+		+flexbox
+		// align-items: center
+		// align-content: center
+		justify-content: center
+		border-bottom: 2px solid darken($white,10%)
+		+media-breakpoint-down(sm)
+			border-bottom: none
+			flex-wrap: wrap
+			margin: 0px -5px
+			justify-content: flex-start
+		li
+			margin-bottom: -2px
+			+flexbox
+			align-items: center
+			align-content: center
+			+media-breakpoint-down(sm)
+				padding: 5px
+				width: 50%
+				text-align: center
+				display: block
+			&:after
+				content: ''
+				display: block
+				width: 1px
+				height: 30px
+				background: darken($white,20%)
+				+transform(rotateZ(20deg))
+				margin: 0px 20px
+				+media-breakpoint-down(sm)
+					display: none
+			&:last-child
+				&:after
+					display: none
+			a
+				display: block
+				+fs(14rem)
+				line-height: 46px
+				font-weight: bold
+				text-transform: uppercase
+				border-bottom: 2px solid transparent
+				+media-breakpoint-down(sm)
+					border-bottom: none
+					+bor-rad(5px)
+					background: darken($white,5%)
+			&:hover
+				a
+					color: $red
+			&.active
+				a
+					color: $red
+					border-bottom-color: $red
+					+media-breakpoint-down(sm)
+						background: $red
+						color: $white

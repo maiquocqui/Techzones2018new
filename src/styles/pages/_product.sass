@@ -1,0 +1,180 @@
+.product-section
+	background: $white
+	padding: 50px 0
+	+media-breakpoint-down(sm)
+		padding: 30px 0
+	.product-list
+		.product
+			text-align: center
+			margin-bottom: 60px
+			.product-img
+				display: block
+				img
+			.product-btn
+.product-page
+.product-detail
+	padding: 50px 0
+	+pos(rel,null)
+	+media-breakpoint-down(sm)
+		padding: 30px 0
+	.product-bg
+		+pos(abs, 0 0 null 0)
+		+media-breakpoint-down(md)
+			bottom: 0
+		img
+			width: 100%
+			+media-breakpoint-down(sm)
+				height: 100%
+				object-fit: cover
+	.container
+		+pos(rel,null)
+		z-index: 1
+	.product-cate
+		margin: 0px auto 5px
+	.product-name
+		+fs(24rem)
+		text-transform: uppercase
+		color: $main
+		margin-bottom: 60px
+	.product-img
+		margin-bottom: 70px
+.product-title
+	+fs(24rem)
+	font-weight: bold
+	margin-bottom: 25px
+	text-transform: uppercase
+	+media-breakpoint-down(sm)
+		+fs(20rem)
+		margin-bottom: 20px
+.product-feature
+	padding: 50px 0
+	background: $white
+	+media-breakpoint-down(sm)
+		padding: 30px 0
+	.feature-content
+		padding: 30px 0
+		.title 
+			+fs(24rem)
+			font-weight: bold
+			margin-bottom: 25px
+			text-transform: uppercase
+		.content
+			+fs(14rem)
+		.feature
+			+flexbox
+			align-items: center
+			align-content: center
+			margin-bottom: 25px
+			.icon
+				+flexbox
+				align-items: center
+				align-content: center
+				width: 40px
+			.name
+				width: calc(100% - 40px)
+				+fs(14rem)
+				text-transform: uppercase
+				color: darken($white,60%)
+		.btn-viewmore
+			+fs(12rem)
+			font-weight: bold
+			color: $white
+			background: $blue
+			padding: 0px 30px
+			+bor-rad(50px)
+			display: inline-block
+			line-height: 36px
+			text-transform: uppercase
+			&:hover
+				background: $yellow
+				color: $main
+.product-limit
+	background: darken($white,4%)
+	+pos(rel,null)
+	.product-img
+		text-align: right
+	.limit-content
+		+pos(abs,0 null 0 auto)
+		width: 540px
+		+flexbox
+		flex-direction: column
+		justify-content: center
+		background: linear-gradient(to right, darken($white,4%) 50%,color-rgba(darken($white,4%),0))
+		+media-breakpoint-down(sm)
+			+pos(static,null)
+			width: 100%
+			padding: 30px 0
+		.title 
+		.content
+			+fs(14rem)
+.product-promotion
+	padding: 50px 0
+	background: $white
+	+media-breakpoint-down(sm)
+		padding: 30px 0
+	.promotion-list
+		.promotion
+			margin-bottom: 20px
+			figure
+				.promotion-img
+					img
+						width: 100%
+				figcaption
+					text-align: center
+					padding: 20px 10px
+					.promotion-name
+						+fs(24rem)
+						color: $blue
+						margin-bottom: 10px
+					.promotion-des
+						+fs(15rem)
+.product-register
+	background: $blue
+	+media-breakpoint-down(md)
+		padding: 20px 0
+	.register-wrap
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: space-between
+		+media-breakpoint-down(md)
+			flex-direction: column
+			justify-content: center
+		.register-intro
+			+flexbox
+			align-items: center
+			align-content: center
+			+media-breakpoint-down(md)
+				flex-direction: column
+				align-items: center
+				align-content: center
+				text-align: center
+			.module-title
+				+fs(18rem)
+				text-transform: uppercase
+				color: $white
+				+media-breakpoint-down(lg)
+					+fs(16rem)
+			.btn-register
+				+fs(12rem)
+				text-transform: uppercase
+				font-weight: bold
+				color: $white
+				background: $red
+				+bor-rad(50px)
+				padding: 0px 35px
+				line-height: 34px
+				margin-left: 30px
+				+media-breakpoint-down(lg)
+					margin-left: 10px
+				+media-breakpoint-down(md)
+					margin: 10px 0
+		.register-pr
+			padding: 10px 0
+			text-align: right
+			margin-top: -80px
+			&.s2
+				margin-top: -38px
+			+media-breakpoint-down(md)
+				margin-top: 0
+			img
