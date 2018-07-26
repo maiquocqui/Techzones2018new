@@ -2,7 +2,9 @@
 	+pos(rel,null)
 .home-banner
 	+pos(rel,null)
-.banner
+	margin: 30px 0
+	background: $white
+.banner-slide
 	.slick-prev, .slick-next
 		+pos(abs, 50% null null null)
 		+transform(translateY(-50%))
@@ -17,53 +19,50 @@
 			font-family: 'linearicons-free'
 			+fs(28rem)
 	.slick-prev
-		left: 50px
+		left: 0px
 		&:before
 			content: '\e875'
 	.slick-next
-		right: 50px
+		right: 0px
 		&:before
 			content: '\e876'
 	&:hover
 		.slick-prev, .slick-next
 			opacity: 1
-	.slick-dots
-		text-align: center
-		+pos(abs, null 0 20px 0)
-		+media-breakpoint-down(sm)
-			bottom: 10px
-		li
-			display: inline-block
-			width: 10px
-			height: 10px
-			+bor-rad(50px)
-			background: $white
-			cursor: pointer
-			+transition(all,0.5s)
-			+ li
-				margin-left: 6px
-			button
-				display: none
-			&.slick-active
-				background: $red
+		.slick-prev
+			left: 20px
+		.slick-next
+			right: 20px
 	.item
-		+pos(rel,null)
 		.banner-img
+			display: block
 			img
 				width: 100%
-				+media-breakpoint-down(lg)
-					height: 350px
-					object-fit: cover
-				+media-breakpoint-down(md)
-					height: 200px
-		.banner-caption 
-			+fs(30rem)
-			font-weight: 500
-			color: $white
+				height: 415px
+				object-fit: cover
+.banner-nav
+	padding: 15px 0
+	overflow: hidden
+	.slick-list
+		margin-left: -1px
+	.item
+		border-left: 1px solid darken($white,15%)
+		.banner-des
+			+fs(13rem)
+			line-height: 1.2
 			text-align: center
-			+pos(abs, null 0 210px 0)
-			z-index: 1
-			background-size: cover
+			padding: 0px 10px
+			display: -webkit-box
+			height: 0.8125rem*1.2*2
+			-webkit-line-clamp: 2
+			-webkit-box-orient: vertical
+			overflow: hidden
+			text-overflow: ellipsis
+			cursor: pointer
+	.slick-current
+		.item
+			.banner-des
+				font-weight: 700
 
 .slick-slide
 	.item
