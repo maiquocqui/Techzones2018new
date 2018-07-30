@@ -1,39 +1,50 @@
 // FORM INIT
-// input, textarea, select
-// 	font-family: inherit
-// .form-wrap, .apply-frm
-// 	.form-group
-// 		// margin-bottom: 15px
-// 		label
-// 			+fs(13rem)
-// 			// color: darken($white,40%)
-// 		input, textarea, select
-// 			@extend .form-control
-// 			background: darken($white,5%)
-// 			width: 100%
-// 			+bor-rad(0px)
-// 			line-height: 20px
-// 			+fs(14rem)
-// 			color: $main
-// 			padding: 0.625rem 1.25rem
-// 			border-color: darken($white,6%)
-// 			font-family: 'Montserrat', sans-serif
-// 			&:active, &:focus
-// 				background: darken($white,10%)
-// 				border-color: lighten($red,20%)
-// 				box-shadow: 0 0 0 0.2rem color-rgba($red,0.3)
-// 		textarea
-// 			min-height: 110px
-// 	.frm-btn
-// 		padding: 10px 5px 0
-// 	input[type="submit"]
-// 		// @extend .btn-submit
-// 		line-height: 36px
-// .frm-btnwrap
-// 	label
-// 		display: none
+.form-wrap
+	.form-group
+	label
+		display: block
+		+fs(14rem)
+		font-weight: 500
+		padding: 5px 0
+	input
+		+fs(14rem)
+		padding: 8px 15px
+		+bor-rad(5px)
+		border: 1px solid darken($white,10%)
+		width: 100%
+		color: $main
+		&::-webkit-input-placeholder
+			color: inherit
+			opacity: 0.5
+		&:active, &:focus
+			border-color: $blue
+			box-shadow: 0 0 0 0.2rem color-rgba($blue,0.3)
 
 // FORM COMPONENTS
+.input-number
+	+flexbox
+	border: 1px solid darken($white,10%)
+	+bor-rad(5px)
+	background: $white
+	width: 72px
+	.btn-spin
+		width: 20px
+		height: 22px
+		+fs(14rem)
+		line-height: 22px
+		text-align: center
+		font-weight: 700
+		cursor: pointer
+	input 
+		width: 30px
+		margin: 0
+		padding: 0
+		border: none
+		line-height: 22px
+		text-align: center
+		+fs(13rem)
+		font-weight: 700
+
 .checkbox
 	input
 		display: none

@@ -1,0 +1,56 @@
+.dropdown.dropdown-custom
+	a.dropdown-toggle.cart-toggle(href='#', data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+		.cart-amount Giỏ hàng
+			span.amount 3
+	.dropdown-menu.dropdown-menu-right.cart-panel
+		.dropdown-title
+			.btn-closedropdown
+			| Giỏ hàng
+		.cart-list
+			.item
+				.cart-item
+					figure
+						a.img(href="#!")
+							img(src="img/product/1.jpg", alt="")
+						figcaption
+							a.name(href="#!") Acer Nitro 5 Carbon AN515
+							.amount Số lượng
+								.input-number
+									.btn-spin.btn-dec -
+									input(type="number", name="", value="1")
+									.btn-spin.btn-inc +
+							.price  
+								.new 20.000.000đ
+			.item
+				.cart-item
+					figure
+						a.img(href="#!")
+							img(src="img/product/5.jpg", alt="")
+						figcaption
+							a.name(href="#!") Asus ROG Strix SCAR II GL504 Series
+							.amount Số lượng
+								.input-number
+									.btn-spin.btn-dec -
+									input(type="number", name="", value="1")
+									.btn-spin.btn-inc +
+							.price 
+								.new 40.000.000đ
+			.item
+				.cart-item
+					figure
+						a.img(href="#!")
+							img(src="img/product/3.jpg", alt="")
+						figcaption
+							a.name(href="#!") Acer Nitro 5 Carbon AN515
+							.amount Số lượng
+								.input-number
+									.btn-spin.btn-dec -
+									input(type="number", name="", value="1")
+									.btn-spin.btn-inc +
+							.price  
+								.new 0đ
+		.cart-checkout
+			.cart-total Tổng tiền: 
+				strong 60.000.000đ
+			.btn-wrap
+				a.btn-checkout(href='#!') Thanh toán

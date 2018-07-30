@@ -1,23 +1,52 @@
+.fullpage
+	padding-top: 110px
+	+media-breakpoint-down(lg)
+		padding-top: 50px
 header
 	background: $white
-	border-bottom: 1px solid darken($white,5%)
+	+pos(fix, 0 0 null 0)
+	z-index: 1000
+	+transition(all,0.5s)
+	&.minimal
+		box-shadow: 0px 10px 50px -10px color-rgba($black,0.1)
 	.header-wrap
 		+flexbox
 		flex-wrap: wrap
 		align-items: center
 		align-content: center
+	.btn-showmenu
+		display: none
+		margin-right: 15px
+		+media-breakpoint-down(lg)
+			+flexbox
+			align-items: center
+			align-content: center
+	.overlay
+		+pos(fix, 0 null 0 0)
+		right: 0
+		opacity: 0.5
+		z-index: 500
+		background: $black
+		-webkit-backdrop-filter: blur(10px)
+		backdrop-filter: blur(10px)
+		display: none
 	.sitelogo
 		+flexbox
 		height: 70px
 		align-items: center
 		align-content: center
-		justify-content: center
+		+media-breakpoint-down(lg)
+			height: 50px
+			flex: auto
 		a
 			display: block
 		img
 			height: 30px
+	// TOP MENU
 	.top-menu
 		margin-left: 40px
+		+media-breakpoint-down(lg)
+			display: none
 		ul.menu-link
 			+flexbox
 			> li
@@ -31,22 +60,92 @@ header
 				&:hover
 					> a
 						color: $blue
+	// HOTLINE
+	.hotline
+		+media-breakpoint-up(xl)
+			+pos(fix, null null 20px 20px)
+		a
+			display: block
+			+media-breakpoint-up(xl)
+				+flexbox
+				width: 50px
+				height: 50px
+				align-items: center
+				align-content: center
+				justify-content: center
+				+bor-rad(50px)
+				color: $white
+				background: $bluegradient
+				&:after
+					content: ''
+					display: block
+					+pos(abs, 0 null 0 0)
+					right: 0
+					background: $bluegradient
+					opacity: .5
+					+bor-rad(50px)
+					+transform(scale3d(1.3,1.3,1.3))
+					animation-name: hotline-animate
+					animation-duration: 1s
+					animation-iteration-count: infinite
+			.material-icons
+				display: block
+				+media-breakpoint-up(xl)
+					+pos(rel,null)
+					z-index: 1
+					animation-name: phone-ring
+					animation-duration: 2s
+					animation-iteration-count: infinite
+	// SEARCH
 	.search
 		margin-left: 40px
 		flex: auto
+		+pos(rel,null)
+		+media-breakpoint-down(lg)
+			flex: unset
+			margin-left: 15px
+		.search-toggle
+			display: none
+			+media-breakpoint-down(lg)
+				display: block
+			.material-icons
+				display: block
 		.search-wrap
+			+media-breakpoint-down(lg)
+				display: none
+				+pos(fix, 0 null 0 0)
+				right: 0
+				z-index: 1000
+				background: $white
+			.btn-closesearch
+				display: none
+				+media-breakpoint-down(lg)
+					+flexbox
+					align-items: center
+					align-content: center
+					+pos(abs, 0 null null 15px)
+					height: 50px
+					z-index: 5
 			.searchbox
-				+flexbox
-				align-items: center
-				align-content: center
-				background: darken($white,3%)
-				+bor-rad(3px)
-				input
-					background: none
-					+fs(14rem)
-					width: calc(100% - 40px)
-					border: none
+				+pos(rel,null)
+				z-index: 600
+				+media-breakpoint-down(lg)
 					padding: 0px 15px
+					z-index: 1
+				input
+					background: darken($white,3%)
+					+bor-rad(5px)
+					+fs(14rem)
+					line-height: 20px
+					width: 100%
+					border: none
+					padding: 10px 15px
+					padding-right: 50px
+					+media-breakpoint-down(lg)
+						margin: 7px 0
+						margin-left: 34px
+						padding: 8px 15px
+						width: calc(100% - 34px)
 					&::-webkit-input-placeholder
 						opacity: 0.5
 				.searchbutton
@@ -57,33 +156,90 @@ header
 					align-content: center
 					justify-content: center
 					cursor: pointer
+					+pos(abs, 0 0 null null)
+					+media-breakpoint-down(lg)
+						right: 15px
+						height: 36px
+						top: 7px
 					&:hover
 						color: $blue
+				&.active
+					input
+						background: $white
+						box-shadow: 0px 10px 50px -10px color-rgba($black,0.1)
 	.col-right
 		+flexbox
 		align-items: center
 		align-content: center
 		justify-content: flex-end
-	.check-tool
+	.site-feature
 		+flexbox
 		align-items: center
 		align-content: center
-		&:before
-			content: 'find_in_page'
-			@extend .material-icons
-			+fs(24rem)
-			margin-right: 5px
+		margin-left: 30px
+		.feature
+			+flexbox
+			align-items: center
+			align-content: center
+			width: 33.33%
+			.icon
+				opacity: 0.6
+			.name
+				+fs(11rem)
+				line-height: 1.3
+				color: darken($white,40%)
+				width: 70px
+				padding-left: 10px
+	// CHECK ORDER
+	.check-tool
+		margin-left: 20px
+		+media-breakpoint-down(lg)
+			margin-left: 0
 		a
-			display: block
-			+fs(13rem)
+			+flexbox
+			align-items: center
+			align-content: center
+			+fs(12rem)
 			line-height: 1.1
-			font-weight: 700
-			width: 60px
+			font-weight: 500
+			width: 80px
+			+media-breakpoint-down(lg)
+				width: 100%
+				padding: 10px 15px
+				font-weight: normal
+				+fs(14rem)
+				color: darken($white,60%)
+			&:before
+				+media-breakpoint-down(lg)
+		&.s1
+			margin-left: 40px
+			+media-breakpoint-down(lg)
+				margin-left: 0
+			a
+				&:before
+					content: 'assignment'
+					@extend .material-icons
+					+fs(24rem)
+					margin-right: 5px
+					+media-breakpoint-down(lg)
+						margin-right: 10px
+		&.s2
+			a
+				&:before
+					content: 'event_available'
+					@extend .material-icons
+					+fs(24rem)
+					margin-right: 5px
+					+media-breakpoint-down(lg)
+						margin-right: 10px
 		&:hover
 			a
 				color: $blue
+	// LOGIN
 	.login-tool
-		margin-left: 40px
+		margin-left: 20px
+		+media-breakpoint-down(lg)
+			display: none
 		.dropdown-toggle
 			+fs(14rem)
 			font-weight: 700
@@ -95,6 +251,10 @@ header
 				content: 'person'
 				@extend .material-icons
 				+fs(28rem)
+				+flexbox
+				align-items: center
+				align-content: center
+				height: 24px
 				margin-right: 5px
 			&:after
 				display: none
@@ -102,47 +262,55 @@ header
 				color: $blue
 		.dropdown-menu
 			min-width: 270px
-			.login
-				ul
-					li
-						margin-bottom: 10px
-						a
-							@extend .btn-main
-							display: block
-							// color: $black
-			.social-login
-				ul
-					li 
-						margin-bottom: 10px
-						&:last-child
-							margin-bottom: 0
-						a
-							@extend .btn-main
-							color: $white
-							+flexbox
-							align-items: center
-							align-content: center
-							padding: 0
-							.fa
-								width: 40px
-								height: 30px
-								+flexbox
-								align-items: center
-								align-content: center
-								justify-content: center
-								+fs(16rem)
-								border-right: 1px solid color-rgba($white,0.5)
-							span
-								display: block
-								width: calc(100% - 40px)
-								padding: 0px 10px
-								text-align: center
-							&.facebook
-								background: $facebook
-							&.google
-								background: $google
+			padding: 10px
+	.login
+		ul
+			li
+				margin-bottom: 10px
+				a
+					@extend .btn-main
+					display: block
+					text-transform: uppercase
+	.social-login
+		ul
+			li 
+				margin-bottom: 10px
+				&:last-child
+					margin-bottom: 0
+				a
+					@extend .btn-main
+					color: $white
+					+flexbox
+					align-items: center
+					align-content: center
+					padding: 0
+					.fa
+						width: 40px
+						height: 30px
+						+flexbox
+						align-items: center
+						align-content: center
+						justify-content: center
+						+fs(16rem)
+						border-right: 1px solid color-rgba($white,0.5)
+					span
+						display: block
+						width: calc(100% - 40px)
+						padding: 0px 10px
+						text-align: center
+					&.facebook
+						background: $facebook
+						&:hover
+							box-shadow: 0px 10px 20px -10px color-rgba($black,0.7)
+					&.google
+						background: $google
+						&:hover
+							box-shadow: 0px 10px 20px -10px color-rgba($black,0.7)
+	// NOTIFICATION
 	.notification
 		margin-left: 20px
+		+media-breakpoint-down(lg)
+			display: none
 		.dropdown-toggle
 			+fs(0rem)
 			font-weight: 700
@@ -159,28 +327,74 @@ header
 			&:hover
 				color: $blue
 		.dropdown-menu
-			min-width: 300px
-			padding: 0
+			min-width: 350px
 			.notification-list
+				max-height: 300px
+				overflow: auto
+				+scrollbar
 				ul
 					li
+						border-bottom: 1px dashed darken($white,5%)
 						.notification-item
-							+flexbox
-							align-items: center
-							align-content: center
+							display: block
+							+pos(rel,null)
+							+transition(all,0.5s)
 							&:before
 								content: ''
-								width: 100px
-								height: 100px
-								+bor-rad(50%)
+								+pos(abs, 0 null 0 0)
+								width: 3px
+								background: $bluegradient-v
+								opacity: 0
+								+transition(all,0.5s)
+							figure
 								+flexbox
-								align-items: center
-								align-content: center
-								justify-content: center
-							.notification-content
-
+								align-items: flex-start
+								align-content: flex-start
+								padding: 10px 15px
+								.img
+									width: 40px
+								figcaption
+									width: calc(100% - 40px)
+									padding-left: 10px
+									.name
+										+fs(13rem)
+										line-height: 1.3
+										+textover(3)
+										+transition(all,0.5s)
+									time
+										+fs(12rem)
+										line-height: 1
+										color: darken($white,40%)
+										display: inline-block
+										margin-top: 5px
+							&:hover
+								background: color-rgba($blue,0.1)
+								&:before
+									opacity: 1
+								figure
+									figcaption
+										.name
+											color: $blue
+			.btn-viewallno
+				+pos(static,null)
+				font-weight: normal
+				padding: 7px 0
+				text-align: center
+				display: block
+				border-top: 1px solid darken($white,10%)
+				color: $blue
+				+fs(14rem)
+				&:after
+					content: '\f105'
+					margin-left: 5px
+				&:hover
+					color: $main
+	// CART
 	.cart
 		margin-left: 20px
+		+pos(rel,null)
+		+media-breakpoint-down(lg)
+			margin-left: 15px
 		.cart-toggle
 			.cart-amount
 				+fs(0rem)
@@ -189,57 +403,114 @@ header
 				+flexbox
 				align-items: center
 				align-content: center
+				+pos(rel,null)
 				&:before
 					content: 'shopping_cart'
 					@extend .material-icons
 					+fs(24rem)
+					+transition(all,0.5s)
 				&:hover
 					color: $blue
-	.header-menu
-	.menu
-		ul.menu-link
-			+flexbox
-			align-items: center
-			align-content: center
-			li
-				+ li
-					margin-left: 5px
-				a
+				.amount
+					+fs(10rem)
+					line-height: 1
+					+bor-rad(50px)
+					padding: 2px 5px
+					color: $white
+					background: $orangegradient
+					+pos(abs, -3px -5px null null)
+		.cart-panel
+			@extend .dropdown-menu
+			@extend .dropdown-menu-right
+			min-width: 350px
+			.dropdown-title
+				+pos(rel,null)
+				+media-breakpoint-down(sm)
 					+flexbox
 					align-items: center
 					align-content: center
-					line-height: 20px
-					+fs(14rem)
+					padding: 0 15px
+			.cart-list
+				max-height: 300px
+				overflow: auto
+				+scrollbar
+				+media-breakpoint-down(sm)
+					max-height: unset
+					height: calc(100vh - 102px)
+				.item
+					border-bottom: 1px dashed darken($white,5%)
+					&:last-child
+						border-bottom: none
+				.cart-item
+					display: block
 					padding: 10px 15px
-					color: darken($white,40%)
-					+pos(rel,null)
-					&:after
-						content: ''
-						+pos(abs, null 0 0 0)
-						height: 3px
-						background: $bluegradient
-						z-index: 1
-						opacity: 0
-						+transition(all,0.5s)
-					.material-icons
-						margin-right: 5px
-						font-size: 18px
-					span
-						font-weight: 500
-				&.sale
-					border-left: 1px solid color-rgba($black,0.1)
-					padding-left: 20px
-					a
-						padding: 0
-						color: darken($white,60%)
-					&.active
-						&:after
-							display: none
-				&:hover
-					a
-						color: $blue
-				&.active
-					a
-						color: $main
-						&:after
-							opacity: 1
+					figure
+						+flexbox
+						align-items: flex-start
+						align-content: flex-start
+						.img
+							width: 60px
+							height: 60px
+							+flexbox
+							align-items: center
+							align-content: center
+							justify-content: center
+							img
+								max-width: 90%
+								max-height: 90%
+						figcaption
+							width: calc(100% - 60px)
+							padding-left: 10px
+							.name
+								+fs(13rem)
+								line-height: 1.3
+								font-weight: 500
+								display: -webkit-box
+								-webkit-line-clamp: 2
+								-webkit-box-orient: vertical
+								overflow: hidden
+								text-overflow: ellipsis
+								+transition(all,0.5s)
+							.amount
+								+fs(13rem)
+								.input-number
+									margin-left: 5px
+									// width: 60px
+									// +fs(13rem)
+									// +bor-rad(5px)
+									// overflow: hidden
+									// text-align: center
+									// border: 1px solid darken($white,10%)
+							.price
+								margin-top: 5px
+								.new
+									color: $bluegrey
+									+fs(13rem)
+									line-height: 1
+									font-weight: 700
+					&:hover
+						figure
+							figcaption
+								.name
+									color: $blue
+			.cart-checkout
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: space-between
+				padding: 7px 15px
+				border-top: 1px solid darken($white,10%)
+				+media-breakpoint-down(sm)
+					+pos(abs, null 0 0 0)
+					z-index: 5
+				.cart-total
+					+fs(13rem)
+					strong
+						color: $red
+						+fs(15rem)
+						margin-left: 5px
+				.btn-checkout
+					@extend .btn-main
+					line-height: 36px
+					padding: 0px 15px
+	.header-menu

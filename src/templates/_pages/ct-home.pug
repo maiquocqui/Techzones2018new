@@ -1,5 +1,6 @@
 .container
-	.row.row-s
+	h1.d-none Techzones - Nơi chia sẻ niềm đam mê công nghệ
+	.row.row-m
 		.col-12.col-lg-8
 			section.banner-wrap.home-banner
 				.banner-slide
@@ -36,7 +37,7 @@
 						.banner-des Đặt OPPO Find X nhận quà siêu xịn
 		.col-12.col-lg-4
 			section.home-video
-				.home-title 
+				h2.home-title 
 					a(href="#!") Video mới nhất
 				.video-wrap
 					//- .video-big
@@ -109,4 +110,632 @@
 									.video-des
 										.video-name PC GAMING AORUS | Chiêm ngưỡng siêu phẩm " Thần chim" dưới 30 triệu ???
 										.video-view 3:5 - 4.103 Lượt xem
-		.col-12
+				.btn-wrap
+					a.btn-viewall(href="#!") Xem thêm
+	section.home-qc
+		.qc-list
+			.item
+				a.banner-qc(href="#!")
+					img(src="img/banner/ad1.jpg", alt="")
+			.item
+				a.banner-qc(href="#!")
+					img(src="img/banner/ad2.jpg", alt="")
+			.item
+				a.banner-qc(href="#!")
+					img(src="img/banner/ad3.jpg", alt="")
+			.item
+				a.banner-qc(href="#!")
+					img(src="img/banner/ad4.jpg", alt="")
+	section.home-category
+		h2.home-title Ngành hàng
+		.category-wrap
+			.category-list
+				.item
+					a.category-item(href="#!")
+						.img
+							img(src="img/cate/1.jpg", alt="")
+						.name
+							i.material-icons watch
+							span Thiết bị đeo tay
+				.item
+					a.category-item(href="#!")
+						.img
+							img(src="img/cate/2.jpg", alt="")
+						.name
+							i.material-icons tv
+							span Home theater
+				.item
+					a.category-item(href="#!")
+						.img
+							img(src="img/cate/3.jpg", alt="")
+						.name
+							i.material-icons headset_mic
+							span Âm thanh
+				.item
+					a.category-item(href="#!")
+						.img
+							img(src="img/cate/4.jpg", alt="")
+						.name
+							i.material-icons computer
+							span Máy tính
+				.item
+					a.category-item(href="#!")
+						.img
+							img(src="img/cate/5.jpg", alt="")
+						.name
+							i.material-icons videogame_asset
+							span Gaming Gear
+				.item
+					a.category-item(href="#!")
+						.img
+							img(src="img/cate/6.jpg", alt="")
+						.name
+							i.material-icons videocam
+							span Camera
+				.item
+					a.category-item(href="#!")
+						.img
+							img(src="img/cate/7.jpg", alt="")
+						.name
+							i.material-icons settings_input_hdmi
+							span Phụ kiện
+				.item
+					a.category-item(href="#!")
+						.img
+							img(src="img/cate/8.jpg", alt="")
+						.name
+							i.material-icons restore
+							span Hàng 2nd
+		.btn-wrap
+			a.btn-viewall(href="#!") Xem thêm
+	section.home-hotsale
+		.home-navs
+			ul#myTab.nav.nav-tabs(role='tablist')
+				li.nav-item
+					a#home-tab.nav-link.active(data-toggle='tab', href='#home', role='tab', aria-controls='home', aria-selected='true') Sản phẩm mới
+				li.nav-item
+					a#profile-tab.nav-link(data-toggle='tab', href='#profile', role='tab', aria-controls='profile', aria-selected='false') Bán chạy
+				li.nav-item
+					a#contact-tab.nav-link(data-toggle='tab', href='#contact', role='tab', aria-controls='contact', aria-selected='false') Khuyến mãi
+			#myTabContent.tab-content
+				#home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab')
+					.product-list
+						.row.no-gutters
+							.col-6.col-sm-4.col-md-3.col-lg-2.item
+								a.product-col(href='#!')
+									figure
+										.product-img
+											img(src='img/product/1.jpg', alt='')
+										figcaption
+											h2.product-name Acer Nitro 5 Carbon AN515
+											.product-price
+												.new 20.990.000 đ
+											.product-rating
+												select.bar-rating
+													option(value='1') 1
+													option(value='2') 2
+													option(value='3') 3
+													option(value='4' selected="selected") 4
+													option(value='5') 5
+												span 70 đánh giá
+											.product-des
+												p Giảm 1 triệu thanh toán online bằng Mastercard và 2 KM khác
+							.col-6.col-sm-4.col-md-3.col-lg-2.item
+								a.product-col(href='#!')
+									figure
+										.product-img
+											img(src='img/product/2.jpg', alt='')
+										figcaption
+											h2.product-name Acer Nitro 5 Carbon AN515
+											.product-price
+												.new 20.990.000 đ
+							.col-6.col-sm-4.col-md-3.col-lg-2.item
+								a.product-col(href='#!')
+									figure
+										.product-img
+											img(src='img/product/3.jpg', alt='')
+										figcaption
+											h2.product-name Acer Nitro 5 Carbon AN515
+											.product-price
+												.new 20.990.000 đ
+							.col-6.col-sm-4.col-md-3.col-lg-2.item
+								a.product-col(href='#!')
+									figure
+										.product-img
+											img(src='img/product/4.jpg', alt='')
+										figcaption
+											h2.product-name Acer Nitro 5 Carbon AN515
+											.product-price
+												.new 20.990.000 đ
+							.col-12.col-sm-8.col-md-6.col-lg-4.item
+								a.product-col(href='#!')
+									figure
+										.product-img
+											img(src='img/product/c1.jpg', alt='')
+										figcaption
+											h2.product-name Garmin Forerunner® 645
+											.product-price
+												.new 9.990.000 đ
+											.product-rating
+												select.bar-rating
+													option(value='1') 1
+													option(value='2') 2
+													option(value='3') 3
+													option(value='4' selected="selected") 4
+													option(value='5') 5
+												span 70 đánh giá
+											//- .product-des
+												ul
+													li Kích thước: 42.5 x 42.5 x 13.5 mm
+													li Phiên bản: Music
+													li Chất liệu dây: Silicone
+													li Mặt kính: Cường lực
+													li Chống nước: 5ATM
+													li Trọng lượng: 42.2 g
+							.col-6.col-sm-4.col-md-3.col-lg-2.item
+								a.product-col(href='#!')
+									figure
+										.product-img
+											img(src='img/product/5.jpg', alt='')
+										figcaption
+											h2.product-name Acer Nitro 5 Carbon AN515
+											.product-price
+												.new 20.990.000 đ
+							.col-6.col-sm-4.col-md-3.col-lg-2.item
+								a.product-col(href='#!')
+									figure
+										.product-img
+											img(src='img/product/6.jpg', alt='')
+										figcaption
+											h2.product-name Acer Nitro 5 Carbon AN515
+											.product-price
+												.new 20.990.000 đ
+							.col-12.col-sm-8.col-md-6.col-lg-4.item
+								a.product-col(href='#!')
+									figure
+										.product-img
+											img(src='img/product/c2.jpg', alt='')
+										figcaption
+											h2.product-name Garmin Forerunner® 645
+											.product-price
+												.new 9.990.000 đ
+											.product-rating
+												select.bar-rating
+													option(value='1') 1
+													option(value='2') 2
+													option(value='3') 3
+													option(value='4') 4
+													option(value='5' selected="selected") 5
+												span 70 đánh giá
+											//- .product-des
+												ul
+													li Kích thước: 42.5 x 42.5 x 13.5 mm
+													li Phiên bản: Music
+													li Chất liệu dây: Silicone
+													li Mặt kính: Cường lực
+							.col-12.col-sm-8.col-md-6.col-lg-4.item
+								a.product-col(href='#!')
+									figure
+										.product-img
+											img(src='img/product/c3.jpg', alt='')
+										figcaption
+											h2.product-name Garmin Forerunner® 645
+											.product-price
+												.new 9.990.000 đ
+											//- .product-des
+												ul
+													li Kích thước: 42.5 x 42.5 x 13.5 mm
+													li Phiên bản: Music
+													li Chất liệu dây: Silicone
+													li Mặt kính: Cường lực
+													li Chống nước: 5ATM
+													li Trọng lượng: 42.2 g
+				#profile.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab') Đang cập nhật...
+				#contact.tab-pane.fade(role='tabpanel', aria-labelledby='contact-tab') Đang cập nhật...
+		.btn-wrap
+			a.btn-viewall(href="#!") Xem thêm
+	section.home-brand
+		h2.home-title Thương hiệu
+		.brand-wrap
+			.brand-list
+				.item
+					a.brand-item(href="#!")
+						img(src="img/brand/1.jpg", alt="")
+				.item
+					a.brand-item(href="#!")
+						img(src="img/brand/2.jpg", alt="")
+				.item
+					a.brand-item(href="#!")
+						img(src="img/brand/3.jpg", alt="")
+				.item
+					a.brand-item(href="#!")
+						img(src="img/brand/4.jpg", alt="")
+				.item
+					a.brand-item(href="#!")
+						img(src="img/brand/5.jpg", alt="")
+				.item
+					a.brand-item(href="#!")
+						img(src="img/brand/6.jpg", alt="")
+				.item
+					a.brand-item(href="#!")
+						img(src="img/brand/7.jpg", alt="")
+				.item
+					a.brand-item(href="#!")
+						img(src="img/brand/8.jpg", alt="")
+				.item
+					a.brand-item(href="#!")
+						img(src="img/brand/9.jpg", alt="")
+				.item
+					a.brand-item(href="#!")
+						img(src="img/brand/10.jpg", alt="")
+				.item
+					a.brand-item(href="#!")
+						img(src="img/brand/11.jpg", alt="")
+				.item
+					a.brand-item(href="#!")
+						img(src="img/brand/12.jpg", alt="")
+				.item
+					a.brand-item(href="#!")
+						img(src="img/brand/13.jpg", alt="")
+				.item
+					a.brand-item(href="#!")
+						img(src="img/brand/14.jpg", alt="")
+				.item
+					a.brand-item(href="#!")
+						img(src="img/brand/15.jpg", alt="")
+				.item
+					a.brand-item(href="#!")
+						img(src="img/brand/16.jpg", alt="")
+		.btn-wrap
+			a.btn-viewall(href="#!") Xem thêm
+	section.home-product.mobile
+		h2.home-title Lựa chọn cho bạn
+		.product-category
+			.category-nav
+				.item
+					.category-name Thiết bị đeo tay
+				.item
+					.category-name Home Theater
+				.item
+					.category-name Âm thanh
+				.item
+					.category-name Máy tính
+				.item
+					.category-name Gaming Gear
+				.item
+					.category-name Camera
+				.item
+					.category-name Phụ kiện
+				.item
+					.category-name Hàng 2nd
+			.category-slick
+				.item
+					.product-list
+						.row.no-gutters
+							.col-6.col-md-3
+								a.product-col(href='#!')
+									figure
+										.product-img
+											img(src='img/product/1.jpg', alt='')
+										figcaption
+											h2.product-name Acer Nitro 5 Carbon AN515
+											.product-price
+												.new 20.990.000 đ
+											.product-rating
+												select.bar-rating
+													option(value='1') 1
+													option(value='2') 2
+													option(value='3') 3
+													option(value='4' selected="selected") 4
+													option(value='5') 5
+												span 70 đánh giá
+							.col-6.col-md-3
+								a.product-col(href='#!')
+									figure
+										.product-img
+											img(src='img/product/2.jpg', alt='')
+										figcaption
+											h2.product-name Acer Nitro 5 Carbon AN515
+											.product-price
+												.new 20.990.000 đ
+											.product-rating
+												select.bar-rating
+													option(value='1') 1
+													option(value='2') 2
+													option(value='3') 3
+													option(value='4' selected="selected") 4
+													option(value='5') 5
+												span 70 đánh giá
+							.col-6.col-md-3
+								a.product-col(href='#!')
+									figure
+										.product-img
+											img(src='img/product/3.jpg', alt='')
+										figcaption
+											h2.product-name Acer Nitro 5 Carbon AN515
+											.product-price
+												.new 20.990.000 đ
+											.product-rating
+												select.bar-rating
+													option(value='1') 1
+													option(value='2') 2
+													option(value='3') 3
+													option(value='4' selected="selected") 4
+													option(value='5') 5
+												span 70 đánh giá
+							.col-6.col-md-3
+								a.product-col(href='#!')
+									figure
+										.product-img
+											img(src='img/product/5.jpg', alt='')
+										figcaption
+											h2.product-name Acer Nitro 5 Carbon AN515
+											.product-price
+												.new 20.990.000 đ
+											.product-rating
+												select.bar-rating
+													option(value='1') 1
+													option(value='2') 2
+													option(value='3') 3
+													option(value='4' selected="selected") 4
+													option(value='5') 5
+												span 70 đánh giá
+											//- .product-des
+												p Giảm 1 triệu thanh toán online bằng Mastercard và 2 KM khác
+				.item Đang cập nhật ...
+				.item Đang cập nhật ...
+				.item Đang cập nhật ...
+				.item Đang cập nhật ...
+				.item Đang cập nhật ...
+				.item Đang cập nhật ...
+				.item Đang cập nhật ...
+
+	section.home-product.pc
+		h2.home-title Lựa chọn cho bạn
+		.product-list
+			.row.no-gutters
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
+						figure
+							.product-img
+								img(src='img/product/1.jpg', alt='')
+							figcaption
+								h2.product-name Acer Nitro 5 Carbon AN515
+								.product-price
+									.new 20.990.000 đ
+								.product-rating
+									select.bar-rating
+										option(value='1') 1
+										option(value='2') 2
+										option(value='3') 3
+										option(value='4' selected="selected") 4
+										option(value='5') 5
+									span 70 đánh giá
+								.product-des
+									p Giảm 1 triệu thanh toán online bằng Mastercard và 2 KM khác
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
+						figure
+							.product-img
+								img(src='img/product/2.jpg', alt='')
+							figcaption
+								h2.product-name Acer Nitro 5 Carbon AN515
+								.product-price
+									.new 20.990.000 đ
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
+						figure
+							.product-img
+								img(src='img/product/3.jpg', alt='')
+							figcaption
+								h2.product-name Acer Nitro 5 Carbon AN515
+								.product-price
+									.new 20.990.000 đ
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
+						figure
+							.product-img
+								img(src='img/product/4.jpg', alt='')
+							figcaption
+								h2.product-name Acer Nitro 5 Carbon AN515
+								.product-price
+									.new 20.990.000 đ
+				.col-12.col-sm-8.col-md-6.col-lg-4
+					a.product-col(href='#!')
+						figure
+							.product-img
+								img(src='img/product/c1.jpg', alt='')
+							figcaption
+								h2.product-name Garmin Forerunner® 645
+								.product-price
+									.new 9.990.000 đ
+								.product-rating
+									select.bar-rating
+										option(value='1') 1
+										option(value='2') 2
+										option(value='3') 3
+										option(value='4' selected="selected") 4
+										option(value='5') 5
+									span 70 đánh giá
+								//- .product-des
+									ul
+										li Kích thước: 42.5 x 42.5 x 13.5 mm
+										li Phiên bản: Music
+										li Chất liệu dây: Silicone
+										li Mặt kính: Cường lực
+										li Chống nước: 5ATM
+										li Trọng lượng: 42.2 g
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
+						figure
+							.product-img
+								img(src='img/product/5.jpg', alt='')
+							figcaption
+								h2.product-name Acer Nitro 5 Carbon AN515
+								.product-price
+									.new 20.990.000 đ
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
+						figure
+							.product-img
+								img(src='img/product/6.jpg', alt='')
+							figcaption
+								h2.product-name Acer Nitro 5 Carbon AN515
+								.product-price
+									.new 20.990.000 đ
+				.col-12.col-sm-8.col-md-6.col-lg-4
+					a.product-col(href='#!')
+						figure
+							.product-img
+								img(src='img/product/c2.jpg', alt='')
+							figcaption
+								h2.product-name Garmin Forerunner® 645
+								.product-price
+									.new 9.990.000 đ
+								.product-rating
+									select.bar-rating
+										option(value='1') 1
+										option(value='2') 2
+										option(value='3') 3
+										option(value='4') 4
+										option(value='5' selected="selected") 5
+									span 70 đánh giá
+								//- .product-des
+									ul
+										li Kích thước: 42.5 x 42.5 x 13.5 mm
+										li Phiên bản: Music
+										li Chất liệu dây: Silicone
+										li Mặt kính: Cường lực
+				.col-12.col-sm-8.col-md-6.col-lg-4
+					a.product-col(href='#!')
+						figure
+							.product-img
+								img(src='img/product/c3.jpg', alt='')
+							figcaption
+								h2.product-name Garmin Forerunner® 645
+								.product-price
+									.new 9.990.000 đ
+								//- .product-des
+									ul
+										li Kích thước: 42.5 x 42.5 x 13.5 mm
+										li Phiên bản: Music
+										li Chất liệu dây: Silicone
+										li Mặt kính: Cường lực
+										li Chống nước: 5ATM
+										li Trọng lượng: 42.2 g
+			.btn-wrap.text-center
+				a.btn-main.big.btn-viewmore(href="#!") Xem thêm
+	section.home-news
+		h2.home-title Tin tức mới nhất
+		.news-wrap
+			.news-list
+				.item
+					a.news-item(href="#!")
+						figure
+							.news-img
+								img(src="img/news/1.jpg", alt="")
+							figcaption
+								time 19/05/2018
+								h3.news-name 10 lý do nên chọn mua DJI Mavic Pro
+								.news-des Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi accusantium cumque porro distinctio perferendis numquam quam aperiam, iste, libero dolor accusamus illum laudantium labore molestias! Aspernatur, velit officiis, ullam modi aliquam quod illum sunt accusantium dicta amet minus minima fugiat aliquid quasi cumque qui autem culpa vero! Ex perspiciatis officia a voluptatibus! Magni, quisquam natus? Amet, libero aliquid rem earum voluptas pariatur. Recusandae molestiae optio totam inventore illum consequatur neque iste doloremque maiores deleniti illo, enim exercitationem adipisci rem suscipit alias veniam minima tempora officia itaque facere? Recusandae sed quasi fuga eligendi nemo accusamus voluptas quo temporibus? Totam, molestias cumque.
+				.item
+					a.news-item(href="#!")
+						figure
+							.news-img
+								img(src="img/news/2.jpg", alt="")
+							figcaption
+								time 19/05/2018
+								h3.news-name Ghé Techzones - Lựa Garmin - Nhận ngàn quà tặng
+								.news-des Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi accusantium cumque porro distinctio perferendis numquam quam aperiam, iste, libero dolor accusamus illum laudantium labore molestias! Aspernatur, velit officiis, ullam modi aliquam quod illum sunt accusantium dicta amet minus minima fugiat aliquid quasi cumque qui autem culpa vero! Ex perspiciatis officia a voluptatibus! Magni, quisquam natus? Amet, libero aliquid rem earum voluptas pariatur. Recusandae molestiae optio totam inventore illum consequatur neque iste doloremque maiores deleniti illo, enim exercitationem adipisci rem suscipit alias veniam minima tempora officia itaque facere? Recusandae sed quasi fuga eligendi nemo accusamus voluptas quo temporibus? Totam, molestias cumque.
+				.item
+					a.news-item(href="#!")
+						figure
+							.news-img
+								img(src="img/news/3.jpg", alt="")
+							figcaption
+								time 19/05/2018
+								h3.news-name Mẹo hay giúp làm sạch bụi dây đeo Silicone cho đồng hồ thông minh
+								.news-des Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi accusantium cumque porro distinctio perferendis numquam quam aperiam, iste, libero dolor accusamus illum laudantium labore molestias! Aspernatur, velit officiis, ullam modi aliquam quod illum sunt accusantium dicta amet minus minima fugiat aliquid quasi cumque qui autem culpa vero! Ex perspiciatis officia a voluptatibus! Magni, quisquam natus? Amet, libero aliquid rem earum voluptas pariatur. Recusandae molestiae optio totam inventore illum consequatur neque iste doloremque maiores deleniti illo, enim exercitationem adipisci rem suscipit alias veniam minima tempora officia itaque facere? Recusandae sed quasi fuga eligendi nemo accusamus voluptas quo temporibus? Totam, molestias cumque.
+				.item
+					a.news-item(href="#!")
+						figure
+							.news-img
+								img(src="img/news/4.jpg", alt="")
+							figcaption
+								time 19/05/2018
+								h3.news-name Những ứng dụng thay thế DJI GO 4 tốt nhất cho Mavic Air, Mavic Pro và Spark
+								.news-des Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi accusantium cumque porro distinctio perferendis numquam quam aperiam, iste, libero dolor accusamus illum laudantium labore molestias! Aspernatur, velit officiis, ullam modi aliquam quod illum sunt accusantium dicta amet minus minima fugiat aliquid quasi cumque qui autem culpa vero! Ex perspiciatis officia a voluptatibus! Magni, quisquam natus? Amet, libero aliquid rem earum voluptas pariatur. Recusandae molestiae optio totam inventore illum consequatur neque iste doloremque maiores deleniti illo, enim exercitationem adipisci rem suscipit alias veniam minima tempora officia itaque facere? Recusandae sed quasi fuga eligendi nemo accusamus voluptas quo temporibus? Totam, molestias cumque.
+				.item
+					a.news-item(href="#!")
+						figure
+							.news-img
+								img(src="img/news/5.jpg", alt="")
+							figcaption
+								time 19/05/2018
+								h3.news-name TOP 4 chiếc Hybrid Watch đáng mua nhất 2018
+								.news-des Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi accusantium cumque porro distinctio perferendis numquam quam aperiam, iste, libero dolor accusamus illum laudantium labore molestias! Aspernatur, velit officiis, ullam modi aliquam quod illum sunt accusantium dicta amet minus minima fugiat aliquid quasi cumque qui autem culpa vero! Ex perspiciatis officia a voluptatibus! Magni, quisquam natus? Amet, libero aliquid rem earum voluptas pariatur. Recusandae molestiae optio totam inventore illum consequatur neque iste doloremque maiores deleniti illo, enim exercitationem adipisci rem suscipit alias veniam minima tempora officia itaque facere? Recusandae sed quasi fuga eligendi nemo accusamus voluptas quo temporibus? Totam, molestias cumque.
+				.item
+					a.news-item(href="#!")
+						figure
+							.news-img
+								img(src="img/news/6.jpg", alt="")
+							figcaption
+								time 19/05/2018
+								h3.news-name Đánh GIá UE Wonderboom " bá đạo trên từng hạt gạo"
+								.news-des Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi accusantium cumque porro distinctio perferendis numquam quam aperiam, iste, libero dolor accusamus illum laudantium labore molestias! Aspernatur, velit officiis, ullam modi aliquam quod illum sunt accusantium dicta amet minus minima fugiat aliquid quasi cumque qui autem culpa vero! Ex perspiciatis officia a voluptatibus! Magni, quisquam natus? Amet, libero aliquid rem earum voluptas pariatur. Recusandae molestiae optio totam inventore illum consequatur neque iste doloremque maiores deleniti illo, enim exercitationem adipisci rem suscipit alias veniam minima tempora officia itaque facere? Recusandae sed quasi fuga eligendi nemo accusamus voluptas quo temporibus? Totam, molestias cumque.
+		.btn-wrap
+			a.btn-viewall(href="#!") Xem thêm
+	section.home-facebook
+		h2.home-title Techzones trên Facebook
+		.facebook-wrap
+			.fb-list
+				.item
+					a.fb-item(href="#!")
+						figure
+							.fb-img
+								img(src="img/news/12.jpg", alt="")
+							figcaption
+								time 25/07/2018
+								.fb-des Đây là 1 sự lựa chọn mà các bạn game thủ nên cân nhắc 😍
+				.item
+					a.fb-item(href="#!")
+						figure
+							.fb-img
+								img(src="img/news/11.jpg", alt="")
+							figcaption
+								time 25/07/2018
+								.fb-des Bạn yêu thích thiết kế của đồng hồ truyền thống nhưng lại muốn sở hữu những tính năng tuyệt vời của một chiếc Smart Watc...
+				.item
+					a.fb-item(href="#!")
+						figure
+							.fb-img
+								img(src="img/news/10.jpg", alt="")
+							figcaption
+								time 25/07/2018
+								.fb-des 📛Mua ⌚DIESEL tặng  🎧 TAI NGHE CỰC "CHẤT"📛 Từ hôm nay khi mua đồng hồ Diesel On Full Guard tại Techzones, bạn sẽ được ...
+				.item
+					a.fb-item(href="#!")
+						figure
+							.fb-img
+								img(src="img/news/9.jpg", alt="")
+							figcaption
+								time 25/07/2018
+								.fb-des Anh em nào chơi drone thì save về xem nhé! 🤗
+				.item
+					a.fb-item(href="#!")
+						figure
+							.fb-img
+								img(src="img/news/8.jpg", alt="")
+							figcaption
+								time 25/07/2018
+								.fb-des Acer Nitro 5 Carbon sở hữu thiết kế bên ngoài với những đường vân cực lạ mắt, tạo cảm giác mạnh mẽ với vẻ đẹp khó cưỡng....
+				.item
+					a.fb-item(href="#!")
+						figure
+							.fb-img
+								img(src="img/news/7.jpg", alt="")
+							figcaption
+								time 25/07/2018
+								.fb-des Garmin Forerunner 35 với thiết kế mỏng và nhẹ giúp bạn không cảm thấy vướng víu hay nặng tay khi đeo trong thời gian dài...
+		.btn-wrap
+			a.btn-viewall(href="#!") Xem thêm

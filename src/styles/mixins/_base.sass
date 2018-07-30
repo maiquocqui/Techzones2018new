@@ -55,10 +55,30 @@
 	display: -ms-flexbox
 	display: flex
 
+// Text overlfow
+=textover($line)
+	display: -webkit-box
+	-webkit-line-clamp: $line
+	-webkit-box-orient: vertical
+	overflow: hidden
+	text-overflow: ellipsis
+
 // Font size px to rem
 =fs($size)
 	font-size: ($size / 16)
 
+// mini scrollbar
+=scrollbar()
+	&::-webkit-scrollbar-track
+		background-color: transparent
+		padding: 2px
+	&::-webkit-scrollbar
+		width: 5px
+		background-color: transparent
+	&::-webkit-scrollbar-thumb
+		background-color: color-rgba($black,0.3)
+
+// main button
 =mainbutton()
 	display: inline-block
 	text-transform: uppercase

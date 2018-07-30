@@ -2,29 +2,52 @@ header
 	section.header-top
 		.container
 			.header-wrap
+				.btn-showmenu
+					i.material-icons menu
+				.overlay
 				.sitelogo
 					a(href="index.html")
 						img(src="img/logo.png", alt="")
 				nav.top-menu
 					ul.menu-link
-						li
+						//- li
 							a(href="#!") Ngành hàng
 						li
 							a(href="#!") Tin tức
 						li
 							a(href="#!") Thương hiệu
+				.hotline
+					a(href="tel:19009064") 
+						i.material-icons phone
 				.search
+					.search-toggle 
+						i.material-icons search
 					.search-wrap
-						.searchbox
-							input(type="text" placeholder="Nhập từ khóa tìm kiếm...")
-							.searchbutton <i class="material-icons">search</i>
+						include module-search
 				.col-right
 					//- .check-tool
 						a(href="#!") Theo dõi đơn hàng
+					//- .site-feature
+						.feature
+							.icon
+								img(src="img/icon/f1.png", alt="")
+							.name Trả góp lãi xuất 0%
+						.feature
+							.icon
+								img(src="img/icon/f2.png", alt="")
+							.name Miễn phí vận chuyển
+						.feature
+							.icon
+								img(src="img/icon/f3.png", alt="")
+							.name Đổi trả trong 15 ngày
+					.check-tool.s1
+						a(href="#!" data-toggle="modal" data-target="#modalOrderCheck") Kiểm tra đơn hàng
+					.check-tool.s2
+						a(href="#!" data-toggle="modal" data-target="#modalGuaranteeCheck") Kiểm tra bảo hành
 					.login-tool
 						.dropdown.dropdown-custom
 							a.dropdown-toggle(href='#', data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Đăng nhập
-							.dropdown-menu(aria-labelledby='dropdownMenuLink')
+							.dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownMenuLink')
 								.login
 									ul
 										li
@@ -40,85 +63,124 @@ header
 											a.google(href="#!") <i class="fa fa-google-plus" aria-hidden="true"></i>
 												span Đăng nhập bằng Google
 					.notification
-						.dropdown.dropdown-custom
-							a.dropdown-toggle(href='#', data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Thông báo của bạn
-							.dropdown-menu(aria-labelledby='dropdownMenuLink')
-								.notification-list
-									ul
-										li
-											a.notification-item(href="#!")
-												.notification-content
-													.name Cơ hội rinh ngay Iphone X, Macbook Air, Samsung Galaxy A8, Ipad 2018 khi mua sách học ngoại...
-													time 19/07/2018
-													.link Chi tiết
-										li
-											a.notification-item(href="#!")
-												.notification-content
-													.name Cơ hội rinh ngay Iphone X, Macbook Air, Samsung Galaxy A8, Ipad 2018 khi mua sách học ngoại...
-													time 19/07/2018
-													.link Chi tiết
-										li
-											a.notification-item(href="#!")
-												.notification-content
-													.name Cơ hội rinh ngay Iphone X, Macbook Air, Samsung Galaxy A8, Ipad 2018 khi mua sách học ngoại...
-													time 19/07/2018
-													.link Chi tiết
-										li
-											a.notification-item(href="#!")
-												.notification-content
-													.name Cơ hội rinh ngay Iphone X, Macbook Air, Samsung Galaxy A8, Ipad 2018 khi mua sách học ngoại...
-													time 19/07/2018
-													.link Chi tiết
-										li
-											a.notification-item(href="#!")
-												.notification-content
-													.name Cơ hội rinh ngay Iphone X, Macbook Air, Samsung Galaxy A8, Ipad 2018 khi mua sách học ngoại...
-													time 19/07/2018
-													.link Chi tiết
-								.btn-wrap.text-center
-									a.btn-viewall(href="#!") Xem tất cả
+						include module-notification
 					.cart
-						.cart-toggle
-							a.cart-amount(href="#!") Giỏ hàng
-								span.amount 0
+						include module-cart
 	section.header-menu
 		.container
 			.header-wrap
 				nav.menu
-					ul.menu-link
-						li.active
-							a(href="#!")
-								i.material-icons watch
-								span Thiết bị đeo tay
-						li
-							a(href="#!")
-								i.material-icons tv
-								span Home theater
-						li
-							a(href="#!")
-								i.material-icons headset_mic
-								span Âm thanh
-						li
-							a(href="#!")
-								i.material-icons computer
-								span Máy tính
-						li
-							a(href="#!")
-								i.material-icons videogame_asset
-								span Gaming Gear
-						li
-							a(href="#!")
-								i.material-icons videocam
-								span Camera
-						li
-							a(href="#!")
-								i.material-icons settings_input_hdmi
-								span Phụ kiện
-						li
-							a(href="#!")
-								i.material-icons restore
-								span Hàng 2nd
-						//- li.sale
-							a(href="#!")
-								i.material-icons event_available
-								span Khuyến mãi cực khủng up to 30%
+					.menu-banner
+						img(src="img/banner/menu.jpg", alt="")
+					.menu-login
+						img.avt(src="img/user.png", alt="")
+						ul
+							li
+								a.btn-register(href="#!") Đăng ký
+							li
+								a.btn-login(href="#!") Đăng nhập
+					.menu-wrap
+						ul.menu-link.menu-mobile
+							li
+								a(href="#!")
+									i.material-icons home
+									span Trang chủ
+							li
+								a(href="#!")
+									i.material-icons view_list
+									span Danh sách ngành hàng
+							li
+								a(href="#!")
+									i.material-icons account_circle
+									span Quản lý tài khoản
+							li
+								a(href="#!")
+									i.material-icons notifications
+									span Thông báo
+							li
+								a(href="#!")
+									i.material-icons rss_feed
+									span Tin tức
+							li
+								a(href="#!")
+									i.material-icons help
+									span Trung tâm hỗ trợ
+						ul.menu-link.menu-pc
+							li
+								a(href="#!")
+									i.material-icons watch
+									span Thiết bị đeo tay
+							li
+								a(href="#!")
+									i.material-icons tv
+									span Home theater
+							li
+								a(href="#!")
+									i.material-icons headset_mic
+									span Âm thanh
+							li
+								a(href="#!")
+									i.material-icons computer
+									span Máy tính
+							li
+								a(href="#!")
+									i.material-icons videogame_asset
+									span Gaming Gear
+							li
+								a(href="#!")
+									i.material-icons videocam
+									span Camera
+							li
+								a(href="#!")
+									i.material-icons settings_input_hdmi
+									span Phụ kiện
+							li
+								a(href="#!")
+									i.material-icons restore
+									span Hàng 2nd
+							//- li.sale
+								a(href="#!")
+									i.material-icons event_available
+									span Khuyến mãi cực khủng up to 30%
+					.menu-contact
+						.company Công ty TNHH TM&DV Techzones
+						ul.contact-info
+							li
+								<i class="material-icons">place</i>Khuôn viên cà phê Tinh Tế - 209 Nam Kỳ Khởi Nghĩa, Phường 7, Quận 3, Tp.HCM
+							li
+								<i class="material-icons">phone</i><a href="tel:(028) 6659.5511">(028) 6659.5511 </a> - <a href="tel:(028) 6659.7722">(028) 6659.7722</a>
+							li
+								<i class="material-icons">email</i><a href="mailto:tannguyen@techzones.vn">tannguyen@techzones.vn </a>
+// MODAL
+#modalOrderCheck.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+	.modal-dialog.modal-check(role='document')
+		.modal-content
+			.modal-header
+				h5.modal-title Kiểm tra đơn hàng
+				.close(data-dismiss='modal', aria-label='Close')
+					i.material-icons close
+			.modal-body
+				.check-form
+					.form-wrap.search-wrap
+						.form-group
+							label(for="") Mã đơn hàng
+							.searchbox
+								input(type="text" placeholder="Nhập mã đơn hàng...")
+								button.searchbutton <i class="material-icons">search</i>
+
+#modalGuaranteeCheck.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+	.modal-dialog.modal-check(role='document')
+		.modal-content
+			.modal-header
+				h5.modal-title Kiểm tra bảo hành
+				.close(data-dismiss='modal', aria-label='Close')
+					i.material-icons close
+			.modal-body
+				.check-form
+					.form-wrap.search-wrap
+						.form-group
+							label(for="") Mã IMEI
+							.searchbox
+								input(type="text" placeholder="Nhập imei sản phẩm...")
+								button.searchbutton <i class="material-icons">search</i>
+// END MODAL
