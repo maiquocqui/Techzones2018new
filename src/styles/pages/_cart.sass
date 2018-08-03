@@ -1,0 +1,31 @@
+.cartpage
+	.fullpage
+		padding: 0
+	header, footer
+		display: none
+
+@import ../includes/cartheader
+@import ../includes/cartfooter
+
+// cart page
+.cart-step
+	+pos(rel,null)
+	background: $white
+	+bor-rad(5px)
+	overflow: hidden
+	box-shadow: 0px 5px 20px color-rgba($black,0.1)
+	margin-bottom: 20px
+	pointer-events: none
+	.cart-overlay
+		+pos(abs, 0 null 0 0)
+		right: 0
+		z-index: 5
+		background: $white
+		opacity: 0.5
+	&.active
+		// pointer-events: all
+		// .cart-overlay
+		// 	display: none
+
+.cart-step1
+	@extend .cart-step

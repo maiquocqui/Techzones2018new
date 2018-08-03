@@ -199,142 +199,111 @@
 					a#contact-tab.nav-link(data-toggle='tab', href='#contact', role='tab', aria-controls='contact', aria-selected='false') Khuyến mãi
 			#myTabContent.tab-content
 				#home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab')
-					.product-list
-						.row.no-gutters
-							.col-6.col-sm-4.col-md-3.col-lg-2.item
-								a.product-col(href='#!')
-									figure
-										.product-img
-											img(src='img/product/1.jpg', alt='')
-										figcaption
-											h2.product-name Acer Nitro 5 Carbon AN515
-											.product-price
-												.new 20.990.000 đ
-											.product-rating
-												select.bar-rating
-													option(value='1') 1
-													option(value='2') 2
-													option(value='3') 3
-													option(value='4' selected="selected") 4
-													option(value='5') 5
-												span 70 đánh giá
-											.product-des
-												p Giảm 1 triệu thanh toán online bằng Mastercard và 2 KM khác
-							.col-6.col-sm-4.col-md-3.col-lg-2.item
-								a.product-col(href='#!')
-									figure
-										.product-img
-											img(src='img/product/2.jpg', alt='')
-										figcaption
-											h2.product-name Acer Nitro 5 Carbon AN515
-											.product-price
-												.new 20.990.000 đ
-							.col-6.col-sm-4.col-md-3.col-lg-2.item
-								a.product-col(href='#!')
-									figure
-										.product-img
-											img(src='img/product/3.jpg', alt='')
-										figcaption
-											h2.product-name Acer Nitro 5 Carbon AN515
-											.product-price
-												.new 20.990.000 đ
-							.col-6.col-sm-4.col-md-3.col-lg-2.item
-								a.product-col(href='#!')
-									figure
-										.product-img
-											img(src='img/product/4.jpg', alt='')
-										figcaption
-											h2.product-name Acer Nitro 5 Carbon AN515
-											.product-price
-												.new 20.990.000 đ
-							.col-12.col-sm-8.col-md-6.col-lg-4.item
-								a.product-col(href='#!')
-									figure
-										.product-img
-											img(src='img/product/c1.jpg', alt='')
-										figcaption
-											h2.product-name Garmin Forerunner® 645
-											.product-price
-												.new 9.990.000 đ
-											.product-rating
-												select.bar-rating
-													option(value='1') 1
-													option(value='2') 2
-													option(value='3') 3
-													option(value='4' selected="selected") 4
-													option(value='5') 5
-												span 70 đánh giá
-											//- .product-des
-												ul
-													li Kích thước: 42.5 x 42.5 x 13.5 mm
-													li Phiên bản: Music
-													li Chất liệu dây: Silicone
-													li Mặt kính: Cường lực
-													li Chống nước: 5ATM
-													li Trọng lượng: 42.2 g
-							.col-6.col-sm-4.col-md-3.col-lg-2.item
-								a.product-col(href='#!')
-									figure
-										.product-img
-											img(src='img/product/5.jpg', alt='')
-										figcaption
-											h2.product-name Acer Nitro 5 Carbon AN515
-											.product-price
-												.new 20.990.000 đ
-							.col-6.col-sm-4.col-md-3.col-lg-2.item
-								a.product-col(href='#!')
-									figure
-										.product-img
-											img(src='img/product/6.jpg', alt='')
-										figcaption
-											h2.product-name Acer Nitro 5 Carbon AN515
-											.product-price
-												.new 20.990.000 đ
-							.col-12.col-sm-8.col-md-6.col-lg-4.item
-								a.product-col(href='#!')
-									figure
-										.product-img
-											img(src='img/product/c2.jpg', alt='')
-										figcaption
-											h2.product-name Garmin Forerunner® 645
-											.product-price
-												.new 9.990.000 đ
-											.product-rating
-												select.bar-rating
-													option(value='1') 1
-													option(value='2') 2
-													option(value='3') 3
-													option(value='4') 4
-													option(value='5' selected="selected") 5
-												span 70 đánh giá
-											//- .product-des
-												ul
-													li Kích thước: 42.5 x 42.5 x 13.5 mm
-													li Phiên bản: Music
-													li Chất liệu dây: Silicone
-													li Mặt kính: Cường lực
-							.col-12.col-sm-8.col-md-6.col-lg-4.item
-								a.product-col(href='#!')
-									figure
-										.product-img
-											img(src='img/product/c3.jpg', alt='')
-										figcaption
-											h2.product-name Garmin Forerunner® 645
-											.product-price
-												.new 9.990.000 đ
-											//- .product-des
-												ul
-													li Kích thước: 42.5 x 42.5 x 13.5 mm
-													li Phiên bản: Music
-													li Chất liệu dây: Silicone
-													li Mặt kính: Cường lực
-													li Chống nước: 5ATM
-													li Trọng lượng: 42.2 g
+					.product-slick
+						.item
+							a.product-col(href='#!')
+								figure
+									.product-img
+										img(src='img/product/1.jpg', alt='')
+									figcaption
+										h2.product-name Acer Nitro 5 Carbon AN515
+										.product-price
+											.new 20.990.000 đ
+										//- .product-rating
+											select.bar-rating
+												option(value='1') 1
+												option(value='2') 2
+												option(value='3') 3
+												option(value='4' selected="selected") 4
+												option(value='5') 5
+											span 70 đánh giá
+										//- .product-des
+											p Giảm 1 triệu thanh toán online bằng Mastercard và 2 KM khác
+						.item
+							a.product-col(href='#!')
+								figure
+									.product-img
+										img(src='img/product/2.jpg', alt='')
+									figcaption
+										h2.product-name Acer Nitro 5 Carbon AN515
+										.product-price
+											.new 20.990.000 đ
+						.item
+							a.product-col(href='#!')
+								figure
+									.product-img
+										img(src='img/product/3.jpg', alt='')
+									figcaption
+										h2.product-name Acer Nitro 5 Carbon AN515
+										.product-price
+											.new 20.990.000 đ
+						.item
+							a.product-col(href='#!')
+								figure
+									.product-img
+										img(src='img/product/4.jpg', alt='')
+									figcaption
+										h2.product-name Acer Nitro 5 Carbon AN515
+										.product-price
+											.new 20.990.000 đ
+						.item
+							a.product-col(href='#!')
+								figure
+									.product-img
+										img(src='img/product/5.jpg', alt='')
+									figcaption
+										h2.product-name Acer Nitro 5 Carbon AN515
+										.product-price
+											.new 20.990.000 đ
+						.item
+							a.product-col(href='#!')
+								figure
+									.product-img
+										img(src='img/product/6.jpg', alt='')
+									figcaption
+										h2.product-name Acer Nitro 5 Carbon AN515
+										.product-price
+											.new 20.990.000 đ
+						.item
+							a.product-col(href='#!')
+								figure
+									.product-img
+										img(src='img/product/4.jpg', alt='')
+									figcaption
+										h2.product-name Acer Nitro 5 Carbon AN515
+										.product-price
+											.new 20.990.000 đ
+						.item
+							a.product-col(href='#!')
+								figure
+									.product-img
+										img(src='img/product/5.jpg', alt='')
+									figcaption
+										h2.product-name Acer Nitro 5 Carbon AN515
+										.product-price
+											.new 20.990.000 đ
+						.item
+							a.product-col(href='#!')
+								figure
+									.product-img
+										img(src='img/product/6.jpg', alt='')
+									figcaption
+										h2.product-name Acer Nitro 5 Carbon AN515
+										.product-price
+											.new 20.990.000 đ
 				#profile.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab') Đang cập nhật...
 				#contact.tab-pane.fade(role='tabpanel', aria-labelledby='contact-tab') Đang cập nhật...
 		.btn-wrap
 			a.btn-viewall(href="#!") Xem thêm
-	section.home-brand
+	section.home-qc2
+		.qc-list
+			.item
+				a.banner-qc(href="#!")
+					img(src="img/banner/qc1.png", alt="")
+			.item
+				a.banner-qc(href="#!")
+					img(src="img/banner/qc2.png", alt="")
+	//- section.home-brand
 		h2.home-title Thương hiệu
 		.brand-wrap
 			.brand-list
@@ -623,7 +592,7 @@
 										li Mặt kính: Cường lực
 										li Chống nước: 5ATM
 										li Trọng lượng: 42.2 g
-			.btn-wrap.text-center
+			//- .btn-wrap.text-center
 				a.btn-main.big.btn-viewmore(href="#!") Xem thêm
 	section.home-news
 		h2.home-title Tin tức mới nhất
@@ -729,7 +698,7 @@
 							figcaption
 								time 25/07/2018
 								.fb-des Acer Nitro 5 Carbon sở hữu thiết kế bên ngoài với những đường vân cực lạ mắt, tạo cảm giác mạnh mẽ với vẻ đẹp khó cưỡng....
-				.item
+				//- .item
 					a.fb-item(href="#!")
 						figure
 							.fb-img

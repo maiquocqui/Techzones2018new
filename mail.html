@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+</head>
+
+<body style="font-family:Arial, Helvetica, sans-serif;font-size: 15px;line-height: 1.4;color:#333;background: #fff;">
+    <div class="mail-wrap">
+        <table cellpadding="0" cellspacing="0" border="0" style="width:740px;border: 1px solid #cccccc;">
+            <tbody>
+                <tr class="mail-header" style="background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);">
+                    <td style="padding: 10px; width: 370px;">
+                        <div class="logo">
+                            <img alt="" height="30px" src="https://techzones.vn/Data/SiteImages/email/logow.png" />
+                        </div>
+                    </td>
+                    <td style="padding: 10px;line-height: 1;">
+                        <div class="feature" style="display: flex;">
+                            <div class="icon">
+                                <img alt="" src="https://techzones.vn/Data/SiteImages/email/tra-gop.svg" height="30px" />
+                            </div>
+                            <div class="des" style="font-size: 11px;padding-top: 5px;padding-left: 5px;">
+                                Trả góp lãi xuất 0%
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding: 10px;line-height: 1;">
+                        <div class="feature" style="display: flex;">
+                            <div class="icon">
+                                <img alt="" src="https://techzones.vn/Data/SiteImages/email/giao-hang.svg" height="30px" />
+                            </div>
+                            <div class="des" style="font-size: 11px;padding-top: 5px;padding-left: 5px;">
+                                Miễn phí vận chuyển
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding: 10px;line-height: 1;">
+                        <div class="feature" style="display: flex;">
+                            <div class="icon">
+                                <img alt="" src="https://techzones.vn/Data/SiteImages/email/15-ngay.svg" height="30px" />
+                            </div>
+                            <div class="des" style="font-size: 11px;padding-top: 5px;padding-left: 5px;">
+                                Đổi trả trong 15 ngày
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="padding: 20px;">
+                        <div class="title" style="font-size: 18px;font-weight: bold;text-transform: uppercase;margin-bottom: 15px;">Xác nhận đơn hàng</div>
+                        <div class="content" style="text-align: center;">
+                            <img alt="" src="https://techzones.vn/Data/SiteImages/email/progress.jpg" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="padding: 20px; background: #f7f7f7;">
+                        <div class="content">
+                            <p>{BillingLastName} {BillingFirstName} thân mến,</p>
+                            <p>Yêu cầu đặt hàng cho đơn hàng #{ORDERCODE} của bạn đã được tiếp nhận và đang chờ Nhà bán hàng xử lý, với hình thức thanh toán là {PaymentMethod}. Chúng tôi sẽ tiếp tục cập nhật với bạn về trạng thái tiếp theo của đơn hàng.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="padding: 20px;">
+                        <div class="title" style="display: flex;margin-bottom: 15px;">
+                            <div class="icon">
+                                <img alt="" src="https://techzones.vn/Data/SiteImages/email/shipping.png" />
+                            </div>
+                            <span style="font-weight: bold; margin-left: 10px; padding: 5px 0px; font-size: 18px;">Thông tin người nhận</span>
+                        </div>
+                        <div class="name" style="color: #18a0c6;font-weight: bold;">{BillingLastName} {BillingFirstName}</div>
+                        <ul style="padding-left: 20px;margin-bottom: 20px;">
+                            <li>Địa chỉ : {BillingAddress}, {BillingDistrictName}, {BillingProvinceName}.</li>
+                            <li>Điện thoại: {BillingPhone}</li>
+                            <li>Email: {BillingEmail}</li>
+                        </ul>
+                        <div class="title" style="display: flex;margin-bottom: 15px;">
+                            <div class="icon">
+                                <img alt="" src="https://techzones.vn/Data/SiteImages/email/box.png" />
+                            </div>
+                            <span style="font-weight: bold; margin-left: 10px; padding: 5px 0px; font-size: 18px;">Đơn hàng của bạn</span>
+                        </div>
+                        <div>{OrderDetails}</div>
+                        <div class="policy" style="padding: 20px 0;">
+                            <ul style="padding-left: 20px;margin-bottom: 20px;">
+                                <li>
+                                    <a href="#!" style="color:#18a0c6;text-decoration: none;"> Quy định 1</a>
+                                </li>
+                                <li>
+                                    <a href="#!" style="color:#18a0c6;text-decoration: none;"> Quy định 2</a>
+                                </li>
+                            </ul>
+                            <p>
+                                <strong>Hotline bộ phận tư vấn - gửi hàng - check tình trạng vận chuyển hàng: 1900 9064 - Thời gian làm việc từ 9h - 20h (
+                    các ngày trong tuần )</strong>
+                            </p>
+                            <p>
+                                <strong>Hotline bộ phận hỗ trợ kĩ thuật : 1900 9064 - Chọn tiếng việt và bấm số 2</strong>
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="padding: 20px; background: #f7f7f7;">
+                        <div class="title" style="display: flex;margin-bottom: 15px;">
+                            <div class="icon">
+                                <img alt="" src="https://techzones.vn/Data/SiteImages/email/note.png" />
+                            </div>
+                            <span style="font-weight: bold; margin-left: 10px; padding: 5px 0px; font-size: 18px;">Lưu ý</span>
+                        </div>
+                        <div class="content">
+                            <p>Bạn vui lòng giữ lại hộp đầy đủ trong suốt quá trình sử dụng sản phẩm để tiện cho việc bảo hành và đổi trả sản phẩm . Tham khảo chính sách bảo hành
+                                <a href="#!" style="color:#18a0c6;text-decoration: none;">tại đây</a>. Quý khách vui lòng tham khảo kĩ
+                                <a href="#!" style="color:#18a0c6;text-decoration: none;">chính sách đổi trả</a> trong 15 ngày đầu tại đây để tránh phát sinh các vấn đề không mong muốn.</p>
+                            <p>Nếu sản phẩm có dấu hiệu hư hỏng/ bể vỡ hoặc không đúng với thông tin trên website, bạn cần liên hệ với Techzones bằng cách để lại tin nhắn tại trang chủ
+                                <a href="#!" style="color:#18a0c6;text-decoration: none;">Techzones</a> bằng cách chat hoặc gửi
+                                <a href="#!" style="color:#18a0c6;text-decoration: none;">email</a> trong vòng 48 giờ sau khi nhận sản phẩm để được hỗ trợ.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="padding: 20px;">
+                        <p>(*) Mọi thông tin của quý khách sẽ được Techzones cam kết bảo mật thông tin thông qua
+                            <a href="#!" style="color:#18a0c6;text-decoration: none;">chính sách bảo mật</a> và
+                            <a href="#!" style="color:#18a0c6;text-decoration: none;">điều khoản sử dụng</a>
+                        </p>
+                        <div class="btn-wrap" style="text-align: center;padding:20px 0;text-transform: uppercase;font-weight: bold;">
+                            <a href="#!" class="btn-manager" style="display: inline-block;padding: 15px 50px;background:linear-gradient(to right, #FF9800, #FF5722);color:#fff;text-decoration: none;">Quản lý đơn hàng</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

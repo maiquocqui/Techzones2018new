@@ -1,4 +1,4 @@
-section.news-breadcrumb.clearfix
+section.breadcrumb-wrap
 	.container
 		ol.breadcrumb
 			li
@@ -11,44 +11,65 @@ section.news-breadcrumb.clearfix
 				a(href="#")
 					span Smartwatch
 .container
-	section.product-subcate.clearfix.d-none.d-lg-block
-		ul
-			li.active
-				a.subcate(href="#")
-					.icon
-						<i class="fa fa-th" aria-hidden="true"></i>
-					.name Nổi bật
-			li
-				a.subcate(href="#")
-					.icon
-						img(src="img/icon/cateic1.png", alt="")
-					.name Smartwatch
-			li
-				a.subcate(href="#")
-					.icon
-						img(src="img/icon/cateic2.png", alt="")
-					.name Tay cầm
-			li
-				a.subcate(href="#")
-					.icon
-						img(src="img/icon/cateic4.png", alt="")
-					.name Âm thanh
-			li
-				a.subcate(href="#")
-					.icon
-						img(src="img/icon/cateic5.png", alt="")
-					.name Máy tính
-			li
-				a.subcate(href="#")
-					.icon
-						img(src="img/icon/cateic6.png", alt="")
-					.name Gaming Gear
-			li
-				a.subcate(href="#")
-					.icon
-						img(src="img/icon/cateic8.png", alt="")
-					.name Camera
-	include filter
+	.product-subcate
+		.category-list
+			.item
+				a.category-item(href="#!")
+					.img
+						img(src="img/cate/1.jpg", alt="")
+					.name
+						i.material-icons watch
+						span Thiết bị đeo tay
+			.item
+				a.category-item(href="#!")
+					.img
+						img(src="img/cate/2.jpg", alt="")
+					.name
+						i.material-icons tv
+						span Home theater
+			.item
+				a.category-item(href="#!")
+					.img
+						img(src="img/cate/3.jpg", alt="")
+					.name
+						i.material-icons headset_mic
+						span Âm thanh
+			.item
+				a.category-item(href="#!")
+					.img
+						img(src="img/cate/4.jpg", alt="")
+					.name
+						i.material-icons computer
+						span Máy tính
+			.item
+				a.category-item(href="#!")
+					.img
+						img(src="img/cate/5.jpg", alt="")
+					.name
+						i.material-icons videogame_asset
+						span Gaming Gear
+			.item
+				a.category-item(href="#!")
+					.img
+						img(src="img/cate/6.jpg", alt="")
+					.name
+						i.material-icons videocam
+						span Camera
+			.item
+				a.category-item(href="#!")
+					.img
+						img(src="img/cate/7.jpg", alt="")
+					.name
+						i.material-icons settings_input_hdmi
+						span Phụ kiện
+			.item
+				a.category-item(href="#!")
+					.img
+						img(src="img/cate/8.jpg", alt="")
+					.name
+						i.material-icons restore
+						span Hàng 2nd
+	include ../_layout/filter
 	section.btn-filterwrap.d-lg-none
 		.btn-changeview
 		.btn-showfilter <i class="material-icons">tune</i> Bộ lọc
@@ -67,289 +88,395 @@ section.news-breadcrumb.clearfix
 					option(value="#") Giá cao - thấp
 					option(value="#") Giảm giá nhiều nhất
 			.btn-compare <i class="material-icons">compare_arrows</i> So sánh
-		.productlist
+		.product-list
 			.row.no-gutters
-				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
-					a.product-col(href="#!")
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/1.jpg", alt="")
+								img(src='img/product/1.jpg', alt='')
 							figcaption
-								h2.product-name iPhone 7 Plus Red
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									//- .old 25.000.000 ₫
+									.new 20.990.000 đ
+								.product-rating
+									select.bar-rating
+										option(value='1') 1
+										option(value='2') 2
+										option(value='3') 3
+										option(value='4' selected="selected") 4
+										option(value='5') 5
+									span 70 đánh giá
 								.product-des
-									p Khuyến mãi
-									ul
-										li Giảm thêm 800.000đ khi thanh toán trực tuyến bằng MasterCard
-								.popup-info
-									.name iPhone 7 Plus Red
-									.des
-										ul
-											li Màn hình: 5.5", Retina HD
-											li HĐH: iOS 10
-											li CPU: Apple A10 Fusion 4 nhân
-											li RAM: 3GB, ROM: 128GB
-											li Camera: 2x 12 MP, Selfie: 7 MP
-											li PIN: 2900 mAh, SIM: 1 SIM
-				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
-					a.product-col(href="#!")
+									p Giảm 1 triệu thanh toán online bằng Mastercard và 2 KM khác
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/2.jpg", alt="")
+								img(src='img/product/2.jpg', alt='')
 							figcaption
-								h2.product-name Samsung Galaxy Note 8
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
+									.new 20.990.000 đ
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
+						figure
+							.product-img
+								img(src='img/product/3.jpg', alt='')
+							figcaption
+								h2.product-name Acer Nitro 5 Carbon AN515
+								.product-price
+									.new 20.990.000 đ
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
+						figure
+							.product-img
+								img(src='img/product/4.jpg', alt='')
+							figcaption
+								h2.product-name Acer Nitro 5 Carbon AN515
+								.product-price
+									.new 20.990.000 đ
+				.col-12.col-sm-8.col-md-6.col-lg-4
+					a.product-col(href='#!')
+						figure
+							.product-img
+								img(src='img/product/c1.jpg', alt='')
+							figcaption
+								h2.product-name Garmin Forerunner® 645
+								.product-price
+									.new 9.990.000 đ
+								.product-rating
+									select.bar-rating
+										option(value='1') 1
+										option(value='2') 2
+										option(value='3') 3
+										option(value='4' selected="selected") 4
+										option(value='5') 5
+									span 70 đánh giá
 								.product-des
-									p Khuyến mãi
 									ul
-										li Cơ hội trúng Xe Honda SH 150i (áp dụng 1 số tỉnh phía Bắc)
-										li Đặt hàng, nhận hàng giữa tháng 10
-								.popup-info
-									.name Samsung Galaxy Note 8
-									.des
-										ul
-											li Màn hình: 6.3", Quad HD (2K)
-											li HĐH: Android 7.1
-											li CPU: Exynos 8895 8 nhân
-											li RAM: 6GB, ROM: 64GB
-											li Camera: 2 camera 12 MP, Selfie: 8 MP
-											li PIN: 3300 mAh, SIM: 2 SIM
-				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
-					a.product-col(href="#!")
+										li Kích thước: 42.5 x 42.5 x 13.5 mm
+										li Phiên bản: Music
+										li Chất liệu dây: Silicone
+										li Mặt kính: Cường lực
+										li Chống nước: 5ATM
+										li Trọng lượng: 42.2 g
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/3.jpg", alt="")
+								img(src='img/product/5.jpg', alt='')
 							figcaption
-								h2.product-name Samsung Galaxy S8
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
-					a.product-col(href="#!")
+									.new 20.990.000 đ
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/4.jpg", alt="")
+								img(src='img/product/6.jpg', alt='')
 							figcaption
-								h2.product-name Sony Xperia XZ Premium
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
-					a.product-col(href="#!")
+									.new 20.990.000 đ
+				.col-12.col-sm-8.col-md-6.col-lg-4
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/5.jpg", alt="")
+								img(src='img/product/c2.jpg', alt='')
 							figcaption
-								h2.product-name iPhone 6s 128GB
+								h2.product-name Garmin Forerunner® 645
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
-					a.product-col(href="#!")
+									.new 9.990.000 đ
+								.product-rating
+									select.bar-rating
+										option(value='1') 1
+										option(value='2') 2
+										option(value='3') 3
+										option(value='4') 4
+										option(value='5' selected="selected") 5
+									span 70 đánh giá
+								.product-des
+									ul
+										li Kích thước: 42.5 x 42.5 x 13.5 mm
+										li Phiên bản: Music
+										li Chất liệu dây: Silicone
+										li Mặt kính: Cường lực
+				.col-12.col-sm-8.col-md-6.col-lg-4
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/6.jpg", alt="")
+								img(src='img/product/c3.jpg', alt='')
 							figcaption
-								h2.product-name HTC U Ultra Sapphire
+								h2.product-name Garmin Forerunner® 645
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
-					a.product-col(href="#!")
+									.new 9.990.000 đ
+								.product-des
+									ul
+										li Kích thước: 42.5 x 42.5 x 13.5 mm
+										li Phiên bản: Music
+										li Chất liệu dây: Silicone
+										li Mặt kính: Cường lực
+										li Chống nước: 5ATM
+										li Trọng lượng: 42.2 g
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/7.jpg", alt="")
+								img(src='img/product/1.jpg', alt='')
 							figcaption
-								h2.product-name Sony Xperia XZ Premium Pink Gold
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
-					a.product-col(href="#!")
+									.new 20.990.000 đ
+								.product-rating
+									select.bar-rating
+										option(value='1') 1
+										option(value='2') 2
+										option(value='3') 3
+										option(value='4' selected="selected") 4
+										option(value='5') 5
+									span 70 đánh giá
+								.product-des
+									p Giảm 1 triệu thanh toán online bằng Mastercard và 2 KM khác
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/8.jpg", alt="")
+								img(src='img/product/2.jpg', alt='')
 							figcaption
-								h2.product-name iPhone 6s Plus 64GB
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
-					a.product-col(href="#!")
+									.new 20.990.000 đ
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/9.jpg", alt="")
+								img(src='img/product/3.jpg', alt='')
 							figcaption
-								h2.product-name iPhone 6s 32GB
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
-					a.product-col(href="#!")
+									.new 20.990.000 đ
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/10.jpg", alt="")
+								img(src='img/product/4.jpg', alt='')
 							figcaption
-								h2.product-name Sony Xperia XZs
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-				
-				
-				article.col-12.col-sm-8.col-md-6.col-lg-4.col-custom
-					a.product-col(href="#!")
+									.new 20.990.000 đ
+				.col-12.col-sm-8.col-md-6.col-lg-4
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/b1.png", alt="")
+								img(src='img/product/c1.jpg', alt='')
 							figcaption
-								h2.product-name Samsung Galaxy Book 10.6 inch
+								h2.product-name Garmin Forerunner® 645
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
-					a.product-col(href="#!")
+									.new 9.990.000 đ
+								.product-rating
+									select.bar-rating
+										option(value='1') 1
+										option(value='2') 2
+										option(value='3') 3
+										option(value='4' selected="selected") 4
+										option(value='5') 5
+									span 70 đánh giá
+								.product-des
+									ul
+										li Kích thước: 42.5 x 42.5 x 13.5 mm
+										li Phiên bản: Music
+										li Chất liệu dây: Silicone
+										li Mặt kính: Cường lực
+										li Chống nước: 5ATM
+										li Trọng lượng: 42.2 g
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/20.jpg", alt="")
+								img(src='img/product/5.jpg', alt='')
 							figcaption
-								h2.product-name iPad Pro 10.5 inch Wifi Cellular 64GB (2017)
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
-					a.product-col(href="#!")
+									.new 20.990.000 đ
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/21.jpg", alt="")
+								img(src='img/product/6.jpg', alt='')
 							figcaption
-								h2.product-name iPad Pro 10.5 inch Wifi 64GB (2017)
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
-					a.product-col(href="#!")
+									.new 20.990.000 đ
+				.col-12.col-sm-8.col-md-6.col-lg-4
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/22.jpg", alt="")
+								img(src='img/product/c2.jpg', alt='')
 							figcaption
-								h2.product-name Samsung Galaxy Tab S3
+								h2.product-name Garmin Forerunner® 645
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
-					a.product-col(href="#!")
+									.new 9.990.000 đ
+								.product-rating
+									select.bar-rating
+										option(value='1') 1
+										option(value='2') 2
+										option(value='3') 3
+										option(value='4') 4
+										option(value='5' selected="selected") 5
+									span 70 đánh giá
+								.product-des
+									ul
+										li Kích thước: 42.5 x 42.5 x 13.5 mm
+										li Phiên bản: Music
+										li Chất liệu dây: Silicone
+										li Mặt kính: Cường lực
+				.col-12.col-sm-8.col-md-6.col-lg-4
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/23.jpg", alt="")
+								img(src='img/product/c3.jpg', alt='')
 							figcaption
-								h2.product-name iPad Wifi 128GB (2017)
+								h2.product-name Garmin Forerunner® 645
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-				article.col-12.col-sm-8.col-md-6.col-lg-4.col-custom
-					a.product-col(href="#!")
+									.new 9.990.000 đ
+								.product-des
+									ul
+										li Kích thước: 42.5 x 42.5 x 13.5 mm
+										li Phiên bản: Music
+										li Chất liệu dây: Silicone
+										li Mặt kính: Cường lực
+										li Chống nước: 5ATM
+										li Trọng lượng: 42.2 g
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/b2.png", alt="")
+								img(src='img/product/1.jpg', alt='')
 							figcaption
-								h2.product-name iPad Pro 9.7 inch Wifi 32GB
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-				article.col-12.col-sm-8.col-md-6.col-lg-4.col-custom
-					a.product-col(href="#!")
+									.new 20.990.000 đ
+								.product-rating
+									select.bar-rating
+										option(value='1') 1
+										option(value='2') 2
+										option(value='3') 3
+										option(value='4' selected="selected") 4
+										option(value='5') 5
+									span 70 đánh giá
+								.product-des
+									p Giảm 1 triệu thanh toán online bằng Mastercard và 2 KM khác
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/b3.png", alt="")
+								img(src='img/product/2.jpg', alt='')
 							figcaption
-								h2.product-name iPad Pro 9.7 inch Wifi 32GB
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
-					a.product-col(href="#!")
+									.new 20.990.000 đ
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/24.jpg", alt="")
+								img(src='img/product/3.jpg', alt='')
 							figcaption
-								h2.product-name iPad Wifi 128GB (2017)
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
-					a.product-col(href="#!")
+									.new 20.990.000 đ
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/25.jpg", alt="")
+								img(src='img/product/4.jpg', alt='')
 							figcaption
-								h2.product-name iPad Wifi 128GB (2017)
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
-					a.product-col(href="#!")
+									.new 20.990.000 đ
+				.col-12.col-sm-8.col-md-6.col-lg-4
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/26.jpg", alt="")
+								img(src='img/product/c1.jpg', alt='')
 							figcaption
-								h2.product-name iPad Wifi 128GB (2017)
+								h2.product-name Garmin Forerunner® 645
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
-					a.product-col(href="#!")
+									.new 9.990.000 đ
+								.product-rating
+									select.bar-rating
+										option(value='1') 1
+										option(value='2') 2
+										option(value='3') 3
+										option(value='4' selected="selected") 4
+										option(value='5') 5
+									span 70 đánh giá
+								.product-des
+									ul
+										li Kích thước: 42.5 x 42.5 x 13.5 mm
+										li Phiên bản: Music
+										li Chất liệu dây: Silicone
+										li Mặt kính: Cường lực
+										li Chống nước: 5ATM
+										li Trọng lượng: 42.2 g
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/27.jpg", alt="")
+								img(src='img/product/5.jpg', alt='')
 							figcaption
-								h2.product-name Samsung Galaxy Tab A6 10.1 Spen
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-				article.col-12.col-sm-8.col-md-6.col-lg-4.col-custom
-					a.product-col(href="#!")
+									.new 20.990.000 đ
+				.col-6.col-sm-4.col-md-3.col-lg-2
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/b4.png", alt="")
+								img(src='img/product/6.jpg', alt='')
 							figcaption
-								h2.product-name Samsung Galaxy Tab A 8.0 (2017)
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
-					a.product-col(href="#!")
+									.new 20.990.000 đ
+				.col-12.col-sm-8.col-md-6.col-lg-4
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/28.jpg", alt="")
+								img(src='img/product/c2.jpg', alt='')
 							figcaption
-								h2.product-name Huawei MediaPad M3 8.0 (2017)
+								h2.product-name Garmin Forerunner® 645
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
-					a.product-col(href="#!")
+									.new 9.990.000 đ
+								.product-rating
+									select.bar-rating
+										option(value='1') 1
+										option(value='2') 2
+										option(value='3') 3
+										option(value='4') 4
+										option(value='5' selected="selected") 5
+									span 70 đánh giá
+								.product-des
+									ul
+										li Kích thước: 42.5 x 42.5 x 13.5 mm
+										li Phiên bản: Music
+										li Chất liệu dây: Silicone
+										li Mặt kính: Cường lực
+				.col-12.col-sm-8.col-md-6.col-lg-4
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/29.jpg", alt="")
+								img(src='img/product/c3.jpg', alt='')
 							figcaption
-								h2.product-name Huawei MediaPad T3 8.0 (2017)
+								h2.product-name Garmin Forerunner® 645
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-				article.col-12.col-sm-8.col-md-6.col-lg-4.col-custom
-					a.product-col(href="#!")
-						figure
-							.product-img
-								img(src="img/product/b5.png", alt="")
-							figcaption
-								h2.product-name Samsung Galaxy Note8
-								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
+									.new 9.990.000 đ
+								.product-des
+									ul
+										li Kích thước: 42.5 x 42.5 x 13.5 mm
+										li Phiên bản: Music
+										li Chất liệu dây: Silicone
+										li Mặt kính: Cường lực
+										li Chống nước: 5ATM
+										li Trọng lượng: 42.2 g
 		.btn-wrap
 			a.btn-loadmore(href="#!") Xem thêm 135 sản phẩm
 	.filter-wrap.option-group.clearfix.filter-bottom.d-xs-none.d-lg-block

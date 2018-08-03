@@ -1,0 +1,54 @@
+.cart-footer
+	background: $white
+	border-top: 1px solid darken($white,10%)
+	.footer-wrap
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: space-between
+		padding: 15px 0
+	.contact-info
+		+flexbox
+		align-items: center
+		align-content: center
+		a
+			+flexbox
+			align-items: center
+			align-content: center
+			color: $main
+			margin-right: 20px
+			.material-icons
+				width: 40px
+				height: 40px
+				+bor-rad(50px)
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				background: $bluegradient
+				color: $white
+			span
+				+fs(14rem)
+				line-height: 1.2
+				padding-left: 10px
+				strong
+					display: block
+					+fs(18rem)
+			&:hover
+				strong
+					color: $blue
+	.payment
+		.payment-icon
+			+flexbox
+			flex-wrap: wrap
+			align-items: center
+			align-content: center
+			.icon
+				margin-right: 10px
+	.copyright
+		border-top: 1px solid darken($white,10%)
+		padding: 15px 0
+		+fs(14rem)
+		text-align: center
+		+media-breakpoint-down(sm)
+			+fs(13rem)

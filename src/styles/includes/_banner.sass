@@ -6,11 +6,11 @@
 	background: $white
 	+bor-rad(5px)
 	overflow: hidden
+	box-shadow: 0px 5px 20px color-rgba($black,0.1)
 	+media-breakpoint-down(md)
 		margin: 15px 0px
 	+media-breakpoint-down(sm)
-		margin: 0px -15px 10px
-		+bor-rad(0)
+		margin: 15px 0
 .banner-slide
 	.slick-prev, .slick-next
 		+pos(abs, 50% null null null)
@@ -47,6 +47,8 @@
 				width: 100%
 				height: 415px
 				object-fit: cover
+				+media-breakpoint-only(lg)
+					height: 325px
 				+media-breakpoint-down(md)
 					height: auto
 .banner-nav
@@ -75,6 +77,13 @@
 			.banner-des
 				font-weight: 700
 
+// slick init
+.slick-track
+	+flexbox
+	.slick-slide
+		height: auto
+		> div
+			height: 100%
 .slick-slide
 	.item
 		display: block !important

@@ -1,0 +1,56 @@
+// CART HEADER
+.cart-header
+	background: $bluegradient
+	margin-bottom: 30px
+	.header-wrap
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: space-between
+	.sitelogo
+		height: 70px
+		+flexbox
+		align-items: center
+		align-content: center
+		a 
+			display: block
+			img 
+				height: 40px
+				filter: invert(100%) grayscale(100%) brightness(300%)
+	.hotline
+		a
+			+flexbox
+			align-items: center
+			align-content: center
+			color: $white
+			.material-icons
+				width: 40px
+				height: 40px
+				+bor-rad(50px)
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				background: $white
+				color: $blue
+			span
+				+fs(14rem)
+				line-height: 1.2
+				padding-left: 10px
+				strong
+					display: block
+					+fs(18rem)
+			&:hover
+				strong
+					color: $blue
+	.cartdes
+		float: right
+		clear: right
+		+fs(14rem)
+		color: darken($white,40%)
+		+media-breakpoint-down(xs)
+			display: none
+		a 
+			color: $white
+			&:hover
+				color: $blue

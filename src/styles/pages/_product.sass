@@ -1,0 +1,84 @@
+.product-subcate
+	background: $white
+	margin: 15px 0
+	padding: 15px
+	+bor-rad(5px)
+	.category-list
+		+flexbox
+		flex-wrap: wrap
+		margin: 0px -10px
+		+media-breakpoint-only(lg)
+			display: block
+			overflow: auto
+			white-space: nowrap
+			margin-bottom: -20px
+		+media-breakpoint-down(sm)
+			flex-direction: column
+			height: 220px
+			overflow: auto
+			overflow-y: hidden
+			margin: 0px -5px
+			padding: 0px 10px
+			margin-bottom: -20px
+		&::-webkit-scrollbar-track
+			background-color: transparent
+		&::-webkit-scrollbar
+			width: 0px
+			background-color: transparent
+		&::-webkit-scrollbar-thumb
+			background-color: transparent
+		.item
+			width: calc(100% / 8)
+			padding: 0px 10px
+			+media-breakpoint-only(lg)
+				width: 170px
+				display: inline-block
+			+media-breakpoint-down(md)
+				width: calc(100% / 4)
+			+media-breakpoint-down(sm)
+				width: auto
+				padding: 0px 5px
+				&:last-child
+					margin-right: 10px
+			.category-item
+				display: block
+				color: $main
+				+media-breakpoint-only(lg)
+					margin-bottom: 0
+				+media-breakpoint-down(sm)
+					margin-bottom: 0
+					height: 49%
+				&:hover
+					color: $blue
+				.img
+					img
+						width: 100%
+						+media-breakpoint-down(sm)
+							width: auto
+							height: 70px
+				.name
+					+flexbox
+					align-items: center
+					align-content: center
+					padding: 10px 0 0
+					+media-breakpoint-down(sm)
+						padding: 5px 0 0
+					.material-icons
+						+fs(18rem)
+					span
+						+fs(14rem)
+						font-weight: 700
+						padding-left: 5px
+						+media-breakpoint-down(sm)
+							+fs(13rem)
+.product-page
+	background: $white
+	padding: 15px
+	+bor-rad(5px)
+	+media-breakpoint-down(sm)
+		padding: 10px
+		margin: 0px -15px
+		+bor-rad(0)
+	.product-list
+		+media-breakpoint-down(sm)
+			margin: 0px -10px

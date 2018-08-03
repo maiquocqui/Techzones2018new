@@ -106,6 +106,39 @@ $(document).ready(function() {
         focusOnSelect: true
     });
 
+    // HOME PRODUCT SLICK
+    $('.product-slick').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 1000,
+        arrows: true,
+        dots: false,
+        infinite: true,
+        responsive: [{
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 6,
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: "unslick"
+            },
+            {
+                breakpoint: 575,
+                settings: "unslick"
+            }
+        ]
+    });
+
     // HOME CATEGORY SLICK
     $('.category-nav').slick({
         slidesToShow: 1,
@@ -114,6 +147,7 @@ $(document).ready(function() {
         arrows: true,
         dots: true,
         speed: 500,
+        fade: true,
         asNavFor: '.category-slick'
     });
 

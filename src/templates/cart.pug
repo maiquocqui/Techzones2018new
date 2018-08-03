@@ -1,0 +1,13 @@
+extends _layout/layout
+
+block variables
+	- var title = 'Techzones'
+	- var bodyclass = 'cartpage'
+
+block body 
+	include _layout/header
+	main
+		include _layout/cartheader
+		include _pages/ct-cart
+		include _layout/cartfooter
+	include _layout/footer

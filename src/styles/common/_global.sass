@@ -15,7 +15,9 @@ html
 	max-width: 100%
 	width: 100%
 	margin: 0 auto
-	background: darken($white,3%)
+	background: darken($white,2%)
+	+media-breakpoint-down(sm)
+		background: $white
 
 main
 	&.small

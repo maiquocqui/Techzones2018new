@@ -7,8 +7,9 @@ header
 	+pos(fix, 0 0 null 0)
 	z-index: 1000
 	+transition(all,0.5s)
+	box-shadow: 0px 5px 20px color-rgba($black,0.05)
 	&.minimal
-		box-shadow: 0px 10px 50px -10px color-rgba($black,0.1)
+		// box-shadow: 0px 10px 50px -10px color-rgba($black,0.1)
 	.header-wrap
 		+flexbox
 		flex-wrap: wrap
@@ -443,7 +444,16 @@ header
 						border-bottom: none
 				.cart-item
 					display: block
-					padding: 10px 15px
+					padding: 15px 15px
+					+pos(rel,null)
+					+transition(all,0.5s)
+					&:before
+						content: ''
+						+pos(abs, 0 null 0 0)
+						width: 3px
+						background: $bluegradient-v
+						opacity: 0
+						+transition(all,0.5s)
 					figure
 						+flexbox
 						align-items: flex-start
@@ -473,6 +483,9 @@ header
 								+transition(all,0.5s)
 							.amount
 								+fs(13rem)
+								+flexbox
+								align-items: center
+								align-content: center
 								.input-number
 									margin-left: 5px
 									// width: 60px
@@ -489,6 +502,9 @@ header
 									line-height: 1
 									font-weight: 700
 					&:hover
+						// background: color-rgba($blue,0.1)
+						&:before
+							opacity: 1
 						figure
 							figcaption
 								.name
@@ -498,7 +514,7 @@ header
 				align-items: center
 				align-content: center
 				justify-content: space-between
-				padding: 7px 15px
+				padding: 9px 15px
 				border-top: 1px solid darken($white,10%)
 				+media-breakpoint-down(sm)
 					+pos(abs, null 0 0 0)
@@ -511,6 +527,6 @@ header
 						margin-left: 5px
 				.btn-checkout
 					@extend .btn-main
-					line-height: 36px
-					padding: 0px 15px
+					line-height: 32px
+					padding: 0px 20px
 	.header-menu
