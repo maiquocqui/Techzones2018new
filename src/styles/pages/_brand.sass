@@ -1,0 +1,206 @@
+.brand-page
+	background: $white
+	+bor-rad(5px)
+	overflow: hidden
+	box-shadow: 0px 5px 20px color-rgba($black,0.05)
+	margin: 15px 0
+	padding: 15px
+	+media-breakpoint-down(md)
+		margin: 0 -15px 10px
+		+bor-rad(0)
+		box-shadow: none
+	.brand-nav
+		margin-bottom: 30px
+		margin: 0px -15px 20px
+		border-bottom: 1px solid darken($white,10%)
+		background: $white
+		ul
+			display: block
+			overflow: auto
+			white-space: nowrap
+			padding: 0px 15px
+			li
+				display: inline-block
+				vertical-align: top
+				+ li
+					margin-left: 5px
+				a
+					display: block
+					+fs(14rem)
+					font-weight: 700
+					color: $main
+					line-height: 36px
+					padding: 0px 20px
+					+bor-rad(50px)
+					+pos(rel,null)
+					+bor-rad(0)
+					line-height: 40px
+					padding: 0px 15px
+					&:after
+						content: ''
+						+pos(abs, null 0 0 0)
+						height: 3px
+						background: $bluegradient
+						z-index: 1
+						opacity: 0
+				&.active
+					a
+						background: none
+						color: $main
+						&:after
+							opacity: 1
+	.brand-list
+		.col-custom
+			+media-breakpoint-up(xl)
+				flex: 0 0 20%
+				max-width: 20%
+	.brand-item
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		height: 80px
+		margin-bottom: 20px
+		img
+			max-width: 70%
+			max-height: 70%
+			+transition(all,0.5s)
+		&:hover
+			img
+				+transform(scale3d(1.1,1.1,1))
+	.brand-header
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: space-between
+		margin-bottom: 15px
+		+media-breakpoint-down(sm)
+			justify-content: center
+		.brand-logo
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			height: 50px
+			a
+		.brand-menu
+			+media-breakpoint-down(sm)
+				display: none
+			ul
+				+flexbox
+				align-items: center
+				align-content: center
+				li
+					+ li
+						margin-left: 20px
+					a
+						display: block
+						+fs(14rem)
+						font-weight: 500
+						text-transform: uppercase
+						color: $main
+					&:hover
+						a
+							color: $blue
+	.brand-banner
+		margin-bottom: 20px
+		.slick-prev, .slick-next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			z-index: 1
+			+fs(0)
+			color: $white
+			text-shadow: 0px 1px 5px color-rgba($black,0.1)
+			opacity: 0
+			+transition(all,0.5s)
+			&:before
+				content: ''
+				font-family: 'linearicons-free'
+				+fs(28rem)
+		.slick-prev
+			left: 0px
+			&:before
+				content: '\e875'
+		.slick-next
+			right: 0px
+			&:before
+				content: '\e876'
+		&:hover
+			.slick-prev, .slick-next
+				opacity: 1
+			.slick-prev
+				left: 20px
+			.slick-next
+				right: 20px
+		.slick-dots
+			+pos(abs, null 0 10px 0)
+			margin: 10px 0
+			text-align: center
+			li
+				display: inline-block
+				width: 10px
+				height: 10px
+				+bor-rad(50px)
+				background: darken($white,10%)
+				&.slick-active
+					background: $bluegradient
+				button
+					display: none
+				+ li
+					margin-left: 5px
+		img
+			width: 100%
+	.brand-section
+		border-bottom: 1px solid darken($white,10%)
+		margin-bottom: 30px
+	.brand-category
+		ul
+			+flexbox
+			flex-wrap: wrap
+			justify-content: center
+			li
+				width: 20%
+				margin-bottom: 30px
+				// +media-breakpoint-down(md)
+				// 	width: 25%
+				+media-breakpoint-down(sm)
+					width: 33.33%
+				+media-breakpoint-down(xs)
+					width: 50%
+				.category
+					text-align: center
+					.img
+						margin-bottom: 10px
+					.name
+						+fs(14rem)
+						font-weight: 700
+	.product-slick
+		margin-bottom: 30px
+		.slick-prev, .slick-next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			z-index: 3
+			+fs(0)
+			color: $main
+			text-shadow: 0px 1px 5px color-rgba($black,0.1)
+			opacity: 0
+			+transition(all,0.5s)
+			&:before
+				content: ''
+				font-family: 'linearicons-free'
+				+fs(28rem)
+		.slick-prev
+			left: 0px
+			&:before
+				content: '\e875'
+		.slick-next
+			right: 0px
+			&:before
+				content: '\e876'
+		&:hover
+			.slick-prev, .slick-next
+				opacity: 1
+			.slick-prev
+				left: 20px
+			.slick-next
+				right: 20px

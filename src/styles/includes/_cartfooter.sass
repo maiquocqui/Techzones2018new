@@ -1,22 +1,35 @@
 .cart-footer
 	background: $white
 	border-top: 1px solid darken($white,10%)
+	margin-top: 30px
+	+media-breakpoint-down(md)
+		margin-top: 0px
 	.footer-wrap
 		+flexbox
 		align-items: center
 		align-content: center
 		justify-content: space-between
 		padding: 15px 0
+		+media-breakpoint-down(sm)
+			flex-wrap: wrap
+			justify-content: center
 	.contact-info
 		+flexbox
 		align-items: center
 		align-content: center
+		+media-breakpoint-down(sm)
+			width: 100%
+			flex-wrap: wrap
+			justify-content: center
+			margin-bottom: 10px
 		a
 			+flexbox
 			align-items: center
 			align-content: center
 			color: $main
 			margin-right: 20px
+			+media-breakpoint-down(sm)
+				margin-right: 10px	
 			.material-icons
 				width: 40px
 				height: 40px
@@ -27,28 +40,53 @@
 				justify-content: center
 				background: $bluegradient
 				color: $white
+				+media-breakpoint-down(md)
+					width: 36px
+					height: 36px
+					+bor-rad(50px)
+					+fs(18rem)
+				+media-breakpoint-down(sm)
+					width: 30px
+					height: 30px
+					+fs(14rem)
 			span
 				+fs(14rem)
 				line-height: 1.2
 				padding-left: 10px
+				+media-breakpoint-down(md)
+					+fs(12rem)
+				+media-breakpoint-down(sm)
+					+fs(10rem)
 				strong
 					display: block
 					+fs(18rem)
+					+media-breakpoint-down(md)
+						+fs(14rem)
+					+media-breakpoint-down(sm)
+						+fs(12rem)
 			&:hover
 				strong
 					color: $blue
 	.payment
+		+media-breakpoint-down(sm)
+			width: 100%
 		.payment-icon
 			+flexbox
 			flex-wrap: wrap
 			align-items: center
 			align-content: center
+			justify-content: center
 			.icon
 				margin-right: 10px
+				img
+					+media-breakpoint-down(md)
+						width: 40px
 	.copyright
 		border-top: 1px solid darken($white,10%)
 		padding: 15px 0
 		+fs(14rem)
 		text-align: center
-		+media-breakpoint-down(sm)
+		+media-breakpoint-down(md)
 			+fs(13rem)
+		+media-breakpoint-down(sm)
+			+fs(12rem)

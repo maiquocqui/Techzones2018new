@@ -1,0 +1,109 @@
+section.breadcrumb-wrap
+	.container
+		ol.breadcrumb
+			li
+				a(href="#")
+					span Trang chủ
+			li
+				a(href="#")
+					span Thông tin tài khoản
+.container
+	.row.no-gutters
+		.col-12.col-lg-3.col-xl-3
+			section.user-info
+				.img
+					img(src="img/user.png", alt="")
+				.caption
+					.title Tài khoản của 
+					.name Mai Quốc Qui
+			nav.user-sidebar
+				ul
+					li
+						a(href="#!") 
+							.icon 
+								i.material-icons person
+							span Thông tin tài khoản
+					li
+						a(href="#!")
+							.icon 
+								i.material-icons notifications
+							span Thông báo của tôi
+					li.active
+						a(href="#!")
+							.icon 
+								i.material-icons assignment
+							span Quản lý đơn hàng
+					li
+						a(href="#!")
+							.icon 
+								i.material-icons place
+							span Sổ địa chỉ
+					li
+						a(href="#!")
+							.icon 
+								i.material-icons favorite
+							span Sản phẩm yêu thích
+		.col-12.col-lg-9.col-xl-9
+			section.user-page
+				//- .page-title Chi tiết đơn hàng 
+				.user-order
+					.order-detail
+						.order-name Đơn hàng 
+							strong #204587630514489
+						.order-list
+							.item
+								.order-item
+									.order-title
+										.des Đặt ngày 15 thg 7 2018 11:12:01
+											br
+											|Đã thanh toán 15 thg 7 2018 11:12:01
+										.status.alert-success Đã thanh toán
+									.row.row-s
+										.col-12.col-md-6.mt-2.mb-2
+											.order-information
+												.title Thông tin đặt hàng
+												ul
+													li 
+														strong Mai Quốc Qui
+													li Địa chỉ: 535/2 Thống Nhất, P.16, Q.Gò Vấp, TP.HCM
+													li Điện thoại: 0981540288
+													li Phương thức vận chuyển: Viettel Post
+													li Phương thức thanh toán: Trả góp qua thẻ tín dụng
+										.col-12.col-md-6.mt-2.mb-2
+											.order-information
+												.title Thông tin người nhận hàng
+												ul
+													li 
+														strong Mai Quốc Qui
+													li Địa chỉ: 535/2 Thống Nhất, P.16, Q.Gò Vấp, TP.HCM
+													li Điện thoại: 0981540288
+									.order-product
+										a.product(href="#!")
+											.img
+												img(src="img/product/1.jpg", alt="")
+											.caption
+												.name Gigabyte GA-H370 Aorus Gaming 3
+												.amount Số lượng: 1
+												.price Tổng tiền: 
+													.new 3.800.000 đ
+										a.product(href="#!")
+											.img
+												img(src="img/product/2.jpg", alt="")
+											.caption
+												.name Gigabyte GA-H370 Aorus Gaming 3
+												.amount Số lượng: 1
+												.price Tổng tiền: 
+													.new 3.800.000 đ
+									.order-total
+										.group
+											.label Tạm tính: 
+											.value 40.000.000 đ
+										.group
+											.label Giảm giá: 
+											.value 0 đ
+										.group
+											.label Phí vận chuyển: 
+											.value 0 đ
+										.group.total
+											.label Tổng tiền: 
+											.value 40.000.000 đ

@@ -1,0 +1,432 @@
+.user-info
+	+flexbox
+	align-items: center
+	align-content: center
+	margin: 15px 0
+	+pos(rel,null)
+	+media-breakpoint-down(md)
+		background: $white
+		padding: 15px
+		margin: 0px -15px 10px
+	&:after
+		content: 'list'
+		@extend .material-icons
+		+pos(abs, 27px 15px null null)
+		display: none
+		+media-breakpoint-down(md)
+			display: block
+	.img
+		width: 50px
+		height: 50px
+	.caption
+		line-height: 1.2
+		padding-left: 15px
+		.title
+			+fs(13rem)
+			color: darken($white,40%)
+		.name
+			+fs(15rem)
+			font-weight: 500
+.user-sidebar
+	+media-breakpoint-down(md)
+		display: none
+		background: $white
+		padding: 15px
+		margin: 0 -15px 10px
+	ul
+		li
+			a
+				+flexbox
+				align-items: center
+				align-content: center
+				color: darken($white,60%)
+				padding: 8px 15px
+				overflow: hidden
+				+bor-rad(5px 0 0 5px)
+				+media-breakpoint-down(md)
+					+bor-rad(5px)
+				.icon
+					margin-right: 10px
+					.material-icons
+						display: block
+				span
+					+fs(14rem)
+			&.active
+				a
+					background: color-rgba($black,0.1)
+
+.user-page
+	background: $white
+	+bor-rad(5px)
+	overflow: hidden
+	margin: 15px 0
+	padding: 15px
+	box-shadow: 0px 5px 20px color-rgba($black,0.05)
+	+media-breakpoint-down(md)
+		+bor-rad(0)
+		margin: 0px -15px 10px
+		box-shadow: none
+	.user-form
+		max-width: 500px
+		.form-wrap
+			.form-group
+				+flexbox
+				flex-wrap: wrap
+				label
+					width: 120px
+				.input
+					width: calc(100% - 120px)
+			.checkbox
+				label
+					width: 100%
+		.change-pw
+			.checkbox
+				margin-left: 120px
+		.changepw-form
+			display: none
+		input[type="submit"]
+			display: inline-block
+			width: auto
+			margin-left: 120px
+	.user-nav
+		padding: 0px 15px
+		border: none
+		border-bottom: 1px solid darken($white,10%)
+		margin: 0px -15px
+		+media-breakpoint-down(sm)
+			+flexbox
+		.nav-item
+			+media-breakpoint-down(sm)
+				flex: 1
+			+ .nav-item
+				margin-left: 5px
+				+media-breakpoint-down(sm)
+					margin-left: 0
+			.nav-link
+				display: block
+				+fs(14rem)
+				font-weight: 700
+				color: $main
+				line-height: 36px
+				padding: 0px 20px
+				+bor-rad(50px)
+				+pos(rel,null)
+				+bor-rad(0)
+				line-height: 40px
+				padding: 0px 15px
+				text-align: center
+				border: none
+				&:after
+					content: ''
+					+pos(abs, null 0 0 0)
+					height: 3px
+					background: $bluegradient
+					z-index: 1
+					opacity: 0
+				&.active
+					background: none
+					color: $main
+					&:after
+						opacity: 1
+	.user-notification
+		.notification-list
+			margin: 0px -15px
+			.item
+				border-bottom: 1px dashed darken($white,10%)
+			.notification-item
+				+flexbox
+				align-items: flex-start
+				align-content: flex-start
+				padding: 20px
+				&.unread
+					background: color-rgba($blue,0.05)
+				.icon
+					width: 80px
+					+flexbox
+					align-items: center
+					align-content: center
+					justify-content: center
+					+media-breakpoint-down(sm)
+						width: 60px
+					img
+						max-width: 100%
+				.caption
+					width: calc(100% - 80px)
+					line-height: 1.3
+					+media-breakpoint-down(sm)
+						width: calc(100% - 60px)
+					.name
+						+fs(14rem)
+					a
+						color: $blue
+						margin-left: 5px
+					time
+						+fs(13rem)
+						color: darken($white,40%)
+	.user-order
+		.order-list
+			margin: 0px -15px
+			.item
+		.order-item
+			padding: 15px 15px 0
+			// border-bottom: 1px solid darken($white,5%)
+			+media-breakpoint-down(sm)
+				padding: 0
+				// border-bottom-color: darken($white,10%)
+			.order-title
+				+pos(rel,null)
+				background: darken($white,2%)
+				+bor-rad(5px)
+				padding: 10px
+				display: block
+				.id
+					+fs(14rem)
+					color: $main
+					+media-breakpoint-down(sm)
+						+fs(13rem)
+					strong
+						color: $blue
+				.des
+					+fs(12rem)
+					color: darken($white,40%)
+					+media-breakpoint-down(sm)
+						+fs(11rem)
+				.status
+					+bor-rad(50px)
+					+fs(13rem)
+					font-weight: 500
+					line-height: 1
+					padding: 5px 10px
+					text-transform: uppercase
+					+pos(abs, 50% 10px null null)
+					+transform(translateY(-50%))
+					+media-breakpoint-down(sm)
+						+fs(11rem)
+						font-weight: 600
+						padding: 5px 5px
+			.order-information
+				+fs(13rem)
+				padding: 15px 10px
+				+bor-rad(5px)
+				border: 1px solid darken($white,5%)
+				height: 100%
+				color: darken($white,60%)
+				+media-breakpoint-down(sm)
+					padding: 0 15px
+					+bor-rad(0)
+					border: none
+				.title
+					+fs(14rem)
+					color: $blue
+					font-weight: 600
+				strong
+					color: $main
+					+fs(14rem)
+			.order-product
+				.product
+					+flexbox
+					padding: 10px 0
+					border-bottom: 1px dashed darken($white,10%)
+					+media-breakpoint-down(sm)
+						padding: 10px 15px
+					.img
+						width: 60px
+						img
+							max-width: 100%
+							max-height: 100%
+					.caption
+						width: calc(100% - 60px)
+						padding-left: 20px
+						.name
+							+fs(14rem)
+							line-height: 1.3
+							font-weight: 500
+							color: $black
+							+media-breakpoint-down(sm)
+								+fs(13rem)
+						.amount, .price
+							display: inline-block
+							+fs(14rem)
+							color: darken($white,40%)
+							+media-breakpoint-down(sm)
+								display: block
+								+fs(13rem)
+						.amount
+							width: 100px
+							+media-breakpoint-down(sm)
+								width: 80px
+						.price
+							.new
+								display: inline
+								font-weight: 600
+								color: $bluegrey
+			.order-total
+				+flexbox
+				flex-wrap: wrap
+				flex-direction: column
+				align-items: flex-end
+				align-content: flex-end
+				+fs(14rem)
+				padding: 10px 0
+				+media-breakpoint-down(sm)
+					padding: 10px
+				.label
+					color: $main
+				.value
+					font-weight: 700
+					color: $red
+					margin-left: 10px
+				.group
+					+flexbox
+					align-items: center
+					align-content: center
+					justify-content: space-between
+					width: 300px
+					+media-breakpoint-down(sm)
+						width: 100%
+					.label
+					.value
+						font-weight: 700
+						color: $bluegrey
+					&.total
+						.value
+							color: $red
+		.order-name
+			font-weight: 500
+			+media-breakpoint-down(sm)
+				margin-bottom: 10px
+			strong
+				color: $blue
+				font-weight: 600
+	.user-address
+		.address-list
+			ul
+				+flexbox
+				flex-wrap: wrap
+				margin: 0px -5px
+				li
+					padding: 0px 5px
+					width: 50%
+					+media-breakpoint-down(sm)
+						width: 100%
+					.address-item
+						display: block
+						+bor-rad(5px)
+						text-align: left
+						+fs(14rem)
+						padding: 10px
+						border: 1px dashed darken($white,10%)
+						margin-bottom: 10px
+						+pos(rel,null)
+						+media-breakpoint-down(sm)
+							+fs(13rem)
+						&:after
+							content: '\f00c'
+							width: 14px
+							height: 14px
+							background: $blue
+							color: $white
+							+bor-rad(50px)
+							z-index: 1
+							+flexbox
+							+fs(12rem)
+							align-items: center
+							align-content: center
+							justify-content: center
+							+pos(abs, null 10px 10px null)
+							opacity: 0
+						.name
+							font-weight: 700
+						.btn-default
+							+pos(abs, 10px 10px null null)
+							+fs(12rem)
+							text-transform: uppercase
+							font-weight: 600
+							color: darken($white,40%)
+							opacity: 0
+							&:before
+								content: '\f058'
+								margin-right: 5px
+								display: none
+						.btn-remove
+							+pos(abs, 10px 10px null null)
+							color: darken($white,20%)
+							&:hover
+								color: lighten($red,10%)
+							&:before
+								content: 'delete'
+								@extend .material-icons
+								+fs(16rem)
+						.btn-edit
+							+pos(abs, 10px 30px null null)
+							color: darken($white,20%)
+							&:hover
+								color: $purple
+							&:before
+								content: 'edit'
+								@extend .material-icons
+								+fs(16rem)
+						&:hover
+							border-color: lighten($blue,10%)
+							background: color-rgba($blue,0.05)
+					&.default
+						.address-item
+							border-color: lighten($blue,10%)
+							background: color-rgba($blue,0.05)
+							.btn-default
+								color: $blue
+								opacity: 1
+								&:before
+									display: inline-block
+							.btn-edit, .btn-remove
+								top: 30px
+		.form-wrap
+			max-width: 500px
+			.form-group
+				+flexbox
+				flex-wrap: wrap
+				label
+					width: 120px
+				.input
+					width: calc(100% - 120px)
+			.checkbox
+				label
+					width: 100%
+			.checkbox
+				margin-left: 120px
+		.changepw-form
+			display: none
+		input[type="submit"]
+			display: inline-block
+			width: auto
+			margin-left: 120px
+	.product-list
+		+media-breakpoint-down(sm)
+			margin: -15px -15px 0
+			padding: 0px 10px
+		.product-item
+			+pos(rel,null)
+			.btn-remove
+				+fs(0)
+				color: darken($white,40%)
+				+pos(abs,null 10px 15px null)
+				z-index: 5
+				+media-breakpoint-down(lg)
+					bottom: 10px
+				&:before
+					content: 'delete'
+					@extend .material-icons
+					+fs(18rem)
+				&:hover
+					color: lighten($red,10%)
+			.product-col
+				figure
+					figcaption
+						.product-rating
+							+media-breakpoint-down(lg)
+								flex-wrap: wrap
+							span
+								+media-breakpoint-down(lg)
+									display: block
+									width: 100%
+									margin: 0

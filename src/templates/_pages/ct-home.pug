@@ -708,3 +708,44 @@
 								.fb-des Garmin Forerunner 35 với thiết kế mỏng và nhẹ giúp bạn không cảm thấy vướng víu hay nặng tay khi đeo trong thời gian dài...
 		.btn-wrap
 			a.btn-viewall(href="#!") Xem thêm
+
+#modalRepay.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+	.modal-dialog.modal-dialog-centered.modal-repay(role='document')
+		.modal-content
+			.modal-header
+				h5#exampleModalLabel.modal-title Thông báo
+				.close(data-dismiss='modal', aria-label='Close')
+					i.material-icons close
+			.modal-body
+				.repay-form
+					.module-title Bạn vừa thanh toán không thành công đơn hàng 
+						a(href="#!") #150918
+						|. Bạn muốn thanh toán lại chứ ?
+					.form-wrap
+						.form-group
+							ul.radio
+								li
+									input#rp1(type="radio", name="repay")
+									label(for="rp1") Thanh toán bằng ebanking
+								li
+									input#rp2(type="radio", name="repay")
+									label(for="rp2") Thanh toán online bằng thẻ ngân hàng nội địa (ATM)
+								li
+									input#rp3(type="radio", name="repay")
+									label(for="rp3") Thanh toán thẻ thanh toán quốc tế
+								li
+									input#rp4(type="radio", name="repay")
+									label(for="rp4") Thanh toán trả góp qua thẻ tín dụng
+								li
+									input#rp5(type="radio", name="repay")
+									label(for="rp5") Thanh toán qua Ví Việt
+							.prepay-select.mb-3
+								.form-group
+									label Chọn số tiền muốn thanh toán
+									select
+										option 30% trên tổng giá trị đơn hàng
+										option 50% trên tổng giá trị đơn hàng
+										option 70% trên tổng giá trị đơn hàng
+						.frm-btn
+							a.btn-cancel(href="#!") Hủy đơn hàng
+							a.btn-repay(href="#!") Thanh toán lại

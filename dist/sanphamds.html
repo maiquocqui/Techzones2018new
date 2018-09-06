@@ -12,13 +12,14 @@
     <link rel="stylesheet" href="./css/main.css">
     <title>Techzones</title>
   </head>
-  <body>
+  <body class="productpage">
     <div class="fullpage">
       <header>
         <section class="header-top">
           <div class="container">
             <div class="header-wrap">
               <div class="btn-showmenu"><i class="material-icons">menu</i></div>
+              <div class="btn-prevpage"><i class="material-icons">arrow_back</i></div>
               <div class="overlay"></div>
               <div class="sitelogo"><a href="index.html"><img src="img/logo.png" alt=""></a></div>
               <nav class="top-menu">
@@ -456,6 +457,12 @@
                     </div>
                   </div>
                 </div>
+                <div class="mini-menu">
+                  <div class="dropdown">
+                    <div class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="material-icons">more_vert</i></div>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="index.html"> <i class="material-icons">home</i><span>Trang chủ</span></a><a class="dropdown-item" href="nganhhang.html"><i class="material-icons">view_list</i><span>Danh mục</span></a><a class="dropdown-item" href="#"><i class="material-icons">account_circle</i><span>Tài khoản của tôi</span></a><a class="dropdown-item" href="#"><i class="material-icons">assignment</i><span>Đơn hàng của tôi</span></a><a class="dropdown-item" href="#"><i class="material-icons">favorite</i><span>Sản phẩm yêu thích</span></a><a class="dropdown-item" href="#"><i class="material-icons">help</i><span>Hỗ trợ khách hàng</span></a></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -475,13 +482,14 @@
                   <ul class="menu-link menu-mobile">
                     <li><a href="#!"><i class="material-icons">home</i><span>Trang chủ</span></a></li>
                     <li><a href="#!"><i class="material-icons">view_list</i><span>Danh sách ngành hàng</span></a></li>
+                    <li><a href="#!"><i class="material-icons">memory</i><span>Tự build PC</span></a></li>
                     <li><a href="#!"><i class="material-icons">account_circle</i><span>Quản lý tài khoản</span></a></li>
                     <li><a href="#!"><i class="material-icons">notifications</i><span>Thông báo</span></a></li>
                     <li><a href="#!"><i class="material-icons">rss_feed</i><span>Tin tức</span></a></li>
                     <li><a href="#!"><i class="material-icons">help</i><span>Trung tâm hỗ trợ</span></a></li>
                   </ul>
                   <ul class="menu-link menu-pc">
-                    <li><a href="#!"><i class="material-icons">watch</i><span>Thiết bị đeo tay</span></a></li>
+                    <li class="active"><a href="#!"><i class="material-icons">watch</i><span>Thiết bị đeo tay</span></a></li>
                     <li><a href="#!"><i class="material-icons">tv</i><span>Home theater</span></a></li>
                     <li><a href="#!"><i class="material-icons">headset_mic</i><span>Âm thanh</span></a></li>
                     <li><a href="#!"><i class="material-icons">computer</i><span>Máy tính</span></a></li>
@@ -489,6 +497,7 @@
                     <li><a href="#!"><i class="material-icons">videocam</i><span>Camera</span></a></li>
                     <li><a href="#!"><i class="material-icons">settings_input_hdmi</i><span>Phụ kiện</span></a></li>
                     <li><a href="#!"><i class="material-icons">restore</i><span>Hàng 2nd</span></a></li>
+                    <li class="hardware"><a href="#!"><i class="material-icons">memory</i><span>Tự build PC</span></a></li>
                   </ul>
                 </div>
                 <div class="menu-contact">
@@ -565,30 +574,21 @@
         <div class="container">
           <div class="product-subcate">
             <div class="category-list">
+              <div class="item active"><a class="category-item" href="#!">
+                  <div class="img"><img src="img/icon/smartwatch.png" alt=""></div>
+                  <div class="name">Thiết bị đeo tay</div></a></div>
               <div class="item"><a class="category-item" href="#!">
-                  <div class="img"><img src="img/cate/1.jpg" alt=""></div>
-                  <div class="name"><i class="material-icons">watch</i><span>Thiết bị đeo tay</span></div></a></div>
+                  <div class="img"><img src="img/icon/monitor.png" alt=""></div>
+                  <div class="name">Màn hình</div></a></div>
               <div class="item"><a class="category-item" href="#!">
-                  <div class="img"><img src="img/cate/2.jpg" alt=""></div>
-                  <div class="name"><i class="material-icons">tv</i><span>Home theater</span></div></a></div>
+                  <div class="img"><img src="img/icon/headphone.png" alt=""></div>
+                  <div class="name">Thiết bị âm thanh</div></a></div>
               <div class="item"><a class="category-item" href="#!">
-                  <div class="img"><img src="img/cate/3.jpg" alt=""></div>
-                  <div class="name"><i class="material-icons">headset_mic</i><span>Âm thanh</span></div></a></div>
+                  <div class="img"><img src="img/icon/game.png" alt=""></div>
+                  <div class="name">Gaming gear</div></a></div>
               <div class="item"><a class="category-item" href="#!">
-                  <div class="img"><img src="img/cate/4.jpg" alt=""></div>
-                  <div class="name"><i class="material-icons">computer</i><span>Máy tính</span></div></a></div>
-              <div class="item"><a class="category-item" href="#!">
-                  <div class="img"><img src="img/cate/5.jpg" alt=""></div>
-                  <div class="name"><i class="material-icons">videogame_asset</i><span>Gaming Gear</span></div></a></div>
-              <div class="item"><a class="category-item" href="#!">
-                  <div class="img"><img src="img/cate/6.jpg" alt=""></div>
-                  <div class="name"><i class="material-icons">videocam</i><span>Camera</span></div></a></div>
-              <div class="item"><a class="category-item" href="#!">
-                  <div class="img"><img src="img/cate/7.jpg" alt=""></div>
-                  <div class="name"><i class="material-icons">settings_input_hdmi</i><span>Phụ kiện</span></div></a></div>
-              <div class="item"><a class="category-item" href="#!">
-                  <div class="img"><img src="img/cate/8.jpg" alt=""></div>
-                  <div class="name"><i class="material-icons">restore</i><span>Hàng 2nd</span></div></a></div>
+                  <div class="img"><img src="img/icon/camera.png" alt=""></div>
+                  <div class="name">Camera</div></a></div>
             </div>
           </div>
           <div class="filter-wrap category-group clearfix">
@@ -766,7 +766,165 @@
             </div>
             <div class="product-list">
               <div class="row no-gutters">
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="product-item"><a class="product-col" href="#!">
+                      <figure>
+                        <div class="product-img"><img src="img/product/1.jpg" alt=""></div>
+                        <figcaption>
+                          <h2 class="product-name">Acer Nitro 5 Carbon AN515</h2>
+                          <div class="product-price">
+                            <div class="new">20.990.000 đ</div>
+                          </div>
+                          <div class="product-rating">
+                            <select class="bar-rating">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4" selected="selected">4</option>
+                              <option value="5">5</option>
+                            </select><span>70 đánh giá</span>
+                          </div>
+                          <div class="product-des">
+                            <p>Giảm 1 triệu thanh toán online bằng Mastercard và 2 KM khác</p>
+                          </div>
+                        </figcaption>
+                      </figure></a><a class="link compare btn_compare" href="#">So sánh</a></div>
+                </article>
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="product-item"><a class="product-col" href="#!">
+                      <figure>
+                        <div class="product-img"><img src="img/product/2.jpg" alt=""></div>
+                        <figcaption>
+                          <h2 class="product-name">Acer Nitro 5 Carbon AN515</h2>
+                          <div class="product-price">
+                            <div class="new">20.990.000 đ</div>
+                          </div>
+                        </figcaption>
+                      </figure></a><a class="link compare btn_compare" href="#">So sánh</a></div>
+                </article>
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="product-item"><a class="product-col" href="#!">
+                      <figure>
+                        <div class="product-img"><img src="img/product/3.jpg" alt=""></div>
+                        <figcaption>
+                          <h2 class="product-name">Acer Nitro 5 Carbon AN515</h2>
+                          <div class="product-price">
+                            <div class="new">20.990.000 đ</div>
+                          </div>
+                        </figcaption>
+                      </figure></a><a class="link compare btn_compare" href="#">So sánh</a></div>
+                </article>
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2">
+                  <div class="product-item"><a class="product-col" href="#!">
+                      <figure>
+                        <div class="product-img"><img src="img/product/4.jpg" alt=""></div>
+                        <figcaption>
+                          <h2 class="product-name">Acer Nitro 5 Carbon AN515</h2>
+                          <div class="product-price">
+                            <div class="new">20.990.000 đ</div>
+                          </div>
+                        </figcaption>
+                      </figure></a><a class="link compare btn_compare" href="#">So sánh</a></div>
+                </article>
+                <article class="col-12 col-sm-8 col-md-6 col-lg-4">
+                  <div class="product-item"><a class="product-col" href="#!">
+                      <figure>
+                        <div class="product-img"><img src="img/product/c1.jpg" alt=""></div>
+                        <figcaption>
+                          <h2 class="product-name">Garmin Forerunner® 645</h2>
+                          <div class="product-price">
+                            <div class="new">9.990.000 đ</div>
+                          </div>
+                          <div class="product-rating">
+                            <select class="bar-rating">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4" selected="selected">4</option>
+                              <option value="5">5</option>
+                            </select><span>70 đánh giá</span>
+                          </div>
+                          <div class="product-des">
+                            <ul>
+                              <li>Kích thước: 42.5 x 42.5 x 13.5 mm</li>
+                              <li>Phiên bản: Music</li>
+                              <li>Chất liệu dây: Silicone</li>
+                              <li>Mặt kính: Cường lực</li>
+                              <li>Chống nước: 5ATM</li>
+                              <li>Trọng lượng: 42.2 g</li>
+                            </ul>
+                          </div>
+                        </figcaption>
+                      </figure></a><a class="link compare btn_compare" href="#">So sánh</a></div>
+                </article>
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
+                    <figure>
+                      <div class="product-img"><img src="img/product/5.jpg" alt=""></div>
+                      <figcaption>
+                        <h2 class="product-name">Acer Nitro 5 Carbon AN515</h2>
+                        <div class="product-price">
+                          <div class="new">20.990.000 đ</div>
+                        </div>
+                      </figcaption>
+                    </figure></a></article>
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
+                    <figure>
+                      <div class="product-img"><img src="img/product/6.jpg" alt=""></div>
+                      <figcaption>
+                        <h2 class="product-name">Acer Nitro 5 Carbon AN515</h2>
+                        <div class="product-price">
+                          <div class="new">20.990.000 đ</div>
+                        </div>
+                      </figcaption>
+                    </figure></a></article>
+                <article class="col-12 col-sm-8 col-md-6 col-lg-4"><a class="product-col" href="#!">
+                    <figure>
+                      <div class="product-img"><img src="img/product/c2.jpg" alt=""></div>
+                      <figcaption>
+                        <h2 class="product-name">Garmin Forerunner® 645</h2>
+                        <div class="product-price">
+                          <div class="new">9.990.000 đ</div>
+                        </div>
+                        <div class="product-rating">
+                          <select class="bar-rating">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5" selected="selected">5</option>
+                          </select><span>70 đánh giá</span>
+                        </div>
+                        <div class="product-des">
+                          <ul>
+                            <li>Kích thước: 42.5 x 42.5 x 13.5 mm</li>
+                            <li>Phiên bản: Music</li>
+                            <li>Chất liệu dây: Silicone</li>
+                            <li>Mặt kính: Cường lực</li>
+                          </ul>
+                        </div>
+                      </figcaption>
+                    </figure></a></article>
+                <article class="col-12 col-sm-8 col-md-6 col-lg-4"><a class="product-col" href="#!">
+                    <figure>
+                      <div class="product-img"><img src="img/product/c3.jpg" alt=""></div>
+                      <figcaption>
+                        <h2 class="product-name">Garmin Forerunner® 645</h2>
+                        <div class="product-price">
+                          <div class="new">9.990.000 đ</div>
+                        </div>
+                        <div class="product-des">
+                          <ul>
+                            <li>Kích thước: 42.5 x 42.5 x 13.5 mm</li>
+                            <li>Phiên bản: Music</li>
+                            <li>Chất liệu dây: Silicone</li>
+                            <li>Mặt kính: Cường lực</li>
+                            <li>Chống nước: 5ATM</li>
+                            <li>Trọng lượng: 42.2 g</li>
+                          </ul>
+                        </div>
+                      </figcaption>
+                    </figure></a></article>
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
                     <figure>
                       <div class="product-img"><img src="img/product/1.jpg" alt=""></div>
                       <figcaption>
@@ -787,8 +945,8 @@
                           <p>Giảm 1 triệu thanh toán online bằng Mastercard và 2 KM khác</p>
                         </div>
                       </figcaption>
-                    </figure></a></div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
+                    </figure></a></article>
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
                     <figure>
                       <div class="product-img"><img src="img/product/2.jpg" alt=""></div>
                       <figcaption>
@@ -797,8 +955,8 @@
                           <div class="new">20.990.000 đ</div>
                         </div>
                       </figcaption>
-                    </figure></a></div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
+                    </figure></a></article>
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
                     <figure>
                       <div class="product-img"><img src="img/product/3.jpg" alt=""></div>
                       <figcaption>
@@ -807,8 +965,8 @@
                           <div class="new">20.990.000 đ</div>
                         </div>
                       </figcaption>
-                    </figure></a></div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
+                    </figure></a></article>
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
                     <figure>
                       <div class="product-img"><img src="img/product/4.jpg" alt=""></div>
                       <figcaption>
@@ -817,8 +975,8 @@
                           <div class="new">20.990.000 đ</div>
                         </div>
                       </figcaption>
-                    </figure></a></div>
-                <div class="col-12 col-sm-8 col-md-6 col-lg-4"><a class="product-col" href="#!">
+                    </figure></a></article>
+                <article class="col-12 col-sm-8 col-md-6 col-lg-4"><a class="product-col" href="#!">
                     <figure>
                       <div class="product-img"><img src="img/product/c1.jpg" alt=""></div>
                       <figcaption>
@@ -846,8 +1004,8 @@
                           </ul>
                         </div>
                       </figcaption>
-                    </figure></a></div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
+                    </figure></a></article>
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
                     <figure>
                       <div class="product-img"><img src="img/product/5.jpg" alt=""></div>
                       <figcaption>
@@ -856,8 +1014,8 @@
                           <div class="new">20.990.000 đ</div>
                         </div>
                       </figcaption>
-                    </figure></a></div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
+                    </figure></a></article>
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
                     <figure>
                       <div class="product-img"><img src="img/product/6.jpg" alt=""></div>
                       <figcaption>
@@ -866,8 +1024,8 @@
                           <div class="new">20.990.000 đ</div>
                         </div>
                       </figcaption>
-                    </figure></a></div>
-                <div class="col-12 col-sm-8 col-md-6 col-lg-4"><a class="product-col" href="#!">
+                    </figure></a></article>
+                <article class="col-12 col-sm-8 col-md-6 col-lg-4"><a class="product-col" href="#!">
                     <figure>
                       <div class="product-img"><img src="img/product/c2.jpg" alt=""></div>
                       <figcaption>
@@ -893,8 +1051,8 @@
                           </ul>
                         </div>
                       </figcaption>
-                    </figure></a></div>
-                <div class="col-12 col-sm-8 col-md-6 col-lg-4"><a class="product-col" href="#!">
+                    </figure></a></article>
+                <article class="col-12 col-sm-8 col-md-6 col-lg-4"><a class="product-col" href="#!">
                     <figure>
                       <div class="product-img"><img src="img/product/c3.jpg" alt=""></div>
                       <figcaption>
@@ -913,8 +1071,8 @@
                           </ul>
                         </div>
                       </figcaption>
-                    </figure></a></div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
+                    </figure></a></article>
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
                     <figure>
                       <div class="product-img"><img src="img/product/1.jpg" alt=""></div>
                       <figcaption>
@@ -935,8 +1093,8 @@
                           <p>Giảm 1 triệu thanh toán online bằng Mastercard và 2 KM khác</p>
                         </div>
                       </figcaption>
-                    </figure></a></div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
+                    </figure></a></article>
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
                     <figure>
                       <div class="product-img"><img src="img/product/2.jpg" alt=""></div>
                       <figcaption>
@@ -945,8 +1103,8 @@
                           <div class="new">20.990.000 đ</div>
                         </div>
                       </figcaption>
-                    </figure></a></div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
+                    </figure></a></article>
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
                     <figure>
                       <div class="product-img"><img src="img/product/3.jpg" alt=""></div>
                       <figcaption>
@@ -955,8 +1113,8 @@
                           <div class="new">20.990.000 đ</div>
                         </div>
                       </figcaption>
-                    </figure></a></div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
+                    </figure></a></article>
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
                     <figure>
                       <div class="product-img"><img src="img/product/4.jpg" alt=""></div>
                       <figcaption>
@@ -965,8 +1123,8 @@
                           <div class="new">20.990.000 đ</div>
                         </div>
                       </figcaption>
-                    </figure></a></div>
-                <div class="col-12 col-sm-8 col-md-6 col-lg-4"><a class="product-col" href="#!">
+                    </figure></a></article>
+                <article class="col-12 col-sm-8 col-md-6 col-lg-4"><a class="product-col" href="#!">
                     <figure>
                       <div class="product-img"><img src="img/product/c1.jpg" alt=""></div>
                       <figcaption>
@@ -994,8 +1152,8 @@
                           </ul>
                         </div>
                       </figcaption>
-                    </figure></a></div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
+                    </figure></a></article>
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
                     <figure>
                       <div class="product-img"><img src="img/product/5.jpg" alt=""></div>
                       <figcaption>
@@ -1004,8 +1162,8 @@
                           <div class="new">20.990.000 đ</div>
                         </div>
                       </figcaption>
-                    </figure></a></div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
+                    </figure></a></article>
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
                     <figure>
                       <div class="product-img"><img src="img/product/6.jpg" alt=""></div>
                       <figcaption>
@@ -1014,8 +1172,8 @@
                           <div class="new">20.990.000 đ</div>
                         </div>
                       </figcaption>
-                    </figure></a></div>
-                <div class="col-12 col-sm-8 col-md-6 col-lg-4"><a class="product-col" href="#!">
+                    </figure></a></article>
+                <article class="col-12 col-sm-8 col-md-6 col-lg-4"><a class="product-col" href="#!">
                     <figure>
                       <div class="product-img"><img src="img/product/c2.jpg" alt=""></div>
                       <figcaption>
@@ -1041,8 +1199,8 @@
                           </ul>
                         </div>
                       </figcaption>
-                    </figure></a></div>
-                <div class="col-12 col-sm-8 col-md-6 col-lg-4"><a class="product-col" href="#!">
+                    </figure></a></article>
+                <article class="col-12 col-sm-8 col-md-6 col-lg-4"><a class="product-col" href="#!">
                     <figure>
                       <div class="product-img"><img src="img/product/c3.jpg" alt=""></div>
                       <figcaption>
@@ -1061,158 +1219,10 @@
                           </ul>
                         </div>
                       </figcaption>
-                    </figure></a></div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
-                    <figure>
-                      <div class="product-img"><img src="img/product/1.jpg" alt=""></div>
-                      <figcaption>
-                        <h2 class="product-name">Acer Nitro 5 Carbon AN515</h2>
-                        <div class="product-price">
-                          <div class="new">20.990.000 đ</div>
-                        </div>
-                        <div class="product-rating">
-                          <select class="bar-rating">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4" selected="selected">4</option>
-                            <option value="5">5</option>
-                          </select><span>70 đánh giá</span>
-                        </div>
-                        <div class="product-des">
-                          <p>Giảm 1 triệu thanh toán online bằng Mastercard và 2 KM khác</p>
-                        </div>
-                      </figcaption>
-                    </figure></a></div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
-                    <figure>
-                      <div class="product-img"><img src="img/product/2.jpg" alt=""></div>
-                      <figcaption>
-                        <h2 class="product-name">Acer Nitro 5 Carbon AN515</h2>
-                        <div class="product-price">
-                          <div class="new">20.990.000 đ</div>
-                        </div>
-                      </figcaption>
-                    </figure></a></div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
-                    <figure>
-                      <div class="product-img"><img src="img/product/3.jpg" alt=""></div>
-                      <figcaption>
-                        <h2 class="product-name">Acer Nitro 5 Carbon AN515</h2>
-                        <div class="product-price">
-                          <div class="new">20.990.000 đ</div>
-                        </div>
-                      </figcaption>
-                    </figure></a></div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
-                    <figure>
-                      <div class="product-img"><img src="img/product/4.jpg" alt=""></div>
-                      <figcaption>
-                        <h2 class="product-name">Acer Nitro 5 Carbon AN515</h2>
-                        <div class="product-price">
-                          <div class="new">20.990.000 đ</div>
-                        </div>
-                      </figcaption>
-                    </figure></a></div>
-                <div class="col-12 col-sm-8 col-md-6 col-lg-4"><a class="product-col" href="#!">
-                    <figure>
-                      <div class="product-img"><img src="img/product/c1.jpg" alt=""></div>
-                      <figcaption>
-                        <h2 class="product-name">Garmin Forerunner® 645</h2>
-                        <div class="product-price">
-                          <div class="new">9.990.000 đ</div>
-                        </div>
-                        <div class="product-rating">
-                          <select class="bar-rating">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4" selected="selected">4</option>
-                            <option value="5">5</option>
-                          </select><span>70 đánh giá</span>
-                        </div>
-                        <div class="product-des">
-                          <ul>
-                            <li>Kích thước: 42.5 x 42.5 x 13.5 mm</li>
-                            <li>Phiên bản: Music</li>
-                            <li>Chất liệu dây: Silicone</li>
-                            <li>Mặt kính: Cường lực</li>
-                            <li>Chống nước: 5ATM</li>
-                            <li>Trọng lượng: 42.2 g</li>
-                          </ul>
-                        </div>
-                      </figcaption>
-                    </figure></a></div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
-                    <figure>
-                      <div class="product-img"><img src="img/product/5.jpg" alt=""></div>
-                      <figcaption>
-                        <h2 class="product-name">Acer Nitro 5 Carbon AN515</h2>
-                        <div class="product-price">
-                          <div class="new">20.990.000 đ</div>
-                        </div>
-                      </figcaption>
-                    </figure></a></div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a class="product-col" href="#!">
-                    <figure>
-                      <div class="product-img"><img src="img/product/6.jpg" alt=""></div>
-                      <figcaption>
-                        <h2 class="product-name">Acer Nitro 5 Carbon AN515</h2>
-                        <div class="product-price">
-                          <div class="new">20.990.000 đ</div>
-                        </div>
-                      </figcaption>
-                    </figure></a></div>
-                <div class="col-12 col-sm-8 col-md-6 col-lg-4"><a class="product-col" href="#!">
-                    <figure>
-                      <div class="product-img"><img src="img/product/c2.jpg" alt=""></div>
-                      <figcaption>
-                        <h2 class="product-name">Garmin Forerunner® 645</h2>
-                        <div class="product-price">
-                          <div class="new">9.990.000 đ</div>
-                        </div>
-                        <div class="product-rating">
-                          <select class="bar-rating">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5" selected="selected">5</option>
-                          </select><span>70 đánh giá</span>
-                        </div>
-                        <div class="product-des">
-                          <ul>
-                            <li>Kích thước: 42.5 x 42.5 x 13.5 mm</li>
-                            <li>Phiên bản: Music</li>
-                            <li>Chất liệu dây: Silicone</li>
-                            <li>Mặt kính: Cường lực</li>
-                          </ul>
-                        </div>
-                      </figcaption>
-                    </figure></a></div>
-                <div class="col-12 col-sm-8 col-md-6 col-lg-4"><a class="product-col" href="#!">
-                    <figure>
-                      <div class="product-img"><img src="img/product/c3.jpg" alt=""></div>
-                      <figcaption>
-                        <h2 class="product-name">Garmin Forerunner® 645</h2>
-                        <div class="product-price">
-                          <div class="new">9.990.000 đ</div>
-                        </div>
-                        <div class="product-des">
-                          <ul>
-                            <li>Kích thước: 42.5 x 42.5 x 13.5 mm</li>
-                            <li>Phiên bản: Music</li>
-                            <li>Chất liệu dây: Silicone</li>
-                            <li>Mặt kính: Cường lực</li>
-                            <li>Chống nước: 5ATM</li>
-                            <li>Trọng lượng: 42.2 g</li>
-                          </ul>
-                        </div>
-                      </figcaption>
-                    </figure></a></div>
+                    </figure></a></article>
               </div>
             </div>
-            <div class="btn-wrap"><a class="btn-loadmore" href="#!">Xem thêm 135 sản phẩm</a></div>
+            <div class="btn-wrap text-center w-100"><a class="btn-loadmore" href="#!">Xem thêm</a></div>
           </section>
           <div class="filter-wrap option-group clearfix filter-bottom d-xs-none d-lg-block">
             <section class="filter-header clearfix">
@@ -1279,31 +1289,16 @@
               <div class="btn-closefilter">Hoàn tất</div>
             </div>
           </div>
-          <section class="product-subcate clearfix d-none d-lg-block">
-            <ul>
-              <li class="active"><a class="subcate" href="#">
-                  <div class="icon"><i class="fa fa-th" aria-hidden="true"></i></div>
-                  <div class="name">Nổi bật</div></a></li>
-              <li><a class="subcate" href="#">
-                  <div class="icon"><img src="img/icon/cateic1.png" alt=""></div>
-                  <div class="name">Smartwatch</div></a></li>
-              <li><a class="subcate" href="#">
-                  <div class="icon"><img src="img/icon/cateic2.png" alt=""></div>
-                  <div class="name">Tay cầm</div></a></li>
-              <li><a class="subcate" href="#">
-                  <div class="icon"><img src="img/icon/cateic4.png" alt=""></div>
-                  <div class="name">Âm thanh</div></a></li>
-              <li><a class="subcate" href="#">
-                  <div class="icon"><img src="img/icon/cateic5.png" alt=""></div>
-                  <div class="name">Máy tính</div></a></li>
-              <li><a class="subcate" href="#">
-                  <div class="icon"><img src="img/icon/cateic6.png" alt=""></div>
-                  <div class="name">Gaming Gear</div></a></li>
-              <li><a class="subcate" href="#">
-                  <div class="icon"><img src="img/icon/cateic8.png" alt=""></div>
-                  <div class="name">Camera</div></a></li>
-            </ul>
-          </section>
+          <div class="product-page-intro">
+            <div class="bg"><img src="img/brand/banner.jpg" alt=""></div>
+            <div class="caption">
+              <h1 class="name">Samsung</h1>
+              <div class="content">
+                <p>Samsung là một tập đoàn đa quốc gia của Hàn Quốc có tổng hành dinh đặt tại Samsung Town, Seoul. Tập đoàn có nhiều công ty con, hầu hết hoạt động dưới thương hiệu Samsung, là tập đoàn thương mại (chaebol) lớn nhất Hàn Quốc. Samsung được sáng lập bởi Lee Byung-chul năm 1938. Từ thập kỉ 90, Samsung mở rộng hoạt động trên quy mô toàn cầu, tập trung vào lĩnh vực điện tử, ĐTDĐ và chất bán dẫn...</p>
+                <p><strong>Mai Nguyên - Đại lý ủy quyền chính thức</strong><br>Samsung Experience Store (SES), Bitexco Financial Tower</p>
+              </div>
+            </div>
+          </div>
           <div class="compare-panel clearfix">
             <div class="container">
               <div class="compare-toggle">

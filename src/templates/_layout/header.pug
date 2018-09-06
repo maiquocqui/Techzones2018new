@@ -4,6 +4,8 @@ header
 			.header-wrap
 				.btn-showmenu
 					i.material-icons menu
+				.btn-prevpage
+					i.material-icons arrow_back
 				.overlay
 				.sitelogo
 					a(href="index.html")
@@ -66,6 +68,29 @@ header
 						include module-notification
 					.cart
 						include module-cart
+					.mini-menu
+						.dropdown
+							.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') 
+								i.material-icons more_vert
+							.dropdown-menu(aria-labelledby='dropdownMenuButton')
+								a.dropdown-item(href='index.html') 
+									i.material-icons home
+									span Trang chủ
+								a.dropdown-item(href='nganhhang.html')
+									i.material-icons view_list
+									span Danh mục
+								a.dropdown-item(href='#')
+									i.material-icons account_circle
+									span Tài khoản của tôi
+								a.dropdown-item(href='#')
+									i.material-icons assignment
+									span Đơn hàng của tôi
+								a.dropdown-item(href='#')
+									i.material-icons favorite
+									span Sản phẩm yêu thích
+								a.dropdown-item(href='#')
+									i.material-icons help
+									span Hỗ trợ khách hàng
 	section.header-menu
 		.container
 			.header-wrap
@@ -91,6 +116,10 @@ header
 									span Danh sách ngành hàng
 							li
 								a(href="#!")
+									i.material-icons memory
+									span Tự build PC
+							li
+								a(href="#!")
 									i.material-icons account_circle
 									span Quản lý tài khoản
 							li
@@ -106,7 +135,7 @@ header
 									i.material-icons help
 									span Trung tâm hỗ trợ
 						ul.menu-link.menu-pc
-							li
+							li.active
 								a(href="#!")
 									i.material-icons watch
 									span Thiết bị đeo tay
@@ -138,6 +167,10 @@ header
 								a(href="#!")
 									i.material-icons restore
 									span Hàng 2nd
+							li.hardware
+								a(href="#!")
+									i.material-icons memory
+									span Tự build PC
 							//- li.sale
 								a(href="#!")
 									i.material-icons event_available

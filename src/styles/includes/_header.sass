@@ -2,20 +2,36 @@
 	padding-top: 110px
 	+media-breakpoint-down(lg)
 		padding-top: 50px
+.homepage
+	header
+		+media-breakpoint-down(lg)
+			.btn-showmenu
+				+flexbox
+			.btn-prevpage
+				display: none
+			.mini-menu
+				display: none
 header
 	background: $white
 	+pos(fix, 0 0 null 0)
 	z-index: 1000
 	+transition(all,0.5s)
 	box-shadow: 0px 5px 20px color-rgba($black,0.05)
+	+media-breakpoint-down(lg)
+		box-shadow: none
 	&.minimal
-		// box-shadow: 0px 10px 50px -10px color-rgba($black,0.1)
 	.header-wrap
 		+flexbox
 		flex-wrap: wrap
 		align-items: center
 		align-content: center
 	.btn-showmenu
+		display: none
+		margin-right: 15px
+		+media-breakpoint-down(lg)
+			align-items: center
+			align-content: center
+	.btn-prevpage
 		display: none
 		margin-right: 15px
 		+media-breakpoint-down(lg)
@@ -43,6 +59,8 @@ header
 			display: block
 		img
 			height: 30px
+			+media-breakpoint-down(lg)
+				height: 25px
 	// TOP MENU
 	.top-menu
 		margin-left: 40px
@@ -272,41 +290,6 @@ header
 					@extend .btn-main
 					display: block
 					text-transform: uppercase
-	.social-login
-		ul
-			li 
-				margin-bottom: 10px
-				&:last-child
-					margin-bottom: 0
-				a
-					@extend .btn-main
-					color: $white
-					+flexbox
-					align-items: center
-					align-content: center
-					padding: 0
-					.fa
-						width: 40px
-						height: 30px
-						+flexbox
-						align-items: center
-						align-content: center
-						justify-content: center
-						+fs(16rem)
-						border-right: 1px solid color-rgba($white,0.5)
-					span
-						display: block
-						width: calc(100% - 40px)
-						padding: 0px 10px
-						text-align: center
-					&.facebook
-						background: $facebook
-						&:hover
-							box-shadow: 0px 10px 20px -10px color-rgba($black,0.7)
-					&.google
-						background: $google
-						&:hover
-							box-shadow: 0px 10px 20px -10px color-rgba($black,0.7)
 	// NOTIFICATION
 	.notification
 		margin-left: 20px
@@ -529,4 +512,31 @@ header
 					@extend .btn-main
 					line-height: 32px
 					padding: 0px 20px
+	.mini-menu
+		display: none
+		margin-left: 15px
+		+media-breakpoint-down(lg)
+			display: block
+		.dropdown-toggle
+			.material-icons
+				display: block
+		.dropdown-menu
+			min-width: 200px
+			padding: 5px 0
+			.dropdown-item
+				+flexbox
+				align-items: center
+				align-content: center
+				padding: 5px 10px
+				.material-icons
+					width: 30px
+					height: 30px
+					+flexbox
+					align-items: center
+					align-content: center
+					justify-content: center
+				span
+					width: calc(100% - 30px)
+					padding-left: 10px
+					+fs(13rem)
 	.header-menu

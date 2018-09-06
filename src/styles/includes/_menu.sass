@@ -1,5 +1,6 @@
 .menu
 	// display: none
+	width: 100%
 	+media-breakpoint-down(lg)
 		+pos(fix, 0 null 0 0)
 		overflow: auto
@@ -79,13 +80,16 @@
 				+flexbox
 				align-items: center
 				align-content: center
+				justify-content: center
 				line-height: 20px
 				+fs(14rem)
-				padding: 10px 15px
+				padding: 10px 20px
 				color: $main
 				+pos(rel,null)
 				+media-breakpoint-down(lg)
 					color: darken($white,60%)
+					padding: 10px 15px
+					justify-content: flex-start
 				&:after
 					content: ''
 					+pos(abs, null 0 0 0)
@@ -104,23 +108,44 @@
 					font-weight: 700
 					+media-breakpoint-down(lg)
 						font-weight: normal
-			&.sale
-				border-left: 1px solid color-rgba($black,0.1)
-				padding-left: 20px
+			&.hardware
+				flex: auto
 				a
-					padding: 0
-					color: darken($white,60%)
-				&.active
-					&:after
-						display: none
-			&:hover
-				a
-					color: $blue
-			&.active
-				a
-					color: $main
-					&:after
-						opacity: 1
+					background: $orangegradient
+					color: $white
+					animation: rgb 10s infinite
+				&:hover, &.active
+					a
+						background: $orangegradient
+						color: $white
+			=menuactive($color,$bg)
+				+media-breakpoint-up(xl)
+					&:hover
+						a
+							color: $color
+					&.active
+						a
+							color: $color
+							&:after
+								background: $bg
+								opacity: 1
+			+menuactive($blue,$bluegradient)
+			&:nth-child(2)
+				+menuactive($amber,$ambergradient)
+			&:nth-child(3)
+				+menuactive($pink,$pinkgradient)
+			&:nth-child(4)
+				+menuactive($green,$greengradient)
+			&:nth-child(5)
+				+menuactive($red,$redgradient)
+			&:nth-child(6)
+				+menuactive($cyan,$cyangradient)
+			&:nth-child(7)
+				+menuactive($purple,$purplegradient)
+			&:nth-child(8)
+				+menuactive($lightgreen,$lightgreengradient)
+			// &.hardware
+				// +menuactive($redgradient)
 	.menu-contact
 		display: none
 		margin: 0px 20px

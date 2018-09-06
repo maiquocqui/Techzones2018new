@@ -1,0 +1,128 @@
+section.breadcrumb-wrap
+	.container
+		ol.breadcrumb
+			li
+				a(href="#")
+					span Trang chủ
+			li
+				a(href="#")
+					span Thông tin tài khoản
+.container
+	.row.no-gutters
+		.col-12.col-lg-3.col-xl-3
+			section.user-info
+				.img
+					img(src="img/user.png", alt="")
+				.caption
+					.title Tài khoản của 
+					.name Mai Quốc Qui
+			nav.user-sidebar
+				ul
+					li
+						a(href="#!") 
+							.icon 
+								i.material-icons person
+							span Thông tin tài khoản
+					li
+						a(href="#!")
+							.icon 
+								i.material-icons notifications
+							span Thông báo của tôi
+					li.active
+						a(href="#!")
+							.icon 
+								i.material-icons assignment
+							span Quản lý đơn hàng
+					li
+						a(href="#!")
+							.icon 
+								i.material-icons place
+							span Sổ địa chỉ
+					li
+						a(href="#!")
+							.icon 
+								i.material-icons favorite
+							span Sản phẩm yêu thích
+		.col-12.col-lg-9.col-xl-9
+			section.user-page
+				.page-title Đơn hàng của tôi
+				.user-order
+					ul#myTab.nav.nav-tabs.user-nav(role='tablist')
+						li.nav-item
+							a#home-tab.nav-link.active(data-toggle='tab', href='#home', role='tab', aria-controls='home', aria-selected='true') Mua online
+						li.nav-item
+							a#profile-tab.nav-link(data-toggle='tab', href='#profile', role='tab', aria-controls='profile', aria-selected='false') Tại cửa hàng
+					#myTabContent.tab-content
+						#home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab')
+							.order-list
+								.item
+									.order-item
+										a.order-title(href="#!")
+											.id Đơn hàng 
+												strong #204587630514489
+											.des Đặt ngày 15 thg 7 2018 11:12:01
+												br
+												|Đã thanh toán 15 thg 7 2018 11:12:01
+											.status.alert-success Đã thanh toán
+										.order-product
+											a.product(href="#!")
+												.img
+													img(src="img/product/1.jpg", alt="")
+												.caption
+													.name Gigabyte GA-H370 Aorus Gaming 3
+													.amount Số lượng: 1
+													.price Tổng tiền: 
+														.new 3.800.000 đ
+											a.product(href="#!")
+												.img
+													img(src="img/product/2.jpg", alt="")
+												.caption
+													.name Gigabyte GA-H370 Aorus Gaming 3
+													.amount Số lượng: 1
+													.price Tổng tiền: 
+														.new 3.800.000 đ
+										.order-total
+											.group.total
+												.label Tổng cộng: 
+												.value 7.600.000 đ
+								.item
+									.order-item
+										a.order-title(href="#!")
+											.id Đơn hàng 
+												strong #204587630514489
+											.des Đặt ngày 15 thg 7 2018 11:12:01
+											.status.alert-secondary Chưa thanh toán
+										.order-product
+											a.product(href="#!")
+												.img
+													img(src="img/product/3.jpg", alt="")
+												.caption
+													.name Gigabyte GA-H370 Aorus Gaming 3
+													.amount Số lượng: 1
+													.price Tổng tiền: 
+														.new 3.800.000 đ
+										.order-total
+											.group.total
+												.label Tổng cộng: 
+												.value 7.600.000 đ
+								.item
+									.order-item
+										a.order-title(href="#!")
+											.id Đơn hàng 
+												strong #204587630514489
+											.des Đặt ngày 15 thg 7 2018 11:12:01
+											.status.alert-danger Đã hủy
+										.order-product
+											a.product(href="#!")
+												.img
+													img(src="img/product/4.jpg", alt="")
+												.caption
+													.name Gigabyte GA-H370 Aorus Gaming 3
+													.amount Số lượng: 1
+													.price Tổng tiền: 
+														.new 3.800.000 đ
+										.order-total
+											.group.total
+												.label Tổng cộng: 
+												.value 7.600.000 đ
+						#profile.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab') ...

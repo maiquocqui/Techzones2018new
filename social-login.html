@@ -1,0 +1,51 @@
+<div class="wrap-secure wrap-recover update-password">
+    <div id="ctl00_phMain_pnlResetPassword" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_phMain_btnChangePassword')">
+        <div class="panel panel-primary">
+            <h3 class="mrb20">
+                Vui lòng hoàn thiện các thông tin dưới đây để tiếp tục
+            </h3>
+            <div class="form-horizontal">
+                <div class="settingrow form-group">
+                    <label for="ctl00_phMain_Email" class="settinglabel control-label col-sm-3">Email</label>
+                    <div class="col-sm-9">
+                        <input name="ctl00$phMain$Email" type="text" value="quimq1905@gmail.com" maxlength="100" id="ctl00_phMain_Email" disabled="disabled" tabindex="10" class="aspNetDisabled form-control">
+                        <span id="ctl00_phMain_EmailRequired" class="fa fa-exclamation-triangle" style="display:none;"></span>
+                        <span id="ctl00_phMain_EmailRegex" class="fa fa-exclamation-triangle" style="display:none;"></span>
+                    </div>
+                </div>
+                <div class="settingrow form-group">
+                    <label class="settinglabel control-label col-sm-3">Điện thoại</label>
+                    <div class="col-sm-9">
+                        <input name="ctl00$phMain$txtPhone" type="text" maxlength="100" id="ctl00_phMain_txtPhone" tabindex="10" class="form-control">
+                        <span id="ctl00_phMain_PhoneRequired" class="fa fa-exclamation-triangle" style="display:none;"></span>
+                    </div>
+                </div>
+                <div class="settingrow form-group">
+                    <label for="ctl00_phMain_txtNewPassword" class="settinglabel control-label col-sm-3">Mật khẩu</label>
+                    <div class="col-sm-9">
+                        <!-- 2017.3.913.40 --><span id="ctl00_phMain_txtNewPassword_wrapper" class="RadInput RadInput_Default" style="white-space:normal;"><input id="ctl00_phMain_txtNewPassword" name="ctl00$phMain$txtNewPassword" size="20" class="riTextBox riEnabled form-control" type="password" style="width:100%;"><input id="ctl00_phMain_txtNewPassword_ClientState" name="ctl00_phMain_txtNewPassword_ClientState" type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;&quot;,&quot;valueAsString&quot;:&quot;&quot;,&quot;lastSetTextBoxValue&quot;:&quot;&quot;}"></span>
+                        <span id="ctl00_phMain_NewPasswordRequired" class="fa fa-exclamation-triangle" style="display:none;">Vui lòng nhập Mật khẩu mới.</span>
+                        <span id="ctl00_phMain_NewPasswordRegex" class="fa fa-exclamation-triangle" style="display:none;">Mật khẩu không đủ độ phức tạp.</span>
+                        <span id="ctl00_phMain_NewPasswordRulesValidator" class="fa fa-exclamation-triangle" style="display:none;"></span>
+                    </div>
+                </div>
+                <div class="settingrow form-group">
+                    <label for="ctl00_phMain_txtConfirmNewPassword" class="settinglabel control-label col-sm-3">Xác nhận mật khẩu</label>
+                    <div class="col-sm-9">
+                        <input name="ctl00$phMain$txtConfirmNewPassword" type="password" id="ctl00_phMain_txtConfirmNewPassword" class="form-control">
+                        <span id="ctl00_phMain_ConfirmNewPasswordRequired" class="fa fa-exclamation-triangle" style="display:none;">Vui lòng nhập Xác nhận mật khẩu.</span>
+                        <span id="ctl00_phMain_NewPasswordCompare" class="fa fa-exclamation-triangle" style="display:none;">Mật khẩu không khớp.</span>
+                    </div>
+                </div>
+                <div class="settingrow form-group">
+                    <div class="offset-sm-3 col-sm-9">
+                        <input type="submit" name="ctl00$phMain$btnChangePassword" value="Hoàn thành" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$phMain$btnChangePassword&quot;, &quot;&quot;, true, &quot;ChangePassword1&quot;, &quot;&quot;, false, false))"
+                            id="ctl00_phMain_btnChangePassword" class="btn btn-default">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

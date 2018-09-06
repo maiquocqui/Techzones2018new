@@ -1,0 +1,59 @@
+.product-dealtime
+	+fs(13rem)
+	text-align: center
+	color: darken($white,60%)
+	margin-bottom: 20px
+	time
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		margin: 0px -5px
+		span
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			+pos(rel,null)
+			width: 36px
+			height: 36px
+			+bor-rad(5px)
+			border: 1px solid darken($white,3%)
+			background: linear-gradient(color-rgba($black,0.03),color-rgba($black,0))
+			box-shadow: 0px 3px 1px 0 color-rgba($black,0.1)
+			+fs(14rem)
+			font-weight: 600
+			margin: 0px 5px
+			color: $red
+			+media-breakpoint-down(xs)
+				width: 30px
+				height: 30px
+			label
+				+pos(abs, null 0 -20px 0)
+				text-align: center
+				+fs(11rem)
+				font-weight: 500
+				color: $bluegrey
+.hot-deal
+	+media-breakpoint-down(xs)
+		margin: -10px !important
+	.hotdeal-item
+		flex: 0 0 20%
+		max-width: 20%
+		+media-breakpoint-down(lg)
+			flex: 0 0 25%
+			max-width: 25%
+		+media-breakpoint-down(md)
+			flex: 0 0 33.33%
+			max-width: 33.33%
+		+media-breakpoint-down(xs)
+			flex: 0 0 50%
+			max-width: 50%
+		.product-col
+			figcaption
+				+flexbox
+				flex-wrap: wrap
+				flex-direction: column
+				text-align: center
+				.product-rating
+					justify-content: center

@@ -18,14 +18,18 @@ body.modal-open
 		overflow: hidden
 		// box-shadow: 0px 10px 20px -10px color-rgba($black,0.5)
 		+pos(rel,null)
+		+media-breakpoint-down(sm)
+			+bor-rad(0)
 	.modal-header
-		padding: 18px 15px 15px
+		padding: 13px 15px 10px
 		border-bottom: 1px solid darken($white,10%)
 		+pos(rel,null)
 		.modal-title
 			+fs(16rem)
 			font-weight: 700
-			text-transform: uppercase
+			margin: 0
+			padding: 0
+			// text-transform: uppercase
 			&:before
 				content: ''
 				+pos(abs, 0 0 null 0)
@@ -35,7 +39,7 @@ body.modal-open
 			margin: 0
 			padding: 0
 			opacity: 1
-			+pos(abs, 16px 15px null null)
+			+pos(abs, 11px 10px null null)
 			color: darken($white,40%)
 			+transition(all,0.5s)
 			.material-icons
@@ -43,9 +47,13 @@ body.modal-open
 			&:hover
 				color: $red
 	.modal-body
-		padding: 20px
+		padding: 15px
 	&.modal-check
 		min-width: 1000px
+		+media-breakpoint-down(lg)
+			min-width: 800px
+		+media-breakpoint-down(md)
+			min-width: 100%
 		.check-form
 			max-width: 300px
 			.search-wrap
@@ -69,3 +77,62 @@ body.modal-open
 							display: block
 						&:hover
 							color: $blue
+	&.modal-address
+		min-width: 200px
+		.address-list
+			ul
+				+flexbox
+				flex-wrap: wrap
+				margin: 0px -5px
+				li
+					padding: 0px 5px
+					width: 50%
+					+media-breakpoint-down(sm)
+						width: 100%
+					.address-item
+						display: block
+						+bor-rad(5px)
+						text-align: left
+						+fs(14rem)
+						padding: 10px
+						border: 1px dashed darken($white,10%)
+						margin-bottom: 10px
+						+pos(rel,null)
+						+media-breakpoint-down(sm)
+							+fs(13rem)
+						&:after
+							content: '\f00c'
+							width: 14px
+							height: 14px
+							background: $blue
+							color: $white
+							+bor-rad(50px)
+							z-index: 1
+							+flexbox
+							+fs(12rem)
+							align-items: center
+							align-content: center
+							justify-content: center
+							+pos(abs, null 10px 10px null)
+							opacity: 0
+						.name
+							font-weight: 700
+						&:hover
+							border-color: lighten($blue,10%)
+							background: color-rgba($blue,0.05)
+						&.active
+							border-color: lighten($blue,10%)
+							background: color-rgba($blue,0.05)
+							&:after
+								opacity: 1
+	&.modal-bank
+		max-width: 900px
+		margin: 0 auto
+		.modal-body
+			+media-breakpoint-down(sm)
+				max-height: calc(100vh - 48px)
+				overflow: auto
+	&.modal-specification
+		max-width: 800px
+	&.modal-repay
+		margin: 0 auto

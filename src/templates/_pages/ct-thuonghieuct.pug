@@ -1,9 +1,18 @@
-section.brand-page.clearfix
+section.breadcrumb-wrap
 	.container
+		ol.breadcrumb
+			li
+				a(href="#")
+					span Trang chủ
+			li
+				a(href="#")
+					span Thương hiệu
+.container
+	section.brand-page
 		.brand-header
 			h1.brand-logo
 				a(href="#!")
-					img(src="img/brand/2.png", alt="")
+					img(src="img/brand/samsung.png", alt="")
 			.brand-menu
 				ul
 					li
@@ -14,240 +23,325 @@ section.brand-page.clearfix
 						a(href="#!") Điện gia dụng
 					li
 						a(href="#!") Màn hình máy tính
-		.brand-banner
-			.item
-				a.banner-img(href="#!")
-					img(src="img/brand/bn1.jpg", alt="")
-		.brand-category
-			ul
-				li.active
-					a.category(href="#!")
-						.img
-							img(src="img/cate/icon1.png", alt="")
-						.name Điện thoại
-				li
-					a.category(href="#!")
-						.img
-							img(src="img/cate/icon2.png", alt="")
-						.name Máy tính bảng
-				li
-					a.category(href="#!")
-						.img
-							img(src="img/cate/icon3.png", alt="")
-						.name Thiết bị đeo
-				li
-					a.category(href="#!")
-						.img
-							img(src="img/cate/icon4.png", alt="")
-						.name Phụ kiện di động
-		.brand-hotsale
-			h2.page-title.text-center Sản phẩm điện thoại bán chạy
-			.newproduct-slide
+		.brand-section
+			.brand-banner
 				.item
-					a.product-col(href="#!")
+					a.banner-img(href="#!")
+						img(src="img/brand/bn3.jpg", alt="")
+				.item
+					a.banner-img(href="#!")
+						img(src="img/brand/bn2.jpg", alt="")
+				.item
+					a.banner-img(href="#!")
+						img(src="img/brand/bn1.jpg", alt="")
+			.page-title.text-center.big Danh mục sản phẩm
+			.brand-category
+				ul
+					li
+						a.category(href="#!")
+							.img
+								img(src="img/cate/i1.png", alt="")
+							.name Điện thoại
+					li
+						a.category(href="#!")
+							.img
+								img(src="img/cate/i2.png", alt="")
+							.name Máy tính bảng
+					li
+						a.category(href="#!")
+							.img
+								img(src="img/cate/i3.png", alt="")
+							.name Thiết bị đeo
+					li
+						a.category(href="#!")
+							.img
+								img(src="img/cate/i4.png", alt="")
+							.name Phụ kiện di động
+					li
+						a.category(href="#!")
+							.img
+								img(src="img/cate/i5.png", alt="")
+							.name Phụ kiện di động
+					li
+						a.category(href="#!")
+							.img
+								img(src="img/cate/i6.png", alt="")
+							.name Điện thoại
+					li
+						a.category(href="#!")
+							.img
+								img(src="img/cate/i7.png", alt="")
+							.name Máy tính bảng
+					li
+						a.category(href="#!")
+							.img
+								img(src="img/cate/i8.png", alt="")
+							.name Thiết bị đeo
+					li
+						a.category(href="#!")
+							.img
+								img(src="img/cate/i9.png", alt="")
+							.name Phụ kiện di động
+					li
+						a.category(href="#!")
+							.img
+								img(src="img/cate/i10.png", alt="")
+							.name Phụ kiện di động
+		.brand-section
+			.page-title.text-center.big Điện thoại thông minh
+			.brand-banner
+				.item
+					a.banner-img(href="#!")
+						img(src="img/brand/bn3.jpg", alt="")
+				.item
+					a.banner-img(href="#!")
+						img(src="img/brand/bn2.jpg", alt="")
+				.item
+					a.banner-img(href="#!")
+						img(src="img/brand/bn1.jpg", alt="")
+			.page-title.text-center Sản phẩm nổi bật
+			.product-slick
+				.item
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/1.jpg", alt="")
+								img(src='img/product/1.jpg', alt='')
 							figcaption
-								h2.product-name iPhone 7 Plus Red
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
+									.new 20.990.000 đ
 				.item
-					a.product-col(href="#!")
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/2.jpg", alt="")
+								img(src='img/product/2.jpg', alt='')
 							figcaption
-								h2.product-name Samsung Galaxy Note 8
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
+									.new 20.990.000 đ
 				.item
-					a.product-col(href="#!")
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/3.jpg", alt="")
+								img(src='img/product/3.jpg', alt='')
 							figcaption
-								h2.product-name Samsung Galaxy S8
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
+									.new 20.990.000 đ
 				.item
-					a.product-col(href="#!")
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/4.jpg", alt="")
+								img(src='img/product/4.jpg', alt='')
 							figcaption
-								h2.product-name Sony Xperia XZ Premium
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
+									.new 20.990.000 đ
 				.item
-					a.product-col(href="#!")
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/5.jpg", alt="")
+								img(src='img/product/5.jpg', alt='')
 							figcaption
-								h2.product-name iPhone 6s 128GB
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
+									.new 20.990.000 đ
 				.item
-					a.product-col(href="#!")
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/6.jpg", alt="")
+								img(src='img/product/6.jpg', alt='')
 							figcaption
-								h2.product-name HTC U Ultra Sapphire
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
+									.new 20.990.000 đ
 				.item
-					a.product-col(href="#!")
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/7.jpg", alt="")
+								img(src='img/product/4.jpg', alt='')
 							figcaption
-								h2.product-name Sony Xperia XZ Premium Pink Gold
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
+									.new 20.990.000 đ
 				.item
-					a.product-col(href="#!")
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/8.jpg", alt="")
+								img(src='img/product/5.jpg', alt='')
 							figcaption
-								h2.product-name iPhone 6s Plus 64GB
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
+									.new 20.990.000 đ
+		.brand-section
+			.page-title.text-center.big TIVI / AUDIO
+			.brand-banner
 				.item
-					a.product-col(href="#!")
+					a.banner-img(href="#!")
+						img(src="img/brand/bn3.jpg", alt="")
+				.item
+					a.banner-img(href="#!")
+						img(src="img/brand/bn2.jpg", alt="")
+				.item
+					a.banner-img(href="#!")
+						img(src="img/brand/bn1.jpg", alt="")
+			.page-title.text-center Sản phẩm nổi bật
+			.product-slick
+				.item
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/9.jpg", alt="")
+								img(src='img/product/1.jpg', alt='')
 							figcaption
-								h2.product-name iPhone 6s 32GB
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
+									.new 20.990.000 đ
 				.item
-					a.product-col(href="#!")
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/10.jpg", alt="")
+								img(src='img/product/2.jpg', alt='')
 							figcaption
-								h2.product-name Sony Xperia XZs
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-			.btn-wrap
-				a.btn-loadmore(href="#!") Xem thêm
-				
-		.brand-hotsale
-			h2.page-title.text-center Sản phẩm máy tính bảng bán chạy
-			.newproduct-slide
+									.new 20.990.000 đ
 				.item
-					a.product-col(href="#!")
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/1.jpg", alt="")
+								img(src='img/product/3.jpg', alt='')
 							figcaption
-								h2.product-name iPhone 7 Plus Red
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
+									.new 20.990.000 đ
 				.item
-					a.product-col(href="#!")
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/2.jpg", alt="")
+								img(src='img/product/4.jpg', alt='')
 							figcaption
-								h2.product-name Samsung Galaxy Note 8
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
+									.new 20.990.000 đ
 				.item
-					a.product-col(href="#!")
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/3.jpg", alt="")
+								img(src='img/product/5.jpg', alt='')
 							figcaption
-								h2.product-name Samsung Galaxy S8
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
+									.new 20.990.000 đ
 				.item
-					a.product-col(href="#!")
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/4.jpg", alt="")
+								img(src='img/product/6.jpg', alt='')
 							figcaption
-								h2.product-name Sony Xperia XZ Premium
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
+									.new 20.990.000 đ
 				.item
-					a.product-col(href="#!")
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/5.jpg", alt="")
+								img(src='img/product/4.jpg', alt='')
 							figcaption
-								h2.product-name iPhone 6s 128GB
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
+									.new 20.990.000 đ
 				.item
-					a.product-col(href="#!")
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/6.jpg", alt="")
+								img(src='img/product/5.jpg', alt='')
 							figcaption
-								h2.product-name HTC U Ultra Sapphire
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
+									.new 20.990.000 đ
+		.brand-section
+			.page-title.text-center.big Điện Gia Dụng
+			.brand-banner
 				.item
-					a.product-col(href="#!")
+					a.banner-img(href="#!")
+						img(src="img/brand/bn3.jpg", alt="")
+				.item
+					a.banner-img(href="#!")
+						img(src="img/brand/bn2.jpg", alt="")
+				.item
+					a.banner-img(href="#!")
+						img(src="img/brand/bn1.jpg", alt="")
+			.page-title.text-center Sản phẩm nổi bật
+			.product-slick
+				.item
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/7.jpg", alt="")
+								img(src='img/product/1.jpg', alt='')
 							figcaption
-								h2.product-name Sony Xperia XZ Premium Pink Gold
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
+									.new 20.990.000 đ
 				.item
-					a.product-col(href="#!")
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/8.jpg", alt="")
+								img(src='img/product/2.jpg', alt='')
 							figcaption
-								h2.product-name iPhone 6s Plus 64GB
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
+									.new 20.990.000 đ
 				.item
-					a.product-col(href="#!")
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/9.jpg", alt="")
+								img(src='img/product/3.jpg', alt='')
 							figcaption
-								h2.product-name iPhone 6s 32GB
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
+									.new 20.990.000 đ
 				.item
-					a.product-col(href="#!")
+					a.product-col(href='#!')
 						figure
 							.product-img
-								img(src="img/product/10.jpg", alt="")
+								img(src='img/product/4.jpg', alt='')
 							figcaption
-								h2.product-name Sony Xperia XZs
+								h2.product-name Acer Nitro 5 Carbon AN515
 								.product-price
-									.new 23.490.000 ₫
-									.old 25.000.000 ₫
-			.btn-wrap
-				a.btn-loadmore(href="#!") Xem thêm
+									.new 20.990.000 đ
+				.item
+					a.product-col(href='#!')
+						figure
+							.product-img
+								img(src='img/product/5.jpg', alt='')
+							figcaption
+								h2.product-name Acer Nitro 5 Carbon AN515
+								.product-price
+									.new 20.990.000 đ
+				.item
+					a.product-col(href='#!')
+						figure
+							.product-img
+								img(src='img/product/6.jpg', alt='')
+							figcaption
+								h2.product-name Acer Nitro 5 Carbon AN515
+								.product-price
+									.new 20.990.000 đ
+				.item
+					a.product-col(href='#!')
+						figure
+							.product-img
+								img(src='img/product/4.jpg', alt='')
+							figcaption
+								h2.product-name Acer Nitro 5 Carbon AN515
+								.product-price
+									.new 20.990.000 đ
+				.item
+					a.product-col(href='#!')
+						figure
+							.product-img
+								img(src='img/product/5.jpg', alt='')
+							figcaption
+								h2.product-name Acer Nitro 5 Carbon AN515
+								.product-price
+									.new 20.990.000 đ

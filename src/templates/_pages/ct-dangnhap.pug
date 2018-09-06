@@ -1,33 +1,37 @@
-section.login-page.clearfix
-	.login-header.clearfix
-		.container
-			a.btn-backpage(href="index.html") <i class="material-icons">arrow_back</i>
+section.breadcrumb-wrap
 	.container
-		.login-panel.clearfix
+		ol.breadcrumb
+			li
+				a(href="#")
+					span Trang chủ
+			li
+				a(href="#")
+					span Đăng nhập
+section.login-page
+	.container
+		.login-panel
 			.login-banner.text-center
 				img(src="img/logobg.png", alt="")
-			nav.login-nav.clearfix
-				ul
-					li.active
-						a(href="dangnhap.html") Đăng nhập
-					li
-						a(href="dangky.html") Đăng ký
-			.loginfrm-wrap
+			.form-wrap
 				.form-group
-					label <i class="material-icons">email</i>
+					label Email
 					input(type="text" placeholder="Địa chỉ email")
 				.form-group
-					label <i class="material-icons">lock</i>
+					label Mật khẩu
 					input(type="text" placeholder="Mật khẩu")
 				.checkbox.remember-pw
 					input#rememberpw(type="checkbox", name="rmbpw")
 					label(for="rememberpw") Lưu mật khẩu
 				.frm-btn
 					input(type="submit", value="Đăng nhập")
-				.forget-pw
-					a(href="#") Quên mật khẩu?
+				.form-group
+					a.form-link(href="#!") Quên mật khẩu?
+					a.form-link(href="#!") Đăng ký
 			.social-login
-				.module-title Đăng nhập bằng
-				.social-list
-					a.facebook(href="#") <i class="fa fa-facebook" aria-hidden="true"></i>facebook
-					a.google(href="#") <i class="fa fa-google-plus" aria-hidden="true"></i>Google
+				ul
+					li
+						a.facebook(href="#!") <i class="fa fa-facebook" aria-hidden="true"></i>
+							span Đăng nhập bằng Facebook
+					li
+						a.google(href="#!") <i class="fa fa-google-plus" aria-hidden="true"></i>
+							span Đăng nhập bằng Google

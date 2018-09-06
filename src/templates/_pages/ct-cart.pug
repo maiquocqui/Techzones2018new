@@ -1,10 +1,193 @@
 .container
-	.row
+	.row.row-m
 		.col-12.col-lg-8
-			section.cart-step1.active
+			section#cart-step1.cart-step.cart-step1
 				.cart-overlay
 				.cart-title
 					i.material-icons shopping_cart
 					span Giỏ hàng của bạn (có
-					strong 1
-					| sản phẩm)
+						strong 1
+						| sản phẩm)
+				.cart-table
+					.item
+						.cart-item
+							a.img(href="#!")
+								img(src="img/product/5.jpg", alt="")
+							.caption
+								.item-info
+									a.name(href="#!") ASUS ROG STRIX SCAR II
+									.option Thuộc tính sản phẩm: 
+										span Đen, 16GB
+									.amount Số lượng: 
+										.input-number
+											.btn-spin.btn-dec -
+											input(type="text" value="1")
+											.btn-spin.btn-inc +
+								.item-price
+									.new 20.000.000 đ
+									.old
+										del 40.000.000 đ
+										span -50%
+									.des (Giá đã bao gồm VAT)
+								.gift-list
+									label Quà tặng
+									ul
+										li
+											a.gift-item(href="#!")
+												.gift-img
+													img(src="img/product/2.jpg", alt="")
+												.gift-caption
+													.gift-name Đồng hồ thông minh
+													.gift-price
+														.new 6.000.000 đ
+										li
+											a.gift-item(href="#!")
+												.gift-img
+													img(src="img/product/3.jpg", alt="")
+												.gift-caption
+													.gift-name Đồng hồ thông minh 2
+													.gift-price
+														.new 6.000.000 đ
+							a.btn-remove(href="#!") <i class="material-icons">delete</i>
+					.item
+						.cart-item
+							a.img(href="#!")
+								img(src="img/product/6.jpg", alt="")
+							.caption
+								.item-info
+									a.name(href="#!") ASUS ROG STRIX SCAR II
+									.option Thuộc tính sản phẩm: 
+										span Đen, 16GB
+									.amount Số lượng: 
+										.input-number
+											.btn-spin.btn-dec -
+											input(type="text" value="1")
+											.btn-spin.btn-inc +
+								.item-price
+									.new 20.000.000 đ
+									.old
+										del 40.000.000 đ
+										span -50%
+									.des (Giá đã bao gồm VAT)
+							a.btn-remove(href="#!") <i class="material-icons">delete</i>
+				.row
+					.col-12.col-md-7
+						.cart-coupon
+							.input-coupon
+								input(type="text" placeholder="Nhập mã giảm giá")
+								button.btn-submitcoupon Áp dụng
+							.form-des 
+								p - Sau khi áp dụng, Mã giảm giá có thể không dùng được trong vòng 15 phút.
+									br
+									| - Trong quá trình thanh toán, Techzones sẽ tạm khóa mã giảm giá của quý khách để đảm bảo phiên giao dịch được ổn định. Mã giảm giá sẽ được mở lại ngay khi phiên giao dịch kết thúc
+					.col-12.col-md-5
+						.cart-total
+							.group
+								.label Tạm tính: 
+								.value 40.000.000 đ
+							.group
+								.label Giảm giá: 
+								.value 0 đ
+							.group
+								.label Phí vận chuyển: 
+								.value 0 đ
+							.group.total
+								.label Tổng tiền: 
+								.value 40.000.000 đ
+				.btn-wrap
+					a.btn-back(href="#!") Tiếp tục mua hàng
+				.cart-btn.d-flex.d-lg-none
+					.total Tổng cộng:
+						strong 40.000.000 đ
+						.des (Giá đã bao gồm VAT)
+					a.btn-continue(href="#!") Thanh toán
+		.col-12.col-lg-4
+			section#cart-step2.cart-step
+				.cart-login
+					.form-wrap
+						.form-select
+							ul
+								li.radio
+									input#r1(type="radio", name="radio")
+									label(for="r1") Tôi chưa có tài khoản
+								li.radio
+									input#r2(type="radio", name="radio" checked)
+									label(for="r2") Tôi đã có tài khoản Techzones
+						.module-title Vui lòng đăng nhập để tiếp tục
+						.form-group
+							label(for="#!") Email
+							input(type="text" placeholder="Email")
+						.form-group
+							label(for="#!") Mật khẩu
+							input(type="password" placeholder="Mật khẩu")
+						.form-group
+							a.form-link(href="#!") Quên mật khẩu?
+							a.form-link(href="#!") Đăng ký
+						.frm-btn
+							input(type="submit", value="Tiếp tục")
+					.social-login
+						ul
+							li
+								a.facebook(href="#!") <i class="fa fa-facebook" aria-hidden="true"></i>
+									span Đăng nhập bằng Facebook
+							li
+								a.google(href="#!") <i class="fa fa-google-plus" aria-hidden="true"></i>
+									span Đăng nhập bằng Google
+		.col-12
+			.cart-step
+				.cart-title 
+					i.material-icons access_time
+					span Sản phẩm đã xem
+				.lastview-wrap
+					.lastview-slick
+						.item
+							a.lastview-item(href="#!")
+								.img
+									img(src="img/product/1.jpg", alt="")
+								.name Lorem ipsum dolor
+						.item
+							a.lastview-item(href="#!")
+								.img
+									img(src="img/product/2.jpg", alt="")
+								.name Lorem ipsum dolor
+						.item
+							a.lastview-item(href="#!")
+								.img
+									img(src="img/product/3.jpg", alt="")
+								.name Lorem ipsum dolor
+						.item
+							a.lastview-item(href="#!")
+								.img
+									img(src="img/product/4.jpg", alt="")
+								.name Lorem ipsum dolor
+						.item
+							a.lastview-item(href="#!")
+								.img
+									img(src="img/product/5.jpg", alt="")
+								.name Lorem ipsum dolor
+						.item
+							a.lastview-item(href="#!")
+								.img
+									img(src="img/product/6.jpg", alt="")
+								.name Lorem ipsum dolor
+						.item
+							a.lastview-item(href="#!")
+								.img
+									img(src="img/product/7.jpg", alt="")
+								.name Lorem ipsum dolor
+						.item
+							a.lastview-item(href="#!")
+								.img
+									img(src="img/product/8.jpg", alt="")
+								.name Lorem ipsum dolor
+						.item
+							a.lastview-item(href="#!")
+								.img
+									img(src="img/product/9.jpg", alt="")
+								.name Lorem ipsum dolor
+						.item
+							a.lastview-item(href="#!")
+								.img
+									img(src="img/product/10.jpg", alt="")
+								.name Lorem ipsum dolor
+

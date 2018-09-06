@@ -1,37 +1,8 @@
-// .breadcrumb-wrap
-// 	background: darken($white,3%)
-// 	.breadcrumb
-// 		margin: 0
-// 		padding: 0
-// 		+bor-rad(0)
-// 		background: none
-// 		white-space: nowrap
-// 		overflow: hidden
-// 		text-overflow: ellipsis
-// 		padding: 5px 0
-// 		li
-// 			display: inline-block
-// 			color: darken($white,40%)
-// 			&:after
-// 				content: '\f105'
-// 				margin: 0px 3px 0px 6px
-// 			&:last-child
-// 				&:after
-// 					display: none
-// 			a
-// 				color: darken($white,40%)
-// 				+fs(12rem)
-// 				span
-// 	&.black
-// 		background: $black
-// 		.breadcrumb
-// 			li
-// 				a
-// 					color: $white
-
 .breadcrumb-wrap
-	padding: 15px 0
-	background: $bluegradient
+	padding: 10px 0
+	// background: $bluegradient
+	+media-breakpoint-down(lg)
+		padding: 8px 0
 	.breadcrumb
 		margin: 0
 		padding: 0
@@ -48,7 +19,7 @@
 				width: 0
 				padding: 0
 				border: 4px solid transparent
-				border-color: transparent $lime $lime transparent
+				border-color: transparent $blue $blue transparent
 				+pos(abs, null -15px 6px null)
 			&:nth-child(2)
 				&:after
@@ -66,7 +37,9 @@
 				&:after
 					border-color: transparent $orange $orange transparent
 			a
-				color: $white
-				+fs(14rem)
+				color: darken($white,40%)
+				+fs(13rem)
+				+media-breakpoint-down(lg)
+					+fs(12rem)
 				&:hover
 					color: $black

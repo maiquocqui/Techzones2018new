@@ -19,6 +19,7 @@
           <div class="container">
             <div class="header-wrap">
               <div class="btn-showmenu"><i class="material-icons">menu</i></div>
+              <div class="btn-prevpage"><i class="material-icons">arrow_back</i></div>
               <div class="overlay"></div>
               <div class="sitelogo"><a href="index.html"><img src="img/logo.png" alt=""></a></div>
               <nav class="top-menu">
@@ -456,6 +457,12 @@
                     </div>
                   </div>
                 </div>
+                <div class="mini-menu">
+                  <div class="dropdown">
+                    <div class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="material-icons">more_vert</i></div>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="index.html"> <i class="material-icons">home</i><span>Trang chủ</span></a><a class="dropdown-item" href="nganhhang.html"><i class="material-icons">view_list</i><span>Danh mục</span></a><a class="dropdown-item" href="#"><i class="material-icons">account_circle</i><span>Tài khoản của tôi</span></a><a class="dropdown-item" href="#"><i class="material-icons">assignment</i><span>Đơn hàng của tôi</span></a><a class="dropdown-item" href="#"><i class="material-icons">favorite</i><span>Sản phẩm yêu thích</span></a><a class="dropdown-item" href="#"><i class="material-icons">help</i><span>Hỗ trợ khách hàng</span></a></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -475,13 +482,14 @@
                   <ul class="menu-link menu-mobile">
                     <li><a href="#!"><i class="material-icons">home</i><span>Trang chủ</span></a></li>
                     <li><a href="#!"><i class="material-icons">view_list</i><span>Danh sách ngành hàng</span></a></li>
+                    <li><a href="#!"><i class="material-icons">memory</i><span>Tự build PC</span></a></li>
                     <li><a href="#!"><i class="material-icons">account_circle</i><span>Quản lý tài khoản</span></a></li>
                     <li><a href="#!"><i class="material-icons">notifications</i><span>Thông báo</span></a></li>
                     <li><a href="#!"><i class="material-icons">rss_feed</i><span>Tin tức</span></a></li>
                     <li><a href="#!"><i class="material-icons">help</i><span>Trung tâm hỗ trợ</span></a></li>
                   </ul>
                   <ul class="menu-link menu-pc">
-                    <li><a href="#!"><i class="material-icons">watch</i><span>Thiết bị đeo tay</span></a></li>
+                    <li class="active"><a href="#!"><i class="material-icons">watch</i><span>Thiết bị đeo tay</span></a></li>
                     <li><a href="#!"><i class="material-icons">tv</i><span>Home theater</span></a></li>
                     <li><a href="#!"><i class="material-icons">headset_mic</i><span>Âm thanh</span></a></li>
                     <li><a href="#!"><i class="material-icons">computer</i><span>Máy tính</span></a></li>
@@ -489,6 +497,7 @@
                     <li><a href="#!"><i class="material-icons">videocam</i><span>Camera</span></a></li>
                     <li><a href="#!"><i class="material-icons">settings_input_hdmi</i><span>Phụ kiện</span></a></li>
                     <li><a href="#!"><i class="material-icons">restore</i><span>Hàng 2nd</span></a></li>
+                    <li class="hardware"><a href="#!"><i class="material-icons">memory</i><span>Tự build PC</span></a></li>
                   </ul>
                 </div>
                 <div class="menu-contact">
@@ -562,12 +571,198 @@
           </div>
         </section>
         <div class="container">
-          <div class="row">
+          <div class="row row-m">
             <div class="col-12 col-lg-8">
-              <section class="cart-step1 active">
+              <section class="cart-step cart-step1" id="cart-step1">
                 <div class="cart-overlay"></div>
-                <div class="cart-title"><i class="material-icons">shopping_cart</i><span>Giỏ hàng của bạn (có</span><strong>1</strong>sản phẩm)</div>
+                <div class="cart-title"><i class="material-icons">shopping_cart</i><span>Giỏ hàng của bạn (có<strong>1</strong>sản phẩm)</span></div>
+                <div class="cart-table">
+                  <div class="item">
+                    <div class="cart-item"><a class="img" href="#!"><img src="img/product/5.jpg" alt=""></a>
+                      <div class="caption">
+                        <div class="item-info"><a class="name" href="#!">ASUS ROG STRIX SCAR II</a>
+                          <div class="option">Thuộc tính sản phẩm: <span>Đen, 16GB</span></div>
+                          <div class="amount">Số lượng: 
+                            <div class="input-number">
+                              <div class="btn-spin btn-dec">-</div>
+                              <input type="text" value="1">
+                              <div class="btn-spin btn-inc">+</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-price">
+                          <div class="new">20.000.000 đ</div>
+                          <div class="old">
+                            <del>40.000.000 đ</del><span>-50%</span>
+                          </div>
+                          <div class="des">(Giá đã bao gồm VAT)</div>
+                        </div>
+                        <div class="gift-list">
+                          <label>Quà tặng</label>
+                          <ul>
+                            <li><a class="gift-item" href="#!">
+                                <div class="gift-img"><img src="img/product/2.jpg" alt=""></div>
+                                <div class="gift-caption">
+                                  <div class="gift-name">Đồng hồ thông minh</div>
+                                  <div class="gift-price">
+                                    <div class="new">6.000.000 đ</div>
+                                  </div>
+                                </div></a></li>
+                            <li><a class="gift-item" href="#!">
+                                <div class="gift-img"><img src="img/product/3.jpg" alt=""></div>
+                                <div class="gift-caption">
+                                  <div class="gift-name">Đồng hồ thông minh 2</div>
+                                  <div class="gift-price">
+                                    <div class="new">6.000.000 đ</div>
+                                  </div>
+                                </div></a></li>
+                          </ul>
+                        </div>
+                      </div><a class="btn-remove" href="#!"><i class="material-icons">delete</i></a>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="cart-item"><a class="img" href="#!"><img src="img/product/6.jpg" alt=""></a>
+                      <div class="caption">
+                        <div class="item-info"><a class="name" href="#!">ASUS ROG STRIX SCAR II</a>
+                          <div class="option">Thuộc tính sản phẩm: <span>Đen, 16GB</span></div>
+                          <div class="amount">Số lượng: 
+                            <div class="input-number">
+                              <div class="btn-spin btn-dec">-</div>
+                              <input type="text" value="1">
+                              <div class="btn-spin btn-inc">+</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-price">
+                          <div class="new">20.000.000 đ</div>
+                          <div class="old">
+                            <del>40.000.000 đ</del><span>-50%</span>
+                          </div>
+                          <div class="des">(Giá đã bao gồm VAT)</div>
+                        </div>
+                      </div><a class="btn-remove" href="#!"><i class="material-icons">delete</i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-7">
+                    <div class="cart-coupon">
+                      <div class="input-coupon">
+                        <input type="text" placeholder="Nhập mã giảm giá">
+                        <button class="btn-submitcoupon">Áp dụng</button>
+                      </div>
+                      <div class="form-des"> 
+                        <p>- Sau khi áp dụng, Mã giảm giá có thể không dùng được trong vòng 15 phút.<br>- Trong quá trình thanh toán, Techzones sẽ tạm khóa mã giảm giá của quý khách để đảm bảo phiên giao dịch được ổn định. Mã giảm giá sẽ được mở lại ngay khi phiên giao dịch kết thúc</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-5">
+                    <div class="cart-total">
+                      <div class="group">
+                        <div class="label">Tạm tính: </div>
+                        <div class="value">40.000.000 đ</div>
+                      </div>
+                      <div class="group">
+                        <div class="label">Giảm giá: </div>
+                        <div class="value">0 đ</div>
+                      </div>
+                      <div class="group">
+                        <div class="label">Phí vận chuyển: </div>
+                        <div class="value">0 đ</div>
+                      </div>
+                      <div class="group total">
+                        <div class="label">Tổng tiền: </div>
+                        <div class="value">40.000.000 đ</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn-wrap"><a class="btn-back" href="#!">Tiếp tục mua hàng</a></div>
+                <div class="cart-btn d-flex d-lg-none">
+                  <div class="total">Tổng cộng:<strong>40.000.000 đ</strong>
+                    <div class="des">(Giá đã bao gồm VAT)</div>
+                  </div><a class="btn-continue" href="#!">Thanh toán</a>
+                </div>
               </section>
+            </div>
+            <div class="col-12 col-lg-4">
+              <section class="cart-step" id="cart-step2">
+                <div class="cart-login">
+                  <div class="form-wrap">
+                    <div class="form-select">
+                      <ul>
+                        <li class="radio">
+                          <input id="r1" type="radio" name="radio">
+                          <label for="r1">Tôi chưa có tài khoản</label>
+                        </li>
+                        <li class="radio">
+                          <input id="r2" type="radio" name="radio" checked>
+                          <label for="r2">Tôi đã có tài khoản Techzones</label>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="module-title">Vui lòng đăng nhập để tiếp tục</div>
+                    <div class="form-group">
+                      <label for="#!">Email</label>
+                      <input type="text" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                      <label for="#!">Mật khẩu</label>
+                      <input type="password" placeholder="Mật khẩu">
+                    </div>
+                    <div class="form-group"><a class="form-link" href="#!">Quên mật khẩu?</a><a class="form-link" href="#!">Đăng ký</a></div>
+                    <div class="frm-btn">
+                      <input type="submit" value="Tiếp tục">
+                    </div>
+                  </div>
+                  <div class="social-login">
+                    <ul>
+                      <li><a class="facebook" href="#!"><i class="fa fa-facebook" aria-hidden="true"></i><span>Đăng nhập bằng Facebook</span></a></li>
+                      <li><a class="google" href="#!"><i class="fa fa-google-plus" aria-hidden="true"></i><span>Đăng nhập bằng Google</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-12">
+              <div class="cart-step">
+                <div class="cart-title"> <i class="material-icons">access_time</i><span>Sản phẩm đã xem</span></div>
+                <div class="lastview-wrap">
+                  <div class="lastview-slick">
+                    <div class="item"><a class="lastview-item" href="#!">
+                        <div class="img"><img src="img/product/1.jpg" alt=""></div>
+                        <div class="name">Lorem ipsum dolor</div></a></div>
+                    <div class="item"><a class="lastview-item" href="#!">
+                        <div class="img"><img src="img/product/2.jpg" alt=""></div>
+                        <div class="name">Lorem ipsum dolor</div></a></div>
+                    <div class="item"><a class="lastview-item" href="#!">
+                        <div class="img"><img src="img/product/3.jpg" alt=""></div>
+                        <div class="name">Lorem ipsum dolor</div></a></div>
+                    <div class="item"><a class="lastview-item" href="#!">
+                        <div class="img"><img src="img/product/4.jpg" alt=""></div>
+                        <div class="name">Lorem ipsum dolor</div></a></div>
+                    <div class="item"><a class="lastview-item" href="#!">
+                        <div class="img"><img src="img/product/5.jpg" alt=""></div>
+                        <div class="name">Lorem ipsum dolor</div></a></div>
+                    <div class="item"><a class="lastview-item" href="#!">
+                        <div class="img"><img src="img/product/6.jpg" alt=""></div>
+                        <div class="name">Lorem ipsum dolor</div></a></div>
+                    <div class="item"><a class="lastview-item" href="#!">
+                        <div class="img"><img src="img/product/7.jpg" alt=""></div>
+                        <div class="name">Lorem ipsum dolor</div></a></div>
+                    <div class="item"><a class="lastview-item" href="#!">
+                        <div class="img"><img src="img/product/8.jpg" alt=""></div>
+                        <div class="name">Lorem ipsum dolor</div></a></div>
+                    <div class="item"><a class="lastview-item" href="#!">
+                        <div class="img"><img src="img/product/9.jpg" alt=""></div>
+                        <div class="name">Lorem ipsum dolor</div></a></div>
+                    <div class="item"><a class="lastview-item" href="#!">
+                        <div class="img"><img src="img/product/10.jpg" alt=""></div>
+                        <div class="name">Lorem ipsum dolor</div></a></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

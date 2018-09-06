@@ -1,0 +1,386 @@
+.container
+	.row.row-m
+		.col-12.col-lg-8
+			section#cart-step1.cart-step.cart-step1
+				.cart-overlay
+				.cart-title
+					i.material-icons shopping_cart
+					span Giỏ hàng của bạn (có
+						strong 2
+						| sản phẩm)
+				.cart-table
+					.item
+						.cart-item
+							a.img(href="#!")
+								img(src="img/product/5.jpg", alt="")
+							.caption
+								.item-info
+									a.name(href="#!") ASUS ROG STRIX SCAR II
+									.option Thuộc tính sản phẩm: 
+										span Đen, 16GB
+									.amount Số lượng: 
+										.input-number
+											.btn-spin.btn-dec -
+											input(type="text" value="1")
+											.btn-spin.btn-inc +
+								.item-price
+									.new 20.000.000 đ
+									.old
+										del 40.000.000 đ
+										span -50%
+									.des (Giá đã bao gồm VAT)
+								.gift-list
+									label Quà tặng
+									ul
+										li
+											a.gift-item(href="#!")
+												.gift-img
+													img(src="img/product/2.jpg", alt="")
+												.gift-caption
+													.gift-name Đồng hồ thông minh
+													.gift-price
+														.new 6.000.000 đ
+										li
+											a.gift-item(href="#!")
+												.gift-img
+													img(src="img/product/3.jpg", alt="")
+												.gift-caption
+													.gift-name Đồng hồ thông minh 2
+													.gift-price
+														.new 6.000.000 đ
+							a.btn-remove(href="#!") <i class="material-icons">delete</i>
+					.item
+						.cart-item
+							a.img(href="#!")
+								img(src="img/product/6.jpg", alt="")
+							.caption
+								.item-info
+									a.name(href="#!") ASUS ROG STRIX SCAR II
+									.option Thuộc tính sản phẩm: 
+										span Đen, 16GB
+									.amount Số lượng: 
+										.input-number
+											.btn-spin.btn-dec -
+											input(type="text" value="1")
+											.btn-spin.btn-inc +
+								.item-price
+									.new 20.000.000 đ
+									.old
+										del 40.000.000 đ
+										span -50%
+									.des (Giá đã bao gồm VAT)
+							a.btn-remove(href="#!") <i class="material-icons">delete</i>
+				.row
+					.col-12.col-md-7
+						.cart-coupon
+							.input-coupon
+								input(type="text" placeholder="Nhập mã giảm giá")
+								button.btn-submitcoupon Áp dụng
+							.form-des 
+								p - Sau khi áp dụng, Mã giảm giá có thể không dùng được trong vòng 15 phút.
+									br
+									| - Trong quá trình thanh toán, Techzones sẽ tạm khóa mã giảm giá của quý khách để đảm bảo phiên giao dịch được ổn định. Mã giảm giá sẽ được mở lại ngay khi phiên giao dịch kết thúc
+					.col-12.col-md-5
+						.cart-total
+							.group
+								.label Tạm tính: 
+								.value 40.000.000 đ
+							.group
+								.label Giảm giá: 
+								.value 0 đ
+							.group
+								.label Phí vận chuyển: 
+								.value 0 đ
+							.group.total
+								.label Tổng tiền: 
+								.value 40.000.000 đ
+				.btn-wrap
+					a.btn-back(href="#!") Tiếp tục mua hàng
+			//- section.cart-step
+				.cart-title
+					i.material-icons card_giftcard
+					span Sử dụng mã giảm giá
+				.cart-coupon
+					.input-coupon
+						input(type="text" placeholder="Nhập mã giảm giá")
+						button.btn-submitcoupon Áp dụng
+					.form-des 
+						p - Sau khi áp dụng, Mã giảm giá có thể không dùng được trong vòng 15 phút.
+							br
+							| - Trong quá trình thanh toán, Techzones sẽ tạm khóa mã giảm giá của quý khách để đảm bảo phiên giao dịch được ổn định. Mã giảm giá sẽ được mở lại ngay khi phiên giao dịch kết thúc
+			section#cart-step3.cart-step
+				.cart-title
+					i.material-icons payment
+					span Phương thức thanh toán
+				.cart-payment
+					#responsivetabs.payment-method
+						ul
+							li.method-select
+								a(href="#method1")
+									input#m1(type="radio", name="method")
+									label.method-item(for="m1")
+										.icon 
+											img(src="img/icon/m1.png", alt="")
+										.name Thanh toán khi nhận hàng
+							li.method-select
+								a(href="#method2")
+									input#m2(type="radio", name="method")
+									label.method-item(for="m2")
+										.icon 
+											img(src="img/icon/m2.png", alt="")
+										.name Thanh toán bằng iBanking
+							li.method-select
+								a(href="#method3")
+									input#m3(type="radio", name="method")
+									label.method-item(for="m3")
+										.icon 
+											img(src="img/icon/m3.png", alt="")
+										.name Thanh toán bằng thẻ ATM
+							li.method-select
+								a(href="#method4")
+									input#m4(type="radio", name="method")
+									label.method-item(for="m4")
+										.icon 
+											img(src="img/icon/m4.png", alt="")
+										.name Thanh toán bằng thẻ quốc tế
+							li.method-select
+								a(href="#method5")
+									input#m5(type="radio", name="method")
+									label.method-item(for="m5")
+										.icon 
+											img(src="img/icon/m5.png", alt="")
+										.name Thanh toán trả góp bằng thẻ tín dụng
+							li.method-select
+								a(href="#method6")
+									input#m6(type="radio", name="method")
+									label.method-item(for="m6")
+										.icon 
+											img(src="img/icon/m6.png", alt="")
+										.name Thanh toán qua Ví Việt
+						#method1.method-content
+							.content
+								p Thanh toán khi nhận hàng
+									br
+									|Quý khách sẽ thanh toán bằng tiền mặt khi đơn vị vận chuyển giao hàng giao hàng tận nơi.
+						#method2.method-content
+							.content
+								p Thanh toán bằng chuyển khoản Online (Internet Banking)
+									br
+									strong.text-red Lưu ý: 
+									|Bạn cần đăng ký Internet-Banking hoặc dịch vụ thanh toán trực tuyến tại ngân hàng trước khi thực hiện.
+							.boxContent
+								ul.cardList.clearfix
+									li.bank-online-methods
+										input#BankCodeIB_VCB(type='radio', checked='', name='BankCodeIB', value='VCB')
+										label(for='BankCodeIB_VCB')
+											i.VCB(title='Ngân hàng TMCP Ngoại Thương Việt Nam')
+											span Ngân hàng
+									li.bank-online-methods
+										input#BankCodeIB_DAB(type='radio', name='BankCodeIB', value='DAB')
+										label(for='BankCodeIB_DAB')
+											i.DAB(title='Ngân hàng Đông Á')
+											span Ngân hàng
+									li.bank-online-methods
+										input#BankCodeIB_TCB(type='radio', name='BankCodeIB', value='TCB')
+										label(for='BankCodeIB_TCB')
+											i.TCB(title='Ngân hàng Kỹ Thương')
+											span Ngân hàng
+									li.bank-online-methods
+										input#BankCodeIB_BIDV(type='radio', name='BankCodeIB', value='BIDV')
+										label(for='BankCodeIB_BIDV')
+											i.BIDV(title='Ngân hàng Đầu tư và Phát triển')
+											span Ngân hàng
+							.prepay-select
+								.form-wrap
+									.form-group
+										label Chọn số tiền muốn thanh toán
+										select
+											option 30% trên tổng giá trị đơn hàng
+											option 50% trên tổng giá trị đơn hàng
+											option 70% trên tổng giá trị đơn hàng
+						#method3.method-content Đang cập nhật 3
+						#method4.method-content Đang cập nhật 4
+						#method5.method-content Đang cập nhật 5
+						#method6.method-content Đang cập nhật 6
+				.cart-btn
+					.total Tổng cộng:
+						strong 40.000.000 đ
+						.des (Giá đã bao gồm VAT)
+					a.btn-continue(href="#!") Thanh toán
+		.col-12.col-lg-4
+			section#cart-step2.cart-step
+				.cart-title 
+					i.material-icons account_circle
+					span Thông tin nhận hàng
+				.btn-wrap.text-center
+					a.btn-getaddress(href="#!" data-toggle="modal" data-target="#modalAddress") Chọn từ sổ địa chỉ
+					#modalAddress.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+						.modal-dialog.modal-address(role='document')
+							.modal-content
+								.modal-header
+									h5#exampleModalLabel.modal-title Sổ địa chỉ
+									.close(data-dismiss='modal', aria-label='Close')
+										i.material-icons close
+								.modal-body
+									.address-list
+										ul
+											li
+												a.address-item(href="#!")
+													h5.name Mai Quoc Qui
+													p Địa chỉ: 535 Thống Nhất
+													p Điện thoại: 0981540288
+											li
+												a.address-item(href="#!")
+													h5.name Mai Quoc Qui
+													p Địa chỉ: 156 nguyễn văn thủ
+													p Điện thoại: 0981540288
+											li
+												a.address-item(href="#!")
+													h5.name Mai Quoc Qui
+													p Địa chỉ: 535 Thống Nhất
+													p Điện thoại: 0981540288
+											li
+												a.address-item(href="#!")
+													h5.name Mai Quoc Qui
+													p Địa chỉ: 156 nguyễn văn thủ
+													p Điện thoại: 0981540288
+				.cart-form
+					.form-wrap
+						.form-group
+							label Họ tên
+							.input
+								input(type="text")
+						.form-group
+							label Điện thoại
+							.input
+								input(type="text")
+								.form-des (Nhân viên giao nhận sẽ liên hệ qua sđt này)
+						.form-group
+							label Email
+							.input
+								input(type="text")
+						.form-group
+							label Tỉnh / Thành
+							.input
+								input(type="text")
+						.form-group
+							label Quận / Huyện
+							.input
+								input(type="text")
+						.form-group
+							label Địa chỉ
+							.input
+								input(type="text")
+						.form-group
+							label Ghi chú
+							.input
+								textarea(name="", cols="30", rows="3")
+								.form-des (Không bắt buộc)
+					.form-checkbox
+						.checkbox
+							input#cb1(type="checkbox", name="checkbox1" checked)
+							label#sameinfo(for="cb1") Thông tin người nhận hàng giống như trên
+						#sameinfoform.form-wrap.form-hidden
+							.form-group
+								label Họ tên
+								.input
+									input(type="text")
+							.form-group
+								label Điện thoại
+								.input
+									input(type="text")
+							.form-group
+								label Email
+								.input
+									input(type="text")
+							.form-group
+								label Tỉnh / Thành
+								.input
+									input(type="text")
+							.form-group
+								label Quận / Huyện
+								.input
+									input(type="text")
+							.form-group
+								label Địa chỉ
+								.input
+									input(type="text")
+						.checkbox
+							input#cb2(type="checkbox", name="checkbox2" checked)
+							label#updateinfo(for="cb2") Cập nhật thông tin trên làm địa chỉ mặc định của tôi
+						.checkbox
+							input#cb3(type="checkbox", name="checkbox3")
+							label#exportbill(for="cb3") Xuất hóa đơn công ty
+						#exportbillform.form-wrap.form-hidden
+							.module-title Vui lòng điền đầy đủ thông tin chính xác
+							.form-group
+								label Mã số thuế
+								.input
+									input(type="text")
+							.form-group
+								label Tên công ty
+								.input
+									input(type="text")
+							.form-group
+								label Địa chỉ công ty
+								.input
+									input(type="text")
+
+		.col-12
+			section.cart-step
+				.cart-title 
+					i.material-icons access_time
+					span Sản phẩm đã xem
+				.lastview-wrap
+					.lastview-slick
+						.item
+							a.lastview-item(href="#!")
+								.img
+									img(src="img/product/1.jpg", alt="")
+								.name Lorem ipsum dolor
+						.item
+							a.lastview-item(href="#!")
+								.img
+									img(src="img/product/2.jpg", alt="")
+								.name Lorem ipsum dolor
+						.item
+							a.lastview-item(href="#!")
+								.img
+									img(src="img/product/3.jpg", alt="")
+								.name Lorem ipsum dolor
+						.item
+							a.lastview-item(href="#!")
+								.img
+									img(src="img/product/4.jpg", alt="")
+								.name Lorem ipsum dolor
+						.item
+							a.lastview-item(href="#!")
+								.img
+									img(src="img/product/5.jpg", alt="")
+								.name Lorem ipsum dolor
+						.item
+							a.lastview-item(href="#!")
+								.img
+									img(src="img/product/6.jpg", alt="")
+								.name Lorem ipsum dolor
+						.item
+							a.lastview-item(href="#!")
+								.img
+									img(src="img/product/7.jpg", alt="")
+								.name Lorem ipsum dolor
+						.item
+							a.lastview-item(href="#!")
+								.img
+									img(src="img/product/8.jpg", alt="")
+								.name Lorem ipsum dolor
+						.item
+							a.lastview-item(href="#!")
+								.img
+									img(src="img/product/9.jpg", alt="")
+								.name Lorem ipsum dolor
+						.item
+							a.lastview-item(href="#!")
+								.img
+									img(src="img/product/10.jpg", alt="")
+								.name Lorem ipsum dolor
+

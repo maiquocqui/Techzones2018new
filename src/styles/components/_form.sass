@@ -1,24 +1,60 @@
 // FORM INIT
 .form-wrap
+	.module-title
+		font-weight: 500
+		+fs(14rem)
+		text-transform: uppercase
+		margin-bottom: 5px
 	.form-group
+		margin-bottom: 10px
 	label
 		display: block
-		+fs(14rem)
-		font-weight: 500
-		padding: 5px 0
-	input
-		+fs(14rem)
-		padding: 8px 15px
+		+fs(13rem)
+		color: darken($white,60%)
+		// font-weight: 500
+		padding: 8px 0
+	input, select, textarea
+		+fs(13rem)
+		padding: 7px 15px
 		+bor-rad(5px)
 		border: 1px solid darken($white,10%)
 		width: 100%
 		color: $main
+		+transition(all,0.5s)
 		&::-webkit-input-placeholder
 			color: inherit
 			opacity: 0.5
 		&:active, &:focus
-			border-color: $blue
-			box-shadow: 0 0 0 0.2rem color-rgba($blue,0.3)
+			border-color: lighten($blue,10%)
+			box-shadow: 0 0 0 0.2rem color-rgba($blue,0.2)
+	select
+		padding: 8px 15px
+	.gender
+		+flexbox
+		flex-wrap: wrap
+		padding: 8px 0
+	.checkbox
+		label
+			width: 100%
+	input[type="submit"]
+		@extend .btn-main
+		width: 100%
+		border: none
+.form-des
+	+fs(13rem)
+	color: darken($white,40%)
+	font-style: italic
+.form-link
+	+fs(14rem)
+	color: darken($white,40%)
+	+ .form-link
+		margin-left: 10px
+	&:hover
+		color: $blue
+		border: none
+.form-hidden
+	display: none
+	padding: 10px 0
 
 // FORM COMPONENTS
 .input-number
@@ -50,25 +86,26 @@
 		display: none
 		+ label
 			color: $main
-			padding: 0 0 0 25px
+			padding: 0 0 0 20px
 			+pos(rel,null)
-			+fs(14rem)
+			+fs(13rem)
 			&:hover
 				color: $blue
 			&:before
 				content: ''
-				width: 18px
-				height: 18px
-				+bor-rad(5px)
-				border: 1px solid darken($white,20%)
-				+pos(abs, 0 null null 0)
-			&:after
-				content: ''
-				width: 10px
-				height: 10px
+				width: 14px
+				height: 14px
 				+bor-rad(3px)
-				background: $red
-				+pos(abs, 4px null null 4px)
+				border: 1px solid darken($white,20%)
+				+pos(abs, 2px null null 0)
+			&:after
+				content: '\f00c'
+				width: 14px
+				height: 14px
+				+bor-rad(3px)
+				color: $orange
+				line-height: 1
+				+pos(abs, 2px null null 1px)
 				z-index: 1
 				opacity: 0
 		&:checked
@@ -80,25 +117,25 @@
 		display: none
 		+ label
 			color: $main
-			padding: 0 0 0 25px
+			padding: 0 0 0 20px
 			+pos(rel,null)
 			+fs(14rem)
 			&:hover
 				color: $blue
 			&:before
 				content: ''
-				width: 18px
-				height: 18px
-				+bor-rad(5px)
+				width: 14px
+				height: 14px
+				+bor-rad(50px)
 				border: 1px solid darken($white,20%)
-				+pos(abs, 0 null null 0)
+				+pos(abs, 2px null null 0)
 			&:after
 				content: ''
-				width: 10px
-				height: 10px
-				+bor-rad(3px)
-				background: $red
-				+pos(abs, 4px null null 4px)
+				width: 6px
+				height: 6px
+				+bor-rad(50px)
+				background: $orange
+				+pos(abs, 6px null null 4px)
 				z-index: 1
 				opacity: 0
 		&:checked
@@ -111,6 +148,42 @@
 	label
 		&:hover
 			color: $black
+// SOCIAL LOGIN
+.social-login
+	ul
+		li 
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
+			a
+				@extend .btn-main
+				color: $white
+				+flexbox
+				align-items: center
+				align-content: center
+				padding: 0
+				.fa
+					width: 40px
+					height: 30px
+					+flexbox
+					align-items: center
+					align-content: center
+					justify-content: center
+					+fs(16rem)
+					border-right: 1px solid color-rgba($white,0.5)
+				span
+					display: block
+					width: calc(100% - 40px)
+					padding: 0px 10px
+					text-align: center
+				&.facebook
+					background: linear-gradient(to right, #718dc8, #3b5998)
+					&:hover
+						box-shadow: 0px 10px 20px -10px $facebook
+				&.google
+					background: linear-gradient(to right, #ec9b92, #dd4c3b)
+					&:hover
+						box-shadow: 0px 10px 20px -10px $google
 // label
 // 	a
 // 		color: $blue

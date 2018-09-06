@@ -1,0 +1,809 @@
+.hot-news
+	margin: 15px 0
+	padding: 15px 15px 0
+	background: $white
+	+bor-rad(5px)
+	overflow: hidden
+	box-shadow: 0px 5px 20px color-rgba($black,0.05)
+	+media-breakpoint-down(md)
+		+bor-rad(0)
+		box-shadow: none
+		margin: 0px -15px 10px
+	.news-list
+		.news-item
+			display: block
+			+pos(rel,null)
+			+bor-rad(5px)
+			overflow: hidden
+			box-shadow: 0px 5px 20px color-rgba($black,0.05)
+			margin-bottom: 20px
+			+media-breakpoint-down(sm)
+				display: none
+			.img
+				img
+					width: 100%
+					height: 250px
+					object-fit: cover
+					+bor-rad(5px)
+					filter: brightness(90%)
+					+transition(all,0.5s)
+					+media-breakpoint-down(lg)
+						height: 220px
+			.caption
+				+pos(abs, null 0 0 0)
+				padding: 15px
+				background: linear-gradient(color-rgba($black,0),color-rgba($black,0.5))
+				color: $white
+				text-shadow: 0px 1px 5px color-rgba($black,0.1)
+				.category
+					+fs(12rem)
+					font-weight: 700
+					text-transform: uppercase
+					margin-bottom: 10px
+				.name
+					+fs(18rem)
+					+textover(2)
+					line-height: 1.2
+					font-weight: 700
+					margin-bottom: 10px
+				time
+					+fs(12rem)
+			&.big
+				+media-breakpoint-down(sm)
+					display: block
+				.img
+					img
+						height: 520px
+						+media-breakpoint-down(lg)
+							height: 460px
+						+media-breakpoint-down(sm)
+							height: 300px
+				.caption
+					.name
+						+fs(24rem)
+						+media-breakpoint-down(sm)
+							+fs(18rem)
+			&:hover
+				.img
+					img
+						filter: brightness(110%)
+.news-category
+	margin: 15px 0
+	padding: 15px
+	background: $white
+	+bor-rad(5px)
+	overflow: hidden
+	box-shadow: 0px 5px 20px color-rgba($black,0.05)
+	+media-breakpoint-down(md)
+		+bor-rad(0)
+		box-shadow: none
+		margin: 0px -15px 10px
+	.category-wrap
+	.category-list
+		+flexbox
+		flex-wrap: wrap
+		margin: 0px -5px
+		+media-breakpoint-down(md)
+			display: block
+			margin: 0px -15px
+			white-space: nowrap
+			overflow: auto
+			padding: 0px 15px
+		.item
+			flex: 1
+			padding: 0px 5px
+			+media-breakpoint-down(md)
+				display: inline-block
+				vertical-align: top
+				width: 150px
+				padding: 0
+				+ .item
+					margin-left: 10px
+			.category-item
+				+pos(rel,null)
+				height: 100px
+				+bor-rad(5px)
+				overflow: hidden
+				box-shadow: 0px 5px 20px color-rgba($black,0.05)
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				+media-breakpoint-down(lg)
+					height: 80px
+				+media-breakpoint-down(sm)
+					height: 60px
+				&:hover
+					+media-breakpoint-up(md)
+						margin-top: -5px
+						box-shadow: 0px 5px 20px color-rgba($black,0.3)
+				.img
+					+pos(abs, 0 null 0 0)
+					right: 0
+					&:before
+						content: ''
+						+pos(abs, 0 null 0 0)
+						right: 0
+						z-index: 1
+						background: linear-gradient(color-rgba($blue,0.1),color-rgba($blue,0.7))
+						opacity: 0
+					img
+						width: 100%
+						height: 100%
+						object-fit: cover
+						filter: brightness(50%)
+				.name
+					+fs(16rem)
+					line-height: 1.2
+					color: $white
+					font-weight: 500
+					text-transform: uppercase
+					+pos(rel,null)
+					z-index: 3
+					text-shadow: 0px 1px 5px color-rgba($black,0.1)
+					padding: 0px 15px
+					text-align: center
+					white-space: normal
+					+media-breakpoint-down(lg)
+						+fs(14rem)
+					+media-breakpoint-down(sm)
+						padding: 0px 20px
+			&.active
+				.category-item
+					box-shadow: 0px 10px 20px -10px $blue
+					.img
+						&:before
+							opacity: 1
+.news-page
+	.news-group
+		margin: 0 0 15px
+		padding: 15px
+		background: $white
+		+bor-rad(5px)
+		overflow: hidden
+		box-shadow: 0px 5px 20px color-rgba($black,0.05)
+		+pos(rel,null)
+		+media-breakpoint-down(md)
+			+bor-rad(0)
+			box-shadow: none
+			margin: 0px -15px 10px
+		.btn-viewmore
+			+fs(14rem)
+			font-weight: 500
+			color: $blue
+			+pos(abs, 15px 15px null null)
+			&:after
+				content: '\f105'
+				margin-left: 5px
+	.news-list
+		.news-item
+			+flexbox
+			flex-wrap: wrap
+			border-bottom: 1px dashed darken($white,10%)
+			margin-bottom: 20px
+			padding-bottom: 20px
+			+media-breakpoint-down(sm)
+				margin-bottom: 10px
+				padding-bottom: 10px
+			.img
+				width: 40%
+				+bor-rad(5px)
+				overflow: hidden
+				box-shadow: 0px 5px 20px color-rgba($black,0.05)
+				img
+					width: 100%
+					height: 220px
+					object-fit: cover
+					+media-breakpoint-down(lg)
+						height: 180px
+					+media-breakpoint-down(sm)
+						height: 100px
+			.caption
+				width: 60%
+				padding-left: 30px
+				padding-top: 15px
+				+media-breakpoint-down(lg)
+					padding-left: 20px
+				+media-breakpoint-down(sm)
+					padding-left: 10px
+					padding-top: 5px
+				.name
+					+fs(20rem)
+					font-weight: 700
+					line-height: 1.2
+					margin-bottom: 10px
+					+textover(2)
+					+media-breakpoint-down(lg)
+						+fs(18rem)
+					+media-breakpoint-down(sm)
+						+fs(14rem)
+						+textover(4)
+				time
+					display: block
+					+fs(13rem)
+					color: darken($white,40%)
+					margin-bottom: 10px
+				.des
+					+fs(14rem)
+					+textover(4)
+					color: darken($white,60%)
+					+media-breakpoint-down(lg)
+						+textover(3)
+					+media-breakpoint-down(sm)
+						display: none
+	.news-list2
+		+flexbox
+		flex-wrap: wrap
+		margin: 0px -10px
+		+media-breakpoint-down(sm)
+			margin: 0px -5px
+		.item
+			padding: 0px 10px
+			width: 50%
+			+media-breakpoint-down(sm)
+				padding: 0px 5px
+		.news-item
+			display: block
+			margin-bottom: 30px
+			.img
+				+bor-rad(5px)
+				overflow: hidden
+				box-shadow: 0px 5px 20px color-rgba($black,0.05)
+				margin-bottom: 20px
+				+media-breakpoint-down(sm)
+					margin-bottom: 10px
+				img
+					width: 100%
+					height: 220px
+					object-fit: cover
+					+media-breakpoint-down(lg)
+						height: 180px
+					+media-breakpoint-down(sm)
+						height: 130px
+			.caption
+				.name
+					+fs(18rem)
+					font-weight: 700
+					line-height: 1.2
+					margin-bottom: 10px
+					+textover(2)
+					+media-breakpoint-down(lg)
+						+fs(16rem)
+					+media-breakpoint-down(sm)
+						+fs(14rem)
+				time
+					display: block
+					+fs(13rem)
+					color: darken($white,40%)
+					margin-bottom: 10px
+				.des
+					+fs(14rem)
+					+textover(4)
+					color: darken($white,60%)
+					display: none
+					+media-breakpoint-down(lg)
+						+textover(3)
+						+fs(13rem)
+					+media-breakpoint-down(sm)
+						display: none
+	.news-slide
+		+bor-rad(5px)
+		overflow: hidden
+		box-shadow: 0px 5px 20px color-rgba($black,0.05)
+		margin-bottom: 10px
+		.slick-prev, .slick-next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			z-index: 1
+			+fs(0)
+			color: $white
+			text-shadow: 0px 1px 5px color-rgba($black,0.1)
+			opacity: 0
+			+transition(all,0.5s)
+			&:before
+				content: ''
+				font-family: 'linearicons-free'
+				+fs(28rem)
+		.slick-prev
+			left: 0px
+			&:before
+				content: '\e875'
+		.slick-next
+			right: 0px
+			&:before
+				content: '\e876'
+		&:hover
+			.slick-prev, .slick-next
+				opacity: 1
+			.slick-prev
+				left: 20px
+			.slick-next
+				right: 20px
+		.slick-dots
+			+pos(abs, null 0 10px 0)
+			text-align: center
+			li
+				display: inline-block
+				width: 10px
+				height: 10px
+				+bor-rad(50px)
+				background: darken($white,10%)
+				&.slick-active
+					background: $bluegradient
+				button
+					display: none
+				+ li
+					margin-left: 5px
+		.news-item
+			display: block
+			+pos(rel,null)
+			.img
+				img
+					width: 100%
+					height: 400px
+					object-fit: cover
+					+media-breakpoint-down(lg)
+						height: 350px
+					+media-breakpoint-down(sm)
+						height: 250px
+			.caption
+				+pos(abs, null 0 0px 0)
+				padding: 30px 15px
+				background: linear-gradient(color-rgba($black,0),color-rgba($black,0.5))
+				color: $white
+				text-shadow: 0px 1px 5px color-rgba($black,0.1)
+				.name
+					+fs(18rem)
+					+textover(2)
+					line-height: 1.2
+					font-weight: 700
+					margin-bottom: 5px
+					+media-breakpoint-down(sm)
+						+fs(16rem)
+				time
+					+fs(12rem)
+	.news-list3
+		+flexbox
+		flex-wrap: wrap
+		margin: 0px -5px
+		.item
+			padding: 0px 5px
+			width: 25%
+			+media-breakpoint-down(sm)
+				width: 50%
+		.news-item
+			display: block
+			+media-breakpoint-down(sm)
+				margin-bottom: 10px
+			.img
+				+bor-rad(5px)
+				overflow: hidden
+				box-shadow: 0px 5px 20px color-rgba($black,0.05)
+				margin-bottom: 10px
+				img
+					width: 100%
+					height: 120px
+					object-fit: cover
+					+media-breakpoint-down(lg)
+						height: 100px
+			.caption
+				time
+					display: none
+				.name
+					+fs(13rem)
+					+textover(3)
+			&:hover
+				color: $blue
+	.news-list4
+		+flexbox
+		margin: 0px -10px
+		flex-wrap: wrap
+		+media-breakpoint-down(sm)
+			margin: 0px -5px
+		&.related
+		.item
+			width: 25%
+			padding: 0px 10px
+			+media-breakpoint-down(sm)
+				width: 50%
+				padding: 0px 5px
+		.news-item
+			display: block
+			margin-bottom: 30px
+			.img
+				+bor-rad(5px)
+				overflow: hidden
+				box-shadow: 0px 5px 20px color-rgba($black,0.05)
+				margin-bottom: 20px
+				img
+					width: 100%
+					height: 180px
+					object-fit: cover
+					+media-breakpoint-down(lg)
+						height: 150px
+					+media-breakpoint-down(md)
+						height: 120px
+					+media-breakpoint-down(sm)
+						height: 100px
+			.caption
+				.name
+					+fs(18rem)
+					font-weight: 700
+					line-height: 1.2
+					margin-bottom: 10px
+					+textover(2)
+					+media-breakpoint-down(lg)
+						+fs(16rem)
+					+media-breakpoint-down(md)
+						+fs(14rem)
+				time
+					display: block
+					+fs(13rem)
+					color: darken($white,40%)
+					margin-bottom: 10px
+				.des
+					+fs(13rem)
+					+textover(3)
+					color: darken($white,60%)
+					// display: none
+			&:hover
+				.img
+					box-shadow: 0px 5px 20px color-rgba($black,0.3)
+				color: $blue
+	.btn-loadmore
+		+fs(14rem)
+		font-weight: 500
+		color: $white
+		background: $bluegradient
+		+bor-rad(50px)
+		line-height: 36px
+		display: inline-block
+		padding: 0px 30px
+		+media-breakpoint-down(sm)
+			margin: 15px 0
+			+fs(13rem)
+			line-height: 36px
+		&:before
+			content: '\f055'
+			font-family: 'fontawesome'
+			margin-right: 10px
+		&:hover
+			box-shadow: 0px 10px 20px -10px $blue
+.sidebar-video
+	padding: 15px
+	margin-bottom: 15px
+	background: $white
+	+bor-rad(5px)
+	overflow: hidden
+	box-shadow: 0px 5px 20px color-rgba($black,0.05)
+	+media-breakpoint-down(md)
+		+bor-rad(0)
+		box-shadow: none
+		margin: 0px -15px 10px
+	.video-wrap
+		margin: 0px -15px -15px
+		+media-breakpoint-down(sm)
+			box-shadow: none
+		.video-des
+			color: $main
+			.video-name
+				+fs(13rem)
+				font-weight: 500
+				+textover(2)
+			.video-view
+				+fs(12rem)
+				opacity: 0.8
+				font-weight: 300
+		.video-big
+			.video-des
+				padding: 15px
+				background: $mainblue
+		.video-list
+			background: $white
+			border-top: 1px dashed darken($white,10%)
+			+media-breakpoint-down(md)
+				+flexbox
+				flex-wrap: wrap
+			.video
+				display: block
+				padding: 10px
+				+transition(all,0.5s)
+				+pos(rel,null)
+				border-bottom: 1px dashed darken($white,10%)
+				+media-breakpoint-down(md)
+					width: 50%
+					border-right: 1px dashed darken($white,10%)
+					&:nth-child(2n)
+						border-right: none
+				+media-breakpoint-down(sm)
+					width: 100%
+					border-right: none
+					&:first-child
+						border-top: none
+					&:last-child
+						border-bottom: none
+				&:before
+					content: ''
+					+pos(abs, 0 null 0 0)
+					width: 3px
+					background: $bluegradient-v
+					opacity: 0
+					+transition(all,0.5s)
+				figure
+					+flexbox
+					align-items: flex-start
+					align-content: flex-start
+					.video-img
+						width: 90px
+						+pos(rel,null)
+						&:before
+							content: '\f04b'
+							background: $bluegradient-r
+							+fs(12rem)
+							width: 35px
+							height: 25px
+							+bor-rad(5px)
+							+flexbox
+							align-items: center
+							align-content: center
+							justify-content: center
+							color: $white
+							+pos(abs,50% null null 50%)
+							+transform(translate(-50%,-50%))
+					figcaption
+						width: calc(100% - 90px)
+						padding-left: 10px
+				&:hover
+					background: color-rgba($blue,0.1)
+					&:before
+						opacity: 1
+.news-popular
+	padding: 15px
+	margin-bottom: 15px
+	background: $white
+	+bor-rad(5px)
+	overflow: hidden
+	box-shadow: 0px 5px 20px color-rgba($black,0.05)
+	+media-breakpoint-down(md)
+		+bor-rad(0)
+		box-shadow: none
+		margin: 0px -15px 10px
+	.post-list
+		border-top: 1px dashed darken($white,10%)
+		.post
+			display: block
+			padding: 10px 0
+			+fs(14rem)
+			color: darken($white,60%)
+			// font-weight: 500
+			border-bottom: 1px dashed darken($white,10%)
+			&:hover
+				color: $blue
+.news-sidebar
+	padding: 15px
+	margin-bottom: 15px
+	background: $white
+	+bor-rad(5px)
+	overflow: hidden
+	box-shadow: 0px 5px 20px color-rgba($black,0.05)
+	+media-breakpoint-down(md)
+		+bor-rad(0)
+		box-shadow: none
+		margin: 0px -15px 10px
+	.news-list
+		margin: 0px -5px
+		+flexbox
+		flex-wrap: wrap
+		.item
+			padding: 0px 5px
+			width: 50%
+			.news-item
+				display: block
+				img
+					width: 100%
+					height: 100px
+					object-fit: cover
+					+media-breakpoint-down(md)
+						height: 200px
+					+media-breakpoint-down(sm)
+						height: 100px
+				.caption
+					padding: 10px 0
+					.name
+						+fs(14rem)
+						+textover(2)
+			&:first-child
+				width: 100%
+				.news-item
+					img
+						height: 200px
+						+media-breakpoint-down(md)
+							height: 400px
+						+media-breakpoint-down(sm)
+							height: 200px
+					.caption
+						.name
+			&:hover
+				.news-item
+					color: $blue
+.news-detail
+	+bor-rad(5px)
+	overflow: hidden
+	box-shadow: 0px 5px 20px color-rgba($black,0.05)
+	margin: 0 auto 15px
+	background: $white
+	padding: 15px 20%
+	+media-breakpoint-down(lg)
+		padding: 15px 15%
+	+media-breakpoint-down(md)
+		padding: 15px
+		margin: 0px -15px 10px
+		box-shadow: none
+		+bor-rad(0)
+	.news-info
+		padding-bottom: 15px
+		margin-bottom: 15px
+		border-bottom: 1px solid darken($white,10%)
+		.news-name
+			+fs(32rem)
+			font-weight: 700
+			line-height: 1.2
+			margin-bottom: 10px
+			+media-breakpoint-down(md)
+				+fs(28rem)
+			+media-breakpoint-down(sm)
+				+fs(24rem)
+			&:after
+				content: ''
+				display: block
+				width: 60px
+				height: 2px
+				background: $bluegradient
+				margin-top: 10px
+		time
+			+fs(13rem)
+			color: darken($white,40%)
+		.share
+			margin: 0
+			padding: 0
+			border: none
+	.product
+		+flexbox
+		flex-wrap: wrap
+		align-items: flex-start
+		align-content: flex-start
+		+bor-rad(5px)
+		border: 1px dashed lighten($blue,10%)
+		background: color-rgba($blue,0.05)
+		padding: 20px
+		margin-top: 10px
+		+pos(rel,null)
+		+media-breakpoint-down(sm)
+		.img
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			width: 180px
+			height: 180px
+			background: $white
+			+media-breakpoint-down(sm)
+				width: 80px
+				height: 80px
+			img
+				max-width: 80%
+				max-height: 80%
+		.caption
+			width: calc(100% - 180px)
+			padding-left: 20px
+			padding-right: 180px
+			+media-breakpoint-down(sm)
+				width: calc(100% - 80px)
+				padding-right: 0
+			.name
+				+fs(16rem)
+				line-height: 1.3
+				font-weight: 500
+				+textover(2)
+				+transition(all,0.5s)
+				+media-breakpoint-down(sm)
+					+fs(14rem)
+				a
+					color: $black
+			.price
+				margin-top: 5px
+				+pos(rel,null)
+				.promotion
+					+pos(abs, 2px 0 null null)
+					+fs(11rem)
+					font-weight: 600
+					color: $white
+					padding: 0px 5px
+					+bor-rad(3px)
+					&.off
+						background: linear-gradient(to right, $orange, $deeporange)
+				.new
+					+fs(14rem)
+					line-height: 1
+					font-weight: 700
+					color: $red
+					+media-breakpoint-down(lg)
+						// +fs(12rem)
+				.old
+					+fs(10rem)
+					line-height: 1
+					color: darken($white,40%)
+					text-decoration: line-through
+			.rating
+				+flexbox
+				align-items: center
+				align-content: center
+				padding: 5px 0
+				flex-wrap: wrap
+				+media-breakpoint-down(lg)
+				.br-wrapper
+					margin-right: 5px
+				span
+					+fs(12rem)
+					color: darken($white,40%)
+			.des
+				+fs(12rem)
+				line-height: 1.4
+				white-space: normal
+				margin-top: 5px
+				color: $main
+				ul
+					list-style-type: disc
+					padding-left: 20px
+					li
+			.btn-wrap
+				+media-breakpoint-down(sm)
+					padding-top: 10px
+					+flexbox
+					align-items: center
+					align-content: center
+					justify-content: space-between
+				.btn-buy, .btn-tragop
+					display: inline-block
+					width: 150px
+					padding: 0px 20px
+					+bor-rad(50px)
+					+fs(14rem)
+					font-weight: 500
+					text-align: center
+					line-height: 36px
+					color: $white
+					+media-breakpoint-down(sm)
+						+fs(13rem)
+						padding: 0px 15px
+						line-height: 34px
+						width: 49%
+				.btn-buy
+					background: $bluegradient
+					+pos(abs, 20px 20px null null)
+					+media-breakpoint-down(sm)
+						+pos(static,null)
+					&:hover
+						box-shadow: 0px 10px 20px -10px $blue
+				.btn-tragop
+					background: $orangegradient
+					+pos(abs, 60px 20px null null)
+					+media-breakpoint-down(sm)
+						+pos(static,null)
+					&:hover
+						box-shadow: 0px 10px 20px -10px $orange
+	.share
+		border-top: 1px solid darken($white,10%)
+		margin-top: 15px
+		padding-top: 15px
+
+.life-style
+	margin-top: 30px
+	box-shadow: 0px 5px 20px color-rgba($black,0.05)
+	.item
+		.pic
+			display: block
+			img
+				width: 100%
+				height: 200px
+				object-fit: cover

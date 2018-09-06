@@ -1,0 +1,97 @@
+section.breadcrumb-wrap
+	.container
+		ol.breadcrumb
+			li
+				a(href="#")
+					span Trang chủ
+			li
+				a(href="#")
+					span Thông tin tài khoản
+.container
+	.row.no-gutters
+		.col-12.col-lg-3.col-xl-3
+			section.user-info
+				.img
+					img(src="img/user.png", alt="")
+				.caption
+					.title Tài khoản của 
+					.name Mai Quốc Qui
+			nav.user-sidebar
+				ul
+					li
+						a(href="#!") 
+							.icon 
+								i.material-icons person
+							span Thông tin tài khoản
+					li
+						a(href="#!")
+							.icon 
+								i.material-icons notifications
+							span Thông báo của tôi
+					li
+						a(href="#!")
+							.icon 
+								i.material-icons assignment
+							span Quản lý đơn hàng
+					li.active
+						a(href="#!")
+							.icon 
+								i.material-icons place
+							span Sổ địa chỉ
+					li
+						a(href="#!")
+							.icon 
+								i.material-icons favorite
+							span Sản phẩm yêu thích
+		.col-12.col-lg-9.col-xl-9
+			section.user-page
+				.page-title Sửa địa chỉ
+				.user-address
+					.form-wrap
+						.form-group
+							label Họ tên
+							.input
+								input(type="text" placeholder="")
+						.form-group
+							label Công ty
+							.input
+								input(type="text" placeholder="")
+						.form-group
+							label Số điện thoại
+							.input
+								input(type="text" placeholder="")
+						.form-group
+							label Địa chỉ
+							.input
+								input(type="text" placeholder="")
+						.form-group
+							label Tỉnh / Thành phố
+							.input
+								select(name="")
+									option Hồ Chí Minh
+						.form-group
+							label Quận / Huyện
+							.input
+								select(name="")
+									option Quận 1
+						//- .form-group
+							label Giới tính
+							.input
+								ul.gender
+									li.radio
+										input#male(type="radio", name="gender" checked)
+										label(for="male") Nam
+									li.radio
+										input#female(type="radio", name="gender")
+										label(for="female") Nữ
+						//- .form-group
+							label Ngày sinh
+							.input
+								input.datepicker(type="text" placeholder="")
+								.form-des (Không bắt buộc)
+						.form-group
+							.checkbox
+								input#setdefault(type="checkbox", name="setdefault")
+								label(for="setdefault") Đặt làm địa chỉ mặc định
+						.frm-btn
+							input(type="submit", value="Cập nhật")

@@ -1,84 +1,136 @@
 .product-subcate
-	background: $white
-	margin: 15px 0
-	padding: 15px
-	+bor-rad(5px)
+	+media-breakpoint-down(md)
+		display: none
 	.category-list
-		+flexbox
-		flex-wrap: wrap
-		margin: 0px -10px
-		+media-breakpoint-only(lg)
-			display: block
-			overflow: auto
-			white-space: nowrap
-			margin-bottom: -20px
-		+media-breakpoint-down(sm)
-			flex-direction: column
-			height: 220px
-			overflow: auto
-			overflow-y: hidden
-			margin: 0px -5px
-			padding: 0px 10px
-			margin-bottom: -20px
-		&::-webkit-scrollbar-track
-			background-color: transparent
-		&::-webkit-scrollbar
-			width: 0px
-			background-color: transparent
-		&::-webkit-scrollbar-thumb
-			background-color: transparent
+		display: block
+		white-space: nowrap
+		overflow: auto
+		overflow-y: hidden
 		.item
-			width: calc(100% / 8)
-			padding: 0px 10px
-			+media-breakpoint-only(lg)
-				width: 170px
-				display: inline-block
-			+media-breakpoint-down(md)
-				width: calc(100% / 4)
-			+media-breakpoint-down(sm)
-				width: auto
-				padding: 0px 5px
-				&:last-child
-					margin-right: 10px
+			display: inline-block
+			vertical-align: top
 			.category-item
 				display: block
-				color: $main
-				+media-breakpoint-only(lg)
-					margin-bottom: 0
-				+media-breakpoint-down(sm)
-					margin-bottom: 0
-					height: 49%
-				&:hover
-					color: $blue
+				text-align: center
+				padding: 10px
+				width: 100px
+				height: 100%
+				white-space: normal
+				+bor-rad(5px)
 				.img
-					img
-						width: 100%
-						+media-breakpoint-down(sm)
-							width: auto
-							height: 70px
-				.name
 					+flexbox
 					align-items: center
 					align-content: center
-					padding: 10px 0 0
-					+media-breakpoint-down(sm)
-						padding: 5px 0 0
-					.material-icons
-						+fs(18rem)
-					span
-						+fs(14rem)
-						font-weight: 700
-						padding-left: 5px
-						+media-breakpoint-down(sm)
-							+fs(13rem)
+					justify-content: center
+					width: 80px
+					height: 80px
+					background: $white
+					box-shadow: 0px 10px 20px -10px color-rgba($black,0.3)
+					+bor-rad(50px)
+					margin-bottom: 5px
+				.name
+					+fs(13rem)
+					line-height: 1.3
+					font-weight: 500
+			&:hover
+				.category-item
+					.img
+						background: $bluegradient
+			&.active
+				.category-item
+					.img
+						background: $bluegradient
+						img
+							// filter: invert(100%)
+					.name
+						color: $blue
 .product-page
 	background: $white
 	padding: 15px
 	+bor-rad(5px)
-	+media-breakpoint-down(sm)
-		padding: 10px
-		margin: 0px -15px
+	margin-bottom: 15px
+	box-shadow: 0px 5px 20px color-rgba($black,0.05)
+	+media-breakpoint-down(md)
+		margin: 0 -15px 10px
 		+bor-rad(0)
+		box-shadow: none
 	.product-list
+		margin-bottom: 15px
+		+media-breakpoint-down(md)
+			margin: 0px 0px 15px
+		article
+			&.col-6
+				&.change
+					flex: 0 0 100%
+					max-width: 100%
+					.product-col
+						figure
+							+flexbox
+							+pos(rel,null)
+							.product-img
+								width: 120px
+								height: 120px
+								margin: 0
+							figcaption
+								width: calc(100% - 120px)
+								padding-left: 15px
+	&.compare-active
+		.product-item
+			.btn_compare
+				visibility: visible
+				opacity: 1
+	.btn-loadmore
+		+fs(14rem)
+		font-weight: 500
+		color: $white
+		background: $bluegradient
+		+bor-rad(50px)
+		line-height: 36px
+		display: inline-block
+		padding: 0px 30px
 		+media-breakpoint-down(sm)
-			margin: 0px -10px
+			margin: 15px 0
+			+fs(13rem)
+			line-height: 36px
+		&:before
+			content: '\f055'
+			font-family: 'fontawesome'
+			margin-right: 10px
+		&:hover
+			box-shadow: 0px 10px 20px -10px $blue
+.product-page-intro
+	background: $white
+	+bor-rad(5px)
+	overflow: hidden
+	margin-bottom: 15px
+	box-shadow: 0px 5px 20px color-rgba($black,0.05)
+	+flexbox
+	flex-wrap: wrap
+	+media-breakpoint-down(md)
+		margin: 10px -15px
+		+bor-rad(0)
+		box-shadow: none
+	.bg
+		width: 35%
+		+media-breakpoint-down(lg)
+			width: 40%
+		+media-breakpoint-down(sm)
+			width: 100%
+		img
+			width: 100%
+			+media-breakpoint-down(lg)
+				height: 100%
+				object-fit: cover
+	.caption
+		width: 65%
+		padding: 20px
+		+media-breakpoint-down(lg)
+			width: 60%
+		+media-breakpoint-down(sm)
+			width: 100%
+		.name
+			+fs(24rem)
+			font-weight: 700
+			margin-bottom: 10px
+		.content
+			+fs(14rem)

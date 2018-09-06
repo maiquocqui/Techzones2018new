@@ -14,10 +14,13 @@ html
 .fullpage
 	max-width: 100%
 	width: 100%
+	overflow: hidden
 	margin: 0 auto
-	background: darken($white,2%)
-	+media-breakpoint-down(sm)
-		background: $white
+	background: darken($white,3%)
+.homepage
+	.fullpage
+		+media-breakpoint-down(sm)
+			background: $white
 
 main
 	&.small
@@ -35,6 +38,8 @@ main
 	+media-breakpoint-down(lg)
 		max-width: 100%
 		width: 100%
+	+media-breakpoint-down(sm)
+		// padding: 0px 10px
 	&.full-width
 		+media-breakpoint-up(xl)
 			max-width: 1920px
@@ -252,6 +257,8 @@ main
 	color: $yellow
 .text-blue
 	color: $blue !important
+.text-bluegrey
+	color: $bluegrey !important
 .text-silver
 	color: darken($white,40%)
 

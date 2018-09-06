@@ -2,15 +2,15 @@
 	+flexbox
 	flex-wrap: wrap
 	background: $white
-	padding-bottom: 10px
-	+ .productlist
-		// margin-top: 10px
+	padding: 10px 15px
+	margin: -10px -15px 0
 	&:after
 		width: 100%
 	+media-breakpoint-up(md)
 		justify-content: space-between
 		align-items: center
 		align-content: center
+		margin: -15px -15px 0px
 	+media-breakpoint-up(lg)
 		padding-bottom: 15px
 		+ .productlist
@@ -96,7 +96,7 @@
 		align-items: center
 		align-content: center
 		line-height: 32px
-		+bor-rad(5px)
+		+bor-rad(50px)
 		color: $white
 		background: linear-gradient(to right, $red, $orange)
 		// border: 1px solid darken($white,5%)
@@ -108,28 +108,15 @@
 		+transition(font-size 0s)
 		&.fly-compare
 			+media-breakpoint-up(xl)
-				+pos(fix, null 30px 160px null)
-				z-index: 5
-				width: 40px
-				height: 40px
-				+bor-rad(50px)
-				// +mainbutton($red,$orange)
-				+flexbox
-				justify-content: center
-				align-items: center
-				align-content: center
-				color: $white
-				// display: none
-				+fs(0)
-				+transition(font-size 0s)
-				.material-icons
-					+fs(24rem)
+				+pos(fix, null null 10px auto)
+				z-index: 50
+				margin-left: 0
 		&:hover
-			filter: brightness(110%)
+			box-shadow: 0px 10px 20px -10px $orange
 		.material-icons
 		&.active
-			background: linear-gradient(to right, $blue, $cyan)
-			box-shadow: 0px 10px 20px -10px $blue
+			background: $purplegradient
+			box-shadow: 0px 10px 20px -10px $purple
 .btn-filterwrap
 	+flexbox
 	+pos(fix , null 0 0 0)
@@ -180,7 +167,7 @@
 			content: '\f00b'
 			+media-breakpoint-down(sm)
 				content: '\f00a'
-		&.list
+		&.active
 			&:before
 				content: '\f00a'
 				+media-breakpoint-down(sm)
@@ -207,17 +194,25 @@
 		+media-breakpoint-up(lg)
 			display: none
 	&.option-group
+		box-shadow: 0px 5px 20px color-rgba($black,0.05)
+		+media-breakpoint-down(md)
+			box-shadow: none
+			margin: 0
 	&.filter-bottom
-		margin: -30px 0px 15px
+		margin: 0px 0px 15px
+		+media-breakpoint-down(md)
+			display: none
 	.filter-header
 		+media-breakpoint-up(lg)
 			display: none
 		.btn-closefilter
-			padding: 10px 0
-			line-height: 30px
-			text-align: center
 			color: $black
 			margin-right: 15px
+			height: 50px
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
 			float: left
 		.filter-title
 			+flexbox
@@ -226,7 +221,7 @@
 			justify-content: center
 			align-items: center
 			align-content: center
-			font-weight: 500
+			font-weight: 700
 	.filter-category
 		overflow: hidden
 		+media-breakpoint-up(lg)
@@ -253,7 +248,7 @@
 						margin-left: 10px
 						display: inline-block
 						+transition(all,0.3s)
-						+pos(abs, 10px 0 null null)
+						+pos(abs, 10px 10px null null)
 					&.active
 						.fa
 							+transform(rotateZ(90deg))
@@ -319,7 +314,7 @@
 					.subfilter
 						display: block
 	.filter-content
-		height: calc(100vh - 250px)
+		max-height: calc(100vh - 160px)
 		overflow: auto
 		padding: 0 15px
 		+media-breakpoint-up(lg)
@@ -403,29 +398,22 @@
 							margin-left: 5px
 						&:before
 							content: ''
-							display: block
-							width: 12px
-							height: 12px
+							width: 14px
+							height: 14px
 							+bor-rad(50px)
-							border: 1px solid darken($white,40%)
-							+pos(abs, 12px null null 0)
-							z-index: 1
-							+transition(all,0.3s)
+							border: 1px solid darken($white,20%)
+							+pos(abs, 11px null null 0)
 						&:after
 							content: ''
-							display: block
 							width: 8px
 							height: 8px
 							+bor-rad(50px)
-							background: linear-gradient(to right,$deeporange,$orange)
-							+pos(abs, 14px null null 2px)
-							z-index: 2
+							background: $red
+							+pos(abs, 14px null null 3px)
+							z-index: 1
 							opacity: 0
-							+transition(all,0.3s)
 						&.active
 							color: $black
-							&:before
-								border-color: $red
 							&:after
 								opacity: 1
 				.filter-color
@@ -462,6 +450,7 @@
 	.filter-tags
 		+media-breakpoint-down(md)
 			padding: 0 15px
+			margin-top: 10px
 		> a
 			color: darken($white,40%)
 			+fs(13rem)
@@ -480,7 +469,7 @@
 			padding: 3px 3px 3px 5px
 			.btn-removetag
 				display: inline-block
-				// vertical-align: middle
+				vertical-align: middle
 				+bor-rad(50px)
 				width: 14px
 				height: 14px
@@ -496,24 +485,35 @@
 					margin-left: 0
 				.material-icons
 					+fs(12rem)
+					margin-top: 1px
 	.filter-button
-		padding: 10px 15px
+		padding: 12px 15px
 		+flexbox
-		+fs(14rem)
+		align-items: center
+		align-content: center
+		justify-content: center
+		text-transform: uppercase
+		+fs(13rem)
+		+pos(fix, null 0 0 0)
+		z-index: 5
 		+media-breakpoint-up(lg)
 			display: none
 		.btn-resetall
 			display: block
-			width: 40%
-			+bor-rad(50px)
-			color: darken($white,40%)
-			border: 1px solid darken($white,40%)
+			width: 50%
+			color: $bluegrey
 			text-align: center
-			line-height: 38px
+			font-weight: 500
 			a
 				color: darken($white,40%)
+				font-weight: 500
 		.btn-closefilter
-			display: block
-			width: 60%
-			margin-left: 10px
-			// +mainbutton($lblue,$blue)
+			width: 50%
+			font-weight: 500
+			color: $white
+			background: $bluegradient
+			+bor-rad(50px)
+			padding: 0px 30px
+			line-height: 36px
+			box-shadow: 0px 10px 20px -10px $blue
+			text-align: center

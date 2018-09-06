@@ -1,16 +1,4 @@
-nav.newsct-category.d-xs-block.d-md-none
-	ul
-		li.active
-			a(href="#") Thủ thuật sử dụng
-		li
-			a(href="#") Kiến thức mua hàng
-		li
-			a(href="#") Review sản phẩm
-		li
-			a(href="#") Tin thị trường
-		li
-			a(href="#") Tin khuyến mãi
-section.news-breadcrumb.clearfix
+section.breadcrumb-wrap
 	.container
 		ol.breadcrumb
 			li
@@ -19,102 +7,127 @@ section.news-breadcrumb.clearfix
 			li
 				a(href="#")
 					span Tin tức
-			li
-				a(href="#")
-					span Samsung chính thức trình làng Galaxy Note8
 .container
-	section.news-page.clearfix
+	section.news-category
+		.category-wrap
+			.category-list
+				.item.active
+					a.category-item(href="#!")
+						.img
+							img(src="img/news/10.jpg", alt="")
+						.caption
+							.name Thủ thuật sử dụng
+				.item
+					a.category-item(href="#!")
+						.img
+							img(src="img/news/5.jpg", alt="")
+						.caption
+							.name Kiến thức mua hàng
+				.item
+					a.category-item(href="#!")
+						.img
+							img(src="img/news/6.jpg", alt="")
+						.caption
+							.name Review sản phẩm
+				.item
+					a.category-item(href="#!")
+						.img
+							img(src="img/news/9.jpg", alt="")
+						.caption
+							.name Tin thị trường
+				.item
+					a.category-item(href="#!")
+						.img
+							img(src="img/news/8.jpg", alt="")
+						.caption
+							.name Tin khuyến mãi
+	section.news-page
 		.news-detail
-			h1.news-name Samsung chính thức trình làng Galaxy Note8
-			time 23/08/2017
-		.content
-			.post-title Tiêu đề
-			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nisi maxime officiis, animi exercitationem quis. Possimus impedit, ab minima sequi odio perferendis, nemo sunt recusandae porro voluptate fuga assumenda explicabo. Aspernatur magnam consequatur itaque, molestias voluptas voluptatibus, at quas repellendus, dicta cumque et laborum veritatis placeat animi sequi fuga iste.
-			.post-title2 Đây là tiêu đề mẫu
-			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates ex fuga adipisci nam ad modi mollitia dignissimos sapiente eius unde error neque nobis iure, soluta accusamus maiores, dicta dolorum in harum facere. Reiciendis rerum, consequuntur dolor amet quos quam quae eaque vero, suscipit, asperiores ullam error nihil eum tenetur alias incidunt, consequatur eius ipsum voluptatum iure facilis. Sint error, accusamus voluptate soluta at distinctio voluptates officia modi repellendus, eos alias numquam repellat harum blanditiis dicta nulla. Quod voluptate repudiandae modi enim voluptates! Repudiandae maiores sit impedit quam quae tenetur delectus? Consequuntur voluptatibus illum dolorem quas, non alias soluta sunt dicta!
-			figure
-				img(src="img/news/1.jpg", alt="")
-				figcaption mô tả ngắn về hình ảnh
-			ul.special
-				li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, aspernatur.
-				li Lorem ipsum dolor sit amet.
-				li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-				li Lorem ipsum dolor sit amet, consectetur adipisicing.
-		.share
-			img(src="img/share.jpg", alt="")
-
-		//- .title-wrap.clearfix
-			h3.small-title Danh mục tin tức
-		//- nav.news-category
-			ul
-				li
-					a(href="#") Thủ thuật sử dụng
-				li
-					a(href="#") Kiến thức mua hàng
-				li
-					a(href="#") Review sản phẩm
-				li
-					a(href="#") Tin thị trường
-				li
-					a(href="#") Tin khuyến mãi
-		.title-wrap.clearfix
-			h3.small-title Bài viết nổi bật
-			a.btn-viewmore(href="#") Xem thêm
-		.post-list.clearfix
-			.post
-				figure
-					a.post-img(href="#")
-						img(src="img/news/2.jpg", alt="")
-					figcaption
-						h3.post-name
-							a(href="#") Thủ thuật sử dụng hiệu quả Galaxy S8/S8 Plus của bạn
-			.post
-				figure
-					a.post-img(href="#")
-						img(src="img/news/2.jpg", alt="")
-					figcaption
-						h3.post-name
-							a(href="#") Thủ thuật sử dụng hiệu quả Galaxy S8/S8 Plus của bạn
-			.post
-				figure
-					a.post-img(href="#")
-						img(src="img/news/2.jpg", alt="")
-					figcaption
-						h3.post-name
-							a(href="#") Thủ thuật sử dụng hiệu quả Galaxy S8/S8 Plus của bạn
-			.post
-				figure
-					a.post-img(href="#")
-						img(src="img/news/2.jpg", alt="")
-					figcaption
-						h3.post-name
-							a(href="#") Thủ thuật sử dụng hiệu quả Galaxy S8/S8 Plus của bạn
-			.post
-				figure
-					a.post-img(href="#")
-						img(src="img/news/2.jpg", alt="")
-					figcaption
-						h3.post-name
-							a(href="#") Thủ thuật sử dụng hiệu quả Galaxy S8/S8 Plus của bạn
-		.title-wrap.clearfix
-			h3.small-title Videos
-			a.btn-viewmore(href="#") Xem thêm
-		.video-list
-			.video-col
-				figure
-					a.video-img(href="#" data-fancybox)
-						img(src="img/news/1.jpg", alt="")
-					figcaption
-						a(href="#") Lorem ipsum dolor sit.
-			.video-col
-				figure
-					a.video-img(href="#" data-fancybox)
-						img(src="img/news/1.jpg", alt="")
-					figcaption
-						a(href="#") Lorem ipsum dolor sit.
-			.video-col
-				figure
-					a.video-img(href="#" data-fancybox)
-						img(src="img/news/1.jpg", alt="")
-					figcaption
-						a(href="#") Lorem ipsum dolor sit.
+			.news-info
+				h1.news-name Google sẽ mất 50 triệu USD nếu Fortnite "tạm biệt" Play Store
+				time 12/08/2018
+				.share
+					img(src="img/share.jpg", alt="")
+			.content
+				.text-center
+					img(src="https://cdn.tgdd.vn/Files/2018/08/12/1108796/fortnite-screenshot-_1390x814-800-resize.jpg", alt="")
+				p Fortnite là một sản phẩm của Epic Game, có thể nói đây là tựa game đang rất nổi ở thời điểm hiện tại. Do vậy, nó sẽ là "miếng bánh" ngon dành cho các nhà cung cấp dịch vụ.
+				p Vừa qua, siêu phẩm cao cấp tiếp theo của Samsung là Galaxy Note 9 vừa được trình làng. Cạnh đó, Epic Game cũng ra mắt Fortnite trên nền tảng Android đã tạo nên sự chú ý từ người dùng đặc biệt là game thủ. 
+				figure.image-compare
+					img(src="https://cdn.tgdd.vn/Files/2018/08/12/1108796/39036834_1011688592344135_834114693634195456_n-_1820x1024-800-resize.jpg", alt="")
+					img(src="https://cdn.tgdd.vn/Files/2018/08/12/1108796/fortniteone_970x546-800-resize.jpg", alt="")
+				h4
+					strong Bước đi đầy "toan tính" của Epic Game
+				p Khi Fortnite Battle Royale ra mắt trên Android. Không "thuận theo tự nhiên", Epic Game đã bỏ qua cửa hàng Play Store vốn được cho là "mảnh đất màu mỡ" dành cho các nhà phát triển ứng dụng Android trong việc tiếp cận người dùng.
+				p Epic Game đã lựa chọn cách đưa Fortnite lên trang web của mình. Họ tin rằng "tựa game này đủ sức để thu hút người dùng" nhằm "lách luật" tránh các khoản phí và chính sách khác từ Google.
+				.text-center
+					img(src="https://cdn.tgdd.vn/Files/2018/08/12/1108796/fortniteone_970x546-800-resize.jpg", alt="")
+				p Đối với hệ điều hành iOS, câu chuyện này chắc chỉ là mơ bởi cơ chế bảo mật và kiểm duyệt của iOS được đánh giá là khắc khe. Nên "chiến lược" trên là bất khả thi.
+				p Trong khi Android là hệ điều hành mở, cho phép cài đặt thoải mái ứng dụng bên thứ 3 từ các nguồn khác nhau mà không chịu sự kiểm duyệt khắc khe như iOS, đã tạo cơ hội để thực hiện "chiêu trò" trên.
+				p Riêng hệ điều hành iOS qua Apple Store, Epic Game đã thu khoảng 180 triệu USD từ Fortnite. Mặt khác, doanh thu này sẽ có thể tăng cao hơn nữa nếu có mặt trên Play Store của Google nhưng nhà phát triển này lại có hướng đi riêng trên nền tảng Android.
+				h4 
+					strong Động thái "đáp trả" của Google và các bên liên quan
+				p Giờ đây, khi người dùng tìm kiếm những thứ như Fortnite, Fortine Mobile hay Fortnite Battle Royale, Google Play sẽ đưa phản hồi "Fortnite Battle Royale của Epic Game, Inc không có mặt trên Google Play".
+			.product
+				.img
+					img(src="img/product/5.jpg", alt="")
+				.caption
+					h3.name Garmin Forerunner® 645
+					.price
+						.new 9.990.000 đ
+					.rating
+						select.bar-rating
+							option(value='1') 1
+							option(value='2') 2
+							option(value='3') 3
+							option(value='4' selected="selected") 4
+							option(value='5') 5
+						span 70 đánh giá
+					.des
+						ul
+							li Kích thước: 42.5 x 42.5 x 13.5 mm
+							li Phiên bản: Music
+							li Chất liệu dây: Silicone
+							li Mặt kính: Cường lực
+							li Chống nước: 5ATM
+							li Trọng lượng: 42.2 g
+					.btn-wrap
+						a.btn-buy(href="#!") Mua ngay
+						a.btn-tragop(href="#!") Trả góp
+			.share
+				img(src="img/share.jpg", alt="")
+		.news-group
+			h2.page-title Bài viết liên quan
+			.news-list4.related
+				.item
+					a.news-item(href="#!")
+						.img
+							img(src="img/news/1.jpg", alt="")
+						.caption
+							.name Muốn điều khiển máy bay DJI dễ dàng và an toàn hãy nắm vững 7 mẹo sử dụng này
+							time 20/07/2018
+							.des Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi iste hic vel veritatis exercitationem suscipit. Delectus aliquam repellat incidunt iusto ducimus facere, quia autem reiciendis. Culpa et molestiae quaerat officia iste inventore excepturi provident, sit fugiat ipsam accusantium laboriosam illo nesciunt vel ab, aperiam ipsum dignissimos. Dignissimos illum laboriosam voluptatum sunt repellendus accusamus qui similique aliquid dolorum. Assumenda rem id illum, perferendis, vero aliquam alias, ea quos asperiores molestias exercitationem deserunt? Dicta nemo perferendis architecto labore aspernatur? Et, autem. Atque magnam eaque, expedita ducimus dolorem ullam aliquid. Eveniet ratione nesciunt fugit a, aut dolorum numquam? Laudantium quaerat optio ab deleniti.
+				.item
+					a.news-item(href="#!")
+						.img
+							img(src="img/news/2.jpg", alt="")
+						.caption
+							.name Muốn điều khiển máy bay DJI dễ dàng và an toàn hãy nắm vững 7 mẹo sử dụng này
+							time 20/07/2018
+							.des Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi iste hic vel veritatis exercitationem suscipit. Delectus aliquam repellat incidunt iusto ducimus facere, quia autem reiciendis. Culpa et molestiae quaerat officia iste inventore excepturi provident, sit fugiat ipsam accusantium laboriosam illo nesciunt vel ab, aperiam ipsum dignissimos. Dignissimos illum laboriosam voluptatum sunt repellendus accusamus qui similique aliquid dolorum. Assumenda rem id illum, perferendis, vero aliquam alias, ea quos asperiores molestias exercitationem deserunt? Dicta nemo perferendis architecto labore aspernatur? Et, autem. Atque magnam eaque, expedita ducimus dolorem ullam aliquid. Eveniet ratione nesciunt fugit a, aut dolorum numquam? Laudantium quaerat optio ab deleniti.
+				.item
+					a.news-item(href="#!")
+						.img
+							img(src="img/news/3.jpg", alt="")
+						.caption
+							.name Muốn điều khiển máy bay DJI dễ dàng và an toàn hãy nắm vững 7 mẹo sử dụng này
+							time 20/07/2018
+							.des Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi iste hic vel veritatis exercitationem suscipit. Delectus aliquam repellat incidunt iusto ducimus facere, quia autem reiciendis. Culpa et molestiae quaerat officia iste inventore excepturi provident, sit fugiat ipsam accusantium laboriosam illo nesciunt vel ab, aperiam ipsum dignissimos. Dignissimos illum laboriosam voluptatum sunt repellendus accusamus qui similique aliquid dolorum. Assumenda rem id illum, perferendis, vero aliquam alias, ea quos asperiores molestias exercitationem deserunt? Dicta nemo perferendis architecto labore aspernatur? Et, autem. Atque magnam eaque, expedita ducimus dolorem ullam aliquid. Eveniet ratione nesciunt fugit a, aut dolorum numquam? Laudantium quaerat optio ab deleniti.
+				.item
+					a.news-item(href="#!")
+						.img
+							img(src="img/news/4.jpg", alt="")
+						.caption
+							.name Muốn điều khiển máy bay DJI dễ dàng và an toàn hãy nắm vững 7 mẹo sử dụng này
+							time 20/07/2018
+							.des Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi iste hic vel veritatis exercitationem suscipit. Delectus aliquam repellat incidunt iusto ducimus facere, quia autem reiciendis. Culpa et molestiae quaerat officia iste inventore excepturi provident, sit fugiat ipsam accusantium laboriosam illo nesciunt vel ab, aperiam ipsum dignissimos. Dignissimos illum laboriosam voluptatum sunt repellendus accusamus qui similique aliquid dolorum. Assumenda rem id illum, perferendis, vero aliquam alias, ea quos asperiores molestias exercitationem deserunt? Dicta nemo perferendis architecto labore aspernatur? Et, autem. Atque magnam eaque, expedita ducimus dolorem ullam aliquid. Eveniet ratione nesciunt fugit a, aut dolorum numquam? Laudantium quaerat optio ab deleniti.

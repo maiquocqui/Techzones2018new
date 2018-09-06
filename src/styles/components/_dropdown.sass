@@ -16,13 +16,18 @@
 	border: 1px solid darken($white,5%)
 	margin-top: 10px
 	padding: 0
-	box-shadow: 0px 5px 20px color-rgba($black,0.1)
+	box-shadow: 0px 5px 20px color-rgba($black,0.05)
 	.dropdown-title
 		+fs(14rem)
 		text-transform: uppercase
 		font-weight: bold
 		padding: 10px 15px
 		border-bottom: 1px solid darken($white,10%)
+	.dropdown-item
+		&:hover, &.active
+			background: color-rgba($blue,0.05)
+			color: $blue
+			border: none
 // DROPDOWN CUSTOM
 .dropdown-custom
 	.dropdown-menu
