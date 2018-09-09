@@ -200,9 +200,70 @@ header
 							.searchbox
 								input(type="text" placeholder="Nhập mã đơn hàng...")
 								button.searchbutton <i class="material-icons">search</i>
+				.user-order
+					.order-detail
+						.order-name Đơn hàng 
+							strong #204587630514489
+						.order-list
+							.item
+								.order-item
+									.order-title
+										.des Đặt ngày 15 thg 7 2018 11:12:01
+											br
+											|Đã thanh toán 15 thg 7 2018 11:12:01
+										.status.alert-success Đã thanh toán
+									.row.row-s
+										.col-12.col-md-6.mt-2.mb-2
+											.order-information
+												.title Thông tin đặt hàng
+												ul
+													li 
+														strong Mai Quốc Qui
+													li Địa chỉ: 535/2 Thống Nhất, P.16, Q.Gò Vấp, TP.HCM
+													li Điện thoại: 0981540288
+													li Phương thức vận chuyển: Viettel Post
+													li Phương thức thanh toán: Trả góp qua thẻ tín dụng
+										.col-12.col-md-6.mt-2.mb-2
+											.order-information
+												.title Thông tin người nhận hàng
+												ul
+													li 
+														strong Mai Quốc Qui
+													li Địa chỉ: 535/2 Thống Nhất, P.16, Q.Gò Vấp, TP.HCM
+													li Điện thoại: 0981540288
+									.order-product
+										a.product(href="#!")
+											.img
+												img(src="img/product/1.jpg", alt="")
+											.caption
+												.name Gigabyte GA-H370 Aorus Gaming 3
+												.amount Số lượng: 1
+												.price Tổng tiền: 
+													.new 3.800.000 đ
+										a.product(href="#!")
+											.img
+												img(src="img/product/2.jpg", alt="")
+											.caption
+												.name Gigabyte GA-H370 Aorus Gaming 3
+												.amount Số lượng: 1
+												.price Tổng tiền: 
+													.new 3.800.000 đ
+									.order-total
+										.group
+											.label Tạm tính: 
+											.value 40.000.000 đ
+										.group
+											.label Giảm giá: 
+											.value 0 đ
+										.group
+											.label Phí vận chuyển: 
+											.value 0 đ
+										.group.total
+											.label Tổng tiền: 
+											.value 40.000.000 đ
 
 #modalGuaranteeCheck.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
-	.modal-dialog.modal-check(role='document')
+	.modal-dialog.modal-check.modal-check2(role='document')
 		.modal-content
 			.modal-header
 				h5.modal-title Kiểm tra bảo hành
@@ -216,4 +277,24 @@ header
 							.searchbox
 								input(type="text" placeholder="Nhập imei sản phẩm...")
 								button.searchbutton <i class="material-icons">search</i>
+				.warranty-info
+					.product
+						.img
+							img(src="img/product/5.jpg", alt="")
+						.caption
+							ul
+								li Serial: 
+									span.serial 12345678
+								li Tên sản phẩm: 
+									span.name ASUS ROG STRIX SCAR II
+								li Ngày kích hoạt bảo hành: 
+									span.datestart 12/12/2018
+								li Ngày kết thúc bảo hành: 
+									span.dateend 12/12/2019
+					.content
+						ul
+							li
+								a.text-blue(href="#!") Điều kiện bảo hành
+							li
+								a.text-blue(href="#!") Điều kiện đổi trả
 // END MODAL

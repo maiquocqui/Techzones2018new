@@ -356,26 +356,42 @@ section.breadcrumb-wrap
 								.name Tổng hợp những mẫu laptop Acer chạy chip Intel thế hệ 8 cực “hot” vừa được ra mắt
 section.life-style
 	.item
-		a.pic(href="#!")
+		a.pic(href="#!" data-toggle="modal" data-target="#modal-picture")
 			img(src="img/news/1.jpg", alt="")
 	.item
-		a.pic(href="#!")
+		a.pic(href="#!" data-toggle="modal" data-target="#modal-picture")
 			img(src="img/news/2.jpg", alt="")
 	.item
-		a.pic(href="#!")
+		a.pic(href="#!" data-toggle="modal" data-target="#modal-picture")
 			img(src="img/news/3.jpg", alt="")
 	.item
-		a.pic(href="#!")
+		a.pic(href="#!" data-toggle="modal" data-target="#modal-picture")
 			img(src="img/news/4.jpg", alt="")
 	.item
-		a.pic(href="#!")
+		a.pic(href="#!" data-toggle="modal" data-target="#modal-picture")
 			img(src="img/news/5.jpg", alt="")
 	.item
-		a.pic(href="#!")
+		a.pic(href="#!" data-toggle="modal" data-target="#modal-picture")
 			img(src="img/news/6.jpg", alt="")
 	.item
-		a.pic(href="#!")
+		a.pic(href="#!" data-toggle="modal" data-target="#modal-picture")
 			img(src="img/news/7.jpg", alt="")
 	.item
-		a.pic(href="#!")
+		a.pic(href="#!" data-toggle="modal" data-target="#modal-picture")
 			img(src="img/news/8.jpg", alt="")
+
+
+#modal-picture.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+	.modal-dialog.modal-picture(role='document')
+		.modal-content
+			.modal-header
+				h5#exampleModalLabel.modal-title Lifestyle
+				.close(data-dismiss='modal', aria-label='Close')
+					i.material-icons close
+			.modal-body
+				.instagram-wrap
+					.row
+						.col-12.col-md-6
+							.instagram-pic
+								img(src="img/news/1.jpg", alt="")
+						.col-12.col-md-6

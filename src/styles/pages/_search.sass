@@ -1,0 +1,105 @@
+.search-page
+	.result-product, .result-news
+		margin-bottom: 40px
+	.small-title
+		+fs(18rem)
+		font-weight: 600
+		margin-bottom: 0px
+	.result-amount
+		// background: lighten($blue,40%)
+		// padding: 2px 10px
+		+bor-rad(3px)
+		font-weight: 500
+		+fs(14rem)
+		color: darken($white,40%)
+		margin-bottom: 15px
+		strong 
+			color: $main
+			font-weight: 600
+	.filter-wrap
+		+media-breakpoint-up(lg)
+			background: darken($white,3%)
+			box-shadow: none
+
+	.result-product
+		background: $white
+		padding: 15px
+		+bor-rad(5px)
+		margin-bottom: 15px
+		box-shadow: 0px 5px 20px color-rgba($black,0.05)
+		+media-breakpoint-down(md)
+			margin: 0 -15px 10px
+			+bor-rad(0)
+			box-shadow: none
+	
+	.product-list
+		margin-bottom: 15px
+		+media-breakpoint-down(md)
+			margin: 0px 0px 15px
+		article
+			&.col-6
+				&.change
+					flex: 0 0 100%
+					max-width: 100%
+					.product-col
+						figure
+							+flexbox
+							+pos(rel,null)
+							.product-img
+								width: 120px
+								height: 120px
+								margin: 0
+							figcaption
+								width: calc(100% - 120px)
+								padding-left: 15px
+	.btn-loadmore
+		+fs(14rem)
+		font-weight: 500
+		color: $white
+		background: $bluegradient
+		+bor-rad(50px)
+		line-height: 36px
+		display: inline-block
+		padding: 0px 30px
+		+media-breakpoint-down(sm)
+			margin: 15px 0
+			+fs(13rem)
+			line-height: 36px
+		&:before
+			content: '\f055'
+			font-family: 'fontawesome'
+			margin-right: 10px
+		&:hover
+			box-shadow: 0px 10px 20px -10px $blue
+	.result-news
+		padding: 15px 0
+	.post-list
+		.post
+			display: block
+			margin-bottom: 10px
+			padding-bottom: 10px
+			border-bottom: 1px dashed darken($white,10%)
+			figure
+				+flexbox
+				.post-img
+					width: 100px
+					img
+						height: 60px
+						object-fit: cover
+				figcaption
+					width: calc(100% - 100px)
+					padding-left: 10px
+					.post-name
+						+fs(14rem)
+						line-height: 1.4
+						font-weight: 500
+						color: $main
+						+textover(3)
+	.btn-viewmore
+		+fs(13rem)
+		font-weight: 500
+		color: $blue
+		text-transform: uppercase
+		&:after
+			content: '\f105'
+			margin-left: 5px

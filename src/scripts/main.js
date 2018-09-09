@@ -222,8 +222,8 @@ $(document).ready(function() {
         $(this).parent('.page-popup').removeClass('open');
     });
     $('.close-popup').on("click", function() {
-        $(this).parent('.page-popup').removeClass('open');
-        $(this).parent('.page-popup').find('.popup-overlay').fadeOut(500);
+        $(this).parents('.page-popup').removeClass('open');
+        $(this).parents('.page-popup').find('.popup-overlay').fadeOut(500);
     });
     $('.btn-buy').on("click", function() {
         $('.page-popup').removeClass('open');
