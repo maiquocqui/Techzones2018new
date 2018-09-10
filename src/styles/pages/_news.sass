@@ -197,7 +197,7 @@
 					+media-breakpoint-down(lg)
 						height: 180px
 					+media-breakpoint-down(sm)
-						height: 100px
+						height: 120px
 			.caption
 				width: 60%
 				padding-left: 30px
@@ -216,13 +216,17 @@
 					+media-breakpoint-down(lg)
 						+fs(18rem)
 					+media-breakpoint-down(sm)
-						+fs(14rem)
-						+textover(4)
+						+fs(13rem)
+						+textover(2)
+						margin-bottom: 5px
 				time
 					display: block
 					+fs(13rem)
 					color: darken($white,40%)
 					margin-bottom: 10px
+					+media-breakpoint-down(sm)
+						+fs(11rem)
+						margin-bottom: 0
 				.des
 					+fs(14rem)
 					+textover(4)
@@ -230,7 +234,8 @@
 					+media-breakpoint-down(lg)
 						+textover(3)
 					+media-breakpoint-down(sm)
-						display: none
+						+fs(12rem)
+						// display: none
 	.news-list2
 		+flexbox
 		flex-wrap: wrap
@@ -259,7 +264,7 @@
 					+media-breakpoint-down(lg)
 						height: 180px
 					+media-breakpoint-down(sm)
-						height: 130px
+						height: 100px
 			.caption
 				.name
 					+fs(18rem)
@@ -270,12 +275,16 @@
 					+media-breakpoint-down(lg)
 						+fs(16rem)
 					+media-breakpoint-down(sm)
-						+fs(14rem)
+						+fs(13rem)
+						margin-bottom: 5px
 				time
 					display: block
 					+fs(13rem)
 					color: darken($white,40%)
 					margin-bottom: 10px
+					+media-breakpoint-down(sm)
+						+fs(11rem)
+						margin-bottom: 0
 				.des
 					+fs(14rem)
 					+textover(4)
@@ -285,7 +294,8 @@
 						+textover(3)
 						+fs(13rem)
 					+media-breakpoint-down(sm)
-						display: none
+						+fs(12rem)
+						// display: none
 	.news-slide
 		+bor-rad(5px)
 		overflow: hidden
