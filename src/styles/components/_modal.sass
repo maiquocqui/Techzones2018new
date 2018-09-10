@@ -194,3 +194,27 @@ body.modal-open
 		max-width: 800px
 	&.modal-repay
 		margin: 0 auto
+	&.modal-picture
+		max-width: 800px
+		+media-breakpoint-down(sm)
+			margin: 0
+		.modal-content
+			+media-breakpoint-down(sm)
+				min-height: 100vh
+		.instagram-pic
+			+media-breakpoint-down(sm)
+				margin-bottom: 20px
+		.post-link
+			+flexbox
+			a
+				+ a
+					margin-left: 20px
+					border-left: 1px solid darken($white,10%)
+					padding-left: 20px
+		.post-product
+			.slick-track
+				+flexbox
+				.slick-slide
+					height: unset
+					> div, .item
+						height: 100%

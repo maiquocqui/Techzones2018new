@@ -7746,6 +7746,37 @@ body.modal-open {
     max-width: 800px; }
   .modal-dialog.modal-repay {
     margin: 0 auto; }
+  .modal-dialog.modal-picture {
+    max-width: 800px; }
+    @media (max-width: 767.98px) {
+      .modal-dialog.modal-picture {
+        margin: 0; } }
+    @media (max-width: 767.98px) {
+      .modal-dialog.modal-picture .modal-content {
+        min-height: 100vh; } }
+    @media (max-width: 767.98px) {
+      .modal-dialog.modal-picture .instagram-pic {
+        margin-bottom: 20px; } }
+    .modal-dialog.modal-picture .post-link {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      .modal-dialog.modal-picture .post-link a + a {
+        margin-left: 20px;
+        border-left: 1px solid #e6e6e6;
+        padding-left: 20px; }
+    .modal-dialog.modal-picture .post-product .slick-track {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      .modal-dialog.modal-picture .post-product .slick-track .slick-slide {
+        height: unset; }
+        .modal-dialog.modal-picture .post-product .slick-track .slick-slide > div, .modal-dialog.modal-picture .post-product .slick-track .slick-slide .item {
+          height: 100%; }
 
 .home-navs {
   position: relative; }
@@ -14828,6 +14859,15 @@ footer {
       width: 100%;
       height: 200px;
       object-fit: cover; }
+      @media (max-width: 1199.98px) {
+        .life-style .item .pic img {
+          height: 150px; } }
+      @media (max-width: 991.98px) {
+        .life-style .item .pic img {
+          height: 130px; } }
+      @media (max-width: 767.98px) {
+        .life-style .item .pic img {
+          height: 100px; } }
 
 .cartpage .fullpage {
   padding: 0; }

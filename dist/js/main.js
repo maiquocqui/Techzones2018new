@@ -302,10 +302,41 @@ $(document).ready(function () {
     $('#modalRepay').modal('show');
 
     // News page script
-    // if ($(window).width() < 576) {
-    //     $('.news-page .news-list .news-item .name').insertBefore($(this).parents('.news-item').find('.img'));
-    // }
-
+    $('#modal-picture').on('shown.bs.modal', function () {
+        $('.post-product').slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            // autoplay: true,
+            autoplaySpeed: 3000,
+            speed: 500,
+            arrows: false,
+            dots: false,
+            infinite: true,
+            swipe: true,
+            swipeToSlide: true,
+            responsive: [{
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 2
+                }
+            }, {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2
+                }
+            }, {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2
+                }
+            }, {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 2
+                }
+            }]
+        });
+    });
 
     // banner
     $('.banner').slick({
@@ -511,38 +542,6 @@ $(document).ready(function () {
             settings: {
                 dots: true,
                 arrows: true
-            }
-        }]
-    });
-
-    $('.post-product').slick({
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        // autoplay: true,
-        autoplaySpeed: 3000,
-        speed: 500,
-        arrows: false,
-        dots: false,
-        infinite: true,
-        responsive: [{
-            breakpoint: 1199,
-            settings: {
-                slidesToShow: 2
-            }
-        }, {
-            breakpoint: 991,
-            settings: {
-                slidesToShow: 2
-            }
-        }, {
-            breakpoint: 767,
-            settings: {
-                slidesToShow: 2
-            }
-        }, {
-            breakpoint: 575,
-            settings: {
-                slidesToShow: 2
             }
         }]
     });
