@@ -92,19 +92,21 @@ body.modal-open
 		.warranty-info
 			.product
 				+flexbox
-				// align-items: center
-				// align-content: center
+				align-items: flex-start
+				align-content: flex-start
 				+bor-rad(5px)
 				border: 1px solid darken($white,10%)
 				padding: 20px
 				margin-bottom: 15px
+				+media-breakpoint-down(sm)
+					padding: 10px
 				.img
 					width: 40%
 					+flexbox
 					align-items: center
 					align-content: center
 					+media-breakpoint-down(sm)
-						width: 30%
+						width: 80px
 					img
 						max-width: 90%
 						max-height: 90%
@@ -112,7 +114,7 @@ body.modal-open
 					width: 60%
 					padding-left: 20px
 					+media-breakpoint-down(sm)
-						width: 70%
+						width: calc(100% - 80px)
 						padding-left: 15px
 					ul
 						li
@@ -120,7 +122,8 @@ body.modal-open
 							color: darken($white,60%)
 							margin-bottom: 5px
 							+media-breakpoint-down(sm)
-								+fs(13rem)
+								+fs(12rem)
+								margin-bottom: 0
 							span
 								color: $main
 								font-weight: 500
@@ -128,7 +131,7 @@ body.modal-open
 								color: $blue
 								+fs(16rem)
 								+media-breakpoint-down(sm)
-									+fs(14rem)
+									+fs(13rem)
 							.dateend
 								color: $red
 

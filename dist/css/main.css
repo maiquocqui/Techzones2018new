@@ -7626,10 +7626,15 @@ body.modal-open {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
     border-radius: 5px;
     border: 1px solid #e6e6e6;
     padding: 20px;
     margin-bottom: 15px; }
+    @media (max-width: 767.98px) {
+      .modal-dialog.modal-check2 .warranty-info .product {
+        padding: 10px; } }
     .modal-dialog.modal-check2 .warranty-info .product .img {
       width: 40%;
       display: -webkit-box;
@@ -7641,7 +7646,7 @@ body.modal-open {
       align-content: center; }
       @media (max-width: 767.98px) {
         .modal-dialog.modal-check2 .warranty-info .product .img {
-          width: 30%; } }
+          width: 80px; } }
       .modal-dialog.modal-check2 .warranty-info .product .img img {
         max-width: 90%;
         max-height: 90%; }
@@ -7650,7 +7655,7 @@ body.modal-open {
       padding-left: 20px; }
       @media (max-width: 767.98px) {
         .modal-dialog.modal-check2 .warranty-info .product .caption {
-          width: 70%;
+          width: calc(100% - 80px);
           padding-left: 15px; } }
       .modal-dialog.modal-check2 .warranty-info .product .caption ul li {
         font-size: 0.875rem;
@@ -7658,7 +7663,8 @@ body.modal-open {
         margin-bottom: 5px; }
         @media (max-width: 767.98px) {
           .modal-dialog.modal-check2 .warranty-info .product .caption ul li {
-            font-size: 0.8125rem; } }
+            font-size: 0.75rem;
+            margin-bottom: 0; } }
         .modal-dialog.modal-check2 .warranty-info .product .caption ul li span {
           color: #333333;
           font-weight: 500; }
@@ -7667,7 +7673,7 @@ body.modal-open {
           font-size: 1rem; }
           @media (max-width: 767.98px) {
             .modal-dialog.modal-check2 .warranty-info .product .caption ul li .name {
-              font-size: 0.875rem; } }
+              font-size: 0.8125rem; } }
         .modal-dialog.modal-check2 .warranty-info .product .caption ul li .dateend {
           color: #F44336; }
   .modal-dialog.modal-address {
@@ -12969,6 +12975,22 @@ footer {
           font-size: 1rem;
           font-weight: 700;
           color: #F44336; }
+        .product-page .product-description .tab-pane .product .caption .change-option {
+          display: inline-block;
+          font-size: 0.8125rem;
+          line-height: 1;
+          padding: 4px 10px;
+          border-radius: 3px;
+          cursor: pointer;
+          background: rgba(0, 0, 0, 0.05);
+          border: 1px solid #e6e6e6; }
+          .product-page .product-description .tab-pane .product .caption .change-option:before {
+            content: '\f0ad';
+            margin-right: 5px; }
+          .product-page .product-description .tab-pane .product .caption .change-option:hover {
+            color: #2cbde5;
+            background: rgba(44, 189, 229, 0.1);
+            border-color: #59cbeb; }
       .product-page .product-description .tab-pane .product .button {
         width: calc(100% - 280px);
         display: -webkit-box;
@@ -17313,5 +17335,113 @@ ul.cardList {
   .search-page .btn-viewmore:after {
     content: '\f105';
     margin-left: 5px; }
+
+.notfound-page {
+  padding: 60px 0;
+  background: #fff; }
+  @media (max-width: 767.98px) {
+    .notfound-page {
+      padding: 40px 0; } }
+  .notfound-page .img {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px; }
+    .notfound-page .img img {
+      max-width: 80%; }
+      @media (max-width: 1199.98px) {
+        .notfound-page .img img {
+          max-width: 100%; } }
+      @media (max-width: 767.98px) {
+        .notfound-page .img img {
+          max-width: 80%; } }
+  @media (max-width: 767.98px) {
+    .notfound-page .error-wrap {
+      text-align: center; } }
+  .notfound-page .error-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 50px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    box-shadow: 0px 10px 20px -10px #2cbde5;
+    margin-bottom: 20px; }
+    @media (max-width: 1199.98px) {
+      .notfound-page .error-title {
+        font-size: 1.375rem; } }
+    @media (max-width: 767.98px) {
+      .notfound-page .error-title {
+        font-size: 1.25rem;
+        padding: 10px 30px;
+        text-align: center; } }
+  .notfound-page .error-content {
+    display: block; }
+    .notfound-page .error-content .title {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: #2cbde5;
+      margin-bottom: 15px; }
+    .notfound-page .error-content .content {
+      color: #666666;
+      font-size: 1rem; }
+      @media (max-width: 1199.98px) {
+        .notfound-page .error-content .content {
+          font-size: 0.875rem; } }
+  .notfound-page .product-subcate {
+    text-align: center;
+    margin-bottom: 20px; }
+    @media (max-width: 991.98px) {
+      .notfound-page .product-subcate {
+        display: block; } }
+    @media (max-width: 767.98px) {
+      .notfound-page .product-subcate .category-list {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap; } }
+    @media (max-width: 767.98px) {
+      .notfound-page .product-subcate .category-list .item {
+        width: 33.33%; } }
+    @media (max-width: 767.98px) {
+      .notfound-page .product-subcate .category-list .item .category-item {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+        text-align: center; }
+        .notfound-page .product-subcate .category-list .item .category-item .img {
+          margin: 0 auto 10px; } }
+  .notfound-page .btn-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap; }
+    .notfound-page .btn-wrap a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #2cbde5;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 5px; }
+      @media (max-width: 767.98px) {
+        .notfound-page .btn-wrap a {
+          display: block; } }
+      .notfound-page .btn-wrap a + a {
+        margin-left: 50px; }
+        @media (max-width: 767.98px) {
+          .notfound-page .btn-wrap a + a {
+            margin-left: 0; } }
+      .notfound-page .btn-wrap a:hover {
+        color: #FF9800;
+        background: rgba(255, 152, 0, 0.1); }
 
 /*# sourceMappingURL=main.css.map */

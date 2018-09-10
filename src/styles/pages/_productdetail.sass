@@ -679,6 +679,22 @@
 						+fs(16rem)
 						font-weight: 700
 						color: $red
+					.change-option
+						display: inline-block
+						+fs(13rem)
+						line-height: 1
+						padding: 4px 10px
+						+bor-rad(3px)
+						cursor: pointer
+						background: color-rgba($black,0.05)
+						border: 1px solid darken($white,10%)
+						&:before
+							content: '\f0ad'
+							margin-right: 5px
+						&:hover
+							color: $blue
+							background: color-rgba($blue,0.1)
+							border-color: lighten($blue,10%)
 				.button
 					width: calc(100% - 280px)
 					+flexbox
