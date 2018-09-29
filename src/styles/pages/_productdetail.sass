@@ -283,6 +283,19 @@
 				color: $main
 				+media-breakpoint-down(md)
 					margin-bottom: 5px
+			.option-list
+				ul
+					list-style-type: disc
+					padding-left: 20px
+					padding-top: 10px
+					li
+						+fs(14rem)
+						margin-bottom: 5px
+						a
+							font-weight: 600
+							margin-left: 5px
+							&:hover
+								color: $blue
 			.option-group
 				margin-top: 5px
 				+media-breakpoint-down(md)
@@ -615,7 +628,7 @@
 			padding: 15px 0 0
 			.content
 				&.showless
-					max-height: 800px
+					max-height: 600px
 					overflow: hidden
 					+pos(rel,null)
 					+media-breakpoint-down(md)
@@ -653,6 +666,7 @@
 				align-items: center
 				align-content: center
 				margin-top: 10px
+				max-width: 800px
 				+media-breakpoint-down(sm)
 					display: none
 				.img
