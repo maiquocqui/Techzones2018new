@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
     // jquery scroll up
-    $.scrollUp();
+    // $.scrollUp();
 
     // header script
     if ($(window).width() < 1200) {

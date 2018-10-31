@@ -1,14 +1,23 @@
 .breadcrumb-wrap
 	padding: 10px 0
-	// background: $bluegradient
 	+media-breakpoint-down(lg)
 		padding: 8px 0
+	+media-breakpoint-down(md)
+		background: $white
 	.breadcrumb
 		margin: 0
 		padding: 0
 		+bor-rad(0)
 		background: none
-		// white-space: nowrap
+		+media-breakpoint-down(md)
+			white-space: nowrap
+			overflow: auto
+			display: block
+			// display: -webkit-box
+			// -webkit-line-clamp: 1
+			// -webkit-box-orient: vertical
+			// overflow: hidden
+			// text-overflow: ellipsis
 		li
 			display: inline-block
 			+pos(rel,null)

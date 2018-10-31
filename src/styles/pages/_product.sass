@@ -28,6 +28,11 @@
 					box-shadow: 0px 10px 20px -10px color-rgba($black,0.3)
 					+bor-rad(50px)
 					margin-bottom: 5px
+					img
+						max-width: 32px
+						max-height: 32px
+						filter: brightness(0%)
+						opacity: 0.5
 				.name
 					+fs(13rem)
 					line-height: 1.3
@@ -41,7 +46,8 @@
 					.img
 						background: $bluegradient
 						img
-							// filter: invert(100%)
+							filter: brightness(0%)invert(100%)
+							opacity: 1
 					.name
 						color: $blue
 .product-page

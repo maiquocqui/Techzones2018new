@@ -15,7 +15,7 @@ var sitePort = 9999;
 // ConCat
 gulp.task('concat-js', function() {
     return gulp.src([
-            "bower_components/popper.js/dist/popper.min.js",
+            // "bower_components/popper.js/dist/popper.min.js",
             "bower_components/bootstrap/dist/js/bootstrap.js",
             "bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js",
             "bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.vi.min.js",

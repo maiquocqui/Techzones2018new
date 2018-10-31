@@ -56,6 +56,28 @@
 	display: none
 	padding: 10px 0
 
+// register cms
+html 
+	body 
+		.form-wrap
+			.RadInput_Default .riTextBox, .RadInputMgr_Default
+				+fs(13rem)
+				padding: 7px 15px
+				+bor-rad(5px)
+				border: 1px solid darken($white,10%)
+				width: 100%
+				color: $main
+				height: auto !important
+				+transition(all,0.5s)
+				&::-webkit-input-placeholder
+					color: inherit
+					opacity: 0.5
+				&:active, &:focus
+					border-color: lighten($blue,10%)
+					box-shadow: 0 0 0 0.2rem color-rgba($blue,0.2)
+
+
+
 // FORM COMPONENTS
 .input-number
 	+flexbox
