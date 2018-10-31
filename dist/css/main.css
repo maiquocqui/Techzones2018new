@@ -9102,7 +9102,6 @@ header {
             font-size: 0.6875rem;
             line-height: 1.5;
             color: #fff;
-            opacity: 0.8;
             text-transform: uppercase; }
             .menu .menu-login ul a:after {
               content: '\f105';
@@ -11036,6 +11035,50 @@ footer {
       content: '\f104';
       color: #fff;
       margin-right: 10px; }
+
+.compare-products.container {
+  position: relative;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  margin: 20px 0; }
+  @media (max-width: 991.98px) {
+    .compare-products.container {
+      width: calc(100% + 30px);
+      max-width: calc(100% + 30px);
+      margin: 0 -15px;
+      padding: 15px;
+      border-radius: 0;
+      box-shadow: none; } }
+
+@media (max-width: 991.98px) {
+  .compare-products .back-link:after {
+    display: none !important; } }
+
+.compare-products .back-link .clear-list {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 5px;
+  background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  border: none;
+  -webkit-transition: all, 0.5s;
+  -khtml-transition: all, 0.5s;
+  -moz-transition: all, 0.5s;
+  -ms-transition: all, 0.5s;
+  -o-transition: all, 0.5s;
+  transition: all, 0.5s;
+  background: linear-gradient(to right, rgba(156, 39, 176, 0.8) 0%, rgba(103, 58, 183, 0.8) 100%);
+  color: #fff;
+  border-radius: 50px; }
+  .compare-products .back-link .clear-list:hover {
+    filter: brightness(110%);
+    box-shadow: 0px 10px 20px -10px #4facfe; }
+  .compare-products .back-link .clear-list:hover {
+    box-shadow: 0px 10px 20px -10px #9C27B0; }
 
 #scrollUp {
   width: 50px;
@@ -16769,7 +16812,8 @@ ul.cardList {
   padding: 15px 0; }
   @media (max-width: 991.98px) {
     .login-page {
-      background: #fff; } }
+      background: #fff;
+      margin: 0px -15px; } }
   @media (max-width: 767.98px) {
     .login-page {
       background: none;
@@ -16783,11 +16827,11 @@ ul.cardList {
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05); }
     @media (max-width: 991.98px) {
       .login-page .login-panel {
-        box-shadow: none;
-        margin: 0px -15px; } }
+        box-shadow: none; } }
     @media (max-width: 767.98px) {
       .login-page .login-panel {
-        padding-bottom: 30px; } }
+        padding-bottom: 30px;
+        max-width: 100%; } }
     .login-page .login-panel .login-banner {
       display: none;
       text-align: center; }
@@ -17223,6 +17267,30 @@ ul.cardList {
     .user-order .order-item .order-information strong {
       color: #333333;
       font-size: 0.875rem; }
+    .user-order .order-item .order-information .popup-tragop {
+      margin-top: 15px; }
+    .user-order .order-item .order-information .repaid-button {
+      display: inline-block;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #fff;
+      border-radius: 5px;
+      background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+      border: none;
+      -webkit-transition: all, 0.5s;
+      -khtml-transition: all, 0.5s;
+      -moz-transition: all, 0.5s;
+      -ms-transition: all, 0.5s;
+      -o-transition: all, 0.5s;
+      transition: all, 0.5s;
+      line-height: 34px;
+      padding: 0px 20px;
+      border-radius: 50px;
+      font-size: 0.8125rem;
+      margin-top: 10px; }
+      .user-order .order-item .order-information .repaid-button:hover {
+        filter: brightness(110%);
+        box-shadow: 0px 10px 20px -10px #4facfe; }
   .user-order .order-item .order-product .product {
     display: -webkit-box;
     display: -webkit-flex;
@@ -17346,6 +17414,13 @@ ul.cardList {
           padding: 0px 0; } }
       .hardware-page .hardware-category .hardware-group .group-title a {
         color: inherit; }
+        .hardware-page .hardware-category .hardware-group .group-title a:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0; }
         @media (max-width: 767.98px) {
           .hardware-page .hardware-category .hardware-group .group-title a {
             display: block;
@@ -17607,6 +17682,13 @@ ul.cardList {
             color: #fff; }
             .modal-hardware .modal-content .modal-body .hardware-list .hardware figure figcaption .btn-select:hover {
               box-shadow: 0px 10px 20px -10px #2cbde5; }
+
+.Module-365 .cart-step {
+  max-width: 1000px;
+  margin: 0 auto 30px; }
+  @media (max-width: 991.98px) {
+    .Module-365 .cart-step {
+      margin-bottom: 0; } }
 
 .product-dealtime {
   font-size: 0.8125rem;
