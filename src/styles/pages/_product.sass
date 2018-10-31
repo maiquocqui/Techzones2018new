@@ -3,9 +3,10 @@
 		display: none
 	.category-list
 		display: block
-		white-space: nowrap
-		overflow: auto
-		overflow-y: hidden
+		+media-breakpoint-down(lg)
+			white-space: nowrap
+			overflow: auto
+			overflow-y: hidden
 		.item
 			display: inline-block
 			vertical-align: top
@@ -28,6 +29,7 @@
 					box-shadow: 0px 10px 20px -10px color-rgba($black,0.3)
 					+bor-rad(50px)
 					margin-bottom: 5px
+					+fs(0)
 					img
 						max-width: 32px
 						max-height: 32px
@@ -80,6 +82,22 @@
 							figcaption
 								width: calc(100% - 120px)
 								padding-left: 15px
+			&.col-12
+				&.col-lg-2
+					+media-breakpoint-down(sm)
+						// flex: 0 0 100%
+						// max-width: 100%
+						.product-col
+							figure
+								+flexbox
+								+pos(rel,null)
+								.product-img
+									width: 120px
+									height: 120px
+									margin: 0
+								figcaption
+									width: calc(100% - 120px)
+									padding-left: 15px
 	&.compare-active
 		.product-item
 			.btn_compare

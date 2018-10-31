@@ -7,7 +7,7 @@
 		+media-breakpoint-down(sm)
 			flex-wrap: wrap
 		.hardware-btn
-			+pos(abs, 0 15px null null)
+			+pos(abs, -6 0 null null)
 			+media-breakpoint-down(sm)
 				+pos(static,null)
 				width: 100%
@@ -25,10 +25,12 @@
 				padding: 10px 0
 				+media-breakpoint-down(sm)
 					+fs(13rem)
-					padding: 10px 0
+					padding: 0px 0
 				a
 					color: inherit
 					+media-breakpoint-down(sm)
+						display: block
+						padding: 10px 0
 						&:after
 							content: '\f105'
 							font-family: 'fontawesome'

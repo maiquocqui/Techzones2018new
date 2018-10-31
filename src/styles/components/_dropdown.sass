@@ -30,6 +30,19 @@
 			border: none
 // DROPDOWN CUSTOM
 .dropdown-custom
+	> a
+		display: block
+		+fs(14rem)
+		font-weight: 600
+		line-height: 1.2
+		&:hover
+			color: $blue
+		+ a
+			+fs(12rem)
+			font-weight: normal
+			color: darken($white,40%)
+			&:hover
+				color: lighten($red,10%)
 	.dropdown-menu
 		+media-breakpoint-down(sm)
 			border: none

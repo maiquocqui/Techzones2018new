@@ -192,6 +192,13 @@ body.modal-open
 				overflow: auto
 	&.modal-specification
 		max-width: 800px
+		.modal-title
+			.change-option
+				+fs(0)
+				&:before 
+					content: '\f0ad'
+					font-family: 'fontawesome'
+					+fs(18rem)
 	&.modal-repay
 		margin: 0 auto
 	&.modal-picture

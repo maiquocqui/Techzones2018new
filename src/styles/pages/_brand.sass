@@ -5,6 +5,28 @@
 	box-shadow: 0px 5px 20px color-rgba($black,0.05)
 	margin: 15px 0
 	padding: 15px
+	.btn-loadmore
+		width: 150px
+		margin: 15px auto 0
+		+fs(14rem)
+		font-weight: 500
+		color: $white
+		background: $bluegradient
+		+bor-rad(50px)
+		line-height: 36px
+		display: block
+		padding: 0px 30px
+		text-align: center
+		+media-breakpoint-down(sm)
+			margin: 15px auto
+			+fs(13rem)
+			line-height: 36px
+		&:before
+			content: '\f055'
+			font-family: 'fontawesome'
+			margin-right: 10px
+		&:hover
+			box-shadow: 0px 10px 20px -10px $blue
 	+media-breakpoint-down(md)
 		margin: 0 -15px 10px
 		+bor-rad(0)
