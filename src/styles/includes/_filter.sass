@@ -108,7 +108,8 @@
 		+transition(font-size 0s)
 		&.fly-compare
 			+media-breakpoint-up(xl)
-				+pos(fix, null null 10px auto)
+				+pos(fix, null null 10px 50%)
+				+transform(translateX(-50%))
 				z-index: 50
 				margin-left: 0
 		&:hover

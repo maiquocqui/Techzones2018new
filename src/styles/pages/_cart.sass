@@ -129,10 +129,20 @@
 							content: '\f06b'
 							margin-right: 5px
 					ul
+						list-style-type: disc
+						padding-left: 20px
 						li
-							margin-bottom: 5px
+							margin-bottom: 3px
 							&:last-child
 								margin-bottom: 0
+							a
+								display: block
+								+fs(0)
+								span
+									+fs(13rem)
+									line-height: 1.2
+								&:hover
+									color: $blue
 					.gift-item
 						+flexbox
 						.gift-img

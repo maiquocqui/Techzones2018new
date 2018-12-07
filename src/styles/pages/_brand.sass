@@ -192,10 +192,34 @@
 				.category
 					text-align: center
 					.img
-						margin-bottom: 10px
+						+flexbox
+						align-items: center
+						align-content: center
+						justify-content: center
+						width: 80px !important
+						height: 80px !important
+						background: $white
+						box-shadow: 0px 10px 20px -10px color-rgba($black,0.3)
+						+bor-rad(50px)
+						margin-bottom: 5px
+						+fs(0)
+						img
+							max-width: 32px !important
+							max-height: 32px !important
+							filter: brightness(0%)
+							opacity: 0.5
 					.name
-						+fs(14rem)
-						font-weight: 700
+						+fs(13rem)
+						line-height: 1.3
+						font-weight: 500
+					&:hover
+						.img
+							background: $bluegradient
+							img
+								filter: brightness(200%)
+								opacity: 1
+						.name
+							color: $blue
 	.product-slick
 		margin-bottom: 30px
 		.slick-prev, .slick-next
@@ -226,3 +250,5 @@
 				left: 20px
 			.slick-next
 				right: 20px
+.brand-hotsale
+	margin-bottom: 30px
