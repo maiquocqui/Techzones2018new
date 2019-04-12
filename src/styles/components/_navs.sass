@@ -1,9 +1,42 @@
+// .nav-tabs
+// 	margin: 0
+// 	padding: 0
+// 	border: none
+// 	border-bottom: 1px solid darken($white,5%)
+// 	.nav-item
+// 		margin: 0
+// 		padding: 0
+// 		+ .nav-item
+// 			margin-left: 30px
+// 		.nav-link
+// 			display: block
+// 			+fs(16rem)
+// 			color: darken($white,60%)
+// 			margin: 0
+// 			padding: 10px 0
+// 			border: none
+// 			+pos(rel,null)
+// 			&:before
+// 				content: ''
+// 				display: block
+// 				+pos(abs, null 0 -1px 0)
+// 				background: $blue
+// 				height: 1px
+// 				z-index: 3
+// 				opacity: 0
+// 			&.active
+// 				color: $blue
+// 				font-weight: 500
+// 				&:before
+// 					opacity: 1
+
 .home-navs
 	+pos(rel,null)
 	.nav-tabs
 		margin: 0
-		padding: 0 0 15px
+		padding: 0
 		border: none
+		border-bottom: 1px solid darken($white,5%)
 		+media-breakpoint-down(sm)
 			display: block
 			overflow: auto
@@ -14,6 +47,7 @@
 			+media-breakpoint-down(sm)
 				display: inline-block
 			+ .nav-item
+				margin-left: 30px
 				+media-breakpoint-down(sm)
 					margin-left: 20px
 			.nav-link
@@ -25,35 +59,33 @@
 				+bor-rad(50px)
 				+fs(16rem)
 				text-transform: capitalize
-				font-weight: 700
-				padding: 8px 25px
+				color: darken($white,60%)
+				padding: 10px 0
 				color: $main
 				+pos(rel,null)
 				+media-breakpoint-down(sm)
 					padding: 0
 					text-align: center
 					color: darken($white,40%)
-				&:hover
+				&:after
+					content: ''
+					display: block
+					+pos(abs, null 0 -1px 0)
+					z-index: 3
+					height: 1px
+					background: $blue
+					opacity: 0
+				&:hover, &.active
 					color: $blue
-				&.active
-					margin: 0
-					border: none
-					color: $white
-					background: $bluegradient
-					box-shadow: 0px 10px 20px -10px $blue
-					+media-breakpoint-down(sm)
-						background: none
-						box-shadow: none
-						color: $main
+					font-weight: 500
 					&:after
-						width: 100%
+						opacity: 1
 .search-navs
 	.nav-tabs
 		margin: 0
 		padding: 0
 		border: none
 		+bor-rad(0)
-		border-bottom: 1px solid darken($white,10%)
 		+media-breakpoint-down(lg)
 			justify-content: center
 		.nav-item
@@ -62,34 +94,30 @@
 			border: none
 			+media-breakpoint-down(lg)
 				width: 50%
+			+ .nav-item
+				margin-left: 10px
 			.nav-link
 				margin: 0
 				padding: 0
 				border: none
-				+bor-rad(0)
+				+bor-rad(100px)
 				+fs(16rem)
-				font-weight: 700
-				padding: 12px 30px
+				line-height: 20px
+				border: 1px solid darken($white,5%)
+				padding: 10px 30px
 				text-align: center
 				text-transform: none
-				color: darken($white,40%)
+				color: darken($white,60%)
 				+pos(rel,null)
 				+media-breakpoint-down(lg)
 					+fs(14rem)
 					line-height: 20px
 					padding: 10px 30px
 					text-transform: uppercase
-				&:after
-					content: ''
-					+pos(abs, null 0 -1px 0)
-					z-index: 3
-					height: 3px
-					background: $bluegradient
-					opacity: 0
-				&.active
-					color: $main
-					&:after
-						opacity: 1
+				&:hover, &.active
+					color: $white
+					background: $blue
+					border-color: $blue
 
 .product-tabs
 	margin: 0

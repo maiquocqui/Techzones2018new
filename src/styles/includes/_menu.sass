@@ -57,93 +57,111 @@
 			padding: 10px 0
 	ul.menu-link
 		+flexbox
-		flex-wrap: wrap
+		// flex-wrap: wrap
 		align-items: center
 		align-content: center
 		&.menu-pc
+			padding: 0 0 5px
 			+media-breakpoint-down(lg)
 				display: none
 		&.menu-mobile
 			display: none
 			+media-breakpoint-down(lg)
 				+flexbox
+				flex-wrap: wrap
 				align-items: center
 				align-content: center
+				flex-direction: column
 		li
+			flex: auto
+			padding: 10px 0
 			+media-breakpoint-down(lg)
 				width: 100%
-			+ li
-				margin-left: 5px
-				+media-breakpoint-down(lg)
-					margin-left: 0
+			// + li
+			// 	margin-left: 5px
+			// 	+media-breakpoint-down(lg)
+			// 		margin-left: 0
 			a
 				+flexbox
 				align-items: center
 				align-content: center
 				justify-content: center
 				line-height: 20px
-				+fs(14rem)
+				+fs(15rem)
 				padding: 10px 20px
 				color: $main
 				+pos(rel,null)
+				+media-breakpoint-up(xl)
+					&:before, &:after
+						content: ''
+						width: 1px
+						height: 8px
+						background: $blue
+						+pos(abs, null null null 50%)
+						opacity: 0
+					&:before
+						top: 0px
+					&:after
+						bottom: 0px
 				+media-breakpoint-down(lg)
 					color: darken($white,60%)
 					padding: 10px 15px
 					justify-content: flex-start
-				&:after
-					content: ''
-					+pos(abs, null 0 0 0)
-					height: 3px
-					background: $bluegradient
-					z-index: 1
-					opacity: 0
-					+transition(all,0.5s)
+				// &:after
+				// 	content: ''
+				// 	+pos(abs, null 0 0 0)
+				// 	height: 3px
+				// 	background: $bluegradient
+				// 	z-index: 1
+				// 	opacity: 0
+				// 	+transition(all,0.5s)
 				.material-icons, > img
 					margin-right: 5px
 					+fs(18rem)
+					+media-breakpoint-up(xl)
+						display: none
 					+media-breakpoint-down(lg)
 						+fs(24rem)
 						margin-right: 10px
 				span
 					font-weight: 700
+					+media-breakpoint-up(xl)
+						text-transform: uppercase
+						font-weight: 500
 					+media-breakpoint-down(lg)
 						font-weight: normal
-			&.hardware
-				flex: auto
-				a
-					background: $orangegradient
-					color: $white
-					animation: rgb 10s infinite
-				&:hover, &.active
-					a
-						background: $orangegradient
-						color: $white
+			// &.hardware
+			// 	flex: auto
+			// 	a
+			// 		background: $orangegradient
+			// 		color: $white
+			// 		animation: rgb 10s infinite
+			// 	&:hover, &.active
+			// 		a
+			// 			background: $orangegradient
+			// 			color: $white
 			=menuactive($color,$bg)
 				+media-breakpoint-up(xl)
-					&:hover
+					&:hover, &.active
 						a
 							color: $color
-					&.active
-						a
-							color: $color
-							&:after
-								background: $bg
+							&:before, &:after
 								opacity: 1
-			+menuactive($blue,$bluegradient)
-			&:nth-child(2)
-				+menuactive($amber,$ambergradient)
-			&:nth-child(3)
-				+menuactive($pink,$pinkgradient)
-			&:nth-child(4)
-				+menuactive($green,$greengradient)
-			&:nth-child(5)
-				+menuactive($red,$redgradient)
-			&:nth-child(6)
-				+menuactive($cyan,$cyangradient)
-			&:nth-child(7)
-				+menuactive($purple,$purplegradient)
-			&:nth-child(8)
-				+menuactive($lightgreen,$lightgreengradient)
+			+menuactive($blue,$blue)
+			// &:nth-child(2)
+			// 	+menuactive($amber,$ambergradient)
+			// &:nth-child(3)
+			// 	+menuactive($pink,$pinkgradient)
+			// &:nth-child(4)
+			// 	+menuactive($green,$greengradient)
+			// &:nth-child(5)
+			// 	+menuactive($red,$redgradient)
+			// &:nth-child(6)
+			// 	+menuactive($cyan,$cyangradient)
+			// &:nth-child(7)
+			// 	+menuactive($purple,$purplegradient)
+			// &:nth-child(8)
+			// 	+menuactive($lightgreen,$lightgreengradient)
 			// &.hardware
 				// +menuactive($redgradient)
 	.menu-contact
