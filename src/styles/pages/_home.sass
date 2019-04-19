@@ -14,6 +14,9 @@
 		background: $blue
 		+pos(abs, null null -1px 0)
 		z-index: 3
+	+media-breakpoint-down(lg)
+		+fs(16rem)
+		line-height: 1.3
 	+media-breakpoint-down(sm)
 		+fs(16rem)
 .page-title
@@ -31,22 +34,21 @@
 .home-video
 	margin: 30px 0 30px
 	// height: calc(100% - 50px)
+	+bor-rad(5px)
+	overflow: hidden
 	+pos(rel,null)
 	border: 2px solid darken($white,5%)
 	padding: 20px
+	+media-breakpoint-down(lg)
+		padding: 15px
 	+media-breakpoint-down(md)
 		margin: 0 0 20px
 		height: auto
 	.home-title
 		margin-bottom: 20px
 	.video-wrap
-		// padding: 0px 15px 15px
-		// +bor-rad(5px)
 		margin: 0px -20px
 		overflow: hidden
-		// box-shadow: 0px 5px 20px color-rgba($black,0.05)
-		+media-breakpoint-down(sm)
-			box-shadow: none
 		.video-des
 			color: $main
 			.video-name
@@ -66,26 +68,18 @@
 			height: 377px
 			overflow: auto
 			padding: 0px 20px
+			&::-webkit-scrollbar-track
+				background-color: transparent
+				padding: 2px
+			&::-webkit-scrollbar
+				width: 5px
+				background-color: transparent
+			&::-webkit-scrollbar-thumb
+				background-color: color-rgba($black,0.3)
 			+media-breakpoint-down(lg)
 				height: 351px
 			+media-breakpoint-down(md)
 				height: 250px
-				+flexbox
-				flex-wrap: wrap
-			+media-breakpoint-down(sm)
-				height: 200px
-				margin-bottom: 10px
-				background: darken($white,3%)
-				+bor-rad(5px)
-			+media-breakpoint-up(lg)
-				&::-webkit-scrollbar-track
-					background-color: transparent
-					padding: 2px
-				&::-webkit-scrollbar
-					width: 5px
-					background-color: transparent
-				&::-webkit-scrollbar-thumb
-					background-color: color-rgba($black,0.3)
 			.video
 				display: block
 				+ .video
@@ -121,25 +115,31 @@
 						+pos(rel,null)
 						&:before
 							content: '\f04b'
-							background: $bluegradient-r
+							background: $white
+							color: $blue
 							+fs(12rem)
-							width: 35px
-							height: 25px
-							+bor-rad(5px)
+							width: 32px
+							height: 32px
+							+bor-rad(100px)
 							+flexbox
 							align-items: center
 							align-content: center
 							justify-content: center
-							color: $white
 							+pos(abs,50% null null 50%)
 							+transform(translate(-50%,-50%))
+							+transition(all,0.5s)
 					figcaption
 						width: calc(100% - 90px)
 						padding-left: 10px
 				&:hover
-					// background: color-rgba($blue,0.1)
-					&:before
-						// opacity: 1
+					figure
+						.video-img
+							&:before
+								background: $blue
+								color: $white
+						figcaption
+							.video-name
+								color: $blue
 .btn-viewall
 	+pos(abs, 23px 20px null null)
 	+fs(12rem)
@@ -148,30 +148,17 @@
 	+flexbox
 	align-items: center
 	align-content: center
-	// &:after
-	// 	content: '\f178'
-	// 	margin-left: 5px
-	// 	+flexbox
-	// 	align-items: center
-	// 	align-content: center
-	// 	justify-content: center
-	// 	width: 30px
-	// 	height: 30px
-	// 	color: $main
-	// 	+bor-rad(50px)
-	// 	border: 1px solid darken($white,10%)
-	// 	background: $white
-	// 	+fs(14rem)
-	// 	+transition(all,0.5s)
+	+media-breakpoint-down(lg)
+		top: 20px
+	+media-breakpoint-down(sm)
+		top: 16px
 	&:hover
 		color: $blue
-		// &:after
-		// 	background: $blue
-		// 	border-color: $blue
-		// 	color: $white
 
 .home-qc, .home-qc2
 	margin-bottom: 40px
+	+media-breakpoint-down(lg)
+		margin-bottom: 0
 	+media-breakpoint-down(sm)
 		display: none
 	.qc-list
@@ -189,6 +176,7 @@
 		padding: 0px 10px
 		+media-breakpoint-down(md)
 			display: inline-block
+			vertical-align: top
 			width: 280px
 			padding: 0px
 			+ .item
@@ -199,7 +187,7 @@
 			vertical-align: top
 	.banner-qc
 		display: block
-		+bor-rad(0px)
+		+bor-rad(5px)
 		overflow: hidden
 		margin-bottom: 0px
 		// box-shadow: 0px 5px 20px color-rgba($black,0.05)
@@ -209,6 +197,8 @@
 			filter: brightness(120%)
 			// box-shadow: 0px 5px 20px color-rgba($black,0.3)
 .home-qc2
+	+media-breakpoint-down(lg)
+		margin-bottom: 15px
 	.qc-list
 		.item
 			width: 50%
@@ -223,8 +213,13 @@
 .home-category
 	margin-bottom: 30px
 	+pos(rel,null)
-	border: 1px solid darken($white,5%)
-	padding: 20px
+	border-top: 1px solid darken($white,5%)
+	padding: 40px 0 0
+	+media-breakpoint-down(lg)
+		padding: 0
+	+media-breakpoint-down(md)
+		margin: 0
+		border-top: none
 	.home-title
 		margin-bottom: 20px
 		display: none
@@ -247,7 +242,7 @@
 			display: block
 			overflow: auto
 			white-space: nowrap
-			padding: 15px
+			padding: 0px 0
 		+media-breakpoint-down(sm)
 			padding: 0 15px
 			margin: 0px -15px
@@ -263,103 +258,43 @@
 				margin-bottom: 15px
 				+ .item
 					margin-left: 5px
-			// &:nth-child(1)
-			// 	.category-item
-			// 		background: $lightbluegradient
-			// 		box-shadow: 0px 10px 20px -10px $lightblue
-			// 		&:hover
-			// 			box-shadow: 0px 10px 40px -10px $lightblue
-			// &:nth-child(2)
-			// 	.category-item
-			// 		background: $ambergradient
-			// 		box-shadow: 0px 10px 20px -10px $amber
-			// 		&:hover
-			// 			box-shadow: 0px 10px 40px -10px $amber
-			// &:nth-child(3)
-			// 	.category-item
-			// 		background: $pinkgradient
-			// 		box-shadow: 0px 10px 20px -10px $pink
-			// 		&:hover
-			// 			box-shadow: 0px 10px 40px -10px $pink
-			// &:nth-child(4)
-			// 	.category-item
-			// 		background: $greengradient
-			// 		box-shadow: 0px 10px 20px -10px $green
-			// 		&:hover
-			// 			box-shadow: 0px 10px 40px -10px $green
-			// &:nth-child(5)
-			// 	.category-item
-			// 		background: $redgradient
-			// 		box-shadow: 0px 10px 20px -10px $red
-			// 		&:hover
-			// 			box-shadow: 0px 10px 40px -10px $red
-			// &:nth-child(6)
-			// 	.category-item
-			// 		background: $cyangradient
-			// 		box-shadow: 0px 10px 20px -10px $cyan
-			// 		&:hover
-			// 			box-shadow: 0px 10px 40px -10px $cyan
-			// &:nth-child(7)
-			// 	.category-item
-			// 		background: $purplegradient
-			// 		box-shadow: 0px 10px 20px -10px $purple
-			// 		&:hover
-			// 			box-shadow: 0px 10px 40px -10px $purple
-			// &:nth-child(8)
-			// 	.category-item
-			// 		background: $lightgreengradient
-			// 		box-shadow: 0px 10px 20px -10px $lightgreen
-			// 		&:hover
-			// 			box-shadow: 0px 10px 40px -10px $lightgreen
 			.category-item
-				+flexbox
-				align-items: center
-				align-content: center
-				justify-content: center
-				color: $main
+				display: block
+				+pos(rel,null)
 				+bor-rad(5px)
 				overflow: hidden
-				width: 100%
-				height: 60px
-				padding: 0px
-				+transition(all,0.5s)
-				&:hover
-					filter: brightness(110%)
-					.name
-						.material-icons
-							margin-top: -10px
 				.img
-					display: none
+					img
+						width: 100%
 				.name
+					+pos(abs, 0 null 0 0)
+					right: 0
+					background: color-rgba($black,0.1)
 					+flexbox
+					z-index: 3
 					align-items: center
 					align-content: center
-					.material-icons
-						+fs(32rem)
-						+flexbox
-						align-items: center
-						align-content: center
-						justify-content: center
-						// width: 60px
-						// height: 60px
-						color: $blue
-						+transition(all,0.3s)
-					> img
-						width: 100%
-						max-width: 32px
-						max-height: 32px
-						filter: brightness(0%)invert(100%)
+					justify-content: center
+					text-align: center
+					text-shadow: 1px 1px 1px $main
+					+transition(all,0.5s)
 					span
-						width: calc(100% - 32px)
 						padding-left: 10px
-						+fs(14rem)
+						+fs(16rem)
+						font-weight: 500
+						color: $white
 						line-height: 1.2
 						+media-breakpoint-down(sm)
 							+fs(13rem)
+				&:hover
+					.name
+						background: color-rgba($blue,0.8)
 
 .home-hotsale
 	+pos(rel,null)
 	margin-bottom: 40px
+	+media-breakpoint-down(sm)
+		margin-bottom: 15px
 	.tab-content
 		background: $white
 		overflow: hidden
@@ -371,9 +306,13 @@
 		text-align: center
 	.nav-tabs
 		margin-bottom: 20px
+		+media-breakpoint-down(sm)
+			margin-bottom: 15px
 	.btn-viewall
 		+pos(static, null)
 		@extend .btn-outline
+		+media-breakpoint-down(sm)
+			+fs(13rem)
 		&:after
 			display: none
 	.product-slick
@@ -436,6 +375,9 @@
 				width: auto
 				width: 150px
 				margin-bottom: 15px
+				padding: 0
+				+ .item
+					margin-left: 10px
 				&:last-child
 					margin-right: 15px
 	.product-col
@@ -516,6 +458,7 @@
 	+pos(rel,null)
 	margin-bottom: 40px
 	+media-breakpoint-down(sm)
+		margin-bottom: 5px
 	&.pc
 		+media-breakpoint-down(md)
 			display: none
@@ -525,10 +468,9 @@
 			display: block
 	.home-title
 		margin-bottom: 30px
+		+media-breakpoint-down(sm)
+			margin-bottom: 15px
 	.product-list
-		background: darken($white,5%)
-		padding: 20px 20px 10px
-		// border: 1px solid darken($white,5%)
 		.row
 			&.no-gutters
 				margin: 0px -5px !important
@@ -538,11 +480,16 @@
 		.product-col
 			border: none
 			background: $white
+			+media-breakpoint-down(sm)
+				background: none
+				border: 1px solid darken($white,5%)
 	.product-category
 		box-shadow: 0px 5px 20px color-rgba($black,0.05)
 		+bor-rad(5px)
 		background: $white
 		overflow: hidden
+		+media-breakpoint-down(lg)
+			box-shadow: none
 		+media-breakpoint-down(sm)
 			box-shadow: none
 			+bor-rad(0)
@@ -592,6 +539,9 @@
 	.category-slick
 		.product-list
 			border-top: none
+		.item
+			+media-breakpoint-down(sm)
+				padding: 0px 15px
 
 	.btn-wrap
 		padding-top: 20px
@@ -610,6 +560,8 @@
 	.btn-viewall
 		+pos(static, null)
 		@extend .btn-outline
+		+media-breakpoint-down(sm)
+			+fs(13rem)
 		&:after
 			display: none
 
@@ -620,7 +572,7 @@
 		+media-breakpoint-down(sm)
 			padding: 0
 			box-shadow: none
-			+bor-rad(0)
+			// +bor-rad(0)
 			margin: 0px -15px
 	.news-list
 		+flexbox
@@ -632,7 +584,7 @@
 			overflow: auto
 			overflow-y: hidden
 			padding: 0px 15px
-			margin: 0
+			margin: 0 0 15px
 		.item
 			width: 50%
 			padding: 0px 15px
@@ -665,6 +617,7 @@
 				align-content: center
 				justify-content: center
 				overflow: hidden
+				+bor-rad(5px)
 				+transition(all,0.5s)
 				+media-breakpoint-only(md)
 					height: 110px
@@ -702,7 +655,7 @@
 					overflow: hidden
 					text-overflow: ellipsis
 					+transition(all,0.5s)
-					+media-breakpoint-only(md)
+					+media-breakpoint-down(md)
 						+fs(14rem)
 						+textover(2)
 					+media-breakpoint-down(sm)
@@ -744,6 +697,8 @@
 	.btn-viewall
 		+pos(static, null)
 		@extend .btn-outline
+		+media-breakpoint-down(sm)
+			+fs(13rem)
 		&:after
 			display: none
 	.facebook-wrap
@@ -768,7 +723,8 @@
 				overflow: auto
 				padding: 15px
 			+media-breakpoint-down(sm)
-				margin: 0px
+				margin: 0px 0px 15px
+				
 				padding: 0px 15px
 			.item
 				padding: 0px 10px
@@ -787,9 +743,9 @@
 			.fb-item
 				display: block
 				height: calc(100% - 0px)
+				+bor-rad(5px)
+				overflow: hidden
 				background: darken($white,5%)
-				// box-shadow: 0px 5px 20px color-rgba($black,0.05)
-				// margin-bottom: 20px
 				+media-breakpoint-down(md)
 					margin-bottom: 0
 				figure
@@ -824,6 +780,8 @@
 								object-fit: cover
 					figcaption
 						padding: 15px
+						+media-breakpoint-down(sm)
+							padding: 10px 15px
 						time
 							display: inline-block
 							+fs(13rem)

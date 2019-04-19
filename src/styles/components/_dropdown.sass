@@ -61,7 +61,7 @@
 				text-transform: capitalize
 				font-weight: 500
 			.btn-closedropdown
-				+pos(abs, 15px 15px null null)
+				+pos(abs, 12px 15px null null)
 				cursor: pointer
 				+media-breakpoint-down(sm)
 					+pos(static,null)
@@ -73,11 +73,23 @@
 				&:before
 					content: 'close'
 					@extend .material-icons
-					display: block
-					+fs(18rem)
+					+flexbox
+					+fs(16rem)
+					width: 26px
+					height: 26px
+					+bor-rad(50px)
+					background: $blue
+					color: $white
+					align-items: center
+					align-content: center
+					justify-content: center
 					+media-breakpoint-down(sm)
 						content: 'arrow_back'
 						+fs(24rem)
+						width: unset
+						height: unset
+						display: block
+						background: none
 				&:hover
 					color: $red
 					+media-breakpoint-down(sm)

@@ -715,14 +715,20 @@ ul.cardList
 		padding: 0px 20px
 		+bor-rad(50px)
 	.btn-cancel
-		background: linear-gradient(to right,darken($white,40%), darken($white,20%))
+		background: $white
+		color: $blue
+		border: 1px solid $blue
 		&:hover
-			box-shadow: 0px 10px 20px -10px darken($white,50%)
+			background: $blue
+			color: $white
 	.btn-repay
-		background: $bluegradient
+		background: $blue
+		border: 1px solid $blue
+		color: $white
 		margin-left: 15px
 		&:hover
-			box-shadow: 0px 10px 20px -10px $blue
+			background: $main
+			border-color: $main
 .stepcomplete
 	.center-noleftright
 		+pos(rel,null)

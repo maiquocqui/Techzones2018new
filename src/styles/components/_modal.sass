@@ -13,16 +13,14 @@ body.modal-open
 .modal-dialog
 	margin: 60px auto
 	.modal-content
-		+bor-rad(0px)
+		+bor-rad(5px)
 		border: none
 		overflow: hidden
 		// box-shadow: 0px 10px 20px -10px color-rgba($black,0.5)
 		+pos(rel,null)
-		+media-breakpoint-down(sm)
-			+bor-rad(0)
 	.modal-header
 		padding: 13px 15px 10px
-		border-bottom: 1px solid darken($white,10%)
+		border: none
 		+pos(rel,null)
 		.modal-title
 			+fs(16rem)
@@ -30,11 +28,11 @@ body.modal-open
 			margin: 0
 			padding: 0
 			// text-transform: uppercase
-			&:before
-				content: ''
-				+pos(abs, 0 0 null 0)
-				height: 2px
-				background: $blue
+			// &:before
+			// 	content: ''
+			// 	+pos(abs, 0 0 null 0)
+			// 	height: 3px
+			// 	background: $blue
 		.close
 			margin: 0
 			padding: 0
@@ -43,7 +41,18 @@ body.modal-open
 			color: darken($white,40%)
 			+transition(all,0.5s)
 			.material-icons
-				display: block
+				+flexbox
+				width: 26px
+				height: 26px
+				align-items: center
+				align-content: center
+				justify-content: center
+				background: $blue
+				+bor-rad(100px)
+				color: $white
+				text-shadow: none
+
+				+fs(16rem)
 			&:hover
 				color: $red
 	.modal-body
