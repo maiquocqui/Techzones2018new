@@ -32,15 +32,16 @@
 		display: inline-block
 		padding: 10px 50px
 		+bor-rad(10px)
-		background: $bluegradient
+		background: $blue
 		box-shadow: 0px 10px 20px -10px $blue
 		margin-bottom: 20px
 		+media-breakpoint-down(lg)
 			+fs(22rem)
 		+media-breakpoint-down(sm)
-			+fs(20rem)
-			padding: 10px 30px
+			+fs(16rem)
+			padding: 8px 20px
 			text-align: center
+			margin-bottom: 10px
 	.error-content
 		display: block
 		.title
@@ -48,11 +49,16 @@
 			font-weight: 600
 			color: $blue
 			margin-bottom: 15px
+			+media-breakpoint-down(sm)
+				+fs(20rem)
+				margin-bottom: 10px
 		.content
 			color: darken($white,60%)
 			+fs(16rem)
 			+media-breakpoint-down(lg)
 				+fs(14rem)
+			+media-breakpoint-down(sm)
+				+fs(13rem)
 	.product-subcate
 		text-align: center
 		margin-bottom: 20px
@@ -85,7 +91,7 @@
 			color: $blue
 			display: inline-block
 			padding: 10px 20px
-			+bor-rad(5px)
+			+bor-rad(50px)
 			+media-breakpoint-down(sm)
 				display: block
 			+ a
@@ -93,5 +99,5 @@
 				+media-breakpoint-down(sm)
 					margin-left: 0
 			&:hover
-				color: $orange
-				background: color-rgba($orange,0.1)
+				color: $white
+				background: $main

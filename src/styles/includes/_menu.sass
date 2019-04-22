@@ -24,9 +24,11 @@
 			align-items: center
 			align-content: center
 			padding: 10px 20px
-			background: $blue
+			background: darken($white,5%)
 			.avt, img
 				width: 40px
+				+bor-rad(100px)
+				border: 1px solid $white
 			ul
 				padding-left: 10px
 				+flexbox
@@ -42,7 +44,7 @@
 					display: block
 					+fs(11rem)
 					line-height: 1.5
-					color: $white
+					color: darken($white,60%)
 					// opacity: 0.8
 					text-transform: uppercase
 					&:after
@@ -57,11 +59,11 @@
 			padding: 10px 0
 	ul.menu-link
 		+flexbox
-		// flex-wrap: wrap
 		align-items: center
 		align-content: center
 		&.menu-pc
 			padding: 0 0 5px
+			+pos(rel,null)
 			+media-breakpoint-down(lg)
 				display: none
 		&.menu-mobile
@@ -72,17 +74,13 @@
 				align-items: center
 				align-content: center
 				flex-direction: column
-		li
+		> li
 			flex: auto
 			padding: 10px 0
 			+media-breakpoint-down(lg)
 				width: 100%
 				padding: 0
-			// + li
-			// 	margin-left: 5px
-			// 	+media-breakpoint-down(lg)
-			// 		margin-left: 0
-			a
+			> a
 				+flexbox
 				align-items: center
 				align-content: center
@@ -106,16 +104,9 @@
 						bottom: 0px
 				+media-breakpoint-down(lg)
 					color: darken($white,60%)
-					padding: 10px 15px
+					padding: 7px 15px
 					justify-content: flex-start
-				// &:after
-				// 	content: ''
-				// 	+pos(abs, null 0 0 0)
-				// 	height: 3px
-				// 	background: $bluegradient
-				// 	z-index: 1
-				// 	opacity: 0
-				// 	+transition(all,0.5s)
+					+fs(14rem)
 				.material-icons, > img
 					margin-right: 5px
 					+fs(18rem)
@@ -131,40 +122,67 @@
 						font-weight: 500
 					+media-breakpoint-down(lg)
 						font-weight: normal
-			// &.hardware
-			// 	flex: auto
-			// 	a
-			// 		background: $orangegradient
-			// 		color: $white
-			// 		animation: rgb 10s infinite
-			// 	&:hover, &.active
-			// 		a
-			// 			background: $orangegradient
-			// 			color: $white
 			=menuactive($color,$bg)
 				+media-breakpoint-up(xl)
 					&:hover, &.active
-						a
+						> a
 							color: $color
 							&:before, &:after
 								opacity: 1
 			+menuactive($blue,$blue)
-			// &:nth-child(2)
-			// 	+menuactive($amber,$ambergradient)
-			// &:nth-child(3)
-			// 	+menuactive($pink,$pinkgradient)
-			// &:nth-child(4)
-			// 	+menuactive($green,$greengradient)
-			// &:nth-child(5)
-			// 	+menuactive($red,$redgradient)
-			// &:nth-child(6)
-			// 	+menuactive($cyan,$cyangradient)
-			// &:nth-child(7)
-			// 	+menuactive($purple,$purplegradient)
-			// &:nth-child(8)
-			// 	+menuactive($lightgreen,$lightgreengradient)
-			// &.hardware
-				// +menuactive($redgradient)
+			&.has-sub
+				.sub1, .sub2
+					+pos(abs, 85% 0 null 0)
+					z-index: 100
+					background: $white
+					box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.15)
+					border-top: 2px solid $blue
+					+bor-rad(5px)
+					padding: 25px
+					visibility: hidden
+					opacity: 0
+					margin-top: 20px
+					+transition(all,0.3s)
+					.sub-img
+						margin-bottom: 10px
+					.sub-title
+						+fs(16rem)
+						font-weight: 500
+						border-bottom: 1px solid darken($white,5%)
+						padding-bottom: 5px
+						+pos(rel,null)
+						margin-bottom: 15px
+						&:before
+							content: ''
+							display: block
+							width: 50px
+							height: 2px
+							background: $blue
+							+pos(abs, null null -1px 0)
+							z-index: 1
+					.sub-link
+						a
+							display: block
+							color: darken($white,50%)
+							+fs(14rem)
+							padding: 8px 0
+							&:before
+								content: '\f178'
+								display: inline-block
+								vertical-align: top
+								width: 0px
+								+transition(all,0.3s)
+								overflow: hidden
+							&:hover
+								color: $blue
+								&:before
+									width: 20px
+				&:hover
+					+media-breakpoint-up(xl)
+						.sub1, .sub2
+							visibility: visible
+							opacity: 1
+							margin-top: 0
 	.menu-contact
 		display: none
 		margin: 0px 20px
@@ -177,11 +195,12 @@
 			font-weight: 700
 			text-transform: uppercase
 			margin-bottom: 10px
+			color: $blue
 		.contact-info
 			li
 				padding-left: 25px
 				+pos(rel,null)
-				+fs(14rem)
+				+fs(13rem)
 				line-height: 1.4
 				color: darken($white,60%)
 				margin-bottom: 5px

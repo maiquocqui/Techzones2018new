@@ -26,13 +26,29 @@
 				padding-bottom: 25px
 			.btn-remove
 				display: block
-				+pos(abs, null 0 0 null)
-				color: darken($white,40%)
+				+pos(abs, null 0 -10px null)
+				color: $white
+				padding-bottom: 3px
+				padding-right: 3px
 				.material-icons
 					+fs(18rem)
 					display: block
+					z-index: 1
+					+pos(rel,null)
+				&:before
+					content: ''
+					display: block
+					width: 0
+					height: 0
+					border-top: 20px solid transparent
+					border-left: 20px solid transparent
+					border-right: 20px solid $blue
+					border-bottom: 20px solid $blue
+					+pos(abs, null 0 0 null)
 				&:hover
-					color: $red
+					&:before
+						border-right-color: $main
+						border-bottom-color: $main
 			.img
 				width: 100px
 				height: 100px
@@ -170,9 +186,18 @@
 	background: $white
 	+bor-rad(5px)
 	overflow: hidden
-	box-shadow: 0px 5px 20px color-rgba($black,0.05)
+	border: 1px solid darken($white,5%)
+	border-top: none
+	// box-shadow: 0px 5px 20px color-rgba($black,0.05)
 	padding: 15px
 	margin-bottom: 20px
+	&:before
+		content: ''
+		display: block
+		+pos(abs, 0px -1px null -1px)
+		z-index: 3
+		height: 2px
+		background: $blue
 	+media-breakpoint-down(md)
 		margin: 0px -15px 10px
 		padding: 15px
@@ -186,8 +211,8 @@
 		align-items: center
 		align-content: center
 		border-bottom: 1px solid darken($white,10%)
-		padding-bottom: 10px
-		margin-bottom: 10px
+		padding: 0px 15px 10px
+		margin: 0px -15px 10px
 		.material-icons
 			padding-right: 10px
 			+media-breakpoint-down(sm)
@@ -250,30 +275,38 @@
 				font-style: italic
 	.btn-back
 		+fs(14rem)
-		font-weight: 500
+		// font-weight: 500
 		color: $blue
 		+pos(abs, 15px 15px null null)
 		&:hover
-			color: $blue
+			color: $main
 		// &:before
 		// 	content: '\f104'
 		// 	font-weight: bold
 		// 	margin-right: 5px
 	.btn-continue
 		@extend .btn-main
-		background: $orangegradient
+		background: $main
 		text-transform: uppercase
 		padding: 0px 40px
 		+media-breakpoint-down(sm)
 			+fs(13rem)
 			padding: 0px 20px
 		&:hover
-			box-shadow: 0px 10px 20px -10px $orange
+			background: $blue
+	&#cart-step2
+		border: none
+		background: darken($white,3%)
+		&:before
+			display: none
 	.cart-login
 		.form-wrap
 			margin-bottom: 10px
 			.form-select
 				margin-bottom: 10px
+				ul
+					li
+						margin-bottom: 5px
 				label
 					font-weight: normal
 			.form-group
@@ -322,7 +355,7 @@
 				width: calc(100% - 110px)
 				+fs(13rem)
 				padding: 7px 15px
-				+bor-rad(5px)
+				+bor-rad(50px)
 				border: 1px solid darken($white,10%)
 				width: 100%
 				color: $main
@@ -336,14 +369,16 @@
 			.btn-submitcoupon
 				width: 105px
 				+fs(13rem)
-				padding: 8px 15px
-				background: $orangegradient
-				color: $white
-				+bor-rad(5px)
+				padding: 7px 15px
+				color: $blue
+				+bor-rad(50px)
+				border: 1px solid $blue
 				+transition(all,0.5s)
 				margin-left: 5px
 				&:hover
-					box-shadow: 0px 10px 20px -10px $orange
+					background: $blue
+					// border-color: $main
+					color: $white
 	.cart-payment
 		.payment-method
 			> ul
