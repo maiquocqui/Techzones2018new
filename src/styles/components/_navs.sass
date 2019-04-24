@@ -107,10 +107,8 @@
 							opacity: 1
 
 .product-tabs
-	margin: 0
-	padding: 0 0 10px
 	border: none
-	border-bottom: 1px solid darken($white,10%)
+	margin-bottom: 15px
 	+media-breakpoint-down(md)
 		display: block
 		white-space: nowrap
@@ -123,17 +121,18 @@
 			display: inline-block !important
 			vertical-align: top
 		+ .nav-item
-			margin-left: 30px
-			+media-breakpoint-down(md)
-				margin-left: 20px
+			margin-left: 10px
 		.nav-link
 			margin: 0
 			padding: 0
 			border: none
 			background: none
+			+bor-rad(50px)
+			padding: 8px 25px
 			+fs(16rem)
-			font-weight: 500
-			text-transform: uppercase
-			color: darken($white,40%)
+			color: $main
+			border: 1px solid darken($white,10%)
 			&.active
-				color: $main
+				color: $white
+				background: $blue
+				border-color: $blue

@@ -1,13 +1,11 @@
 .category-page
-	background: $white
-	padding: 15px
-	+bor-rad(5px)
+	// background: $white
+	// padding: 15px
+	// +bor-rad(5px)
 	margin: 15px 0
-	box-shadow: 0px 5px 20px color-rgba($black,0.05)
+	// box-shadow: 0px 5px 20px color-rgba($black,0.05)
 	+media-breakpoint-down(md)
-		margin: 0 -15px 10px
-		+bor-rad(0)
-		box-shadow: none
+		margin: 0
 	.category-list
 		.category-item
 			display: block
@@ -19,6 +17,7 @@
 			+media-breakpoint-down(sm)
 				margin-bottom: 15px
 			&:hover
+				filter: brightness(120%)
 				box-shadow: 0px 10px 50px -10px color-rgba($black,0.5)
 			.img
 			.name

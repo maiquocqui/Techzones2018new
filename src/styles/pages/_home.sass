@@ -22,11 +22,21 @@
 .page-title
 	+fs(24rem)
 	// font-weight: 700
-	margin-bottom: 15px
+	padding: 0 0 10px
+	margin-bottom: 20px
 	text-transform: capitalize
+	+pos(rel,null)
 	border-bottom: 1px solid darken($white,5%)
 	+media-breakpoint-down(sm)
 		+fs(16rem)
+	&:after
+		content: ''
+		display: block
+		width: 50px
+		height: 2px
+		background: $blue
+		+pos(abs, null null -1px 0)
+		z-index: 3
 	&.big
 		+fs(32rem)
 		+media-breakpoint-down(sm)
