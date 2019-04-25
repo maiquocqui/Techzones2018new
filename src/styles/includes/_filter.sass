@@ -3,16 +3,15 @@
 	flex-wrap: wrap
 	background: $white
 	padding: 10px 15px
-	margin: -10px -15px 0
 	&:after
 		width: 100%
 	+media-breakpoint-up(md)
 		justify-content: space-between
 		align-items: center
 		align-content: center
-		margin: -15px -15px 0px
 	+media-breakpoint-up(lg)
-		padding-bottom: 15px
+		background: none
+		border-bottom: 1px solid darken($white,5%)
 		+ .productlist
 			// margin-top: 15px
 	.click-sort
@@ -99,7 +98,7 @@
 		line-height: 32px
 		+bor-rad(50px)
 		color: $white
-		background: $blue
+		background: $main
 		padding: 0px 10px
 		margin-left: 10px
 		+fs(14rem)
@@ -113,11 +112,11 @@
 				z-index: 50
 				margin-left: 0
 		&:hover
-			background: $main
+			background: $blue
 			color: $white
 		.material-icons
 		&.active
-			background: $main
+			background: $blue
 			color: $white
 .btn-filterwrap
 	+flexbox
@@ -197,7 +196,7 @@
 			display: none
 	&.option-group
 		// border: 1px solid darken($white,5%)
-		background: darken($white,5%)
+		background: $white
 		+media-breakpoint-down(md)
 			background: $white
 			box-shadow: none

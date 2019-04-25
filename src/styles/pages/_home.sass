@@ -42,12 +42,13 @@
 		+media-breakpoint-down(sm)
 			+fs(24rem)
 .home-video
-	margin: 30px 0 30px
+	margin: 30px 0 20px
 	// height: calc(100% - 50px)
 	+bor-rad(5px)
 	overflow: hidden
 	+pos(rel,null)
-	border: 2px solid darken($white,5%)
+	background: $white
+	border: 2px solid darken($white,10%)
 	padding: 20px
 	+media-breakpoint-down(lg)
 		padding: 15px
@@ -166,7 +167,7 @@
 		color: $blue
 
 .home-qc, .home-qc2
-	margin-bottom: 40px
+	margin-bottom: 20px
 	+media-breakpoint-down(lg)
 		margin-bottom: 0
 	+media-breakpoint-down(sm)
@@ -207,6 +208,7 @@
 			filter: brightness(120%)
 			// box-shadow: 0px 5px 20px color-rgba($black,0.3)
 .home-qc2
+	margin-bottom: 30px
 	+media-breakpoint-down(lg)
 		margin-bottom: 15px
 	.qc-list
@@ -221,10 +223,11 @@
 				vertical-align: top
 
 .home-category
-	margin-bottom: 30px
 	+pos(rel,null)
-	border-top: 1px solid darken($white,5%)
-	padding: 40px 0 0
+	background: $white
+	+bor-rad(5px)
+	overflow: hidden
+	margin-bottom: 20px
 	+media-breakpoint-down(lg)
 		padding: 0
 	+media-breakpoint-down(md)
@@ -247,52 +250,48 @@
 	.category-list
 		+flexbox
 		flex-wrap: wrap
-		margin: 0px -5px
 		+media-breakpoint-down(md)
 			display: block
 			overflow: auto
 			white-space: nowrap
-			padding: 0px 0
-		+media-breakpoint-down(sm)
-			padding: 0 15px
-			margin: 0px -15px
 		.item
 			width: calc(100% / 8)
-			padding: 0px 5px
 			+media-breakpoint-down(md)
 				width: 170px
 				display: inline-block
-			+media-breakpoint-down(sm)
-				padding: 0
-				width: 120px
-				margin-bottom: 15px
 				+ .item
 					margin-left: 5px
+			+media-breakpoint-down(sm)
+				width: 120px
+				margin-bottom: 15px
 			.category-item
-				display: block
-				+pos(rel,null)
+				+flexbox
+				align-items: center
+				align-content: center
+				padding: 0px 10px
+				height: 70px
 				+bor-rad(5px)
-				overflow: hidden
 				.img
 					img
 						width: 100%
 				.name
-					+pos(abs, 0 null 0 0)
-					right: 0
-					background: color-rgba($black,0.1)
 					+flexbox
-					z-index: 3
 					align-items: center
 					align-content: center
-					justify-content: center
-					text-align: center
-					text-shadow: 1px 1px 1px $main
-					+transition(all,0.5s)
+					.material-icons
+						color: $blue
+						+flexbox
+						width: 32px
+						height: 32px
+						align-items: center
+						align-content: center
+						justify-content: center
 					span
-						padding-left: 10px
-						+fs(16rem)
+						flex: 1
+						padding-left: 5px
+						+fs(13rem)
 						font-weight: 500
-						color: $white
+						color: $main
 						line-height: 1.2
 						+media-breakpoint-down(lg)
 							+fs(13rem)
@@ -300,17 +299,20 @@
 						+media-breakpoint-down(sm)
 							+fs(12rem)
 				&:hover
+					background: $main
 					.name
-						background: color-rgba($blue,0.8)
+						span 
+							color: $white 
 
 .home-hotsale
 	+pos(rel,null)
-	margin-bottom: 40px
+	margin-bottom: 30px
 	+media-breakpoint-down(sm)
 		margin-bottom: 15px
 	.tab-content
 		background: $white
 		overflow: hidden
+		margin-bottom: 15px	
 		+media-breakpoint-down(sm)
 			padding: 0
 			box-shadow: none
@@ -323,13 +325,30 @@
 			margin-bottom: 15px
 	.btn-viewall
 		+pos(static, null)
-		@extend .btn-outline
+		+fs(14rem)
+		// font-weight: 500
+		text-transform: none
+		color: $white
+		background: $main
+		+bor-rad(50px)
+		line-height: 36px
+		display: inline-block
+		padding: 0px 30px
 		+media-breakpoint-down(sm)
+			margin: 15px 0
 			+fs(13rem)
+			line-height: 36px
+		&:before
+			content: '\f055'
+			font-family: 'fontawesome'
+			margin-right: 10px
+		&:hover
+			background: $blue
 		&:after
 			display: none
 	.product-slick
-		margin-bottom: 20px
+		padding: 0 15px
+		+bor-rad(5px)
 		+media-breakpoint-down(sm)
 			overflow: auto
 			white-space: nowrap
@@ -378,10 +397,10 @@
 		.slick-track
 			padding: 15px 0
 		.slick-list
-			margin: 0px -10px
+			margin: 0px -5px
 		.item
 			height: 100%
-			padding: 0px 10px
+			padding: 0px 5px
 			+media-breakpoint-down(sm)
 				display: inline-block
 				vertical-align: top
@@ -469,7 +488,7 @@
 
 .home-product
 	+pos(rel,null)
-	margin-bottom: 40px
+	margin-bottom: 30px
 	+media-breakpoint-down(sm)
 		margin-bottom: 5px
 	&.pc
@@ -485,7 +504,7 @@
 			margin-bottom: 15px
 	.product-list
 		+media-breakpoint-up(lg)
-			background: darken($white,5%)
+			background: $white
 			padding: 15px 15px 5px
 			+bor-rad(5px)
 		.row
@@ -495,11 +514,11 @@
 					padding: 0px 5px !important
 					margin-bottom: 10px
 		.product-col
-			border: none
-			background: $white
-			+media-breakpoint-down(sm)
-				background: none
-				border: 1px solid darken($white,5%)
+			// border: none
+			// background: $white
+			// +media-breakpoint-down(sm)
+			// 	background: none
+			// 	border: 1px solid darken($white,5%)
 	.product-category
 		box-shadow: 0px 5px 20px color-rgba($black,0.05)
 		+bor-rad(5px)
@@ -591,14 +610,30 @@
 		text-align: center
 	.btn-viewall
 		+pos(static, null)
-		@extend .btn-outline
+		+fs(14rem)
+		// font-weight: 500
+		text-transform: none
+		color: $white
+		background: $main
+		+bor-rad(50px)
+		line-height: 36px
+		display: inline-block
+		padding: 0px 30px
 		+media-breakpoint-down(sm)
+			margin: 15px 0
 			+fs(13rem)
+			line-height: 36px
+		&:before
+			content: '\f055'
+			font-family: 'fontawesome'
+			margin-right: 10px
+		&:hover
+			background: $blue
 		&:after
 			display: none
 
 	.news-wrap
-		background: $white
+		// background: $white
 		// +bor-rad(5px)
 		overflow: hidden
 		+media-breakpoint-down(sm)
@@ -609,7 +644,7 @@
 	.news-list
 		+flexbox
 		flex-wrap: wrap
-		margin: 0px -15px
+		margin: 0px -10px
 		+media-breakpoint-down(sm)
 			display: block
 			white-space: nowrap
@@ -619,9 +654,9 @@
 			margin: 0 0 15px
 		.item
 			width: 50%
-			padding: 0px 15px
+			padding: 0px 10px
 			+media-breakpoint-down(md)
-				padding: 0px 15px
+				padding: 0px 10px
 			+media-breakpoint-down(sm)
 				display: inline-block
 				vertical-align: top
@@ -631,8 +666,7 @@
 					margin-left: 5px
 	.news-item
 		display: block
-		margin-bottom: 15px
-		padding-bottom: 15px
+		margin-bottom: 20px
 		// border-bottom: 1px dashed darken($white,10%)
 		+media-breakpoint-down(sm)
 			margin-bottom: 0
@@ -641,6 +675,9 @@
 		figure
 			+flexbox
 			flex-wrap: wrap
+			background: $white
+			overflow: hidden
+			+bor-rad(5px)
 			.news-img
 				width: 40%
 				height: 150px
@@ -648,8 +685,6 @@
 				align-items: center
 				align-content: center
 				justify-content: center
-				overflow: hidden
-				+bor-rad(5px)
 				+transition(all,0.5s)
 				+media-breakpoint-only(md)
 					height: 110px
@@ -666,6 +701,7 @@
 				width: 60%
 				padding-top: 15px
 				padding-left: 15px
+				padding-right: 15px
 				+media-breakpoint-down(sm)
 					width: 100%
 					padding: 5px 0px 0
@@ -728,14 +764,28 @@
 		text-align: center
 	.btn-viewall
 		+pos(static, null)
-		@extend .btn-outline
+		+fs(14rem)
+		// font-weight: 500
+		text-transform: none
+		color: $white
+		background: $main
+		+bor-rad(50px)
+		line-height: 36px
+		display: inline-block
+		padding: 0px 30px
 		+media-breakpoint-down(sm)
+			margin: 15px 0
 			+fs(13rem)
+			line-height: 36px
+		&:before
+			content: '\f055'
+			font-family: 'fontawesome'
+			margin-right: 10px
+		&:hover
+			background: $blue
 		&:after
 			display: none
 	.facebook-wrap
-		background: $white
-		overflow: hidden
 		+media-breakpoint-down(md)
 			padding: 0
 		+media-breakpoint-down(sm)
@@ -746,7 +796,7 @@
 		.fb-list
 			+flexbox
 			flex-wrap: wrap
-			margin: 0px -10px 30px
+			margin: 0px -10px 20px
 			+media-breakpoint-down(lg)
 				margin: 0px -5px
 			+media-breakpoint-down(md)
@@ -777,7 +827,7 @@
 				height: calc(100% - 0px)
 				+bor-rad(5px)
 				overflow: hidden
-				background: darken($white,5%)
+				background: $white
 				+media-breakpoint-down(md)
 					margin-bottom: 0
 				figure
