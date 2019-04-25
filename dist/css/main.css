@@ -16794,11 +16794,6 @@ footer > .container {
         padding: 0px 20px; } }
     .cart-step .btn-continue:hover {
       background: #18a0c6; }
-  .cart-step#cart-step2 {
-    border: none;
-    background: #f7f7f7; }
-    .cart-step#cart-step2:before {
-      display: none; }
   .cart-step .cart-login .form-wrap {
     margin-bottom: 10px; }
     .cart-step .cart-login .form-wrap .form-select {
