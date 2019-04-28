@@ -12049,10 +12049,10 @@ footer > .container {
         transition: all, 0.5s;
         position: relative; }
         .home-video .video-wrap .video-list .video + .video {
-          margin-top: 25px; }
+          margin-top: 15px; }
           @media (max-width: 991.98px) {
             .home-video .video-wrap .video-list .video + .video {
-              margin-top: 15px; } }
+              margin-top: 10px; } }
         .home-video .video-wrap .video-list .video:before {
           content: '';
           position: absolute;
@@ -16330,10 +16330,12 @@ footer > .container {
         .life-style .item .pic img {
           height: 100px; } }
 
-.news-detail-page .news-page .news-group {
-  margin: 0;
-  padding: 0px 15px;
-  box-shadow: none; }
+.news-detail-page .news-page {
+  margin-bottom: 15px; }
+  .news-detail-page .news-page .news-group {
+    margin: 0;
+    padding: 0px 15px;
+    box-shadow: none; }
 
 .cartpage .fullpage {
   padding: 0; }
