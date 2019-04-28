@@ -18,31 +18,28 @@
 			height: 30px
 			line-height: 30px
 			text-align: center
-			border: 1px solid darken($white,10%)
+			background: darken($white,5%)
 			+bor-rad(50px)
 			+fs(16rem)
 			margin-top: 10px
 			margin-left: 10px
-			color: darken($white,20%)
+			color: darken($white,40%)
 		&.active
 			&:before
 				// border-color: color-rgba($white,0)
-				background: $purplegradient
+				background: $blue
 				color: $white
 
 .product-col
 	display: block
 	height: 100%
 	padding: 10px 15px
-	border: 1px solid darken($white,5%)
+	background: $white
+	// border: 1px solid darken($white,5%)
 	+bor-rad(5px)
 	+transition(all,0.5s)
-	+media-breakpoint-down(lg)
-		padding: 5px
-	+media-breakpoint-down(sm)
+	+media-breakpoint-down(md)
 		padding: 10px
-	&:hover
-		// box-shadow: 0px 10px 20px -10px color-rgba($black,0.3)
 	figure
 		+pos(rel,null)
 		.product-img
@@ -85,8 +82,10 @@
 				-webkit-box-orient: vertical
 				overflow: hidden
 				text-overflow: ellipsis
-				height: 35px
+				// height: 35px
 				+transition(all,0.5s)
+				+media-breakpoint-down(md)
+					+fs(13rem)
 				a
 					color: $black
 			.product-price
@@ -106,8 +105,8 @@
 					line-height: 1
 					font-weight: 700
 					color: $black
-					+media-breakpoint-down(lg)
-						// +fs(12rem)
+					+media-breakpoint-down(md)
+						+fs(13rem)
 				.old
 					font-weight: 500
 					color: $bluegrey
@@ -115,6 +114,8 @@
 					line-height: 1
 					color: darken($white,40%)
 					text-decoration: line-through
+					+media-breakpoint-down(md)
+						+fs(12rem)
 			.product-rating
 				+flexbox
 				align-items: center
@@ -139,7 +140,7 @@
 					li
 	&:hover
 		+media-breakpoint-up(xl)
-			box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1)
+			box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.1)
 			figure
 				.product-img
 					img

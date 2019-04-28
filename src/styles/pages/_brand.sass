@@ -2,9 +2,11 @@
 	background: $white
 	+bor-rad(5px)
 	overflow: hidden
-	box-shadow: 0px 5px 20px color-rgba($black,0.05)
+	// box-shadow: 0px 5px 20px color-rgba($black,0.05)
 	margin: 15px 0
 	padding: 15px
+	.page-title
+		margin-bottom: 15px
 	.btn-loadmore
 		width: 150px
 		margin: 15px auto 0
@@ -32,45 +34,44 @@
 		+bor-rad(0)
 		box-shadow: none
 	.brand-nav
-		margin-bottom: 30px
-		margin: 0px -15px 20px
-		border-bottom: 1px solid darken($white,10%)
-		background: $white
 		ul
-			display: block
-			overflow: auto
-			white-space: nowrap
-			padding: 0px 15px
+			+flexbox
+			border: none
+			margin-bottom: 15px
+			+media-breakpoint-down(md)
+				display: block
+				white-space: nowrap
+				overflow: auto
 			li
-				display: inline-block
-				vertical-align: top
+				margin: 0
+				padding: 0
+				border: none
+				+media-breakpoint-down(md)
+					display: inline-block !important
+					vertical-align: top
 				+ li
-					margin-left: 5px
+					margin-left: 10px
+					+media-breakpoint-down(md)
+						margin-left: 5px
 				a
 					display: block
-					+fs(14rem)
-					font-weight: 700
-					color: $main
-					line-height: 36px
-					padding: 0px 20px
+					margin: 0
+					padding: 0
+					border: none
+					background: none
 					+bor-rad(50px)
-					+pos(rel,null)
-					+bor-rad(0)
-					line-height: 40px
-					padding: 0px 15px
-					&:after
-						content: ''
-						+pos(abs, null 0 0 0)
-						height: 3px
-						background: $bluegradient
-						z-index: 1
-						opacity: 0
+					padding: 8px 25px
+					+fs(14rem)
+					color: $main
+					border: 1px solid darken($white,10%)
+				&:hover
+					a
+						color: $blue
 				&.active
 					a
-						background: none
-						color: $main
-						&:after
-							opacity: 1
+						color: $white
+						background: $blue
+						border-color: $blue
 	.brand-list
 		.col-custom
 			+media-breakpoint-up(xl)
@@ -131,22 +132,34 @@
 			+transform(translateY(-50%))
 			z-index: 1
 			+fs(0)
-			color: $white
+			// color: $white
 			text-shadow: 0px 1px 5px color-rgba($black,0.1)
 			opacity: 0
 			+transition(all,0.5s)
 			&:before
 				content: ''
-				font-family: 'linearicons-free'
-				+fs(28rem)
+				+fs(14rem)
+				+flexbox
+				width: 36px
+				height: 36px
+				justify-content: center
+				align-items: center
+				+bor-rad(50px)
+				background: $white
+				border: 1px solid darken($white,5%)
+			&:hover
+				&:before
+					background: $blue
+					color: $white
+					border-color: $blue
 		.slick-prev
 			left: 0px
 			&:before
-				content: '\e875'
+				content: '\f177'
 		.slick-next
 			right: 0px
 			&:before
-				content: '\e876'
+				content: '\f178'
 		&:hover
 			.slick-prev, .slick-next
 				opacity: 1
@@ -155,7 +168,7 @@
 			.slick-next
 				right: 20px
 		.slick-dots
-			+pos(abs, null 0 10px 0)
+			// +pos(abs, null 0 0 0)
 			margin: 10px 0
 			text-align: center
 			li
@@ -163,9 +176,12 @@
 				width: 10px
 				height: 10px
 				+bor-rad(50px)
-				background: darken($white,10%)
+				border: 2px solid darken($white,10%)
+				+transition(all,0.5s)
 				&.slick-active
-					background: $bluegradient
+					border-color: $blue
+					background: $blue
+					width: 30px
 				button
 					display: none
 				+ li
@@ -198,8 +214,8 @@
 						justify-content: center
 						width: 80px !important
 						height: 80px !important
-						background: $white
-						box-shadow: 0px 10px 20px -10px color-rgba($black,0.3)
+						background: darken($white,5%)
+						// box-shadow: 0px 10px 20px -10px color-rgba($black,0.3)
 						+bor-rad(50px)
 						margin-bottom: 5px
 						+fs(0)
@@ -214,7 +230,7 @@
 						font-weight: 500
 					&:hover
 						.img
-							background: $bluegradient
+							background: $blue
 							img
 								filter: brightness(200%)
 								opacity: 1

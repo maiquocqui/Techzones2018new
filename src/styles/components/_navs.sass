@@ -4,7 +4,7 @@
 		margin: 0
 		padding: 0
 		border: none
-		border-bottom: 1px solid darken($white,5%)
+		// border-bottom: 1px solid darken($white,5%)
 		.nav-item
 			margin: 0
 			padding: 0
@@ -122,6 +122,8 @@
 			vertical-align: top
 		+ .nav-item
 			margin-left: 10px
+			+media-breakpoint-down(md)
+				margin-left: 5px
 		.nav-link
 			margin: 0
 			padding: 0
@@ -129,9 +131,11 @@
 			background: none
 			+bor-rad(50px)
 			padding: 8px 25px
-			+fs(16rem)
+			+fs(14rem)
 			color: $main
 			border: 1px solid darken($white,10%)
+			&:hover
+				color: $blue
 			&.active
 				color: $white
 				background: $blue
