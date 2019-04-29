@@ -64,19 +64,22 @@
 						+flexbox
 						.nav-item
 							margin: 0
-							&:first-child
-								flex: auto
+							+ .nav-item
+								margin-left: 15px
+								// flex: auto
 							.nav-link
 								margin: 0
-								padding: 0
+								padding: 5px 0
 								background: none
 								border: none
-								+fs(16rem)
+								+fs(14rem)
 								text-transform: uppercase
-								font-weight: 700
+								font-weight: 500
 								color: darken($white,40%)
 								&.active
-									color: $main
+									font-weight: 700
+									color: $blue
+									border-bottom: 1px solid $blue
 					.material-icons
 						display: block
 			.popup-body

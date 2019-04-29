@@ -70,6 +70,9 @@
 				max-width: 90%
 				max-height: 90%
 				+transition(all,0.5s)
+			a
+				display: block
+				text-align: center
 		figcaption
 			padding-top: 10px
 			.product-name
@@ -77,29 +80,26 @@
 				line-height: 1.3
 				font-weight: 500
 				color: $blue
-				display: -webkit-box
-				-webkit-line-clamp: 2
-				-webkit-box-orient: vertical
-				overflow: hidden
-				text-overflow: ellipsis
-				// height: 35px
+				height: 35px
+				+textover(2)
 				+transition(all,0.5s)
 				+media-breakpoint-down(md)
 					+fs(13rem)
+					height: 32px
 				a
-					color: $black
+					color: $blue
 			.product-price
 				margin-top: 5px
-				// +pos(rel,null)
+				+pos(rel,null)
 				.promotion
-					+pos(abs, 2px 0 null null)
+					+pos(abs, -2px 0 null null)
 					+fs(11rem)
-					font-weight: 600
+					font-weight: 500
 					color: $white
 					padding: 0px 5px
 					+bor-rad(3px)
 					&.off
-						background: linear-gradient(to right, $orange, $deeporange)
+						background: lighten($red,10%)
 				.new
 					+fs(14rem)
 					line-height: 1

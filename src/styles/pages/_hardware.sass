@@ -204,6 +204,7 @@
 						+flexbox
 						align-items: flex-start
 						align-content: flex-start
+						+pos(rel,null)
 						.img
 							width: 80px
 							height: 80px
@@ -225,6 +226,16 @@
 							.price
 								+flexbox
 								margin-bottom: 5px
+								.promotion
+									+fs(10rem)
+									fontw: 500
+									padding: 2px 5px
+									+bor-rad(5px)
+									&.off
+										+pos(abs, 0px null null 0px)
+										z-index: 3
+										background: lighten($red,10%)
+										color: $white
 								.new
 									color: $main
 									+fs(14rem)

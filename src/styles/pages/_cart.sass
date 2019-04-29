@@ -3,7 +3,7 @@
 		padding: 0
 		+media-breakpoint-down(md)
 			padding-top: 50px
-	header, footer
+	header
 		display: none
 
 @import ../includes/cartheader
@@ -369,15 +369,14 @@
 			.btn-submitcoupon
 				width: 105px
 				+fs(13rem)
-				padding: 7px 15px
-				color: $blue
+				padding: 8px 15px
+				color: $white
+				background: $blue
 				+bor-rad(50px)
-				border: 1px solid $blue
 				+transition(all,0.5s)
 				margin-left: 5px
 				&:hover
-					background: $blue
-					// border-color: $main
+					background: $main
 					color: $white
 	.cart-payment
 		.payment-method
@@ -801,3 +800,52 @@ ul.cardList
 			.btn-nextstep
 				+media-breakpoint-down(sm)
 					padding: 0px 20px
+
+// UPDATE CART CUSTOMIZE
+.thankyou
+	+media-breakpoint-down(md)
+		text-align: center
+		margin-bottom: 0
+	img
+		+media-breakpoint-down(md)
+			max-width: 500px
+		+media-breakpoint-down(sm)
+			max-width: 150px
+.payment-success 
+	.notice
+		+media-breakpoint-down(sm)
+			background: #3db39e !important
+	.cart-info 
+		.cart-finish-table
+			+media-breakpoint-down(sm)
+				tbody
+					tr
+						display: block
+					th
+						display: block
+						width: 100% !important
+						border-bottom: none
+						+ th
+							display: none
+					td
+						display: inline-block
+						width: 100% !important
+						text-align: left !important
+						border-bottom: none
+						&:first-child
+							display: block
+							padding: 0px 10px
+							padding-top: 10px
+							font-weight: 500
+							border-top: 1px solid darken($white,10%)
+						&:nth-child(2)
+							width: auto !important
+							margin-left: 10px
+							color: lighten($red,10%)
+							font-weight: 500
+							padding: 0
+							padding-bottom: 10px
+						&:last-child
+							width: auto !important
+							padding: 0px
+							padding-bottom: 10px
