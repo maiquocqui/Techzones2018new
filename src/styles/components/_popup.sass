@@ -17,10 +17,11 @@
 		// height: 100vh
 		padding: 0
 		+pos(fix, null 0 0 0)
-		top: 0
 		z-index: 1100
 		+transform(translateY(100%))
 		+transition(all,0.5s)
+		+media-breakpoint-down(md)
+			top: 0
 		.popup-header
 			// border-bottom: 1px solid darken($white,10%)
 			min-height: 50px
@@ -51,6 +52,29 @@
 				label
 					&:after
 						display: none
+			.btn-addtocart
+				display: block
+				width: 100%
+				background: $main
+				color: $white
+				+bor-rad(50px)
+				text-align: center
+				margin-bottom: 10px
+				text-transform: uppercase
+				+fs(15rem)
+				font-weight: 500
+				line-height: 40px
+				margin-top: 15px
+				+media-breakpoint-down(md)
+					order: 2
+					flex: 1
+					// width: calc(70% - 10px)
+					margin: 0
+					padding: 0
+					line-height: 36px
+					+fs(14rem)
+				&:hover
+					background: $blue
 	&.popup-detail
 		.popup-dialog
 			// min-height: 100vh

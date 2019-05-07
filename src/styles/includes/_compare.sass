@@ -226,7 +226,7 @@
 					&:hover
 						color: $red
 			&.specs-match				
-				background: lighten($blue,40%)
+				background: lighten($blue,50%)
 		.toggle-diff
 			// +mainbutton($lblue,$blue)
 			display: block
@@ -284,7 +284,7 @@
 			// margin-top: 40px
 		tr
 			&.specs-match
-				background: lighten($blue,40%)
+				background: lighten($blue,50%)
 			&.specs-group
 				td
 					background: darken($white, 5%)!important
@@ -481,6 +481,11 @@
 			padding: 15px
 			+bor-rad(0)
 			box-shadow: none
+	.page-title
+		margin-bottom: 15px
+	.body-wrap
+		.clear-list
+			margin-top: 0
 	.back-link
 		+media-breakpoint-down(md)
 			&:after

@@ -8969,7 +8969,6 @@ body.modal-open {
   right: 0;
   bottom: 0;
   left: 0;
-  top: 0;
   z-index: 1100;
   -webkit-transform: translateY(100%);
   -khtml-transform: translateY(100%);
@@ -8983,6 +8982,9 @@ body.modal-open {
   -ms-transition: all, 0.5s;
   -o-transition: all, 0.5s;
   transition: all, 0.5s; }
+  @media (max-width: 991.98px) {
+    .page-popup .popup-dialog {
+      top: 0; } }
   .page-popup .popup-dialog .popup-header {
     min-height: 50px;
     display: -webkit-box;
@@ -9019,6 +9021,29 @@ body.modal-open {
       padding: 10px 0; }
       .page-popup .popup-dialog .popup-body .product-option label:after {
         display: none; }
+    .page-popup .popup-dialog .popup-body .btn-addtocart {
+      display: block;
+      width: 100%;
+      background: #333333;
+      color: #fff;
+      border-radius: 50px;
+      text-align: center;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      line-height: 40px;
+      margin-top: 15px; }
+      @media (max-width: 991.98px) {
+        .page-popup .popup-dialog .popup-body .btn-addtocart {
+          order: 2;
+          flex: 1;
+          margin: 0;
+          padding: 0;
+          line-height: 36px;
+          font-size: 0.875rem; } }
+      .page-popup .popup-dialog .popup-body .btn-addtocart:hover {
+        background: #18a0c6; }
 
 .page-popup.popup-detail .popup-dialog .popup-header .popup-title .nav-tabs {
   margin: 0;
@@ -9228,7 +9253,7 @@ header {
         justify-content: center;
         border-radius: 50px;
         color: #fff;
-        background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); }
+        background: #18a0c6; }
         header .hotline a:after {
           content: '';
           display: block;
@@ -9237,7 +9262,7 @@ header {
           bottom: 0;
           left: 0;
           right: 0;
-          background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+          background: #18a0c6;
           opacity: .5;
           border-radius: 50px;
           -webkit-transform: scale3d(1.3, 1.3, 1.3);
@@ -9248,7 +9273,11 @@ header {
           transform: scale3d(1.3, 1.3, 1.3);
           animation-name: hotline-animate;
           animation-duration: 1s;
-          animation-iteration-count: infinite; } }
+          animation-iteration-count: infinite; }
+        header .hotline a:hover {
+          background: #333333; }
+          header .hotline a:hover:after {
+            background: #333333; } }
     header .hotline a .material-icons, header .hotline a .mi, header .hotline a .dropdown-custom .dropdown-menu .dropdown-title .btn-closedropdown:before, .dropdown-custom .dropdown-menu .dropdown-title header .hotline a .btn-closedropdown:before, .dropdown-custom header .hotline a .cart .cart-panel .dropdown-title .btn-closedropdown:before, .dropdown-custom header .cart .cart-panel .dropdown-title .hotline a .btn-closedropdown:before, header .hotline a .cart .dropdown-custom .cart-panel .dropdown-title .btn-closedropdown:before, header .cart .dropdown-custom .cart-panel .dropdown-title .hotline a .btn-closedropdown:before, header .hotline a .check-tool.s1 a:before, header .check-tool.s1 .hotline a a:before, header .hotline a .check-tool.s2 a:before, header .check-tool.s2 .hotline a a:before, header .hotline a .login-tool .dropdown-toggle:before, header .login-tool .hotline a .dropdown-toggle:before, header .hotline a .notification .dropdown-toggle:before, header .notification .hotline a .dropdown-toggle:before, header .hotline a .cart .cart-toggle .cart-amount:before, header .cart .cart-toggle .hotline a .cart-amount:before, header .hotline a .cart-header .btn-back:before, .cart-header header .hotline a .btn-back:before, header .hotline a .user-info:after, header .hotline a .user-page .user-address .address-list ul li .address-item .btn-remove:before, .user-page .user-address .address-list ul li .address-item header .hotline a .btn-remove:before, header .hotline a .user-page .user-address .address-list ul li .address-item .btn-edit:before, .user-page .user-address .address-list ul li .address-item header .hotline a .btn-edit:before, header .hotline a .user-page .product-list .product-item .btn-remove:before, .user-page .product-list .product-item header .hotline a .btn-remove:before {
       display: block; }
       @media (min-width: 1200px) {
@@ -9472,14 +9501,32 @@ header {
       border-radius: 5px;
       border: none;
       border-top: 3px solid #18a0c6; }
-  header .login ul li + li {
+  header .login ul li + li, header .social-login ul li + li {
     margin-top: 10px; }
-  header .login ul li a {
+  header .login ul li a, header .social-login ul li a {
     display: block;
     font-size: 0.8125rem;
-    color: #666666; }
-    header .login ul li a:hover {
-      color: #18a0c6; }
+    line-height: 1.5 !important;
+    color: #666666 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+    border: none !important;
+    text-align: left !important; }
+    header .login ul li a .fa, header .social-login ul li a .fa {
+      display: none; }
+    header .login ul li a span, header .social-login ul li a span {
+      padding: 0 !important;
+      text-align: left !important;
+      line-height: 1.5 !important; }
+    header .login ul li a:hover, header .social-login ul li a:hover {
+      color: #18a0c6 !important; }
+  header .social-login li {
+    margin-top: 10px; }
+    header .social-login li a {
+      display: block; }
+      header .social-login li a span {
+        display: block; }
   header .notification {
     margin-left: 20px; }
     @media (max-width: 1199.98px) {
@@ -11636,7 +11683,7 @@ footer > .container {
         .compare-page .compare-product-table tr.title a:hover {
           color: #F44336; }
     .compare-page .compare-product-table tr.specs-match {
-      background: #b4e8f6; }
+      background: #e2f6fb; }
     .compare-page .compare-product-table .toggle-diff {
       display: block;
       line-height: 40px;
@@ -11687,7 +11734,7 @@ footer > .container {
       display: inline-block;
       padding: 0px 20px; }
     .compare-products .compare-products-table tr.specs-match {
-      background: #b4e8f6; }
+      background: #e2f6fb; }
     .compare-products .compare-products-table tr.specs-group td {
       background: #f2f2f2 !important; }
     .compare-products .compare-products-table tr.specs-group a {
@@ -11904,6 +11951,12 @@ footer > .container {
       padding: 15px;
       border-radius: 0;
       box-shadow: none; } }
+
+.compare-products .page-title {
+  margin-bottom: 15px; }
+
+.compare-products .body-wrap .clear-list {
+  margin-top: 0; }
 
 @media (max-width: 991.98px) {
   .compare-products .back-link:after {
@@ -12859,7 +12912,8 @@ footer > .container {
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
           overflow: hidden;
-          text-overflow: ellipsis; }
+          text-overflow: ellipsis;
+          height: 3.675rem; }
           @media (max-width: 991.98px) {
             .home-news .news-item figure figcaption .news-des {
               font-size: 0.75rem;
@@ -12868,7 +12922,7 @@ footer > .container {
               -webkit-box-orient: vertical;
               overflow: hidden;
               text-overflow: ellipsis;
-              min-height: 31px; } }
+              height: 2.1rem; } }
     .home-news .news-item:hover figure .news-img img {
       -webkit-transform: scale3d(1.1, 1.1, 1);
       -khtml-transform: scale3d(1.1, 1.1, 1);
@@ -13024,12 +13078,14 @@ footer > .container {
           -moz-transition: all, 0.5s;
           -ms-transition: all, 0.5s;
           -o-transition: all, 0.5s;
-          transition: all, 0.5s; }
+          transition: all, 0.5s;
+          height: 3.675rem; }
           @media (max-width: 991.98px) {
             .home-facebook .facebook-wrap .fb-list .fb-item figure figcaption .fb-des {
               font-size: 0.8125rem;
               white-space: normal;
-              min-height: 56px; } }
+              min-height: 56px;
+              height: 3.4125rem; } }
       .home-facebook .facebook-wrap .fb-list .fb-item:hover figure figcaption .fb-des {
         color: #18a0c6; }
 
@@ -14471,7 +14527,9 @@ footer > .container {
     z-index: 10; }
     @media (max-width: 767.98px) {
       .product-page .product-sameprice .searchbox {
-        position: static;
+        position: relative;
+        top: unset;
+        right: unset;
         width: 100% !important;
         margin: 0 !important;
         padding: 0 !important; } }
@@ -17660,7 +17718,6 @@ ul.cardList {
   background: #fff;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
   max-width: 900px;
   margin: 15px auto;
   padding: 15px; }
@@ -17702,7 +17759,7 @@ ul.cardList {
       font-size: 0.875rem;
       line-height: 1.3;
       font-weight: 500;
-      color: #000000;
+      color: #18a0c6;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
@@ -17715,7 +17772,7 @@ ul.cardList {
       -o-transition: all, 0.5s;
       transition: all, 0.5s; }
       .installment-page .installment-product figcaption .product-name a {
-        color: #000000; }
+        color: #18a0c6; }
     .installment-page .installment-product figcaption .product-price {
       margin-top: 5px;
       position: relative; }
@@ -17729,12 +17786,12 @@ ul.cardList {
         padding: 0px 5px;
         border-radius: 3px; }
         .installment-page .installment-product figcaption .product-price .promotion.off {
-          background: linear-gradient(to right, #FF9800, #FF5722); }
+          background: #f77066; }
       .installment-page .installment-product figcaption .product-price .new {
         font-size: 0.875rem;
         line-height: 1;
         font-weight: 700;
-        color: #F44336; }
+        color: #000000; }
       .installment-page .installment-product figcaption .product-price .old {
         font-size: 0.625rem;
         line-height: 1;
@@ -17745,7 +17802,6 @@ ul.cardList {
   background: #fff;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
   max-width: 900px;
   margin: 15px auto;
   padding: 15px; }
@@ -17760,7 +17816,7 @@ ul.cardList {
     border: none;
     border-radius: 5px;
     overflow: hidden;
-    border: 1px solid #2cbde5; }
+    background: #e6e6e6; }
     .installment-page .installment-selection .installment-nav .nav-item {
       width: 50%;
       margin: 0;
@@ -17783,10 +17839,9 @@ ul.cardList {
         justify-content: center;
         margin: 0;
         padding: 10px;
+        height: 100%;
         border: none;
-        border-radius: 0;
-        border-left: 1px solid transparent;
-        border-right: 1px solid transparent; }
+        border-radius: 0; }
         .installment-page .installment-selection .installment-nav .nav-item .nav-link .icon {
           width: 32px;
           height: 32px;
@@ -17800,8 +17855,8 @@ ul.cardList {
           justify-content: center; }
           @media (max-width: 767.98px) {
             .installment-page .installment-selection .installment-nav .nav-item .nav-link .icon {
-              width: 24px;
-              height: 24px; } }
+              width: 20px;
+              height: 20px; } }
           .installment-page .installment-selection .installment-nav .nav-item .nav-link .icon img {
             max-width: 100%;
             max-height: 100%; }
@@ -17812,15 +17867,17 @@ ul.cardList {
           text-transform: uppercase; }
           @media (max-width: 767.98px) {
             .installment-page .installment-selection .installment-nav .nav-item .nav-link .name {
-              width: calc(100% - 24px);
+              width: calc(100% - 20px);
               padding-left: 0;
               font-size: 0.8125rem;
+              text-transform: none;
               line-height: 1.3;
               text-align: center; } }
-        .installment-page .installment-selection .installment-nav .nav-item .nav-link.active {
-          background: rgba(24, 160, 198, 0.05);
-          border-color: #2cbde5;
+        .installment-page .installment-selection .installment-nav .nav-item .nav-link:hover {
           color: #18a0c6; }
+        .installment-page .installment-selection .installment-nav .nav-item .nav-link.active {
+          background: #333333;
+          color: #fff; }
   .installment-page .installment-selection .tab-content {
     padding: 15px 0;
     position: relative; }
@@ -17837,7 +17894,7 @@ ul.cardList {
           position: static;
           margin-bottom: 10px; } }
       .installment-page .installment-selection .tab-content .btn-viewdetail:hover {
-        color: #FF9800; }
+        color: #333333; }
   .installment-page .installment-selection .installment-option {
     margin-bottom: 15px; }
     .installment-page .installment-selection .installment-option .option-list {
@@ -17870,16 +17927,14 @@ ul.cardList {
         text-align: center;
         line-height: 34px;
         border-radius: 5px;
-        border: 1px solid #e6e6e6;
+        background: #f2f2f2;
         padding: 0px 20px; }
         .installment-page .installment-selection .installment-option .option-list li a.active {
-          border-color: #2cbde5;
-          background: rgba(24, 160, 198, 0.05);
-          color: #18a0c6; }
+          background: #333333;
+          color: #fff; }
       .installment-page .installment-selection .installment-option .option-list li.active a {
-        border-color: #2cbde5;
-        background: rgba(24, 160, 198, 0.05);
-        color: #18a0c6; }
+        background: #333333;
+        color: #fff; }
     .installment-page .installment-selection .installment-option .form-group {
       padding: 0px 5px; }
       @media (max-width: 767.98px) {
@@ -17907,8 +17962,7 @@ ul.cardList {
       border-radius: 3px;
       vertical-align: middle; }
       .installment-page .installment-selection .installment-table table .prepay-select:active, .installment-page .installment-selection .installment-table table .prepay-select:focus {
-        border-color: #2cbde5;
-        box-shadow: 0 0 0 0.2rem rgba(24, 160, 198, 0.2); }
+        border-color: #2cbde5; }
 
 .installment-page .bank-list {
   display: -webkit-box;
@@ -17992,7 +18046,7 @@ ul.cardList {
     .installment-page .confirmation-table table th + th {
       border-left: 1px solid #e6e6e6; }
   .installment-page .confirmation-table table th[colspan="2"] {
-    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    background: #18a0c6;
     color: #fff; }
   .installment-page .confirmation-table table td {
     border-left: 1px solid #e6e6e6; }
@@ -18001,7 +18055,6 @@ ul.cardList {
   background: #fff;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
   max-width: 900px;
   margin: 15px auto;
   padding: 15px; }
@@ -18054,7 +18107,7 @@ ul.cardList {
       width: 80px;
       font-size: 0.8125rem;
       padding: 8px 10px;
-      background: linear-gradient(to right, #FF9800 0%, #FF5722 100%);
+      background: #18a0c6;
       color: #fff;
       border-radius: 5px;
       -webkit-transition: all, 0.5s;
@@ -18065,7 +18118,7 @@ ul.cardList {
       transition: all, 0.5s;
       margin-left: 5px; }
       .installment-page .installment-form .input-coupon .btn-submitcoupon:hover {
-        box-shadow: 0px 10px 20px -10px #FF9800; }
+        background: #333333; }
 
 .login-page {
   padding: 15px 0; }
@@ -18646,15 +18699,29 @@ ul.cardList {
     color: #18a0c6;
     font-weight: 600; }
 
+@media (max-width: 991.98px) {
+  .hardware-page {
+    background: #fff; }
+    .hardware-page .cart-step {
+      margin: 0px -15px !important;
+      border: none; } }
+    @media (max-width: 991.98px) and (max-width: 767.98px) {
+      .hardware-page .cart-step:before {
+        display: none; } }
+
 .hardware-page .cart-title {
   position: relative; }
   @media (max-width: 767.98px) {
     .hardware-page .cart-title {
-      flex-wrap: wrap; } }
+      flex-wrap: wrap;
+      border-bottom: none; } }
   .hardware-page .cart-title .hardware-btn {
     position: absolute;
     top: -6;
     right: 0; }
+    @media (max-width: 991.98px) {
+      .hardware-page .cart-title .hardware-btn {
+        right: 15px; } }
     @media (max-width: 767.98px) {
       .hardware-page .cart-title .hardware-btn {
         position: static;
@@ -18777,6 +18844,9 @@ ul.cardList {
   .hardware-page .form-wrap .btn-order:hover {
     background: linear-gradient(to right, #FF9800 0%, #FF5722 100%);
     box-shadow: 0px 10px 20px -10px #FF9800; }
+
+.hardware-page .btn-loadmore {
+  margin-bottom: 40px; }
 
 .modal-hardware {
   max-width: 1000px; }
