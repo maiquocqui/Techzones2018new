@@ -10057,13 +10057,7 @@ header {
         padding: 25px;
         visibility: hidden;
         opacity: 0;
-        margin-top: 20px;
-        -webkit-transition: all, 0.3s;
-        -khtml-transition: all, 0.3s;
-        -moz-transition: all, 0.3s;
-        -ms-transition: all, 0.3s;
-        -o-transition: all, 0.3s;
-        transition: all, 0.3s; }
+        margin-top: 20px; }
         .menu ul.menu-link > li.has-sub .sub1 .sub-img, .menu ul.menu-link > li.has-sub .sub2 .sub-img {
           margin-bottom: 10px; }
         .menu ul.menu-link > li.has-sub .sub1 .sub-title, .menu ul.menu-link > li.has-sub .sub2 .sub-title {
@@ -10108,7 +10102,13 @@ header {
         .menu ul.menu-link > li.has-sub:hover .sub1, .menu ul.menu-link > li.has-sub:hover .sub2 {
           visibility: visible;
           opacity: 1;
-          margin-top: 0; } }
+          margin-top: 0;
+          -webkit-transition: all, 0.3s;
+          -khtml-transition: all, 0.3s;
+          -moz-transition: all, 0.3s;
+          -ms-transition: all, 0.3s;
+          -o-transition: all, 0.3s;
+          transition: all, 0.3s; } }
   .menu .menu-contact {
     display: none;
     margin: 0px 20px;
