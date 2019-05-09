@@ -138,9 +138,7 @@
 					border-top: 2px solid $blue
 					+bor-rad(5px)
 					padding: 25px
-					visibility: hidden
-					opacity: 0
-					margin-top: 20px
+					display: none
 					.sub-img
 						margin-bottom: 10px
 					.sub-title
@@ -178,10 +176,7 @@
 				&:hover
 					+media-breakpoint-up(xl)
 						.sub1, .sub2
-							visibility: visible
-							opacity: 1
-							margin-top: 0
-							+transition(all,0.3s)
+							display: block
 	.menu-contact
 		display: none
 		margin: 0px 20px
