@@ -1,0 +1,55 @@
+.news-page
+	.fullpage
+		padding-top: 0
+
+.flash-news
+	background: $white
+	+bor-rad(5px)
+	overflow: hidden
+	box-shadow: 0px 5px 20px color-rgba($black,0.01)
+	margin: 20px 0
+	+flexbox
+	height: 40px
+	.flash-news-label
+		background: $blue
+		color: $white
+		line-height: 20px
+		padding: 10px 15px
+		white-space: nowrap
+	.flash-news-slick
+		flex: 1
+		+flexbox
+		.slick-list
+			width: calc(100% - 80px)
+			.slick-slide
+				margin: 0
+			.news
+				display: block
+				white-space: nowrap
+				line-height: 20px
+				padding: 10px 15px
+				color: darken($white,60%)
+				+fs(14rem)
+				text-overflow: ellipsis
+				&:hover
+					color: $blue
+		.slick-arrow
+			+flexbox
+			width: 40px
+			height: 40px
+			align-items: center
+			align-content: center
+			justify-content: center
+			+fs(0)
+			&:before
+				content: ''
+				font-family: 'fontawesome'
+				+fs(18rem)
+			&:hover
+				color: $blue
+		.slick-prev
+			&:before
+				content: '\f104'
+		.slick-next
+			&:before
+				content: '\f105'

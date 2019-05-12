@@ -562,4 +562,19 @@ $(document).ready(function () {
         arrows: true,
         dots: true
     });
+
+    // update 12/5/2019
+    $('.flash-news-slick').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        speed: 300,
+        dots: false,
+        arrows: true,
+        vertical: true
+    });
+    if ($('.flash-news-slick .slick-prev')) {
+        $('.flash-news-slick .slick-prev').insertBefore('.flash-news-slick .slick-next');
+    }
 });
