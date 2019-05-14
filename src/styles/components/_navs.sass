@@ -140,3 +140,31 @@
 				color: $white
 				background: $blue
 				border-color: $blue
+
+.news-tabs
+	margin: 0
+	padding: 0
+	border: none
+	.nav-item
+		margin: 0
+		padding: 0
+		+ .nav-item
+			margin-left: 20px
+		.nav-link
+			margin: 0
+			padding: 0
+			border: none
+			display: block
+			+fs(14rem)
+			font-weight: 600
+			text-transform: uppercase
+			background: none
+			color: darken($white,60%)
+			&:hover, &:focus
+				background: none
+				border: none
+				outline: none
+			&:hover
+				color: $black
+			&.active
+				color: $blue

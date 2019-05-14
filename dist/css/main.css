@@ -8715,6 +8715,34 @@ body.modal-open {
         background: #18a0c6;
         border-color: #18a0c6; }
 
+.news-tabs {
+  margin: 0;
+  padding: 0;
+  border: none; }
+  .news-tabs .nav-item {
+    margin: 0;
+    padding: 0; }
+    .news-tabs .nav-item + .nav-item {
+      margin-left: 20px; }
+    .news-tabs .nav-item .nav-link {
+      margin: 0;
+      padding: 0;
+      border: none;
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      background: none;
+      color: #666666; }
+      .news-tabs .nav-item .nav-link:hover, .news-tabs .nav-item .nav-link:focus {
+        background: none;
+        border: none;
+        outline: none; }
+      .news-tabs .nav-item .nav-link:hover {
+        color: #000000; }
+      .news-tabs .nav-item .nav-link.active {
+        color: #18a0c6; }
+
 .br-theme-fontawesome-stars .br-widget {
   height: auto;
   display: -webkit-box;
@@ -18287,7 +18315,7 @@ ul.cardList {
   background: #fff;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.01);
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.02);
   margin: 20px 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -18344,5 +18372,182 @@ ul.cardList {
       content: '\f104'; }
     .flash-news .flash-news-slick .slick-next:before {
       content: '\f105'; }
+
+.hot-news {
+  margin-bottom: 40px; }
+  .hot-news .row {
+    margin: 0px -5px; }
+    .hot-news .row .col-12 {
+      padding: 0px 5px; }
+  .hot-news .news-item {
+    border-radius: 5px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.02);
+    margin-bottom: 10px; }
+    .hot-news .news-item:nth-child(even) figure .img {
+      order: 2; }
+    .hot-news .news-item:nth-child(even) figure figcaption {
+      order: 1; }
+    .hot-news .news-item figure {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      .hot-news .news-item figure .img {
+        display: block;
+        width: 50%; }
+        .hot-news .news-item figure .img img {
+          width: 100%; }
+      .hot-news .news-item figure figcaption {
+        width: 50%;
+        padding: 25px; }
+        .hot-news .news-item figure figcaption .name a {
+          display: block;
+          font-weight: 500;
+          color: #333333;
+          line-height: 1.4;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin-bottom: 5px; }
+        .hot-news .news-item figure figcaption time {
+          font-size: 0.75rem;
+          font-weight: 500;
+          color: #18a0c6; }
+    .hot-news .news-item.big {
+      height: calc(100% - 10px); }
+      .hot-news .news-item.big figure {
+        flex-direction: column; }
+        .hot-news .news-item.big figure .img, .hot-news .news-item.big figure figcaption {
+          width: 100%; }
+        .hot-news .news-item.big figure figcaption .name a {
+          font-size: 1.75rem; }
+    .hot-news .news-item:hover figure figcaption .name a {
+      color: #18a0c6; }
+
+.news-title-wrap {
+  position: relative; }
+  .news-title-wrap .news-title {
+    border-top: 3px solid grey;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .news-title-wrap .news-tabs {
+    position: absolute;
+    top: 20px;
+    right: 0; }
+
+.news-list2 .news-item {
+  border-radius: 5px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.02);
+  height: calc(100% - 30px);
+  margin-bottom: 30px; }
+  .news-list2 .news-item figure {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column; }
+    .news-list2 .news-item figure .img {
+      display: block; }
+      .news-list2 .news-item figure .img img {
+        width: 100%; }
+    .news-list2 .news-item figure figcaption {
+      padding: 25px 30px; }
+      .news-list2 .news-item figure figcaption .name a {
+        display: block;
+        font-weight: 500;
+        color: #333333;
+        font-size: 1.125rem;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 5px; }
+      .news-list2 .news-item figure figcaption time {
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: #18a0c6;
+        display: block;
+        margin-bottom: 15px; }
+      .news-list2 .news-item figure figcaption .des {
+        font-size: 0.875rem;
+        color: gray;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+  .news-list2 .news-item:hover figure figcaption .name a {
+    color: #18a0c6; }
+
+.popular-news {
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.02);
+  padding: 25px 30px; }
+  .popular-news .title {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px; }
+
+.news-list3 .news-item {
+  border-radius: 5px;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 20px; }
+  .news-list3 .news-item figure {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .news-list3 .news-item figure .img {
+      display: block;
+      width: 90px;
+      height: 90px;
+      border-radius: 100px;
+      overflow: hidden; }
+      .news-list3 .news-item figure .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block; }
+    .news-list3 .news-item figure figcaption {
+      width: calc(100% - 90px);
+      padding: 0 15px; }
+      .news-list3 .news-item figure figcaption .name a {
+        display: block;
+        font-weight: 500;
+        color: #333333;
+        font-size: 0.9375rem;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 5px; }
+      .news-list3 .news-item figure figcaption time {
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: #18a0c6;
+        display: block;
+        margin-bottom: 15px; }
+  .news-list3 .news-item:hover figure figcaption .name a {
+    color: #18a0c6; }
 
 /*# sourceMappingURL=main.css.map */
