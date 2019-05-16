@@ -18914,6 +18914,9 @@ ul.cardList {
   .category-link a:hover {
     color: #18a0c6; }
 
+.news-list6 .news-item:last-child figure figcaption {
+  padding-bottom: 0; }
+
 .news-list6 .news-item figure .img {
   display: block;
   border-radius: 5px;
