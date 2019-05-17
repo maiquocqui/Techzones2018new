@@ -7852,48 +7852,41 @@ input[type="reset"] {
 .product-detail-page .pages, .news-detail-page .pages, .project-detail-page .pages {
   display: none; }
 
-.pages {
-  padding: 20px 0; }
-  .pages ul.pagination {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    justify-content: center; }
+.pages ul.pagination {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center; }
+  .pages ul.pagination li {
+    display: block; }
     .pages ul.pagination li + li {
-      margin-left: 10px; }
+      margin-left: 5px; }
     .pages ul.pagination li a, .pages ul.pagination li span {
-      width: 30px;
-      height: 30px;
       display: -webkit-box;
       display: -webkit-flex;
       display: -moz-flex;
       display: -ms-flexbox;
       display: flex;
+      width: 36px;
+      height: 36px;
       justify-content: center;
       align-items: center;
-      color: #666666;
+      align-content: center;
+      color: #333333;
+      background: #fff;
       font-size: 0.875rem;
-      background: none;
-      border-bottom: 3px solid transparent;
-      border-radius: 0px; }
-    .pages ul.pagination li.prev a {
-      font-size: 1.125rem; }
-      .pages ul.pagination li.prev a:before {
-        content: '\f104'; }
-    .pages ul.pagination li.next a {
-      font-size: 1.125rem; }
-      .pages ul.pagination li.next a:before {
-        content: '\f105'; }
+      border-radius: 5px; }
     .pages ul.pagination li:hover a, .pages ul.pagination li:hover span {
       color: #18a0c6; }
     .pages ul.pagination li.active a, .pages ul.pagination li.active span {
-      font-weight: 600;
-      border-bottom-color: #F44336;
-      color: #18a0c6; }
+      background: #333333;
+      color: #fff; }
 
-.btn-main, .btn-outline, .social-login ul li a, .form-wrap input[type="submit"], header .cart .cart-panel .cart-checkout .btn-checkout, .cart-step .btn-continue, .installment-page .btn-buy {
+.btn-main, .btn-outline, .social-login ul li a, .news-page .product .caption .btn-tragop, .form-wrap input[type="submit"], header .cart .cart-panel .cart-checkout .btn-checkout, .cart-step .btn-continue, .installment-page .btn-buy, .news-page .product .caption .btn-buy {
   display: inline-block;
   font-size: 0.875rem;
   line-height: 36px;
@@ -7910,27 +7903,27 @@ input[type="reset"] {
   -o-transition: all, 0.5s;
   transition: all, 0.5s; }
   @media (max-width: 767.98px) {
-    .btn-main, .btn-outline, .social-login ul li a, .form-wrap input[type="submit"], header .cart .cart-panel .cart-checkout .btn-checkout, .cart-step .btn-continue, .installment-page .btn-buy {
+    .btn-main, .btn-outline, .social-login ul li a, .news-page .product .caption .btn-tragop, .form-wrap input[type="submit"], header .cart .cart-panel .cart-checkout .btn-checkout, .cart-step .btn-continue, .installment-page .btn-buy, .news-page .product .caption .btn-buy {
       padding: 0px 25px; } }
-  .btn-main:hover, .btn-outline:hover, .social-login ul li a:hover, .form-wrap input:hover[type="submit"], header .cart .cart-panel .cart-checkout .btn-checkout:hover, .cart-step .btn-continue:hover, .installment-page .btn-buy:hover {
+  .btn-main:hover, .btn-outline:hover, .social-login ul li a:hover, .news-page .product .caption .btn-tragop:hover, .form-wrap input:hover[type="submit"], header .cart .cart-panel .cart-checkout .btn-checkout:hover, .cart-step .btn-continue:hover, .installment-page .btn-buy:hover, .news-page .product .caption .btn-buy:hover {
     background: #18a0c6; }
-  .btn-main.big, .big.btn-outline, .social-login ul li a.big, .form-wrap input.big[type="submit"], header .cart .cart-panel .cart-checkout .big.btn-checkout, .cart-step .big.btn-continue, .installment-page .big.btn-buy {
+  .btn-main.big, .big.btn-outline, .social-login ul li a.big, .news-page .product .caption .big.btn-tragop, .form-wrap input.big[type="submit"], header .cart .cart-panel .cart-checkout .big.btn-checkout, .cart-step .big.btn-continue, .installment-page .big.btn-buy, .news-page .product .caption .big.btn-buy {
     line-height: 50px;
     padding: 0px 50px;
     font-size: 0.875rem;
     text-transform: uppercase; }
-  .btn-main.disabled, .disabled.btn-outline, .social-login ul li a.disabled, .form-wrap input.disabled[type="submit"], header .cart .cart-panel .cart-checkout .disabled.btn-checkout, .cart-step .disabled.btn-continue, .installment-page .disabled.btn-buy {
+  .btn-main.disabled, .disabled.btn-outline, .social-login ul li a.disabled, .news-page .product .caption .disabled.btn-tragop, .form-wrap input.disabled[type="submit"], header .cart .cart-panel .cart-checkout .disabled.btn-checkout, .cart-step .disabled.btn-continue, .installment-page .disabled.btn-buy, .news-page .product .caption .disabled.btn-buy {
     background: #cccccc;
     pointer-events: none; }
-    .btn-main.disabled:hover, .disabled.btn-outline:hover, .social-login ul li a.disabled:hover, .form-wrap input.disabled:hover[type="submit"], header .cart .cart-panel .cart-checkout .disabled.btn-checkout:hover, .cart-step .disabled.btn-continue:hover, .installment-page .disabled.btn-buy:hover {
+    .btn-main.disabled:hover, .disabled.btn-outline:hover, .social-login ul li a.disabled:hover, .news-page .product .caption .disabled.btn-tragop:hover, .form-wrap input.disabled:hover[type="submit"], header .cart .cart-panel .cart-checkout .disabled.btn-checkout:hover, .cart-step .disabled.btn-continue:hover, .installment-page .disabled.btn-buy:hover, .news-page .product .caption .disabled.btn-buy:hover {
       box-shadow: none; }
 
-.btn-outline, .social-login ul li a {
+.btn-outline, .social-login ul li a, .news-page .product .caption .btn-tragop {
   background: #fff;
-  border: 1px solid #f2f2f2;
+  border: 1px solid #e6e6e6;
   color: #666666;
   border-radius: 50px; }
-  .btn-outline:hover, .social-login ul li a:hover {
+  .btn-outline:hover, .social-login ul li a:hover, .news-page .product .caption .btn-tragop:hover {
     color: #fff;
     background: #18a0c6;
     border-color: #18a0c6; }
@@ -18308,7 +18301,7 @@ ul.cardList {
         color: #fff;
         background: #333333; }
 
-.news-page .fullpage {
+.newspage .fullpage, .news-detail-page .fullpage {
   padding-top: 0; }
 
 .flash-news {
@@ -18428,6 +18421,17 @@ ul.cardList {
           font-size: 1.75rem; }
     .hot-news .news-item:hover figure figcaption .name a {
       color: #18a0c6; }
+
+.news-page {
+  padding-top: 30px; }
+  .news-page .pages {
+    margin-bottom: 40px; }
+
+.news-page-title {
+  font-size: 2.25rem;
+  line-height: 1.3;
+  font-weight: 500;
+  margin-bottom: 20px; }
 
 .news-title-wrap {
   position: relative; }
@@ -18949,5 +18953,74 @@ ul.cardList {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis; }
+
+.news-detail {
+  background: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.02);
+  margin-bottom: 30px; }
+  .news-detail time {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #18a0c6;
+    margin-bottom: 20px; }
+
+.news-page .product {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10px;
+  border: 2px solid #18a0c6;
+  padding: 25px; }
+  .news-page .product .img {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px; }
+    .news-page .product .img img {
+      max-width: 90%;
+      max-height: 90%; }
+  .news-page .product .caption .name {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #333333; }
+  .news-page .product .caption .price {
+    margin-bottom: 10px; }
+    .news-page .product .caption .price .new {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #18a0c6; }
+  .news-page .product .caption .des {
+    margin-bottom: 20px; }
+    .news-page .product .caption .des ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      font-size: 0.8125rem;
+      color: gray; }
+  .news-page .product .caption .btn-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    align-content: center; }
+  .news-page .product .caption .btn-buy {
+    font-weight: 500; }
+  .news-page .product .caption .btn-tragop {
+    border-color: #18a0c6;
+    font-weight: 500;
+    color: #18a0c6;
+    margin-left: 10px; }
 
 /*# sourceMappingURL=main.css.map */

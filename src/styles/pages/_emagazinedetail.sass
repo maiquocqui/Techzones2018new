@@ -1,0 +1,60 @@
+.news-detail
+	background: $white
+	padding: 30px
+	+bor-rad(5px)
+	box-shadow: 0px 5px 30px color-rgba($black,0.02)
+	margin-bottom: 30px
+	time
+		display: block
+		+fs(12rem)
+		font-weight: 500
+		color: $blue
+		margin-bottom: 20px
+	
+.news-page
+	.product
+		+flexbox
+		+bor-rad(10px)
+		border: 2px solid $blue
+		padding: 25px
+		.img
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			width: 200px
+			height: 200px
+			img
+				max-width: 90%
+				max-height: 90%
+		.caption
+			.name
+				+fs(18rem)
+				font-weight: 500
+				color: $main
+			.price
+				margin-bottom: 10px
+				.new
+					+fs(18rem)
+					font-weight: 700
+					color: $blue
+			.des
+				margin-bottom: 20px
+				ul
+					list-style-type: disc
+					padding-left: 20px
+					+fs(13rem)
+					color: darken($white,50%)
+			.btn-wrap
+				+flexbox
+				align-items: center
+				align-content: center
+			.btn-buy
+				@extend .btn-main
+				font-weight: 500
+			.btn-tragop
+				@extend .btn-outline
+				border-color: $blue
+				font-weight: 500
+				color: $blue
+				margin-left: 10px
