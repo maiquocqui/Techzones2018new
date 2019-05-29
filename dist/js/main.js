@@ -583,6 +583,22 @@ $(document).ready(function () {
     autoplay: false,
     speed: 300,
     dots: false,
-    arrows: true
+    arrows: true,
+    responsive: [{
+      breakpoint: 1199,
+      settings: {
+        slidesToShow: 4
+      }
+    }, {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 3
+      }
+    }, {
+      breakpoint: 567,
+      settings: {
+        slidesToShow: 2
+      }
+    }]
   });
 });
