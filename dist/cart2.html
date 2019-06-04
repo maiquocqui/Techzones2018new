@@ -973,7 +973,177 @@
                     </div>
                     <div class="method-content" id="method3">Đang cập nhật 3</div>
                     <div class="method-content" id="method4">Đang cập nhật 4</div>
-                    <div class="method-content" id="method5">Đang cập nhật 5</div>
+                    <div class="method-content" id="method5">
+                      <div class="installment-selection">
+                        <ul class="nav nav-tabs installment-nav" id="myTab" role="tablist">
+                          <li class="nav-item"><a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+                              <div class="icon"><img src="img/icon/m7.png" alt=""></div>
+                              <div class="name">Trả góp không cần thẻ</div></a></li>
+                          <li class="nav-item"><a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                              <div class="icon"><img src="img/icon/m2.png" alt=""></div>
+                              <div class="name">Trả góp 0% qua thẻ</div></a></li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="content">
+                              <p>Các kì hạn có gói <strong class="text-red">Trả góp 0%</strong>: 4 tháng, 6 tháng<br><strong>Chọn số thời hạn trả góp và giá trị trả trước</strong></p>
+                            </div>
+                            <div class="installment-option form-wrap">
+                              <ul class="option-list">
+                                <li><a class="active" href="#!">4 tháng</a></li>
+                                <li><a href="#!">6 tháng</a></li>
+                                <li><a href="#!">9 tháng</a></li>
+                                <li><a href="#!">12 tháng</a></li>
+                              </ul>
+                            </div>
+                            <div class="installment-table">
+                              <table>
+                                <tr>
+                                  <th>Công ty</th>
+                                  <td> <strong class="text-red">HD SAIGON</strong></td>
+                                </tr>
+                                <tr>
+                                  <th>Giá sản phẩm</th>
+                                  <td> <span class="text-bluegrey">40.000.000 đ</span></td>
+                                </tr>
+                                <tr>
+                                  <th>Giá mua trả góp</th>
+                                  <td> <span class="text-blue">42.000.000 đ</span></td>
+                                </tr>
+                                <tr>
+                                  <th>Trả trước
+                                    <select class="prepay-select">
+                                      <option value="">30%</option>
+                                      <option value="">50%</option>
+                                      <option value="">70%</option>
+                                    </select>
+                                  </th>
+                                  <td>0 đ</td>
+                                </tr>
+                                <tr>
+                                  <th>Lãi suất thực / phẳng</th>
+                                  <td> <span class="text-red">0%</span></td>
+                                </tr>
+                                <tr>
+                                  <th>Giấy tờ cần có</th>
+                                  <td>CMND + BLX + HK</td>
+                                </tr>
+                                <tr>
+                                  <th>Góp mỗi tháng</th>
+                                  <td>2.000.000 đ</td>
+                                </tr>
+                                <tr>
+                                  <th>Tổng tiền phải trả</th>
+                                  <td> <span class="text-red">42.000.000 đ</span></td>
+                                </tr>
+                                <tr>
+                                  <th>Chênh lệch với mua trả thẳng</th>
+                                  <td>2.000.000 đ</td>
+                                </tr>
+                              </table>
+                            </div>
+                            <div class="installment-agree mt-2">
+                              <div class="checkbox">
+                                <input id="ag1" type="checkbox" name="agree1">
+                                <label for="ag1">Tôi đã đọc kỹ và chấp nhận <a class="text-blue" href="#!">điều khiện tham gia trả góp</a>.</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><a class="btn-viewdetail" href="#!">Xem chi tiết chương trình</a>
+                            <div class="content">
+                              <p> <strong>Bước 1: Chọn ngân hàng trả góp</strong></p>
+                              <div class="bank-list">
+                                <div class="item"><a class="bank-item active" href="#!" data-toggle="modal" data-target="#modalBank"><img src="img/bank/vietcombank.png" alt=""></a>
+                                  <div class="modal fade" id="modalBank" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-bank" role="document">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h5 class="modal-title">Mua trả góp qua thẻ tín dụng Sacombank</h5>
+                                          <div class="close" data-dismiss="modal" aria-label="Close"><i class="material-icons">close</i></div>
+                                        </div>
+                                        <div class="modal-body">
+                                          <div class="content">
+                                            <p><strong>Trả góp online</strong></p>
+                                          </div>
+                                          <div class="installment-option form-wrap">
+                                            <ul class="option-list">
+                                              <li><a href="#!">6 tháng</a></li>
+                                            </ul>
+                                          </div>
+                                          <div class="content">
+                                            <p><strong>Trả góp tại cửa hàng</strong></p>
+                                          </div>
+                                          <div class="installment-option form-wrap">
+                                            <ul class="option-list">
+                                              <li><a class="active" href="#!">4 tháng</a></li>
+                                              <li><a href="#!">6 tháng</a></li>
+                                              <li><a href="#!">9 tháng</a></li>
+                                              <li><a href="#!">12 tháng</a></li>
+                                            </ul>
+                                          </div>
+                                          <div class="installment-table">
+                                            <table>
+                                              <tr>
+                                                <th>Số tiền hàng tháng</th>
+                                                <td> <span class="text-red">7.330.000 ₫</span></td>
+                                              </tr>
+                                              <tr>
+                                                <th> <span data-toggle="tooltip" data-placement="right" data-html="true" title="&lt;p&gt;Phí chuyển đổi trả góp là phí thực hiện chuyển đổi từ hình thức thanh toán trực tiếp bằng thẻ Tín dụng sang Thanh toán trả góp lãi suất 0% khi Khách hàng tham gia chương trình.&lt;/p&gt;&lt;/br&gt;&lt;p&gt;Phí chuyển đổi được tính dựa trên &lt;strong&gt;Tổng số tiền trả góp&lt;/strong&gt; và được truy thu trực tiếp trên tài khoản của khách hàng.&lt;/p&gt;">Phí chuyển đổi (*)</span></th>
+                                                <td>0 ₫ <span>(10%)</span></td>
+                                              </tr>
+                                            </table>
+                                          </div>
+                                          <div class="btn-wrap text-center mb-3"><a class="btn-buy" href="#!" data-dismiss="modal">Mua ngay</a></div>
+                                          <div class="content">
+                                            <div class="text-center"><img src="https://techzones.vn/Data/Sites/1/media/tra-gop/cover/sacombank.png" alt=""></div>
+                                            <p> <strong class="text-red">ĐIỀU KIỆN THAM GIA CHƯƠNG TRÌNH</strong></p>
+                                            <div class="row">
+                                              <div class="col-12 col-md-8">
+                                                <ul>
+                                                  <li>Áp dụng cho khách hàng là Chủ thẻ tín dụng quốc tế Sacombank.</li>
+                                                  <li>Áp dụng cho đơn hàng có giá trị từ 3.000.000đ trở lên (giá sau khuyến mãi).</li>
+                                                  <li>Mỗi khách hàng được tham gia chương trình nhiều lần, nhiều đơn hàng, sao cho tổng giá trị các đơn hàng không vượt quá hạn mức thẻ tín dụng của khách hàng.</li>
+                                                  <li>Khách hàng không thể hủy đơn hàng sau khi đã thực hiện giao dịch trả góp online hoặc sau khi xác nhận chuyển đổi với ngân hàng khi trả góp offline (mua hàng trực tiếp tại showroom Techzones).</li>
+                                                  <li>Đơn hàng tham gia chương trình trả góp sẽ không được đổi trả (Trừ sản phẩm lỗi do nhà sản xuất hoặc được quy định tại quy định bảo hành và chính sách đổi trả).</li>
+                                                  <li>Các chính sách ưu đãi, chương trình khuyến mãi hiện có trên sản phẩm vẫn được áp dụng cho khách hàng tham gia trả góp 0%.</li>
+                                                  <li>Khi tham gia chương trình, giao dịch đăng ký trả góp sẽ được chia thành các khoản trả góp và ghi nợ vào sao kê thẻ mỗi tháng như một giao dịch thông thường.</li>
+                                                </ul>
+                                                <p>** Xem thêm Điều khoản và Điều kiện của Sacombank.</p>
+                                              </div>
+                                              <div class="col-12 col-md-4"><img src="https://techzones.vn/Data/Sites/1/media/tra-gop/PIC2.png" alt=""></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="item"><a class="bank-item" href="#!"><img src="img/bank/vietcombank.png" alt=""></a></div>
+                                <div class="item"><a class="bank-item" href="#!"><img src="img/bank/vietcombank.png" alt=""></a></div>
+                                <div class="item"><a class="bank-item" href="#!"><img src="img/bank/vietcombank.png" alt=""></a></div>
+                                <div class="item"><a class="bank-item" href="#!"><img src="img/bank/vietcombank.png" alt=""></a></div>
+                                <div class="item"><a class="bank-item" href="#!"><img src="img/bank/vietcombank.png" alt=""></a></div>
+                                <div class="item"><a class="bank-item" href="#!"><img src="img/bank/vietcombank.png" alt=""></a></div>
+                                <div class="item"><a class="bank-item" href="#!"><img src="img/bank/vietcombank.png" alt=""></a></div>
+                                <div class="item"><a class="bank-item" href="#!"><img src="img/bank/vietcombank.png" alt=""></a></div>
+                                <div class="item"><a class="bank-item" href="#!"><img src="img/bank/vietcombank.png" alt=""></a></div>
+                                <div class="item"><a class="bank-item" href="#!"><img src="img/bank/vietcombank.png" alt=""></a></div>
+                                <div class="item"><a class="bank-item" href="#!"><img src="img/bank/vietcombank.png" alt=""></a></div>
+                                <div class="item"><a class="bank-item" href="#!"><img src="img/bank/vietcombank.png" alt=""></a></div>
+                                <div class="item"><a class="bank-item" href="#!"><img src="img/bank/vietcombank.png" alt=""></a></div>
+                                <div class="item"><a class="bank-item" href="#!"><img src="img/bank/vietcombank.png" alt=""></a></div>
+                              </div>
+                              <p> <strong>Bước 2: Chọn loại thẻ</strong></p>
+                              <div class="bank-list">
+                                <div class="item"><a class="bank-item active"><img src="img/bank/visa.png" alt=""></a></div>
+                                <div class="item"><a class="bank-item"><img src="img/bank/mastercard.png" alt=""></a></div>
+                                <div class="item"><a class="bank-item"><img src="img/bank/jcb.png" alt=""></a></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <div class="method-content" id="method6">Đang cập nhật 6</div>
                   </div>
                 </div>

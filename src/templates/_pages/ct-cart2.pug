@@ -200,7 +200,219 @@
 											option 70% trên tổng giá trị đơn hàng
 						#method3.method-content Đang cập nhật 3
 						#method4.method-content Đang cập nhật 4
-						#method5.method-content Đang cập nhật 5
+						#method5.method-content
+							.installment-selection
+								ul#myTab.nav.nav-tabs.installment-nav(role='tablist')
+									li.nav-item
+										a#home-tab.nav-link.active(data-toggle='tab', href='#home', role='tab', aria-controls='home', aria-selected='true')
+											.icon
+												img(src="img/icon/m7.png", alt="")
+											.name Trả góp không cần thẻ
+									li.nav-item
+										a#profile-tab.nav-link(data-toggle='tab', href='#profile', role='tab', aria-controls='profile', aria-selected='false')
+											.icon
+												img(src="img/icon/m2.png", alt="")
+											.name Trả góp 0% qua thẻ
+								#myTabContent.tab-content
+									#home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab')
+										.content
+											p Các kì hạn có gói 
+												strong.text-red Trả góp 0%
+												|: 4 tháng, 6 tháng
+												br
+												strong Chọn số thời hạn trả góp và giá trị trả trước
+										.installment-option.form-wrap
+											ul.option-list
+												li
+													a.active(href="#!") 4 tháng
+												li
+													a(href="#!") 6 tháng
+												li
+													a(href="#!") 9 tháng
+												li
+													a(href="#!") 12 tháng
+											//- .form-row
+												.form-group
+													select(name="")
+														option --- Chọn thời hạn ---
+												//- .form-group
+													select(name="")
+														option --- Chọn số tiền trả trước ---
+										.installment-table
+											table
+												tr
+													th Công ty
+													td 
+														strong.text-red HD SAIGON
+												tr
+													th Giá sản phẩm
+													td 
+														span.text-bluegrey 40.000.000 đ
+												tr
+													th Giá mua trả góp
+													td 
+														span.text-blue 42.000.000 đ
+												tr
+													th Trả trước
+														select.prepay-select
+															option(value="") 30%
+															option(value="") 50%
+															option(value="") 70%
+													td 0 đ
+												tr
+													th Lãi suất thực / phẳng
+													td 
+														span.text-red 0%
+												tr
+													th Giấy tờ cần có
+													td CMND + BLX + HK
+												tr
+													th Góp mỗi tháng
+													td 2.000.000 đ
+												tr
+													th Tổng tiền phải trả
+													td 
+														span.text-red 42.000.000 đ
+												tr
+													th Chênh lệch với mua trả thẳng
+													td 2.000.000 đ
+										.installment-agree.mt-2
+											.checkbox
+												input#ag1(type="checkbox", name="agree1")
+												label(for="ag1") Tôi đã đọc kỹ và chấp nhận 
+													a.text-blue(href="#!") điều khiện tham gia trả góp
+													|.
+										//- .btn-wrap.text-center
+										//- 	a.btn-buy(href="#!") Mua ngay
+									#profile.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab')
+										a.btn-viewdetail(href="#!") Xem chi tiết chương trình
+										.content
+											p 
+												strong Bước 1: Chọn ngân hàng trả góp
+											.bank-list
+												.item
+													a.bank-item.active(href="#!" data-toggle="modal" data-target="#modalBank")
+														img(src="img/bank/vietcombank.png", alt="")
+													#modalBank.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+														.modal-dialog.modal-bank(role='document')
+															.modal-content
+																.modal-header
+																	h5.modal-title Mua trả góp qua thẻ tín dụng Sacombank
+																	.close(data-dismiss='modal', aria-label='Close')
+																		i.material-icons close
+																.modal-body
+																	.content
+																		p
+																			strong Trả góp online
+																	.installment-option.form-wrap
+																		ul.option-list
+																			li
+																				a(href="#!") 6 tháng
+																	.content
+																		p
+																			strong Trả góp tại cửa hàng
+																	.installment-option.form-wrap
+																		ul.option-list
+																			li
+																				a.active(href="#!") 4 tháng
+																			li
+																				a(href="#!") 6 tháng
+																			li
+																				a(href="#!") 9 tháng
+																			li
+																				a(href="#!") 12 tháng
+																		//- .form-row
+																			.form-group
+																				select(name="")
+																					option Thời hạn 6 tháng
+																			//- .form-group
+																				select(name="")
+																					option --- Chọn số tiền trả trước ---
+																	.installment-table
+																		table
+																			tr
+																				th Số tiền hàng tháng
+																				td 
+																					span.text-red 7.330.000 ₫
+																			tr
+																				th 
+																					span(data-toggle="tooltip" data-placement="right" data-html="true" title="<p>Phí chuyển đổi trả góp là phí thực hiện chuyển đổi từ hình thức thanh toán trực tiếp bằng thẻ Tín dụng sang Thanh toán trả góp lãi suất 0% khi Khách hàng tham gia chương trình.</p></br><p>Phí chuyển đổi được tính dựa trên <strong>Tổng số tiền trả góp</strong> và được truy thu trực tiếp trên tài khoản của khách hàng.</p>") Phí chuyển đổi (*)
+																				td 0 ₫ 
+																					span (10%)
+																	.btn-wrap.text-center.mb-3
+																		a.btn-buy(href="#!" data-dismiss='modal') Mua ngay
+																	.content
+																		.text-center
+																			img(src="https://techzones.vn/Data/Sites/1/media/tra-gop/cover/sacombank.png", alt="")
+																		p 
+																			strong.text-red ĐIỀU KIỆN THAM GIA CHƯƠNG TRÌNH
+																		.row
+																			.col-12.col-md-8
+																				ul
+																					li Áp dụng cho khách hàng là Chủ thẻ tín dụng quốc tế Sacombank.
+																					li Áp dụng cho đơn hàng có giá trị từ 3.000.000đ trở lên (giá sau khuyến mãi).
+																					li Mỗi khách hàng được tham gia chương trình nhiều lần, nhiều đơn hàng, sao cho tổng giá trị các đơn hàng không vượt quá hạn mức thẻ tín dụng của khách hàng.
+																					li Khách hàng không thể hủy đơn hàng sau khi đã thực hiện giao dịch trả góp online hoặc sau khi xác nhận chuyển đổi với ngân hàng khi trả góp offline (mua hàng trực tiếp tại showroom Techzones).
+																					li Đơn hàng tham gia chương trình trả góp sẽ không được đổi trả (Trừ sản phẩm lỗi do nhà sản xuất hoặc được quy định tại quy định bảo hành và chính sách đổi trả).
+																					li Các chính sách ưu đãi, chương trình khuyến mãi hiện có trên sản phẩm vẫn được áp dụng cho khách hàng tham gia trả góp 0%.
+																					li Khi tham gia chương trình, giao dịch đăng ký trả góp sẽ được chia thành các khoản trả góp và ghi nợ vào sao kê thẻ mỗi tháng như một giao dịch thông thường.
+																				p ** Xem thêm Điều khoản và Điều kiện của Sacombank.
+																			.col-12.col-md-4
+																				img(src="https://techzones.vn/Data/Sites/1/media/tra-gop/PIC2.png", alt="")
+												.item
+													a.bank-item(href="#!")
+														img(src="img/bank/vietcombank.png", alt="")
+												.item
+													a.bank-item(href="#!")
+														img(src="img/bank/vietcombank.png", alt="")
+												.item
+													a.bank-item(href="#!")
+														img(src="img/bank/vietcombank.png", alt="")
+												.item
+													a.bank-item(href="#!")
+														img(src="img/bank/vietcombank.png", alt="")
+												.item
+													a.bank-item(href="#!")
+														img(src="img/bank/vietcombank.png", alt="")
+												.item
+													a.bank-item(href="#!")
+														img(src="img/bank/vietcombank.png", alt="")
+												.item
+													a.bank-item(href="#!")
+														img(src="img/bank/vietcombank.png", alt="")
+												.item
+													a.bank-item(href="#!")
+														img(src="img/bank/vietcombank.png", alt="")
+												.item
+													a.bank-item(href="#!")
+														img(src="img/bank/vietcombank.png", alt="")
+												.item
+													a.bank-item(href="#!")
+														img(src="img/bank/vietcombank.png", alt="")
+												.item
+													a.bank-item(href="#!")
+														img(src="img/bank/vietcombank.png", alt="")
+												.item
+													a.bank-item(href="#!")
+														img(src="img/bank/vietcombank.png", alt="")
+												.item
+													a.bank-item(href="#!")
+														img(src="img/bank/vietcombank.png", alt="")
+												.item
+													a.bank-item(href="#!")
+														img(src="img/bank/vietcombank.png", alt="")
+											p 
+												strong Bước 2: Chọn loại thẻ
+											.bank-list
+												.item
+													a.bank-item.active
+														img(src="img/bank/visa.png", alt="")
+												.item
+													a.bank-item
+														img(src="img/bank/mastercard.png", alt="")
+												.item
+													a.bank-item
+														img(src="img/bank/jcb.png", alt="")
 						#method6.method-content Đang cập nhật 6
 				.cart-btn
 					.total Tổng cộng:

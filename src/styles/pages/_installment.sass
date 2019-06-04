@@ -1,294 +1,222 @@
 .installment-page
-	.installment-title
-		+flexbox
-		align-items: center
-		align-content: center
-		border-bottom: 1px solid darken($white,10%)
-		padding-bottom: 10px
-		margin-bottom: 10px
-		.icon
-			+flexbox
-			align-items: center
-			align-content: center
-			margin-right: 10px
-		span
-			+fs(14rem)
-			font-weight: 700
-			text-transform: uppercase
-	.installment-product
-		background: $white
-		+bor-rad(5px)
-		overflow: hidden
-		// box-shadow: 0px 5px 20px color-rgba($black,0.05)
-		max-width: 900px
-		margin: 15px auto
-		padding: 15px
-		+media-breakpoint-down(sm)
-			margin: 0px -15px 10px
-			box-shadow: none
-			+bor-rad(0)
-		figure
-			+flexbox
-		.product-img
-			width: 100px
-			height: 100px
-			+bor-rad(5px)
-			+flexbox
-			align-items: center
-			align-content: center
-			justify-content: center
-			+media-breakpoint-down(sm)
-				width: 60px
-				height: 60px
-		figcaption
-			width: calc(100% - 100px)
-			padding-left: 15px
-			+media-breakpoint-down(sm)
-				width: calc(100% - 60px)
-				padding-left: 10px
-			.product-name
-				+fs(14rem)
-				line-height: 1.3
-				font-weight: 500
-				color: $blue
-				display: -webkit-box
-				-webkit-line-clamp: 2
-				-webkit-box-orient: vertical
-				overflow: hidden
-				text-overflow: ellipsis
-				+transition(all,0.5s)
-				a
-					color: $blue
-			.product-price
-				margin-top: 5px
-				+pos(rel,null)
-				.promotion
-					+pos(abs, 2px 0 null null)
-					+fs(11rem)
-					font-weight: 600
-					color: $white
-					padding: 0px 5px
-					+bor-rad(3px)
-					&.off
-						background: lighten($red,10%)
-				.new
-					+fs(14rem)
-					line-height: 1
-					font-weight: 700
-					color: $black
-					+media-breakpoint-down(lg)
-						// +fs(12rem)
-				.old
-					+fs(10rem)
-					line-height: 1
-					color: darken($white,40%)
-					text-decoration: line-through
-	.installment-selection
-		background: $white
-		+bor-rad(5px)
-		overflow: hidden
-		// box-shadow: 0px 5px 20px color-rgba($black,0.05)
-		max-width: 900px
-		margin: 15px auto
-		padding: 15px
-		+media-breakpoint-down(sm)
-			margin: 0px -15px 10px
-			box-shadow: none
-			+bor-rad(0)
-		.installment-nav
-			margin: 0
-			padding: 0
-			border: none
-			+bor-rad(5px)
-			overflow: hidden
-			background: darken($white,10%)
-			// border: 1px solid lighten($blue,10%)
-			.nav-item
-				width: 50%
-				margin: 0
-				padding: 0
-				border: none
-				background: none
-				+bor-rad(0)
-				&:first-child
-					.nav-link
-						border-left: none
-				&:last-child
-					.nav-link
-						border-right: none
-				.nav-link
-					+flexbox
-					align-items: center
-					align-content: center
-					justify-content: center
-					margin: 0
-					padding: 10px
-					height: 100%
-					border: none
-					+bor-rad(0)
-					// border-left: 1px solid transparent
-					// border-right: 1px solid transparent
-					.icon
-						width: 32px
-						height: 32px
-						+flexbox
-						align-items: center
-						align-content: center
-						justify-content: center
-						+media-breakpoint-down(sm)
-							width: 20px
-							height: 20px
-						img
-							max-width: 100%
-							max-height: 100%
-					.name
-						padding-left: 10px
-						+fs(14rem)
-						font-weight: 500
-						text-transform: uppercase
-						+media-breakpoint-down(sm)
-							width: calc(100% - 20px)
-							padding-left: 0
-							+fs(13rem)
-							text-transform: none
-							line-height: 1.3
-							text-align: center
-					&:hover
-						color: $blue
-					&.active
-						background: $main
-						color: $white
-		.tab-content
-			padding: 15px 0
-			+pos(rel,null)
-			.btn-viewdetail
-				display: block
-				+pos(abs, 15px 0px null null)
-				+fs(14rem)
-				font-weight: 500
-				color: $blue
-				+media-breakpoint-down(sm)
-					+pos(static,null)
-					margin-bottom: 10px
-				&:hover
-					color: $main
-		.installment-option
-			margin-bottom: 15px
-			.option-list
-				+flexbox
-				flex-wrap: wrap
-				padding-left: 0
-				list-style-type: none
-				+media-breakpoint-down(sm)
-					display: block
-					overflow: auto
-					white-space: nowrap
-				li
-					+media-breakpoint-down(sm)
-						display: inline-block
-						vertical-align: top
-					+ li
-						margin-left: 10px
-						+media-breakpoint-down(sm)
-							margin-left: 5px
-					a
-						display: block
-						+fs(14rem)
-						font-weight: 700
-						text-align: center
-						line-height: 34px
-						+bor-rad(5px)
-						background: darken($white,5%)
-						padding: 0px 20px
-						&.active
-							background: $main
-							color: $white
-					&.active
-						a
-							background: $main
-							color: $white
-			.form-row
-			.form-group
-				padding: 0px 5px
-				+media-breakpoint-down(sm)
-					width: 50%
-		.installment-table
-			table
-				+bor-rad(5px)
-				overflow: hidden
-				border: 1px solid darken($white,10%)
-				tr
-					&:nth-child(odd)
-						background: darken($white,3%)
-				th, td
-					+fs(14rem)
-					font-weight: normal
-					padding: 10px
-					width: 50%
-				th
-					font-weight: 500
-					+ th
-						border-left: 1px solid darken($white,10%)
-				td
-					border-left: 1px solid darken($white,10%)
-				.prepay-select
-					border: 1px solid darken($white,10%)
-					+bor-rad(3px)
-					vertical-align: middle
-					&:active, &:focus
-						border-color: lighten($blue,10%)
-						// box-shadow: 0 0 0 0.2rem color-rgba($blue,0.2)
-	.bank-list
-		+flexbox
-		flex-wrap: wrap
-		margin: 0px -5px
-		.item
-			width: calc(100% / 6)
-			padding: 0px 5px
-			margin-bottom: 10px
-			+media-breakpoint-down(sm)
-				width: calc(100% / 5)
-			+media-breakpoint-down(xs)
-				width: calc(100% / 3)
-		.bank-item
-			height: 60px
-			+flexbox
-			align-items: center
-			align-content: center
-			justify-content: center
-			+bor-rad(5px)
-			border: 1px solid darken($white,10%)
-			+pos(rel,null)
-			&:before
-				content: '\f00c'
-				width: 14px
-				height: 14px
-				background: $blue
-				color: $white
-				+bor-rad(50px)
-				z-index: 1
-				+flexbox
-				+fs(12rem)
-				align-items: center
-				align-content: center
-				justify-content: center
-				opacity: 0
-				+pos(abs, null 5px 5px null)
-			img
-				max-width: 80%
-				max-height: 80%
-				margin: 0
-			&:hover, &.active
-				border-color: lighten($blue,10%)
-				background: color-rgba($blue,0.05)
-			&.active
-				&:before
-					opacity: 1
 	.btn-buy
 		margin-top: 15px
 		@extend .btn-main
 		text-transform: uppercase
-	.confirmation-table
+.installment-title
+	+flexbox
+	align-items: center
+	align-content: center
+	border-bottom: 1px solid darken($white,10%)
+	padding-bottom: 10px
+	margin-bottom: 10px
+	.icon
+		+flexbox
+		align-items: center
+		align-content: center
+		margin-right: 10px
+	span
+		+fs(14rem)
+		font-weight: 700
+		text-transform: uppercase
+.installment-product
+	background: $white
+	+bor-rad(5px)
+	overflow: hidden
+	// box-shadow: 0px 5px 20px color-rgba($black,0.05)
+	max-width: 900px
+	margin: 15px auto
+	padding: 15px
+	+media-breakpoint-down(sm)
+		margin: 0px -15px 10px
+		box-shadow: none
+		+bor-rad(0)
+	figure
+		+flexbox
+	.product-img
+		width: 100px
+		height: 100px
+		+bor-rad(5px)
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		+media-breakpoint-down(sm)
+			width: 60px
+			height: 60px
+	figcaption
+		width: calc(100% - 100px)
+		padding-left: 15px
+		+media-breakpoint-down(sm)
+			width: calc(100% - 60px)
+			padding-left: 10px
+		.product-name
+			+fs(14rem)
+			line-height: 1.3
+			font-weight: 500
+			color: $blue
+			display: -webkit-box
+			-webkit-line-clamp: 2
+			-webkit-box-orient: vertical
+			overflow: hidden
+			text-overflow: ellipsis
+			+transition(all,0.5s)
+			a
+				color: $blue
+		.product-price
+			margin-top: 5px
+			+pos(rel,null)
+			.promotion
+				+pos(abs, 2px 0 null null)
+				+fs(11rem)
+				font-weight: 600
+				color: $white
+				padding: 0px 5px
+				+bor-rad(3px)
+				&.off
+					background: lighten($red,10%)
+			.new
+				+fs(14rem)
+				line-height: 1
+				font-weight: 700
+				color: $black
+				+media-breakpoint-down(lg)
+					// +fs(12rem)
+			.old
+				+fs(10rem)
+				line-height: 1
+				color: darken($white,40%)
+				text-decoration: line-through
+.installment-selection
+	background: $white
+	+bor-rad(5px)
+	overflow: hidden
+	// box-shadow: 0px 5px 20px color-rgba($black,0.05)
+	max-width: 900px
+	margin: 15px auto
+	padding: 15px
+	+media-breakpoint-down(sm)
+		margin: 0px -15px 10px
+		box-shadow: none
+		+bor-rad(0)
+	.installment-nav
+		margin: 0
+		padding: 0
+		border: none
+		+bor-rad(5px)
+		overflow: hidden
+		background: darken($white,10%)
+		// border: 1px solid lighten($blue,10%)
+		.nav-item
+			width: 50%
+			margin: 0
+			padding: 0
+			border: none
+			background: none
+			+bor-rad(0)
+			&:first-child
+				.nav-link
+					border-left: none
+			&:last-child
+				.nav-link
+					border-right: none
+			.nav-link
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				margin: 0
+				padding: 10px
+				height: 100%
+				border: none
+				+bor-rad(0)
+				// border-left: 1px solid transparent
+				// border-right: 1px solid transparent
+				.icon
+					width: 32px
+					height: 32px
+					+flexbox
+					align-items: center
+					align-content: center
+					justify-content: center
+					+media-breakpoint-down(sm)
+						width: 20px
+						height: 20px
+					img
+						max-width: 100%
+						max-height: 100%
+				.name
+					padding-left: 10px
+					+fs(14rem)
+					font-weight: 500
+					text-transform: uppercase
+					+media-breakpoint-down(sm)
+						width: calc(100% - 20px)
+						padding-left: 0
+						+fs(13rem)
+						text-transform: none
+						line-height: 1.3
+						text-align: center
+				&:hover
+					color: $blue
+				&.active
+					background: $main
+					color: $white
+	.tab-content
+		padding: 15px 0
+		+pos(rel,null)
+		.btn-viewdetail
+			display: block
+			+pos(abs, 15px 0px null null)
+			+fs(14rem)
+			font-weight: 500
+			color: $blue
+			+media-breakpoint-down(sm)
+				+pos(static,null)
+				margin-bottom: 10px
+			&:hover
+				color: $main
+	.installment-option
+		margin-bottom: 15px
+		.option-list
+			+flexbox
+			flex-wrap: wrap
+			padding-left: 0
+			list-style-type: none
+			+media-breakpoint-down(sm)
+				display: block
+				overflow: auto
+				white-space: nowrap
+			li
+				+media-breakpoint-down(sm)
+					display: inline-block
+					vertical-align: top
+				+ li
+					margin-left: 10px
+					+media-breakpoint-down(sm)
+						margin-left: 5px
+				a
+					display: block
+					+fs(14rem)
+					font-weight: 700
+					text-align: center
+					line-height: 34px
+					+bor-rad(5px)
+					background: darken($white,5%)
+					padding: 0px 20px
+					&.active
+						background: $main
+						color: $white
+				&.active
+					a
+						background: $main
+						color: $white
+		.form-row
+		.form-group
+			padding: 0px 5px
+			+media-breakpoint-down(sm)
+				width: 50%
+	.installment-table
 		table
 			+bor-rad(5px)
 			overflow: hidden
@@ -305,62 +233,134 @@
 				font-weight: 500
 				+ th
 					border-left: 1px solid darken($white,10%)
-			th[colspan="2"]
-				background: $blue
-				color: $white
 			td
 				border-left: 1px solid darken($white,10%)
-	.installment-form
-		background: $white
-		+bor-rad(5px)
-		overflow: hidden
-		// box-shadow: 0px 5px 20px color-rgba($black,0.05)
-		max-width: 900px
-		margin: 15px auto
-		padding: 15px
-		+media-breakpoint-down(sm)
-			margin: 0px -15px 10px
-			box-shadow: none
-			+bor-rad(0)
-		.form-wrap
-			.form-group
-				+flexbox
-				flex-wrap: wrap
-				label
-					width: 100px
-				.input
-					width: calc(100% - 100px)
-		.input-coupon
-			max-width: 350px
-			+flexbox
-			align-items: center
-			align-content: center
-			margin-bottom: 5px
-			// margin-left: 100px
-			// + .form-des
-			// 	margin-left: 100px
-			input
-				width: calc(100% - 85px)
-				+fs(13rem)
-				padding: 7px 15px
-				+bor-rad(5px)
+			.prepay-select
 				border: 1px solid darken($white,10%)
-				color: $main
-				+transition(all,0.5s)
-				&::-webkit-input-placeholder
-					color: inherit
-					opacity: 0.5
+				+bor-rad(3px)
+				vertical-align: middle
 				&:active, &:focus
 					border-color: lighten($blue,10%)
-					box-shadow: 0 0 0 0.2rem color-rgba($blue,0.2)
-			.btn-submitcoupon
-				width: 80px
-				+fs(13rem)
-				padding: 8px 10px
-				background: $blue
-				color: $white
-				+bor-rad(5px)
-				+transition(all,0.5s)
-				margin-left: 5px
-				&:hover
-					background: $main
+					// box-shadow: 0 0 0 0.2rem color-rgba($blue,0.2)
+.bank-list
+	+flexbox
+	flex-wrap: wrap
+	margin: 0px -5px
+	.item
+		width: calc(100% / 6)
+		padding: 0px 5px
+		margin-bottom: 10px
+		+media-breakpoint-down(sm)
+			width: calc(100% / 5)
+		+media-breakpoint-down(xs)
+			width: calc(100% / 3)
+	.bank-item
+		height: 60px
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		+bor-rad(5px)
+		border: 1px solid darken($white,10%)
+		+pos(rel,null)
+		&:before
+			content: '\f00c'
+			width: 14px
+			height: 14px
+			background: $blue
+			color: $white
+			+bor-rad(50px)
+			z-index: 1
+			+flexbox
+			+fs(12rem)
+			align-items: center
+			align-content: center
+			justify-content: center
+			opacity: 0
+			+pos(abs, null 5px 5px null)
+		img
+			max-width: 80%
+			max-height: 80%
+			margin: 0
+		&:hover, &.active
+			border-color: lighten($blue,10%)
+			background: color-rgba($blue,0.05)
+		&.active
+			&:before
+				opacity: 1
+.confirmation-table
+	table
+		+bor-rad(5px)
+		overflow: hidden
+		border: 1px solid darken($white,10%)
+		tr
+			&:nth-child(odd)
+				background: darken($white,3%)
+		th, td
+			+fs(14rem)
+			font-weight: normal
+			padding: 10px
+			width: 50%
+		th
+			font-weight: 500
+			+ th
+				border-left: 1px solid darken($white,10%)
+		th[colspan="2"]
+			background: $blue
+			color: $white
+		td
+			border-left: 1px solid darken($white,10%)
+.installment-form
+	background: $white
+	+bor-rad(5px)
+	overflow: hidden
+	// box-shadow: 0px 5px 20px color-rgba($black,0.05)
+	max-width: 900px
+	margin: 15px auto
+	padding: 15px
+	+media-breakpoint-down(sm)
+		margin: 0px -15px 10px
+		box-shadow: none
+		+bor-rad(0)
+	.form-wrap
+		.form-group
+			+flexbox
+			flex-wrap: wrap
+			label
+				width: 100px
+			.input
+				width: calc(100% - 100px)
+	.input-coupon
+		max-width: 350px
+		+flexbox
+		align-items: center
+		align-content: center
+		margin-bottom: 5px
+		// margin-left: 100px
+		// + .form-des
+		// 	margin-left: 100px
+		input
+			width: calc(100% - 85px)
+			+fs(13rem)
+			padding: 7px 15px
+			+bor-rad(5px)
+			border: 1px solid darken($white,10%)
+			color: $main
+			+transition(all,0.5s)
+			&::-webkit-input-placeholder
+				color: inherit
+				opacity: 0.5
+			&:active, &:focus
+				border-color: lighten($blue,10%)
+				box-shadow: 0 0 0 0.2rem color-rgba($blue,0.2)
+		.btn-submitcoupon
+			width: 80px
+			+fs(13rem)
+			padding: 8px 10px
+			background: $blue
+			color: $white
+			+bor-rad(5px)
+			+transition(all,0.5s)
+			margin-left: 5px
+			&:hover
+				background: $main
