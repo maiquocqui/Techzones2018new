@@ -18469,7 +18469,7 @@ ul.cardList {
       .hot-news .news-item.big figure {
         flex-direction: column; }
         .hot-news .news-item.big figure img {
-          height: auto;
+          height: 350px;
           object-fit: cover; }
         .hot-news .news-item.big figure .img, .hot-news .news-item.big figure figcaption {
           width: 100%; }
@@ -18550,7 +18550,9 @@ ul.cardList {
     .news-list2 .news-item figure .img {
       display: block; }
       .news-list2 .news-item figure .img img {
-        width: 100%; }
+        width: 100%;
+        height: 230px;
+        object-fit: cover; }
     .news-list2 .news-item figure figcaption {
       padding: 25px 30px; }
       @media (max-width: 767.98px) {
@@ -18847,7 +18849,7 @@ ul.cardList {
         background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)); }
       .picked-news .news-item figure .img img {
         width: 100%;
-        height: 100%;
+        height: 170px;
         object-fit: cover;
         display: block; }
         @media (max-width: 767.98px) {
@@ -18920,8 +18922,8 @@ ul.cardList {
   .news-list4 .news-item figure figcaption time {
     display: none; }
   .news-list4 .news-item + .news-item {
-    margin-top: 15px;
-    padding-top: 15px;
+    margin-top: 12px;
+    padding-top: 12px;
     border-top: 1px solid #e6e6e6; }
     @media (max-width: 1199.98px) {
       .news-list4 .news-item + .news-item {
@@ -18931,7 +18933,6 @@ ul.cardList {
     position: relative;
     border-radius: 5px;
     overflow: hidden;
-    height: 100%;
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.02); }
     @media (max-width: 767.98px) {
       .news-list4 .news-item.big {
@@ -18941,7 +18942,9 @@ ul.cardList {
       height: 100%; }
       .news-list4 .news-item.big figure .img {
         display: block;
-        height: 100%; }
+        width: 100%;
+        height: 300px;
+        object-fit: cover; }
         .news-list4 .news-item.big figure .img:before {
           content: '';
           position: absolute;
@@ -19006,6 +19009,10 @@ ul.cardList {
         margin-bottom: 10px; } }
     .video-list2 .video .img {
       display: block; }
+      .video-list2 .video .img img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover; }
     .video-list2 .video figcaption {
       position: absolute;
       right: 0;
@@ -19092,6 +19099,10 @@ ul.cardList {
       .news-list5 .news-item figure .img {
         display: block;
         width: 50%; }
+        .news-list5 .news-item figure .img img {
+          width: 100%;
+          height: 250px;
+          object-fit: cover; }
       .news-list5 .news-item figure figcaption {
         width: 50%;
         padding: 20px 25px; }
@@ -19188,6 +19199,10 @@ ul.cardList {
     .news-list6 .news-item figure .img {
       width: 50%;
       border-radius: 5px; } }
+  .news-list6 .news-item figure .img img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover; }
 
 .news-list6 .news-item figure figcaption {
   padding: 15px 0; }
@@ -19311,6 +19326,13 @@ ul.cardList {
         @media (max-width: 767.98px) {
           .news-page .product .caption .price .new {
             font-size: 0.8125rem; } }
+      .news-page .product .caption .price .old {
+        font-size: 1rem;
+        color: gray;
+        text-decoration: line-through; }
+        @media (max-width: 767.98px) {
+          .news-page .product .caption .price .old {
+            font-size: 0.75rem; } }
     .news-page .product .caption .des {
       margin-bottom: 20px; }
       @media (max-width: 767.98px) {
