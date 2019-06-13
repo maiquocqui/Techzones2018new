@@ -9198,7 +9198,7 @@ header {
         align-content: center; } }
   header .btn-prevpage {
     display: none;
-    margin-right: 15px; }
+    margin-right: 8px; }
     @media (max-width: 1199.98px) {
       header .btn-prevpage {
         display: -webkit-box;
@@ -9324,7 +9324,7 @@ header {
     @media (max-width: 1199.98px) {
       header .search {
         flex: unset;
-        margin-left: 15px; } }
+        margin-left: 8px; } }
     header .search .search-toggle {
       display: none; }
       @media (max-width: 1199.98px) {
@@ -9678,7 +9678,7 @@ header {
     position: relative; }
     @media (max-width: 1199.98px) {
       header .cart {
-        margin-left: 15px; } }
+        margin-left: 8px; } }
     header .cart .cart-toggle .cart-amount {
       font-size: 0rem;
       font-weight: 700;
@@ -9863,7 +9863,7 @@ header {
           padding: 0px 20px; }
   header .mini-menu {
     display: none;
-    margin-left: 15px; }
+    margin-left: 8px; }
     @media (max-width: 1199.98px) {
       header .mini-menu {
         display: block; } }
@@ -18432,6 +18432,12 @@ ul.cardList {
           width: 100%;
           height: 180px;
           object-fit: cover; }
+          @media (max-width: 991.98px) {
+            .hot-news .news-item figure .img img {
+              height: 200px; } }
+          @media (max-width: 767.98px) {
+            .hot-news .news-item figure .img img {
+              height: 100px; } }
       .hot-news .news-item figure figcaption {
         width: 50%;
         padding: 25px; }
@@ -18471,6 +18477,12 @@ ul.cardList {
         .hot-news .news-item.big figure img {
           height: 350px;
           object-fit: cover; }
+          @media (max-width: 991.98px) {
+            .hot-news .news-item.big figure img {
+              height: 415px; } }
+          @media (max-width: 767.98px) {
+            .hot-news .news-item.big figure img {
+              height: 190px; } }
         .hot-news .news-item.big figure .img, .hot-news .news-item.big figure figcaption {
           width: 100%; }
         .hot-news .news-item.big figure figcaption .name a {
@@ -18553,6 +18565,12 @@ ul.cardList {
         width: 100%;
         height: 230px;
         object-fit: cover; }
+        @media (max-width: 991.98px) {
+          .news-list2 .news-item figure .img img {
+            height: 190px; } }
+        @media (max-width: 767.98px) {
+          .news-list2 .news-item figure .img img {
+            height: 100px; } }
     .news-list2 .news-item figure figcaption {
       padding: 25px 30px; }
       @media (max-width: 767.98px) {
@@ -18599,7 +18617,8 @@ ul.cardList {
             font-size: 0.8125rem; } }
         @media (max-width: 767.98px) {
           .news-list2 .news-item figure figcaption .des {
-            font-size: 0.6875rem; } }
+            font-size: 0.6875rem;
+            display: none; } }
   .news-list2 .news-item:hover figure figcaption .name a {
     color: #18a0c6; }
 
@@ -18934,6 +18953,9 @@ ul.cardList {
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.02); }
+    @media (max-width: 991.98px) {
+      .news-list4 .news-item.big {
+        margin-bottom: 15px; } }
     @media (max-width: 767.98px) {
       .news-list4 .news-item.big {
         height: auto;
@@ -18945,6 +18967,12 @@ ul.cardList {
         width: 100%;
         height: 300px;
         object-fit: cover; }
+        @media (max-width: 991.98px) {
+          .news-list4 .news-item.big figure .img {
+            height: 250px; } }
+        @media (max-width: 767.98px) {
+          .news-list4 .news-item.big figure .img {
+            height: 200px; } }
         .news-list4 .news-item.big figure .img:before {
           content: '';
           position: absolute;
@@ -19013,12 +19041,21 @@ ul.cardList {
         width: 100%;
         height: 350px;
         object-fit: cover; }
+        @media (max-width: 991.98px) {
+          .video-list2 .video .img img {
+            height: 250px; } }
+        @media (max-width: 767.98px) {
+          .video-list2 .video .img img {
+            height: 200px; } }
     .video-list2 .video figcaption {
       position: absolute;
       right: 0;
       bottom: 0;
       left: 0;
       padding: 25px 25px; }
+      @media (max-width: 991.98px) {
+        .video-list2 .video figcaption {
+          padding: 20px; } }
       @media (max-width: 767.98px) {
         .video-list2 .video figcaption {
           padding: 0px 15px 15px; } }
@@ -19103,6 +19140,12 @@ ul.cardList {
           width: 100%;
           height: 250px;
           object-fit: cover; }
+          @media (max-width: 991.98px) {
+            .news-list5 .news-item figure .img img {
+              height: 210px; } }
+          @media (max-width: 767.98px) {
+            .news-list5 .news-item figure .img img {
+              height: 100px; } }
       .news-list5 .news-item figure figcaption {
         width: 50%;
         padding: 20px 25px; }
@@ -19176,6 +19219,20 @@ ul.cardList {
   .category-link a:hover {
     color: #18a0c6; }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .news-list6 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0px -15px; } }
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .news-list6 .news-item {
+    width: 50%;
+    padding: 0px 15px; } }
+
 @media (max-width: 767.98px) {
   .news-list6 .news-item {
     margin-bottom: 15px; } }
@@ -19203,6 +19260,9 @@ ul.cardList {
     width: 100%;
     height: 190px;
     object-fit: cover; }
+    @media (max-width: 767.98px) {
+      .news-list6 .news-item figure .img img {
+        height: 100px; } }
 
 .news-list6 .news-item figure figcaption {
   padding: 15px 0; }
@@ -19280,9 +19340,12 @@ ul.cardList {
   display: flex;
   border-radius: 10px;
   border: 2px solid #18a0c6;
-  padding: 25px; }
+  padding: 15px;
+  max-width: 500px;
+  margin: 0 auto 15px; }
   @media (max-width: 767.98px) {
     .news-page .product {
+      flex-wrap: wrap;
       padding: 15px; } }
   .news-page .product .img {
     display: -webkit-box;
@@ -19297,8 +19360,9 @@ ul.cardList {
     height: 200px; }
     @media (max-width: 767.98px) {
       .news-page .product .img {
-        width: 100px;
-        height: 100px; } }
+        width: 100%;
+        height: 130px;
+        margin-bottom: 10px; } }
     .news-page .product .img img {
       max-width: 90%;
       max-height: 90%; }
@@ -19306,9 +19370,9 @@ ul.cardList {
     width: calc(100% - 200px); }
     @media (max-width: 767.98px) {
       .news-page .product .caption {
-        width: calc(100% - 100px); } }
+        width: 100%; } }
     .news-page .product .caption .name {
-      font-size: 1.125rem;
+      font-size: 1rem;
       font-weight: 500;
       color: #333333; }
       @media (max-width: 767.98px) {
@@ -19320,14 +19384,14 @@ ul.cardList {
         .news-page .product .caption .price {
           margin-bottom: 5px; } }
       .news-page .product .caption .price .new {
-        font-size: 1.125rem;
+        font-size: 1rem;
         font-weight: 700;
         color: #18a0c6; }
         @media (max-width: 767.98px) {
           .news-page .product .caption .price .new {
             font-size: 0.8125rem; } }
       .news-page .product .caption .price .old {
-        font-size: 1rem;
+        font-size: 0.875rem;
         color: gray;
         text-decoration: line-through; }
         @media (max-width: 767.98px) {
@@ -19354,13 +19418,11 @@ ul.cardList {
       display: flex;
       align-items: center;
       align-content: center; }
-      @media (max-width: 767.98px) {
-        .news-page .product .caption .btn-wrap {
-          justify-content: center; } }
     .news-page .product .caption .btn-buy {
       font-weight: 500; }
       @media (max-width: 767.98px) {
         .news-page .product .caption .btn-buy {
+          flex: 1;
           font-size: 0.75rem;
           line-height: 34px;
           padding: 0px 15px;
@@ -19372,6 +19434,7 @@ ul.cardList {
       margin-left: 10px; }
       @media (max-width: 767.98px) {
         .news-page .product .caption .btn-tragop {
+          flex: 1;
           margin-left: 5px;
           font-size: 0.75rem;
           line-height: 34px;

@@ -102,6 +102,10 @@
 					width: 100%
 					height: 180px
 					object-fit: cover
+					+media-breakpoint-down(md)
+						height: 200px
+					+media-breakpoint-down(sm)
+						height: 100px
 			figcaption
 				width: 50%
 				padding: 25px
@@ -136,6 +140,10 @@
 				img
 					height: 350px
 					object-fit: cover
+					+media-breakpoint-down(md)
+						height: 415px
+					+media-breakpoint-down(sm)
+						height: 190px
 				.img, figcaption
 					width: 100%
 				figcaption
@@ -212,6 +220,10 @@
 					width: 100%
 					height: 230px
 					object-fit: cover
+					+media-breakpoint-down(md)
+						height: 190px
+					+media-breakpoint-down(sm)
+						height: 100px
 			figcaption
 				padding: 25px 30px
 				+media-breakpoint-down(sm)
@@ -247,6 +259,7 @@
 						+fs(13rem)
 					+media-breakpoint-down(sm)
 						+fs(11rem)
+						display: none
 		&:hover
 			figure
 				figcaption
@@ -537,6 +550,8 @@
 			+bor-rad(5px)
 			overflow: hidden
 			box-shadow: 0px 5px 30px color-rgba($black,0.02)
+			+media-breakpoint-down(md)
+				margin-bottom: 15px
 			+media-breakpoint-down(sm)
 				height: auto
 				margin-bottom: 10px
@@ -547,6 +562,10 @@
 					width: 100%
 					height: 300px
 					object-fit: cover
+					+media-breakpoint-down(md)
+						height: 250px
+					+media-breakpoint-down(sm)
+						height: 200px
 					&:before
 						content: ''
 						+pos(abs, 0 null 0 0)
@@ -601,9 +620,15 @@
 				width: 100%
 				height: 350px
 				object-fit: cover
+				+media-breakpoint-down(md)
+					height: 250px
+				+media-breakpoint-down(sm)
+					height: 200px
 		figcaption
 			+pos(abs, null 0 0 0)
 			padding: 25px 25px
+			+media-breakpoint-down(md)
+				padding: 20px
 			+media-breakpoint-down(sm)
 				padding: 0px 15px 15px
 			.name
@@ -669,6 +694,10 @@
 					width: 100%
 					height: 250px
 					object-fit: cover
+					+media-breakpoint-down(md)
+						height: 210px
+					+media-breakpoint-down(sm)
+						height: 100px
 			figcaption
 				width: 50%
 				padding: 20px 25px
@@ -729,7 +758,13 @@
 			color: $blue
 
 .news-list6
+	+media-breakpoint-only(md)
+		+flexbox
+		margin: 0px -15px
 	.news-item
+		+media-breakpoint-only(md)
+			width: 50%
+			padding: 0px 15px
 		+media-breakpoint-down(sm)
 			margin-bottom: 15px
 		&:last-child
@@ -750,6 +785,8 @@
 					width: 100%
 					height: 190px
 					object-fit: cover
+					+media-breakpoint-down(sm)
+						height: 100px
 			figcaption
 				padding: 15px 0
 				+media-breakpoint-down(sm)

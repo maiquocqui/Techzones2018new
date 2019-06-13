@@ -20,9 +20,11 @@
 		+flexbox
 		+bor-rad(10px)
 		border: 2px solid $blue
-		padding: 25px
+		padding: 15px
+		max-width: 500px
+		margin: 0 auto 15px
 		+media-breakpoint-down(sm)
-			// flex-wrap: wrap
+			flex-wrap: wrap
 			padding: 15px
 		.img
 			+flexbox
@@ -32,17 +34,18 @@
 			width: 200px
 			height: 200px
 			+media-breakpoint-down(sm)
-				width: 100px
-				height: 100px
+				width: 100%
+				height: 130px
+				margin-bottom: 10px
 			img
 				max-width: 90%
 				max-height: 90%
 		.caption
 			width: calc(100% - 200px)
 			+media-breakpoint-down(sm)
-				width: calc(100% - 100px)
+				width: 100%
 			.name
-				+fs(18rem)
+				+fs(16rem)
 				font-weight: 500
 				color: $main
 				+media-breakpoint-down(sm)
@@ -52,13 +55,13 @@
 				+media-breakpoint-down(sm)
 					margin-bottom: 5px
 				.new
-					+fs(18rem)
+					+fs(16rem)
 					font-weight: 700
 					color: $blue
 					+media-breakpoint-down(sm)
 						+fs(13rem)
 				.old
-					+fs(16rem)
+					+fs(14rem)
 					color: darken($white,50%)
 					text-decoration: line-through
 					+media-breakpoint-down(sm)
@@ -79,11 +82,12 @@
 				align-items: center
 				align-content: center
 				+media-breakpoint-down(sm)
-					justify-content: center
+					// justify-content: center
 			.btn-buy
 				@extend .btn-main
 				font-weight: 500
 				+media-breakpoint-down(sm)
+					flex: 1
 					+fs(12rem)
 					line-height: 34px
 					padding: 0px 15px
@@ -95,6 +99,7 @@
 				color: $blue
 				margin-left: 10px
 				+media-breakpoint-down(sm)
+					flex: 1
 					margin-left: 5px
 					+fs(12rem)
 					line-height: 34px
